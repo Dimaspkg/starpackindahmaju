@@ -149,8 +149,8 @@
   },
   "errors": {
     "404": {
-      "title": "404 - Page Not Found",
-      "message": "The page you are looking for doesn't exist or has been moved."
+      "title": "Lost in the shine?",
+      "message": "It seems the page you're looking for has taken another path. But don't worry, the perfect finish for your product is just a click away."
     },
     "general": {
       "title": "Something went wrong",

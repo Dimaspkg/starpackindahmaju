@@ -10,7 +10,6 @@ export default function NotFound() {
   return (
     <div className={styles.errorContainer}>
       <div className={styles.content}>
-        <h1 className={styles.errorCode}>404</h1>
         <h2 className={styles.title}>{t.errors['404'].title}</h2>
         <p className={styles.message}>
           {t.errors['404'].message}
