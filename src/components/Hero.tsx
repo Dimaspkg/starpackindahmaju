@@ -33,7 +33,7 @@ export default function Hero() {
       <div className={styles.heroVisual}>
         <div className={styles.imageWrapper}>
           <Image 
-            src="/images/uv_coating_hero_1777522954617.png" 
+            src="/images/uv_coating.png" 
             alt="Coating production" 
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
