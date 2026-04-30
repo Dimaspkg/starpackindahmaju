@@ -35,8 +35,6 @@ export default function EffectsSection() {
             </div>
           ))}
         </div>
-        
-        <p className={styles.note}>{t.effects.note}</p>
       </div>
     </section>
   );

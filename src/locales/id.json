@@ -85,8 +85,7 @@
       { "title": "Signature Finish 06", "desc": "Tampilan premium reflektif" },
       { "title": "Signature Finish 07", "desc": "Gaya finishing tahan lama" },
       { "title": "Signature Finish 08", "desc": "Penampilan produk yang konsisten" }
-    ],
-    "note": "Catatan: Ganti placeholder dengan gambar produk asli Anda untuk galeri akhir."
+    ]
   },
   "industry": {
     "tag": "APLIKASI",
