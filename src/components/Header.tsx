@@ -60,13 +60,20 @@ export default function Header() {
       <header className={styles.header}>
         <div className={styles.logoContainer}>
           <Image 
-            src={mounted && (theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) 
-              ? "/logo_starpack_white.png" 
-              : "/logo_starpack.png"}
+            src="/logo_starpack.png"
             alt="PT. STARPACK INDAHMAJU Logo" 
             width={400} 
             height={20} 
-            className={styles.logoImage}
+            className={`${styles.logoImage} ${styles.logoLight}`}
+            priority
+          />
+          <Image 
+            src="/logo_starpack_white.png"
+            alt="PT. STARPACK INDAHMAJU Logo" 
+            width={400} 
+            height={20} 
+            className={`${styles.logoImage} ${styles.logoDark}`}
+            priority
           />
         </div>
         

@@ -3,15 +3,14 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  transition: all 0.3s ease;
-  background-color: transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--header-bg);
+  backdrop-filter: blur(12px);
 }
 
 .headerScrolled {
-  background-color: var(--header-bg);
-  backdrop-filter: blur(15px);
   border-bottom: 1px solid var(--card-border);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .header {
@@ -42,6 +41,28 @@
   width: auto;
   height: 25px;
   max-width: 100%;
+}
+
+.logoDark {
+  display: none;
+}
+
+:global([data-theme='dark']) .logoLight {
+  display: none;
+}
+
+:global([data-theme='dark']) .logoDark {
+  display: block;
+}
+
+/* System preference fallback if no data-theme set */
+@media (prefers-color-scheme: dark) {
+  :global(:root:not([data-theme='light'])) .logoLight {
+    display: none;
+  }
+  :global(:root:not([data-theme='light'])) .logoDark {
+    display: block;
+  }
 }
 
 .nav {
