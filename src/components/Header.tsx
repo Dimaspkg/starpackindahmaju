@@ -12,6 +12,8 @@ export default function Header() {
   const [mounted, setMounted] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   
   const { language, setLanguage, t } = useLanguage();
@@ -27,12 +29,24 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+      
+      // Toggle sticky background
+      setIsScrolled(currentScrollY > 50);
+
+      // Auto-hide logic
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   const toggleTheme = () => {
 
@@ -56,7 +70,11 @@ export default function Header() {
   ];
 
   return (
-    <div className={`${styles.headerWrapper} ${isScrolled ? styles.headerScrolled : ''}`}>
+    <div className={`
+      ${styles.headerWrapper} 
+      ${isScrolled ? styles.headerScrolled : ''} 
+      ${!isVisible ? styles.headerHidden : ''}
+    `}>
       <header className={styles.header}>
         <div className={styles.logoContainer}>
           <Image 
