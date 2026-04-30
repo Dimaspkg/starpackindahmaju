@@ -52,110 +52,110 @@
     }
   },
   "tech": {
-    "tag": "CAPABILITY",
-    "title": "Advance Technology & Machinery",
-    "description": "Our manufacturing environment is designed for precision coating, stable operation, and consistent product results.",
+    "tag": "生産能力",
+    "title": "先進技術と機械",
+    "description": "私たちの製造環境は、精密なコーティング、安定した稼働、および一貫した製品結果のために設計されています。",
     "strength": {
-      "title": "Production Strength",
+      "title": "生産力",
       "items": [
-        { "id": "01", "title": "Controlled coating environment", "text": "Structured production steps to support consistent surface quality across runs." },
-        { "id": "02", "title": "UV-driven finishing workflow", "text": "Designed to support stable curing and a clean, premium appearance." },
-        { "id": "03", "title": "Production scalability", "text": "Capabilities built for recurring orders and high-volume manufacturing." }
+        { "id": "01", "title": "管理されたコーティング環境", "text": "各工程で一貫した表面品質を維持するための構造化された生産ステップ。" },
+        { "id": "02", "title": "UV駆動の仕上げワークフロー", "text": "安定した硬化と、クリーンでプレミアムな外観をサポートするように設計されています。" },
+        { "id": "03", "title": "生産のスケーラビリティ", "text": "継続的な注文や大量生産に対応するために構築された能力。" }
       ]
     },
     "highlights": {
-      "title": "Machinery Highlights",
+      "title": "機械のハイライト",
       "items": [
-        { "id": "A", "title": "Coating & curing line", "text": "UV coating line for plastic finishing applications." },
-        { "id": "B", "title": "Surface conditioning support", "text": "Pre-treatment handling to help achieve reliable coating results." },
-        { "id": "C", "title": "Quality checkpoints", "text": "Inspection points to maintain appearance and finishing consistency." }
+        { "id": "A", "title": "コーティング＆硬化ライン", "text": "プラスチック仕上げ用途向けのUVコーティングライン。" },
+        { "id": "B", "title": "表面調整サポート", "text": "信頼性の高いコーティング結果を実現するための前処理ハンドリング。" },
+        { "id": "C", "title": "品質チェックポイント", "text": "外観と仕上げの一貫性を維持するための検査ポイント。" }
       ]
     }
   },
   "effects": {
-    "tag": "EFFECTS",
-    "title": "Premium Coating Effect",
-    "description": "Discover signature finishes designed to elevate plastic product appearance.",
+    "tag": "効果",
+    "title": "プレミアムコーティング効果",
+    "description": "プラスチック製品の外観を向上させるために設計されたシグネチャーフィニッシュをご覧ください。",
     "items": [
-      { "title": "Signature Finish 01", "desc": "Gloss / clarity look" },
-      { "title": "Signature Finish 02", "desc": "Soft satin appearance" },
-      { "title": "Signature Finish 03", "desc": "Premium texture feel" },
-      { "title": "Signature Finish 04", "desc": "High-impact surface" },
-      { "title": "Signature Finish 05", "desc": "Color depth effect" },
-      { "title": "Signature Finish 06", "desc": "Reflective premium look" },
-      { "title": "Signature Finish 07", "desc": "Durable finishing style" },
-      { "title": "Signature Finish 08", "desc": "Consistent product appearance" }
+      { "title": "シグネチャーフィニッシュ 01", "desc": "グロス / クリアな外観" },
+      { "title": "シグネチャーフィニッシュ 02", "desc": "ソフトサテンの外観" },
+      { "title": "シグネチャーフィニッシュ 03", "desc": "プレミアムな質感と手触り" },
+      { "title": "シグネチャーフィニッシュ 04", "desc": "耐衝撃性に優れた表面" },
+      { "title": "シグネチャーフィニッシュ 05", "desc": "色の深み効果" },
+      { "title": "シグネチャーフィニッシュ 06", "desc": "反射性のあるプレミアムな外観" },
+      { "title": "シグネチャーフィニッシュ 07", "desc": "耐久性のある仕上げスタイル" },
+      { "title": "シグネチャーフィニッシュ 08", "desc": "一貫した製品外観" }
     ]
   },
   "industry": {
-    "tag": "APPLICATIONS",
-    "title": "Industry We Serve",
-    "description": "Our UV plastic coating support products across multiple industries.",
+    "tag": "用途",
+    "title": "私たちが提供する業界",
+    "description": "当社のUVプラスチックコーティングは、複数の業界の製品をサポートしています。",
     "pills": [
-      "Beauty & Cosmetics",
-      "Fragrance",
-      "Fashion & Footwear",
-      "Toys & Dolls",
-      "Stationery",
-      "Electronics",
-      "FMCG"
+      "美容・化粧品",
+      "フレグランス",
+      "ファッション・フットウェア",
+      "玩具・人形",
+      "文房具",
+      "電子機器",
+      "FMCG（日用品）"
     ],
-    "footer": "We help production teams achieve consistent finishing results for recurring manufacturing."
+    "footer": "継続的な製造において、一貫した仕上げ結果を達成できるよう生産チームを支援します。"
   },
   "quality": {
-    "tag": "QUALITY",
-    "title": "Quality & Certification",
-    "description": "Quality-driven manufacturing with structured controls and certification alignment.",
+    "tag": "品質",
+    "title": "品質と認証",
+    "description": "構造化された管理と認証に基づいた、品質重視の製造。",
     "iso": {
       "title": "ISO 9001:2015",
-      "text": "PT. Starpack Indahmaju is ISO 9001:2015 certified (upgraded April 2022).",
+      "text": "PT. Starpack IndahmajuはISO 9001:2015認証済みです（2022年4月にアップグレード）。",
       "items": [
-        "Process consistency for reliable coating outcomes",
-        "Operational control aligned with quality objectives"
+        "信頼性の高いコーティング結果のための一貫したプロセス",
+        "品質目標に沿った運用管理"
       ]
     },
     "standards": {
-      "title": "Quality Standards",
+      "title": "品質基準",
       "items": [
-        "Appearance-focused finishing checkpoints",
-        "Inspection to support stable product appearance across runs",
-        "Production planning for scalable manufacturing delivery"
+        "外観重視の仕上げチェックポイント",
+        "各ロットで安定した製品外観を維持するための検査",
+        "スケーラブルな製造のための生産計画"
       ]
     }
   },
   "inquiry": {
-    "tag": "CONTACT",
-    "title": "Inquiry",
-    "description": "Tell us about your plastic product and required coating effect. We'll respond with next steps for sampling and production.",
+    "tag": "連絡先",
+    "title": "お問い合わせ",
+    "description": "プラスチック製品の詳細と必要なコーティング効果についてお知らせください。サンプリングと生産の次のステップについて回答いたします。",
     "sales": {
-      "title": "Sales",
+      "title": "営業部",
       "email": "sales@starpackindahmaju.com",
       "phone": "+62 21-0000-0000",
-      "note": "Please verify your official contact details before final deployment."
+      "note": "最終的なデプロイの前に、公式の連絡先詳細を確認してください。"
     },
     "form": {
-      "name": "YOUR NAME",
-      "company": "COMPANY",
-      "email": "EMAIL",
-      "phone": "PHONE",
-      "message": "MESSAGE",
-      "message_placeholder": "Plastic type, coating effect reference, target volume, and timeline...",
-      "submit": "Send Inquiry",
-      "back": "Back to Home",
-      "success": "Inquiry sent successfully! We will contact you soon.",
-      "error": "Failed to send inquiry. Please try again."
+      "name": "お名前",
+      "company": "会社名",
+      "email": "メールアドレス",
+      "phone": "電話番号",
+      "message": "メッセージ",
+      "message_placeholder": "プラスチックの種類、コーティング効果のリファレンス、目標数量、タイムラインなど...",
+      "submit": "お問い合わせを送信",
+      "back": "ホームに戻る",
+      "success": "お問い合わせが正常に送信されました。追ってご連絡いたします。",
+      "error": "送信に失敗しました。もう一度お試しください。"
     }
   },
   "errors": {
     "404": {
-      "title": "Lost in the shine?",
-      "message": "It seems the page you're looking for has taken another path. But don't worry, the perfect finish for your product is just a click away."
+      "title": "輝きの影で迷子になりましたか？",
+      "message": "お探しのページは別の道を選んだようです。ご安心ください。製品に最適な仕上げは、すぐそこ（ホーム）にあります。"
     },
     "general": {
-      "title": "Something went wrong",
-      "message": "We encountered an unexpected error. Please try again later."
+      "title": "エラーが発生しました",
+      "message": "予期しないエラーが発生しました。後でもう一度お試しください。"
     },
-    "button": "Back to Home",
-    "retry": "Try Again"
+    "button": "ホームに戻る",
+    "retry": "再試行"
   }
 }

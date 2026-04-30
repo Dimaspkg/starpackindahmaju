@@ -52,110 +52,110 @@
     }
   },
   "tech": {
-    "tag": "CAPABILITY",
-    "title": "Advance Technology & Machinery",
-    "description": "Our manufacturing environment is designed for precision coating, stable operation, and consistent product results.",
+    "tag": "生产能力",
+    "title": "先进技术与机械",
+    "description": "我们的制造环境专为精密涂装、稳定运行和一致的产品结果而设计。",
     "strength": {
-      "title": "Production Strength",
+      "title": "生产实力",
       "items": [
-        { "id": "01", "title": "Controlled coating environment", "text": "Structured production steps to support consistent surface quality across runs." },
-        { "id": "02", "title": "UV-driven finishing workflow", "text": "Designed to support stable curing and a clean, premium appearance." },
-        { "id": "03", "title": "Production scalability", "text": "Capabilities built for recurring orders and high-volume manufacturing." }
+        { "id": "01", "title": "受控的涂装环境", "text": "结构化的生产步骤，确保各批次表面质量的一致性。" },
+        { "id": "02", "title": "紫外线驱动的整理流程", "text": "旨在支持稳定的固化，实现洁净、优质的外观。" },
+        { "id": "03", "title": "生产可扩展性", "text": "为满足持续订单和高产量制造而打造的能力。" }
       ]
     },
     "highlights": {
-      "title": "Machinery Highlights",
+      "title": "机械亮点",
       "items": [
-        { "id": "A", "title": "Coating & curing line", "text": "UV coating line for plastic finishing applications." },
-        { "id": "B", "title": "Surface conditioning support", "text": "Pre-treatment handling to help achieve reliable coating results." },
-        { "id": "C", "title": "Quality checkpoints", "text": "Inspection points to maintain appearance and finishing consistency." }
+        { "id": "A", "title": "涂装与固化流水线", "text": "用于塑料饰面应用的紫外线涂装生产线。" },
+        { "id": "B", "title": "表面处理支持", "text": "前处理处理，助力实现可靠的涂装效果。" },
+        { "id": "C", "title": "质量检查点", "text": "通过检查点维护外观和饰面的一致性。" }
       ]
     }
   },
   "effects": {
-    "tag": "EFFECTS",
-    "title": "Premium Coating Effect",
-    "description": "Discover signature finishes designed to elevate plastic product appearance.",
+    "tag": "涂层效果",
+    "title": "优质涂层效果",
+    "description": "探索旨在提升塑料产品外观的标志性饰面。",
     "items": [
-      { "title": "Signature Finish 01", "desc": "Gloss / clarity look" },
-      { "title": "Signature Finish 02", "desc": "Soft satin appearance" },
-      { "title": "Signature Finish 03", "desc": "Premium texture feel" },
-      { "title": "Signature Finish 04", "desc": "High-impact surface" },
-      { "title": "Signature Finish 05", "desc": "Color depth effect" },
-      { "title": "Signature Finish 06", "desc": "Reflective premium look" },
-      { "title": "Signature Finish 07", "desc": "Durable finishing style" },
-      { "title": "Signature Finish 08", "desc": "Consistent product appearance" }
+      { "title": "标志性饰面 01", "desc": "高光 / 清晰外观" },
+      { "title": "标志性饰面 02", "desc": "柔和缎面外观" },
+      { "title": "标志性饰面 03", "desc": "优质质感手感" },
+      { "title": "标志性饰面 04", "desc": "高冲击力表面" },
+      { "title": "标志性饰面 05", "desc": "色彩深度效果" },
+      { "title": "标志性饰面 06", "desc": "反射性优质外观" },
+      { "title": "标志性饰面 07", "desc": "耐用的饰面风格" },
+      { "title": "标志性饰面 08", "desc": "一致的产品外观" }
     ]
   },
   "industry": {
-    "tag": "APPLICATIONS",
-    "title": "Industry We Serve",
-    "description": "Our UV plastic coating support products across multiple industries.",
+    "tag": "应用领域",
+    "title": "我们服务的行业",
+    "description": "我们的紫外线塑料涂装为多个行业的项目提供支持。",
     "pills": [
-      "Beauty & Cosmetics",
-      "Fragrance",
-      "Fashion & Footwear",
-      "Toys & Dolls",
-      "Stationery",
-      "Electronics",
-      "FMCG"
+      "美容与化妆品",
+      "香水",
+      "时尚与鞋类",
+      "玩具与娃娃",
+      "文具",
+      "电子产品",
+      "快速消费品 (FMCG)"
     ],
-    "footer": "We help production teams achieve consistent finishing results for recurring manufacturing."
+    "footer": "我们助力生产团队在持续制造中获得一致的饰面效果。"
   },
   "quality": {
-    "tag": "QUALITY",
-    "title": "Quality & Certification",
-    "description": "Quality-driven manufacturing with structured controls and certification alignment.",
+    "tag": "质量标准",
+    "title": "质量与认证",
+    "description": "以质量为导向的制造，配备结构化控制和认证对接。",
     "iso": {
       "title": "ISO 9001:2015",
-      "text": "PT. Starpack Indahmaju is ISO 9001:2015 certified (upgraded April 2022).",
+      "text": "PT. Starpack Indahmaju 已通过 ISO 9001:2015 认证（2022 年 4 月升级）。",
       "items": [
-        "Process consistency for reliable coating outcomes",
-        "Operational control aligned with quality objectives"
+        "流程一致性，确保可靠的涂装成果",
+        "与质量目标一致的运营控制"
       ]
     },
     "standards": {
-      "title": "Quality Standards",
+      "title": "质量标准",
       "items": [
-        "Appearance-focused finishing checkpoints",
-        "Inspection to support stable product appearance across runs",
-        "Production planning for scalable manufacturing delivery"
+        "专注于外观的饰面检查点",
+        "通过检查支持各批次产品外观的稳定性",
+        "为可扩展的制造交付进行生产规划"
       ]
     }
   },
   "inquiry": {
-    "tag": "CONTACT",
-    "title": "Inquiry",
-    "description": "Tell us about your plastic product and required coating effect. We'll respond with next steps for sampling and production.",
+    "tag": "联系我们",
+    "title": "询价",
+    "description": "告诉我们您的塑料产品和所需的涂装效果。我们将回复您关于打样和生产的后续步骤。",
     "sales": {
-      "title": "Sales",
+      "title": "销售部",
       "email": "sales@starpackindahmaju.com",
       "phone": "+62 21-0000-0000",
-      "note": "Please verify your official contact details before final deployment."
+      "note": "在最终发布前，请核实您的官方联系详情。"
     },
     "form": {
-      "name": "YOUR NAME",
-      "company": "COMPANY",
-      "email": "EMAIL",
-      "phone": "PHONE",
-      "message": "MESSAGE",
-      "message_placeholder": "Plastic type, coating effect reference, target volume, and timeline...",
-      "submit": "Send Inquiry",
-      "back": "Back to Home",
-      "success": "Inquiry sent successfully! We will contact you soon.",
-      "error": "Failed to send inquiry. Please try again."
+      "name": "您的姓名",
+      "company": "公司名称",
+      "email": "电子邮件",
+      "phone": "电话号码",
+      "message": "留言信息",
+      "message_placeholder": "塑料类型、涂装效果参考、目标产量和时间表...",
+      "submit": "发送询价",
+      "back": "返回首页",
+      "success": "询价已成功发送！我们将尽快联系您。",
+      "error": "发送失败。请重试。"
     }
   },
   "errors": {
     "404": {
-      "title": "Lost in the shine?",
-      "message": "It seems the page you're looking for has taken another path. But don't worry, the perfect finish for your product is just a click away."
+      "title": "在光泽中迷路了？",
+      "message": "看来您寻找的页面走上了另一条路。别担心，为您产品打造的完美饰面只需一键即可找回。"
     },
     "general": {
-      "title": "Something went wrong",
-      "message": "We encountered an unexpected error. Please try again later."
+      "title": "出错了",
+      "message": "我们遇到了意外错误。请稍后再试。"
     },
-    "button": "Back to Home",
-    "retry": "Try Again"
+    "button": "返回首页",
+    "retry": "重试"
   }
 }
