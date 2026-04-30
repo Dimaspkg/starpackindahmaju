@@ -44,20 +44,24 @@ export default async function Image() {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            background: 'rgba(255, 255, 255, 0.03)',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
+            background: 'rgba(255, 255, 255, 0.02)',
+            border: '1px solid rgba(255, 255, 255, 0.08)',
             borderRadius: '40px',
-            padding: '60px 80px',
+            padding: '80px 100px',
             backdropFilter: 'blur(20px)',
+            width: '1000px',
           }}
         >
-          {/* Logo Placeholder - In a real scenario we'd fetch the actual image buffer */}
-          {/* But since we want to be safe with external assets in Edge, we use text or a simple SVG for now */}
-          <div style={{ display: 'flex', marginBottom: '40px' }}>
+          {/* Wide Logo Support */}
+          <div style={{ display: 'flex', marginBottom: '50px' }}>
              <img 
                src="https://starpackindahmaju.com/logo_starpack_white.png" 
                alt="Logo" 
-               style={{ width: '600px' }}
+               style={{ 
+                 width: '800px',
+                 height: 'auto',
+                 objectFit: 'contain'
+               }}
              />
           </div>
 
