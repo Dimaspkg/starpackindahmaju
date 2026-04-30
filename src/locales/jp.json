@@ -50,5 +50,112 @@
         "ISO 9001:2015認証済み（2022年4月にアップグレード）"
       ]
     }
+  },
+  "tech": {
+    "tag": "CAPABILITY",
+    "title": "Advance Technology & Machinery",
+    "description": "Our manufacturing environment is designed for precision coating, stable operation, and consistent product results.",
+    "strength": {
+      "title": "Production Strength",
+      "items": [
+        { "id": "01", "title": "Controlled coating environment", "text": "Structured production steps to support consistent surface quality across runs." },
+        { "id": "02", "title": "UV-driven finishing workflow", "text": "Designed to support stable curing and a clean, premium appearance." },
+        { "id": "03", "title": "Production scalability", "text": "Capabilities built for recurring orders and high-volume manufacturing." }
+      ]
+    },
+    "highlights": {
+      "title": "Machinery Highlights",
+      "items": [
+        { "id": "A", "title": "Coating & curing line", "text": "UV coating line for plastic finishing applications." },
+        { "id": "B", "title": "Surface conditioning support", "text": "Pre-treatment handling to help achieve reliable coating results." },
+        { "id": "C", "title": "Quality checkpoints", "text": "Inspection points to maintain appearance and finishing consistency." }
+      ]
+    }
+  },
+  "effects": {
+    "tag": "EFFECTS",
+    "title": "Premium Coating Effect",
+    "description": "Discover signature finishes designed to elevate plastic product appearance.",
+    "items": [
+      { "title": "Signature Finish 01", "desc": "Gloss / clarity look" },
+      { "title": "Signature Finish 02", "desc": "Soft satin appearance" },
+      { "title": "Signature Finish 03", "desc": "Premium texture feel" },
+      { "title": "Signature Finish 04", "desc": "High-impact surface" },
+      { "title": "Signature Finish 05", "desc": "Color depth effect" },
+      { "title": "Signature Finish 06", "desc": "Reflective premium look" },
+      { "title": "Signature Finish 07", "desc": "Durable finishing style" },
+      { "title": "Signature Finish 08", "desc": "Consistent product appearance" }
+    ]
+  },
+  "industry": {
+    "tag": "APPLICATIONS",
+    "title": "Industry We Serve",
+    "description": "Our UV plastic coating support products across multiple industries.",
+    "pills": [
+      "Beauty & Cosmetics",
+      "Fragrance",
+      "Fashion & Footwear",
+      "Toys & Dolls",
+      "Stationery",
+      "Electronics",
+      "FMCG"
+    ],
+    "footer": "We help production teams achieve consistent finishing results for recurring manufacturing."
+  },
+  "quality": {
+    "tag": "QUALITY",
+    "title": "Quality & Certification",
+    "description": "Quality-driven manufacturing with structured controls and certification alignment.",
+    "iso": {
+      "title": "ISO 9001:2015",
+      "text": "PT. Starpack Indahmaju is ISO 9001:2015 certified (upgraded April 2022).",
+      "items": [
+        "Process consistency for reliable coating outcomes",
+        "Operational control aligned with quality objectives"
+      ]
+    },
+    "standards": {
+      "title": "Quality Standards",
+      "items": [
+        "Appearance-focused finishing checkpoints",
+        "Inspection to support stable product appearance across runs",
+        "Production planning for scalable manufacturing delivery"
+      ]
+    }
+  },
+  "inquiry": {
+    "tag": "CONTACT",
+    "title": "Inquiry",
+    "description": "Tell us about your plastic product and required coating effect. We'll respond with next steps for sampling and production.",
+    "sales": {
+      "title": "Sales",
+      "email": "sales@starpackindahmaju.com",
+      "phone": "+62 21-0000-0000",
+      "note": "Please verify your official contact details before final deployment."
+    },
+    "form": {
+      "name": "YOUR NAME",
+      "company": "COMPANY",
+      "email": "EMAIL",
+      "phone": "PHONE",
+      "message": "MESSAGE",
+      "message_placeholder": "Plastic type, coating effect reference, target volume, and timeline...",
+      "submit": "Send Inquiry",
+      "back": "Back to Home",
+      "success": "Inquiry sent successfully! We will contact you soon.",
+      "error": "Failed to send inquiry. Please try again."
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Lost in the shine?",
+      "message": "It seems the page you're looking for has taken another path. But don't worry, the perfect finish for your product is just a click away."
+    },
+    "general": {
+      "title": "Something went wrong",
+      "message": "We encountered an unexpected error. Please try again later."
+    },
+    "button": "Back to Home",
+    "retry": "Try Again"
   }
 }
