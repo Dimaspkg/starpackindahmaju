@@ -7,7 +7,7 @@ export default function IndustrySection() {
   const { t } = useLanguage();
 
   return (
-    <section className={styles.industryContainer}>
+    <section className={styles.industryContainer} id="industry">
       <div className={styles.content}>
         <div className={styles.tag}>{t.industry.tag}</div>
         <h2 className={styles.title}>{t.industry.title}</h2>

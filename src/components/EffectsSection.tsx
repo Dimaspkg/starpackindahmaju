@@ -8,7 +8,7 @@ export default function EffectsSection() {
   const { t } = useLanguage();
 
   return (
-    <section className={styles.effectsContainer}>
+    <section className={styles.effectsContainer} id="premium">
       <div className={styles.content}>
         <div className={styles.tag}>{t.effects.tag}</div>
         <h2 className={styles.title}>{t.effects.title}</h2>

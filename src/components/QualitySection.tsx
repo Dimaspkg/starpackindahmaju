@@ -7,7 +7,7 @@ export default function QualitySection() {
   const { t } = useLanguage();
 
   return (
-    <section className={styles.qualityContainer}>
+    <section className={styles.qualityContainer} id="quality">
       <div className={styles.content}>
         <div className={styles.tag}>{t.quality.tag}</div>
         <h2 className={styles.title}>{t.quality.title}</h2>

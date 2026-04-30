@@ -59,12 +59,12 @@ export default function Header() {
       
       <nav className={styles.nav}>
         <Link href="/" className={styles.navLink}>{t.nav.home}</Link>
-        <Link href="/about" className={styles.navLink}>{t.nav.about}</Link>
-        <Link href="/technology" className={styles.navLink}>{t.nav.technology}</Link>
-        <Link href="/premium" className={styles.navLink}>{t.nav.premium}</Link>
-        <Link href="/industry" className={styles.navLink}>{t.nav.industry}</Link>
-        <Link href="/quality" className={styles.navLink}>{t.nav.quality}</Link>
-        <Link href="/inquiry" className={styles.navLink}>{t.nav.inquiry}</Link>
+        <Link href="/#about" className={styles.navLink}>{t.nav.about}</Link>
+        <Link href="/#technology" className={styles.navLink}>{t.nav.technology}</Link>
+        <Link href="/#premium" className={styles.navLink}>{t.nav.premium}</Link>
+        <Link href="/#industry" className={styles.navLink}>{t.nav.industry}</Link>
+        <Link href="/#quality" className={styles.navLink}>{t.nav.quality}</Link>
+        <Link href="/#inquiry" className={styles.navLink}>{t.nav.inquiry}</Link>
       </nav>
 
       <div className={styles.langSwitch}>
@@ -134,12 +134,12 @@ export default function Header() {
         <div className={styles.mobileNavOverlay}>
           <nav className={styles.mobileNav}>
             <Link href="/" className={styles.mobileNavLink} onClick={toggleMenu}>{t.nav.home}</Link>
-            <Link href="/about" className={styles.mobileNavLink} onClick={toggleMenu}>{t.nav.about}</Link>
-            <Link href="/technology" className={styles.mobileNavLink} onClick={toggleMenu}>{t.nav.technology}</Link>
-            <Link href="/premium" className={styles.mobileNavLink} onClick={toggleMenu}>{t.nav.premium}</Link>
-            <Link href="/industry" className={styles.mobileNavLink} onClick={toggleMenu}>{t.nav.industry}</Link>
-            <Link href="/quality" className={styles.mobileNavLink} onClick={toggleMenu}>{t.nav.quality}</Link>
-            <Link href="/inquiry" className={styles.mobileNavLink} onClick={toggleMenu}>{t.nav.inquiry}</Link>
+            <Link href="/#about" className={styles.mobileNavLink} onClick={toggleMenu}>{t.nav.about}</Link>
+            <Link href="/#technology" className={styles.mobileNavLink} onClick={toggleMenu}>{t.nav.technology}</Link>
+            <Link href="/#premium" className={styles.mobileNavLink} onClick={toggleMenu}>{t.nav.premium}</Link>
+            <Link href="/#industry" className={styles.mobileNavLink} onClick={toggleMenu}>{t.nav.industry}</Link>
+            <Link href="/#quality" className={styles.mobileNavLink} onClick={toggleMenu}>{t.nav.quality}</Link>
+            <Link href="/#inquiry" className={styles.mobileNavLink} onClick={toggleMenu}>{t.nav.inquiry}</Link>
           </nav>
         </div>
       )}

@@ -7,7 +7,7 @@ export default function TechnologySection() {
   const { t } = useLanguage();
 
   return (
-    <section className={styles.techContainer}>
+    <section className={styles.techContainer} id="technology">
       <div className={styles.content}>
         <div className={styles.tag}>{t.tech.tag}</div>
         <h2 className={styles.title}>{t.tech.title}</h2>

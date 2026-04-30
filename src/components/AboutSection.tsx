@@ -7,8 +7,9 @@ export default function AboutSection() {
   const { t } = useLanguage();
 
   return (
-    <section className={styles.aboutContainer}>
+    <section className={styles.aboutContainer} id="about">
       <div className={styles.content}>
+
         <div className={styles.tag}>{t.about.tag}</div>
         <h2 className={styles.title}>{t.about.title}</h2>
         <p className={styles.description}>
