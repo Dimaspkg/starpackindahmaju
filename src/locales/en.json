@@ -1,0 +1,162 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Starpack",
+    "technology": "Advance Technology & Machinery",
+    "premium": "Premium Coating Effect",
+    "industry": "Industry We Serve",
+    "quality": "Quality & Certification",
+    "inquiry": "Inquiry"
+  },
+  "hero": {
+    "tag": "UV PLASTIC COATING",
+    "title": "Premium finishing for plastic products—built for consistency.",
+    "description": "PT. Starpack Indahmaju delivers UV coating plastik with advanced production control, stable output, and a wide range of premium coating effects. Designed to help your products stand out.",
+    "badges": {
+      "iso": "ISO 9001:2015",
+      "units": "10M+ units annually",
+      "clients": "500+ clients"
+    },
+    "buttons": {
+      "quote": "Request a Quote",
+      "explore": "Explore Coating Effects"
+    },
+    "cards": {
+      "uv": "UV Coating",
+      "uv_desc": "Plastic coating focus",
+      "stable": "Stable Process",
+      "stable_desc": "Quality-driven production"
+    }
+  },
+  "about": {
+    "tag": "COMPANY",
+    "title": "About Starpack",
+    "description": "Established in January 1996 and headquartered in Jakarta, PT. Starpack Indahmaju supports manufacturing teams with reliable UV coating plastik production.",
+    "focus": {
+      "title": "What we focus on",
+      "text": "We specialize in plastic coating to help products achieve premium surface finishing and consistent appearance.",
+      "items": [
+        "Wide coating effect options for different product requirements",
+        "Process stability supported by structured production control",
+        "Built for production scale and recurring orders"
+      ]
+    },
+    "glance": {
+      "title": "At a glance",
+      "items": [
+        "30+ years experience since 1996",
+        "500+ clients supported",
+        "10M+ units per year",
+        "ISO 9001:2015 certified (upgraded April 2022)"
+      ]
+    }
+  },
+  "tech": {
+    "tag": "CAPABILITY",
+    "title": "Advance Technology & Machinery",
+    "description": "Our manufacturing environment is designed for precision coating, stable operation, and consistent product results.",
+    "strength": {
+      "title": "Production Strength",
+      "items": [
+        { "id": "01", "title": "Controlled coating environment", "text": "Structured production steps to support consistent surface quality across runs." },
+        { "id": "02", "title": "UV-driven finishing workflow", "text": "Designed to support stable curing and a clean, premium appearance." },
+        { "id": "03", "title": "Production scalability", "text": "Capabilities built for recurring orders and high-volume manufacturing." }
+      ]
+    },
+    "highlights": {
+      "title": "Machinery Highlights",
+      "items": [
+        { "id": "A", "title": "Coating & curing line", "text": "UV coating line for plastic finishing applications." },
+        { "id": "B", "title": "Surface conditioning support", "text": "Pre-treatment handling to help achieve reliable coating results." },
+        { "id": "C", "title": "Quality checkpoints", "text": "Inspection points to maintain appearance and finishing consistency." }
+      ]
+    }
+  },
+  "effects": {
+    "tag": "EFFECTS",
+    "title": "Premium Coating Effect",
+    "description": "Discover signature finishes designed to elevate plastic product appearance.",
+    "items": [
+      { "title": "Signature Finish 01", "desc": "Gloss / clarity look" },
+      { "title": "Signature Finish 02", "desc": "Soft satin appearance" },
+      { "title": "Signature Finish 03", "desc": "Premium texture feel" },
+      { "title": "Signature Finish 04", "desc": "High-impact surface" },
+      { "title": "Signature Finish 05", "desc": "Color depth effect" },
+      { "title": "Signature Finish 06", "desc": "Reflective premium look" },
+      { "title": "Signature Finish 07", "desc": "Durable finishing style" },
+      { "title": "Signature Finish 08", "desc": "Consistent product appearance" }
+    ],
+    "note": "Note: Replace the placeholders with your actual product images for the final gallery."
+  },
+  "industry": {
+    "tag": "APPLICATIONS",
+    "title": "Industry We Serve",
+    "description": "Our UV plastic coating support products across multiple industries.",
+    "pills": [
+      "Beauty & Cosmetics",
+      "Fragrance",
+      "Fashion & Footwear",
+      "Toys & Dolls",
+      "Stationery",
+      "Electronics",
+      "FMCG"
+    ],
+    "footer": "We help production teams achieve consistent finishing results for recurring manufacturing."
+  },
+  "quality": {
+    "tag": "QUALITY",
+    "title": "Quality & Certification",
+    "description": "Quality-driven manufacturing with structured controls and certification alignment.",
+    "iso": {
+      "title": "ISO 9001:2015",
+      "text": "PT. Starpack Indahmaju is ISO 9001:2015 certified (upgraded April 2022).",
+      "items": [
+        "Process consistency for reliable coating outcomes",
+        "Operational control aligned with quality objectives"
+      ]
+    },
+    "standards": {
+      "title": "Quality Standards",
+      "items": [
+        "Appearance-focused finishing checkpoints",
+        "Inspection to support stable product appearance across runs",
+        "Production planning for scalable manufacturing delivery"
+      ]
+    }
+  },
+  "inquiry": {
+    "tag": "CONTACT",
+    "title": "Inquiry",
+    "description": "Tell us about your plastic product and required coating effect. We'll respond with next steps for sampling and production.",
+    "sales": {
+      "title": "Sales",
+      "email": "sales@starpackindahmaju.com",
+      "phone": "+62 21-0000-0000",
+      "note": "Please verify your official contact details before final deployment."
+    },
+    "form": {
+      "name": "YOUR NAME",
+      "company": "COMPANY",
+      "email": "EMAIL",
+      "phone": "PHONE",
+      "message": "MESSAGE",
+      "message_placeholder": "Plastic type, coating effect reference, target volume, and timeline...",
+      "submit": "Send Inquiry",
+      "back": "Back to Home",
+      "success": "Inquiry sent successfully! We will contact you soon.",
+      "error": "Failed to send inquiry. Please try again."
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "404 - Page Not Found",
+      "message": "The page you are looking for doesn't exist or has been moved."
+    },
+    "general": {
+      "title": "Something went wrong",
+      "message": "We encountered an unexpected error. Please try again later."
+    },
+    "button": "Back to Home",
+    "retry": "Try Again"
+  }
+}

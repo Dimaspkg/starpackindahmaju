@@ -1,0 +1,139 @@
+.techContainer {
+  width: 95%;
+  max-width: 1300px;
+  margin: 0 auto 6rem auto;
+  padding: 2rem 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag {
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--foreground);
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--muted-text);
+  max-width: 900px;
+  margin-bottom: 3rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 2.5rem;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--foreground);
+}
+
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 1.5rem;
+  top: 3.5rem;
+  bottom: -1rem;
+  width: 1px;
+  border-left: 1px dashed var(--card-border);
+}
+
+.itemBadge {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--foreground);
+  background: var(--btn-secondary-bg);
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.itemContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.itemTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.itemText {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--muted-text);
+}
+
+@media (max-width: 968px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .itemBadge {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}

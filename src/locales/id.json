@@ -1,0 +1,162 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang Starpack",
+    "technology": "Teknologi & Mesin Canggih",
+    "premium": "Efek Coating Premium",
+    "industry": "Industri Kami",
+    "quality": "Kualitas & Sertifikasi",
+    "inquiry": "Pertanyaan"
+  },
+  "hero": {
+    "tag": "UV PLASTIC COATING",
+    "title": "Finishing premium untuk produk plastik—dibangun demi konsistensi.",
+    "description": "PT. Starpack Indahmaju menghadirkan UV coating plastik dengan kontrol produksi tingkat lanjut, hasil yang stabil, dan berbagai efek pelapisan premium. Dirancang untuk membuat produk Anda menonjol.",
+    "badges": {
+      "iso": "ISO 9001:2015",
+      "units": "10Jt+ unit per tahun",
+      "clients": "500+ klien"
+    },
+    "buttons": {
+      "quote": "Minta Penawaran",
+      "explore": "Jelajahi Efek Coating"
+    },
+    "cards": {
+      "uv": "UV Coating",
+      "uv_desc": "Fokus pelapisan plastik",
+      "stable": "Proses Stabil",
+      "stable_desc": "Produksi berbasis kualitas"
+    }
+  },
+  "about": {
+    "tag": "PERUSAHAAN",
+    "title": "Tentang Starpack",
+    "description": "Didirikan pada Januari 1996 dan berkantor pusat di Jakarta, PT. Starpack Indahmaju mendukung tim manufaktur dengan produksi UV coating plastik yang andal.",
+    "focus": {
+      "title": "Apa yang kami fokuskan",
+      "text": "Kami berspesialisasi dalam pelapisan plastik untuk membantu produk mencapai penyelesaian permukaan premium dan penampilan yang konsisten.",
+      "items": [
+        "Opsi efek pelapisan yang luas untuk kebutuhan produk yang berbeda",
+        "Stabilitas proses yang didukung oleh kontrol produksi terstruktur",
+        "Dibangun untuk skala produksi dan pesanan berulang"
+      ]
+    },
+    "glance": {
+      "title": "Sekilas pandang",
+      "items": [
+        "Pengalaman 30+ tahun sejak 1996",
+        "500+ klien didukung",
+        "10Jt+ unit per tahun",
+        "Tersertifikasi ISO 9001:2015 (diperbarui April 2022)"
+      ]
+    }
+  },
+  "tech": {
+    "tag": "KEMAMPUAN",
+    "title": "Teknologi & Mesin Canggih",
+    "description": "Lingkungan manufaktur kami dirancang untuk pelapisan presisi, operasi yang stabil, dan hasil produk yang konsisten.",
+    "strength": {
+      "title": "Kekuatan Produksi",
+      "items": [
+        { "id": "01", "title": "Lingkungan pelapisan terkendali", "text": "Langkah-langkah produksi terstruktur untuk mendukung kualitas permukaan yang konsisten di setiap proses." },
+        { "id": "02", "title": "Alur kerja finishing berbasis UV", "text": "Dirancang untuk mendukung pengeringan yang stabil dan penampilan premium yang bersih." },
+        { "id": "03", "title": "Skalabilitas produksi", "text": "Kemampuan yang dibangun untuk pesanan berulang dan manufaktur volume tinggi." }
+      ]
+    },
+    "highlights": {
+      "title": "Sorotan Mesin",
+      "items": [
+        { "id": "A", "title": "Lini pelapisan & pengeringan", "text": "Lini pelapisan UV untuk aplikasi finishing plastik." },
+        { "id": "B", "title": "Dukungan pengkondisian permukaan", "text": "Penanganan pra-perawatan untuk membantu mencapai hasil pelapisan yang andal." },
+        { "id": "C", "title": "Titik pemeriksaan kualitas", "text": "Titik inspeksi untuk menjaga konsistensi penampilan dan finishing." }
+      ]
+    }
+  },
+  "effects": {
+    "tag": "EFEK",
+    "title": "Efek Coating Premium",
+    "description": "Temukan finishing khas yang dirancang untuk meningkatkan penampilan produk plastik.",
+    "items": [
+      { "title": "Signature Finish 01", "desc": "Tampilan gloss / kejernihan" },
+      { "title": "Signature Finish 02", "desc": "Penampilan satin lembut" },
+      { "title": "Signature Finish 03", "desc": "Nuansa tekstur premium" },
+      { "title": "Signature Finish 04", "desc": "Permukaan dampak tinggi" },
+      { "title": "Signature Finish 05", "desc": "Efek kedalaman warna" },
+      { "title": "Signature Finish 06", "desc": "Tampilan premium reflektif" },
+      { "title": "Signature Finish 07", "desc": "Gaya finishing tahan lama" },
+      { "title": "Signature Finish 08", "desc": "Penampilan produk yang konsisten" }
+    ],
+    "note": "Catatan: Ganti placeholder dengan gambar produk asli Anda untuk galeri akhir."
+  },
+  "industry": {
+    "tag": "APLIKASI",
+    "title": "Industri yang Kami Layani",
+    "description": "Dukungan pelapisan plastik UV kami untuk berbagai industri.",
+    "pills": [
+      "Kecantikan & Kosmetik",
+      "Wewangian",
+      "Fashion & Alas Kaki",
+      "Mainan & Boneka",
+      "Alat Tulis",
+      "Elektronik",
+      "FMCG"
+    ],
+    "footer": "Kami membantu tim produksi mencapai hasil finishing yang konsisten untuk manufaktur yang berulang."
+  },
+  "quality": {
+    "tag": "KUALITAS",
+    "title": "Kualitas & Sertifikasi",
+    "description": "Manufaktur berbasis kualitas dengan kontrol terstruktur dan keselarasan sertifikasi.",
+    "iso": {
+      "title": "ISO 9001:2015",
+      "text": "PT. Starpack Indahmaju telah tersertifikasi ISO 9001:2015 (diperbarui April 2022).",
+      "items": [
+        "Konsistensi proses untuk hasil pelapisan yang andal",
+        "Kontrol operasional yang selaras dengan tujuan kualitas"
+      ]
+    },
+    "standards": {
+      "title": "Standar Kualitas",
+      "items": [
+        "Titik pemeriksaan finishing yang berfokus pada penampilan",
+        "Inspeksi untuk mendukung penampilan produk yang stabil di setiap proses",
+        "Perencanaan produksi untuk pengiriman manufaktur yang terukur"
+      ]
+    }
+  },
+  "inquiry": {
+    "tag": "KONTAK",
+    "title": "Pertanyaan",
+    "description": "Beritahu kami tentang produk plastik Anda dan efek pelapisan yang diperlukan. Kami akan menanggapi dengan langkah selanjutnya untuk pengambilan sampel dan produksi.",
+    "sales": {
+      "title": "Penjualan",
+      "email": "sales@starpackindahmaju.com",
+      "phone": "+62 21-0000-0000",
+      "note": "Harap verifikasi detail kontak resmi Anda sebelum peluncuran akhir."
+    },
+    "form": {
+      "name": "NAMA ANDA",
+      "company": "PERUSAHAAN",
+      "email": "EMAIL",
+      "phone": "TELEPON",
+      "message": "PESAN",
+      "message_placeholder": "Jenis plastik, referensi efek pelapisan, target volume, dan lini masa...",
+      "submit": "Kirim Pertanyaan",
+      "back": "Kembali ke Beranda",
+      "success": "Pertanyaan berhasil dikirim! Kami akan segera menghubungi Anda.",
+      "error": "Gagal mengirim pertanyaan. Silakan coba lagi."
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "404 - Halaman Tidak Ditemukan",
+      "message": "Halaman yang Anda cari tidak ada atau telah dipindahkan."
+    },
+    "general": {
+      "title": "Terjadi Kesalahan",
+      "message": "Kami mengalami kesalahan yang tidak terduga. Silakan coba lagi nanti."
+    },
+    "button": "Kembali ke Beranda",
+    "retry": "Coba Lagi"
+  }
+}
