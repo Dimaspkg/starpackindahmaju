@@ -25,8 +25,20 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
   useEffect(() => {
     const savedLang = localStorage.getItem('language') as Language;
+    
     if (savedLang && translations[savedLang]) {
       setLanguageState(savedLang);
+    } else {
+      // Auto-detect browser language
+      const browserLang = navigator.language.split('-')[0] as any;
+      const supportedLangs: Language[] = ['en', 'id', 'zh', 'jp'];
+      
+      if (supportedLangs.includes(browserLang)) {
+        setLanguageState(browserLang);
+        localStorage.setItem('language', browserLang);
+      } else {
+        setLanguageState('id'); // Fallback to Indonesian
+      }
     }
   }, []);
 
