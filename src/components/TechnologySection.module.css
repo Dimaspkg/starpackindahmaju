@@ -3,124 +3,118 @@
   border-top: 1px solid var(--card-border);
 }
 
-.tag {
-  color: var(--primary);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+.header {
+  margin-bottom: 4rem;
 }
 
 .title {
   font-size: 3rem;
   font-weight: 800;
-  margin-bottom: 2rem;
-  color: var(--foreground);
+  color: var(--primary);
+  margin-bottom: 1.5rem;
 }
 
 .description {
-  font-size: 1.25rem;
-  color: var(--muted-text);
-  max-width: 800px;
-  margin-bottom: 4rem;
+  font-size: 1.1rem;
+  color: #dddddd;
+  max-width: 900px;
   line-height: 1.8;
 }
 
-.grid {
+.categoriesList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.categoryCard {
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 4px solid var(--primary);
+  padding: 2.5rem;
+  border-radius: 4px;
+}
+
+.categoryTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.listItem {
+  display: flex;
+  gap: 0.75rem;
+  color: #bbbbbb;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.dot {
+  color: #ffffff;
+}
+
+.galleryGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
-.card {
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  padding: 3rem 2rem;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  position: relative;
+.galleryCard {
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
   overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
-.card:hover {
+.galleryCard:hover {
   transform: translateY(-5px);
-  border-color: var(--primary);
 }
 
-.cardNumber {
-  font-size: 3rem;
-  font-weight: 900;
-  color: var(--primary);
-  opacity: 0.2;
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-}
-
-.cardTitle {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--foreground);
+.imageWrapper {
+  width: 100%;
+  aspect-ratio: 1.6 / 1;
   position: relative;
-  z-index: 1;
+  background-color: #111;
 }
 
-.cardText {
-  color: var(--muted-text);
-  line-height: 1.6;
-  font-size: 0.95rem;
-  position: relative;
-  z-index: 1;
+.galleryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.highlights {
-  margin-top: 6rem;
+.galleryContent {
+  padding: 1.5rem;
+  text-align: center;
 }
 
-.highlightTitle {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
-  color: var(--primary);
-}
-
-.highlightGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-}
-
-.highlightItem {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.highlightIcon {
-  width: 48px;
-  height: 48px;
-  background-color: rgba(255, 59, 59, 0.1);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary);
-  font-weight: 800;
-}
-
-.itemTitle {
+.galleryTitle {
   font-size: 1.2rem;
   font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
 }
 
-.itemText {
-  color: var(--muted-text);
+.galleryDesc {
   font-size: 0.9rem;
+  color: #888888;
+  line-height: 1.5;
 }
 
 @media (max-width: 1024px) {
-  .grid, .highlightGrid { grid-template-columns: 1fr; }
-  .title { font-size: 2.25rem; }
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+  .title {
+    font-size: 2.25rem;
+  }
 }

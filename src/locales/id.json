@@ -50,25 +50,44 @@
     }
   },
   "tech": {
-    "tag": "KEMAMPUAN",
     "title": "Teknologi & Mesin Canggih",
-    "description": "Lingkungan manufaktur kami dirancang untuk pelapisan presisi, operasi yang stabil, dan hasil produk yang konsisten.",
-    "strength": {
-      "title": "Kekuatan Produksi",
-      "items": [
-        { "id": "01", "title": "Lingkungan pelapisan terkendali", "text": "Langkah-langkah produksi terstruktur untuk mendukung kualitas permukaan yang konsisten di setiap proses." },
-        { "id": "02", "title": "Alur kerja finishing berbasis UV", "text": "Dirancang untuk mendukung pengeringan yang stabil dan penampilan premium yang bersih." },
-        { "id": "03", "title": "Skalabilitas produksi", "text": "Kemampuan yang dibangun untuk pesanan berulang dan manufaktur volume tinggi." }
-      ]
-    },
-    "highlights": {
-      "title": "Sorotan Mesin",
-      "items": [
-        { "id": "A", "title": "Lini pelapisan & pengeringan", "text": "Lini pelapisan UV untuk aplikasi finishing plastik." },
-        { "id": "B", "title": "Dukungan pengkondisian permukaan", "text": "Penanganan pra-perawatan untuk membantu mencapai hasil pelapisan yang andal." },
-        { "id": "C", "title": "Titik pemeriksaan kualitas", "text": "Titik inspeksi untuk menjaga konsistensi penampilan dan finishing." }
-      ]
-    }
+    "description": "Fasilitas mutakhir kami menghadirkan teknologi UV coating dan vacuum metallizing terbaru, memastikan presisi, konsistensi, dan skalabilitas dalam setiap proses produksi.",
+    "categories": [
+      {
+        "title": "Teknologi UV Coating",
+        "items": [
+          "Sistem pengeringan lampu UV canggih untuk pengerasan instan",
+          "Peralatan pelapisan semprot dan rol yang presisi",
+          "Pemantauan dan kontrol ketebalan secara real-time",
+          "Proses pelapisan bebas pelarut yang ramah lingkungan",
+          "Waktu siklus produksi yang cepat"
+        ]
+      },
+      {
+        "title": "Teknologi Vacuum Metallizing",
+        "items": [
+          "Ruang vakum kelas industri untuk deposisi logam",
+          "Kemampuan pelapisan aluminium dan krom yang presisi",
+          "Sistem pelapisan multi-lapis untuk efek yang ditingkatkan",
+          "Kontrol dan pemantauan proses tingkat lanjut",
+          "Adhesi dan daya tahan yang unggul"
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "title": "Sistem Pengeringan UV",
+        "desc": "Peralatan presisi untuk pengerasan instan dan finishing premium"
+      },
+      {
+        "title": "Vacuum Metallizing",
+        "desc": "Ruang canggih untuk deposisi logam profesional"
+      },
+      {
+        "title": "Pemantauan Kualitas",
+        "desc": "Sistem kontrol presisi secara real-time"
+      }
+    ]
   },
   "effects": {
     "tag": "EFEK",

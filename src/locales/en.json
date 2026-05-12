@@ -50,25 +50,44 @@
     }
   },
   "tech": {
-    "tag": "CAPABILITY",
     "title": "Advanced Technology & Machinery",
-    "description": "Our manufacturing environment is designed for precision coating, stable operation, and consistent product results.",
-    "strength": {
-      "title": "Production Strength",
-      "items": [
-        { "id": "01", "title": "Controlled coating environment", "text": "Structured production steps to support consistent surface quality across runs." },
-        { "id": "02", "title": "UV-driven finishing workflow", "text": "Designed to support stable curing and a clean, premium appearance." },
-        { "id": "03", "title": "Production scalability", "text": "Capabilities built for recurring orders and high-volume manufacturing." }
-      ]
-    },
-    "highlights": {
-      "title": "Machinery Highlights",
-      "items": [
-        { "id": "A", "title": "Coating & curing line", "text": "UV coating line for plastic finishing applications." },
-        { "id": "B", "title": "Surface conditioning support", "text": "Pre-treatment handling to help achieve reliable coating results." },
-        { "id": "C", "title": "Quality checkpoints", "text": "Inspection points to maintain appearance and finishing consistency." }
-      ]
-    }
+    "description": "Our state-of-the-art facilities feature the latest in UV coating and vacuum metallizing technology, ensuring precision, consistency, and scalability in every production run.",
+    "categories": [
+      {
+        "title": "UV Coating Technology",
+        "items": [
+          "Advanced UV light curing systems for instant hardening",
+          "Precision spray and roller coating equipment",
+          "Real-time thickness monitoring and control",
+          "Eco-friendly, solvent-free coating process",
+          "Rapid production cycle times"
+        ]
+      },
+      {
+        "title": "Vacuum Metallizing Technology",
+        "items": [
+          "Industrial-grade vacuum chambers for metal deposition",
+          "Precise aluminum and chrome coating capabilities",
+          "Multi-layer coating systems for enhanced effects",
+          "Advanced process control and monitoring",
+          "Superior adhesion and durability"
+        ]
+      }
+    ],
+    "gallery": [
+      {
+        "title": "UV Curing Systems",
+        "desc": "Precision equipment for instant hardening and premium finishes"
+      },
+      {
+        "title": "Vacuum Metallizing",
+        "desc": "Advanced chambers for professional metal deposition"
+      },
+      {
+        "title": "Quality Monitoring",
+        "desc": "Real-time precision control systems"
+      }
+    ]
   },
   "effects": {
     "tag": "EFFECTS",
