@@ -2,11 +2,11 @@
   "nav": {
     "home": "首页",
     "about": "关于 Starpack",
-    "technology": "先进技术与机械",
-    "premium": "优质涂层效果",
-    "industry": "我们服务的行业",
+    "technology": "技术与机械",
+    "premium": "涂层效果",
+    "industry": "服务行业",
     "quality": "质量与认证",
-    "inquiry": "询价"
+    "inquiry": "联系我们"
   },
   "hero": {
     "tag": "UV 塑料涂装与真空镀膜",
