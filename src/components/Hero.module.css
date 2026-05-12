@@ -4,15 +4,17 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .heroBackground {
   position: absolute;
-  top: 0;
+  top: -10%;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 120%;
   z-index: 0;
+  will-change: transform;
 }
 
 .bgImage {

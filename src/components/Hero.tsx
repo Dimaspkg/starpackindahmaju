@@ -3,13 +3,36 @@
 import Image from 'next/image';
 import styles from './Hero.module.css';
 import { useLanguage } from '@/context/LanguageContext';
+import { useEffect, useRef } from 'react';
 
 export default function Hero() {
   const { t } = useLanguage();
+  const bgRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let requestRef: number;
+    
+    const handleScroll = () => {
+      if (bgRef.current) {
+        const scrollY = window.scrollY;
+        bgRef.current.style.transform = `translateY(${scrollY * 0.3}px)`;
+      }
+      requestRef = requestAnimationFrame(handleScroll);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      cancelAnimationFrame(requestRef);
+    };
+  }, []);
 
   return (
     <section id="home" className={styles.heroSection}>
-      <div className={styles.heroBackground}>
+      <div 
+        ref={bgRef}
+        className={styles.heroBackground}
+      >
         <Image 
           src="/images/uv_coating.png" 
           alt="Product finishing background" 
