@@ -97,7 +97,7 @@
 .formCard {
   background-color: var(--card-bg);
   padding: 3.5rem;
-  border-radius: 12px;
+  border-radius: 24px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--card-border);
   position: relative;
@@ -135,23 +135,24 @@
   flex: 1;
   background-color: var(--card-bg);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 1rem;
-  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
   color: var(--foreground);
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .input:focus, .select:focus, .textarea:focus {
   outline: none;
   border-color: var(--primary);
+  background-color: rgba(255, 255, 255, 0.02);
 }
 
 .select {
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 1rem center;
+  background-position: right 1.25rem center;
   background-size: 1.2rem;
 }
 
@@ -159,14 +160,15 @@
   background-color: var(--primary);
   color: #ffffff;
   border: none;
-  padding: 1rem 2.5rem;
-  border-radius: 4px;
+  padding: 1rem 3rem;
+  border-radius: 50px;
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
   width: fit-content;
   margin-top: 1rem;
+  margin-left: 136px; /* Offset to align with inputs (120px label + 16px gap roughly) */
 }
 
 .submitBtn:hover {
@@ -211,6 +213,10 @@
     gap: 0.5rem;
   }
   .formLabel {
+    width: 100%;
+  }
+  .submitBtn {
+    margin-left: 0;
     width: 100%;
   }
 }
