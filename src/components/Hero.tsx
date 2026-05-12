@@ -27,18 +27,17 @@ export default function Hero() {
             className={styles.mainImage}
             priority
           />
-          <div className={styles.imageOverlay} />
         </div>
       </div>
 
       <div className={styles.statsGrid}>
         <div className={styles.statCard}>
-          <div className={styles.statValue}>{t.hero.badges.units.split(' ')[0]}</div>
-          <div className={styles.statLabel}>{t.hero.badges.units}</div>
+          <div className={styles.statValue}>10M+</div>
+          <div className={styles.statLabel}>{t.hero.badges.units.replace('10M+', '').trim()}</div>
         </div>
         <div className={styles.statCard}>
-          <div className={styles.statValue}>{t.hero.badges.clients.split(' ')[0]}</div>
-          <div className={styles.statLabel}>{t.hero.badges.clients}</div>
+          <div className={styles.statValue}>500+</div>
+          <div className={styles.statLabel}>{t.hero.badges.clients.replace('500+', '').trim()}</div>
         </div>
         <div className={styles.statCard}>
           <div className={styles.statValue}>Since 1996</div>
