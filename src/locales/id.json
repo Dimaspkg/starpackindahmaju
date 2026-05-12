@@ -90,18 +90,15 @@
     ]
   },
   "effects": {
-    "tag": "EFEK",
     "title": "Efek Coating Premium",
-    "description": "Temukan finishing khas yang dirancang untuk meningkatkan penampilan produk plastik.",
+    "description": "Kami menawarkan rangkaian lengkap finishing pelapisan yang disesuaikan dengan aplikasi spesifik dan kebutuhan pasar Anda. Setiap efek dirancang untuk daya tahan dan keunggulan visual.",
     "items": [
-      { "title": "Signature Finish 01", "desc": "Tampilan gloss / kejernihan" },
-      { "title": "Signature Finish 02", "desc": "Penampilan satin lembut" },
-      { "title": "Signature Finish 03", "desc": "Nuansa tekstur premium" },
-      { "title": "Signature Finish 04", "desc": "Permukaan dampak tinggi" },
-      { "title": "Signature Finish 05", "desc": "Efek kedalaman warna" },
-      { "title": "Signature Finish 06", "desc": "Tampilan premium reflektif" },
-      { "title": "Signature Finish 07", "desc": "Gaya finishing tahan lama" },
-      { "title": "Signature Finish 08", "desc": "Penampilan produk yang konsisten" }
+      { "title": "High Gloss", "desc": "Finishing seperti cermin untuk produk mewah premium" },
+      { "title": "Matte Finish", "desc": "Tekstur permukaan non-reflektif yang canggih" },
+      { "title": "Metallic Silver", "desc": "Pelapisan perak premium dengan kedalaman dan kilauan" },
+      { "title": "Gold Chrome", "desc": "Finishing logam emas mewah untuk produk kelas atas" },
+      { "title": "Holographic", "desc": "Efek pelangi warna-warni dengan finishing reaktif cahaya" },
+      { "title": "Pearl Effect", "desc": "Pelapisan mutiara yang halus dan canggih untuk keanggunan" }
     ]
   },
   "industry": {

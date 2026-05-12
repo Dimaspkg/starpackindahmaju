@@ -90,18 +90,15 @@
     ]
   },
   "effects": {
-    "tag": "EFFECTS",
-    "title": "Premium Coating Effect",
-    "description": "Discover signature finishes designed to elevate plastic product appearance.",
+    "title": "Premium Coating Effects",
+    "description": "We offer a comprehensive range of coating finishes tailored to your specific application and market requirements. Each effect is engineered for durability and visual excellence.",
     "items": [
-      { "title": "Signature Finish 01", "desc": "Gloss / clarity look" },
-      { "title": "Signature Finish 02", "desc": "Soft satin appearance" },
-      { "title": "Signature Finish 03", "desc": "Premium texture feel" },
-      { "title": "Signature Finish 04", "desc": "High-impact surface" },
-      { "title": "Signature Finish 05", "desc": "Color depth effect" },
-      { "title": "Signature Finish 06", "desc": "Reflective premium look" },
-      { "title": "Signature Finish 07", "desc": "Durable finishing style" },
-      { "title": "Signature Finish 08", "desc": "Consistent product appearance" }
+      { "title": "High Gloss", "desc": "Mirror-like finish for premium luxury products" },
+      { "title": "Matte Finish", "desc": "Sophisticated non-reflective surface texture" },
+      { "title": "Metallic Silver", "desc": "Premium silver coating with depth and shimmer" },
+      { "title": "Gold Chrome", "desc": "Luxurious gold metallic finish for high-end products" },
+      { "title": "Holographic", "desc": "Rainbow iridescent effect with light-reactive finish" },
+      { "title": "Pearl Effect", "desc": "Subtle, sophisticated pearl coating for elegance" }
     ]
   },
   "industry": {
