@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import { signOut, useSession } from 'next-auth/react';
 import styles from './admin.module.css';
 
 interface Lead {
@@ -15,6 +16,7 @@ interface Lead {
 }
 
 export default function AdminDashboard() {
+  const { data: session } = useSession();
   const [leads, setLeads] = useState<Lead[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -52,8 +54,29 @@ export default function AdminDashboard() {
   return (
     <div className={styles.adminContainer}>
       <header className={styles.header}>
-        <h1 className={styles.title}>Leads Dashboard</h1>
-        <button onClick={fetchLeads} className={styles.refreshBtn}>Refresh Data</button>
+        <div>
+          <h1 className={styles.title}>Leads Dashboard</h1>
+          <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+            Welcome, {session?.user?.name || 'Admin'}
+          </p>
+        </div>
+        <div style={{ display: 'flex', gap: '1rem' }}>
+          <button onClick={fetchLeads} className={styles.refreshBtn}>Refresh Data</button>
+          <button 
+            onClick={() => signOut({ callbackUrl: '/login' })} 
+            className={styles.logoutBtn}
+            style={{ 
+              background: 'rgba(231, 76, 60, 0.1)', 
+              color: '#e74c3c', 
+              border: '1px solid #e74c3c',
+              padding: '0.5rem 1rem',
+              borderRadius: '8px',
+              cursor: 'pointer'
+            }}
+          >
+            Logout
+          </button>
+        </div>
       </header>
 
       <div className={styles.tableWrapper}>
