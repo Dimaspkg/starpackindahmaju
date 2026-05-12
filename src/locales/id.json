@@ -114,23 +114,29 @@
     ]
   },
   "quality": {
-    "tag": "KUALITAS",
     "title": "Kualitas & Sertifikasi",
-    "description": "Manufaktur berbasis kualitas dengan kontrol terstruktur dan keselarasan sertifikasi.",
-    "iso": {
-      "title": "ISO 9001:2015",
-      "text": "PT. Starpack Indahmaju telah tersertifikasi ISO 9001:2015 (diperbarui April 2022).",
+    "description": "Kami menjaga standar kualitas tertinggi melalui pengujian yang ketat, sistem pengukuran canggih, dan sertifikasi ISO 9001:2015, yang diperbarui pada April 2022.",
+    "commitment": {
+      "title": "Komitmen Kualitas Kami",
       "items": [
-        "Konsistensi proses untuk hasil pelapisan yang andal",
-        "Kontrol operasional yang selaras dengan tujuan kualitas"
+        { "title": "Tersertifikasi ISO 9001:2015", "text": "Standar manajemen kualitas internasional" },
+        { "title": "Pengujian Ketebalan Lapisan", "text": "Pengukuran presisi untuk konsistensi" },
+        { "title": "Analisis Kekasaran Permukaan", "text": "Peralatan profiling canggih" },
+        { "title": "Analisis Spektrofotometri", "text": "Verifikasi akurasi warna" },
+        { "title": "Pengujian Adhesi", "text": "Verifikasi daya tahan dan adhesi" },
+        { "title": "Pengujian Korosi Salt Spray", "text": "Jaminan ketahanan lingkungan" },
+        { "title": "Pengujian Kekerasan", "text": "Verifikasi daya tahan permukaan" },
+        { "title": "Analisis Ketahanan Kimia", "text": "Validasi kinerja" }
       ]
     },
-    "standards": {
-      "title": "Standar Kualitas",
+    "capabilities": {
+      "title": "Kemampuan Pengujian",
       "items": [
-        "Titik pemeriksaan finishing yang berfokus pada penampilan",
-        "Inspeksi untuk mendukung penampilan produk yang stabil di setiap proses",
-        "Perencanaan produksi untuk pengiriman manufaktur yang terukur"
+        "Inspeksi kualitas 100% pada komponen kritis",
+        "Pemantauan statistical process control (SPC)",
+        "Kemampuan first article inspection (FAI)",
+        "Ketertelusuran batch dan dokumentasi",
+        "Program perbaikan proses yang berkelanjutan"
       ]
     }
   },

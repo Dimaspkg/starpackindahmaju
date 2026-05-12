@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import styles from './QualitySection.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -8,34 +9,46 @@ export default function QualitySection() {
 
   return (
     <section className={styles.qualityContainer} id="quality">
-      <div className={styles.content}>
-        <div className={styles.tag}>{t.quality.tag}</div>
+      <div className={styles.header}>
         <h2 className={styles.title}>{t.quality.title}</h2>
-        <p className={styles.description}>
-          {t.quality.description}
-        </p>
+        <p className={styles.description}>{t.quality.description}</p>
+      </div>
 
-        <div className={styles.cards}>
-          <div className={styles.card}>
-            <h3 className={styles.cardTitle}>{t.quality.iso.title}</h3>
-            <p className={styles.cardText}>{t.quality.iso.text}</p>
-            <ul className={styles.list}>
-              {t.quality.iso.items.map((item: string, index: number) => (
-                <li key={index} className={styles.listItem}>
-                  <span className={styles.dot}></span>
-                  <span className={styles.itemText}>{item}</span>
-                </li>
-              ))}
-            </ul>
+      <div className={styles.mainContent}>
+        <div className={styles.leftCol}>
+          <div className={styles.imageWrapper}>
+            <Image 
+              src="/images/quality/quality-main.png" 
+              alt="Quality Control"
+              width={500}
+              height={400}
+              className={styles.qualityImage}
+            />
+          </div>
+        </div>
+
+        <div className={styles.rightCol}>
+          <h3 className={styles.subTitle}>{t.quality.commitment.title}</h3>
+          
+          <div className={styles.commitmentList}>
+            {t.quality.commitment.items.map((item: any, index: number) => (
+              <div key={index} className={styles.commitmentItem}>
+                <span className={styles.triangle}>►</span>
+                <div className={styles.itemText}>
+                  <span className={styles.itemTitle}>{item.title}:</span>
+                  <span className={styles.itemDesc}> {item.text}</span>
+                </div>
+              </div>
+            ))}
           </div>
 
-          <div className={styles.card}>
-            <h3 className={styles.cardTitle}>{t.quality.standards.title}</h3>
-            <ul className={styles.list}>
-              {t.quality.standards.items.map((item: string, index: number) => (
-                <li key={index} className={styles.listItem}>
-                  <span className={styles.dot}></span>
-                  <span className={styles.itemText}>{item}</span>
+          <div className={styles.capabilitiesBox}>
+            <h4 className={styles.capabilitiesTitle}>{t.quality.capabilities.title}</h4>
+            <ul className={styles.capabilitiesList}>
+              {t.quality.capabilities.items.map((item: string, index: number) => (
+                <li key={index} className={styles.capabilityItem}>
+                  <span className={styles.bullet}>•</span>
+                  {item}
                 </li>
               ))}
             </ul>

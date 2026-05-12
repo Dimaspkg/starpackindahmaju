@@ -114,23 +114,29 @@
     ]
   },
   "quality": {
-    "tag": "QUALITY",
     "title": "Quality & Certification",
-    "description": "Quality-driven manufacturing with structured controls and certification alignment.",
-    "iso": {
-      "title": "ISO 9001:2015",
-      "text": "PT. Starpack Indahmaju is ISO 9001:2015 certified (upgraded April 2022).",
+    "description": "We maintain the highest standards of quality through rigorous testing, advanced measurement systems, and ISO 9001:2015 certification, updated in April 2022.",
+    "commitment": {
+      "title": "Our Quality Commitment",
       "items": [
-        "Process consistency for reliable coating outcomes",
-        "Operational control aligned with quality objectives"
+        { "title": "ISO 9001:2015 Certified", "text": "International quality management standards" },
+        { "title": "Coating Thickness Testing", "text": "Precise measurements for consistency" },
+        { "title": "Surface Roughness Analysis", "text": "Advanced profiling equipment" },
+        { "title": "Spectrophotometric Analysis", "text": "Color accuracy verification" },
+        { "title": "Adhesion Testing", "text": "Durability and adhesion verification" },
+        { "title": "Salt Spray Corrosion Testing", "text": "Environmental resistance assurance" },
+        { "title": "Hardness Testing", "text": "Surface durability verification" },
+        { "title": "Chemical Resistance Analysis", "text": "Performance validation" }
       ]
     },
-    "standards": {
-      "title": "Quality Standards",
+    "capabilities": {
+      "title": "Testing Capabilities",
       "items": [
-        "Appearance-focused finishing checkpoints",
-        "Inspection to support stable product appearance across runs",
-        "Production planning for scalable manufacturing delivery"
+        "100% quality inspection on critical components",
+        "Statistical process control (SPC) monitoring",
+        "First article inspection (FAI) capabilities",
+        "Batch traceability and documentation",
+        "Continuous process improvement programs"
       ]
     }
   },
