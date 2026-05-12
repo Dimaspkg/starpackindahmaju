@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import styles from './Sidebar.module.css';
 import { useLanguage } from '@/context/LanguageContext';
+import ThemeToggle from './ThemeToggle';
 
 export default function Sidebar() {
   const { language, setLanguage, t } = useLanguage();
@@ -52,15 +53,18 @@ export default function Sidebar() {
           <Image src="/logo_starpack.png" alt="Logo" width={120} height={20} style={{ objectFit: 'contain' }} className="logoLight" />
           <Image src="/logo_starpack_white.png" alt="Logo" width={120} height={20} style={{ objectFit: 'contain' }} className="logoDark" />
         </div>
-        <button onClick={() => setIsMobileOpen(!isMobileOpen)} className={styles.menuBtn}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            {isMobileOpen ? (
-              <path d="M18 6L6 18M6 6l12 12" />
-            ) : (
-              <path d="M3 12h18M3 6h18M3 18h18" />
-            )}
-          </svg>
-        </button>
+        <div className={styles.mobileActions}>
+          <ThemeToggle />
+          <button onClick={() => setIsMobileOpen(!isMobileOpen)} className={styles.menuBtn}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              {isMobileOpen ? (
+                <path d="M18 6L6 18M6 6l12 12" />
+              ) : (
+                <path d="M3 12h18M3 6h18M3 18h18" />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* Sidebar */}
@@ -100,6 +104,9 @@ export default function Sidebar() {
         </div>
 
         <div className={styles.bottomSection}>
+          <div className={styles.themeSwitch}>
+            <ThemeToggle />
+          </div>
           <div className={styles.langSwitch}>
             {['id', 'en', 'zh', 'jp'].map((lang) => (
               <button 

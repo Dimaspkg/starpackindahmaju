@@ -53,6 +53,12 @@
   padding: 2rem;
 }
 
+.themeSwitch {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
 .langSwitch {
   display: flex;
   gap: 0.75rem;
@@ -103,7 +109,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 60px;
+    height: 70px;
     background-color: var(--sidebar-bg);
     border-bottom: 1px solid var(--sidebar-border);
     align-items: center;
@@ -112,8 +118,17 @@
     z-index: 1100;
   }
 
+  .mobileActions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
   .menuBtn {
     color: var(--foreground);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .overlay {

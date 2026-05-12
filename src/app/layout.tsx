@@ -73,7 +73,6 @@ export default function RootLayout({
           <div className="mainContainer">
             <Sidebar />
             <main className="contentWrapper">
-              <ThemeToggle />
               {children}
             </main>
           </div>
