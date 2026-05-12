@@ -134,12 +134,19 @@
 .input, .select, .textarea {
   flex: 1;
   background-color: var(--card-bg);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 1rem 1.25rem;
   border-radius: 12px;
   color: var(--foreground);
   font-size: 1rem;
   transition: all 0.3s ease;
+}
+
+[data-theme="light"] .input, 
+[data-theme="light"] .select, 
+[data-theme="light"] .textarea {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: #fcfcfc;
 }
 
 .input:focus, .select:focus, .textarea:focus {
