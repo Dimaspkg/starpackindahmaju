@@ -43,7 +43,6 @@
 
 .highlight {
   border-color: var(--primary) !important;
-  box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
 }
 
 .imageWrapper {
