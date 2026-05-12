@@ -17,6 +17,7 @@ export default function Hero() {
           priority
           className={styles.bgImage}
         />
+        <div className={styles.bgOverlay} />
       </div>
 
       <div className={styles.heroContent}>
