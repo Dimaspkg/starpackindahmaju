@@ -220,6 +220,14 @@
   .infoItem {
     font-size: 0.95rem;
   }
+  .formCard {
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  }
+  .form {
+    gap: 1.25rem;
+  }
   .formGroup {
     flex-direction: column;
     align-items: flex-start;
@@ -229,8 +237,13 @@
     width: 100%;
     font-size: 0.8rem;
   }
+  .input, .select, .textarea {
+    padding: 0.85rem 1rem;
+    font-size: 0.95rem;
+  }
   .submitBtn {
     margin-left: 0;
     width: 100%;
+    padding: 1rem;
   }
 }
