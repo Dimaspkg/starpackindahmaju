@@ -2,7 +2,7 @@
   "nav": {
     "home": "Home",
     "about": "About Starpack",
-    "technology": "Advance Technology & Machinery",
+    "technology": "Advanced Technology & Machinery",
     "premium": "Premium Coating Effect",
     "industry": "Industry We Serve",
     "quality": "Quality & Certification",
@@ -11,7 +11,7 @@
   "hero": {
     "tag": "UV PLASTIC COATING",
     "title": "Premium finishing for plastic products—built for consistency.",
-    "description": "PT. Starpack Indahmaju delivers UV coating plastik with advanced production control, stable output, and a wide range of premium coating effects. Designed to help your products stand out.",
+    "description": "PT. Starpack Indahmaju delivers UV plastic coating with advanced production control, stable output, and a wide range of premium coating effects. Designed to help your products stand out.",
     "badges": {
       "iso": "ISO 9001:2015",
       "units": "10M+ units annually",
@@ -31,7 +31,7 @@
   "about": {
     "tag": "COMPANY",
     "title": "About Starpack",
-    "description": "Established in January 1996 and headquartered in Jakarta, PT. Starpack Indahmaju supports manufacturing teams with reliable UV coating plastik production.",
+    "description": "Established in January 1996 and headquartered in Jakarta, PT. Starpack Indahmaju supports manufacturing teams with reliable UV plastic coating production.",
     "focus": {
       "title": "What we focus on",
       "text": "We specialize in plastic coating to help products achieve premium surface finishing and consistent appearance.",
@@ -53,7 +53,7 @@
   },
   "tech": {
     "tag": "CAPABILITY",
-    "title": "Advance Technology & Machinery",
+    "title": "Advanced Technology & Machinery",
     "description": "Our manufacturing environment is designed for precision coating, stable operation, and consistent product results.",
     "strength": {
       "title": "Production Strength",
@@ -157,5 +157,11 @@
     },
     "button": "Back to Home",
     "retry": "Try Again"
+  },
+  "footer": {
+    "description": "Premium UV plastic coating services since 1996, focused on quality, consistency, and advanced production control.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact Us",
+    "address": "Jakarta, Indonesia"
   }
 }

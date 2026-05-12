@@ -157,5 +157,11 @@
     },
     "button": "Kembali ke Beranda",
     "retry": "Coba Lagi"
+  },
+  "footer": {
+    "description": "Layanan UV coating plastik premium sejak 1996, berfokus pada kualitas, konsistensi, dan kontrol produksi tingkat lanjut.",
+    "quickLinks": "Tautan Langsung",
+    "contact": "Hubungi Kami",
+    "address": "Jakarta, Indonesia"
   }
 }
