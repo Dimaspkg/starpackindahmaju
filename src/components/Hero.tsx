@@ -9,7 +9,7 @@ export default function Hero() {
 
   return (
     <section id="home" className={styles.heroSection}>
-      <header className={styles.header}>
+      <header className={styles.header} style={{ position: 'relative', zIndex: 10 }}>
         <h2 className={styles.companyName}>PT. Starpack Indahmaju</h2>
         <h1 className={styles.headline}>
           {t.hero.title}
