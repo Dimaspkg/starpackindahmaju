@@ -34,12 +34,12 @@
 .heroContent {
   position: relative;
   z-index: 2;
-  padding: 5rem 6rem;
+  padding: 5rem 6rem 8rem 6rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
   height: 100vh;
-  justify-content: center;
+  justify-content: flex-end;
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
