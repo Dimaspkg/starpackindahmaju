@@ -127,7 +127,10 @@
 @media (max-width: 1024px) {
   .heroContent {
     padding: 2rem;
-    padding-top: 5rem;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    height: auto;
+    min-height: 100vh;
   }
 }
 
@@ -135,18 +138,53 @@
   .heroContent {
     padding: 1.5rem;
     padding-top: 5rem;
-    gap: 2rem;
+    padding-bottom: 3rem;
+    gap: 1.5rem;
+    height: auto;
+    min-height: 100dvh;
+    justify-content: center; /* Center content on mobile for better balance */
   }
+
+  .textContainer {
+    text-align: center;
+    align-items: center;
+  }
+
+  .headline {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .subHeadline {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .companyName {
+    font-size: 0.85rem;
+  }
+
   .statsContainer {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
-  .headline {
-    font-size: 2.2rem;
+
+  .card {
+    padding: 1.5rem;
+    border-left-width: 3px;
   }
-  .companyName {
-    font-size: 0.9rem;
-  }
+
   .val {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .lab {
+    font-size: 0.85rem;
+  }
+
+  .descBox {
+    font-size: 0.95rem;
+    text-align: center;
+    margin: 0 auto;
   }
 }
