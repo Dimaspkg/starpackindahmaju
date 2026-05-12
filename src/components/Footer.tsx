@@ -10,8 +10,9 @@ export default function Footer() {
   const { t } = useLanguage();
   
   return (
-    <footer className={styles.footer}>
-      <div className={styles.container}>
+    <div className={styles.footerWrapper}>
+      <footer className={styles.footer}>
+        <div className={styles.container}>
         <div className={styles.footerGrid}>
           {/* Company Branding */}
           <div className={styles.branding}>
@@ -91,6 +92,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
-    </footer>
+      </footer>
+    </div>
   );
 }
