@@ -9,7 +9,12 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
   const isLoginPage = pathname === "/login";
 
   if (isLoginPage) {
-    return <main style={{ width: '100%' }}>{children}</main>;
+    return (
+      <main style={{ width: '100%' }}>
+        <ThemeToggle className="floatingToggle" />
+        {children}
+      </main>
+    );
   }
 
   return (
