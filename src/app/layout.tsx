@@ -2,12 +2,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-
-import { LanguageProvider } from "@/context/LanguageContext";
-import Sidebar from "@/components/Sidebar";
-import ThemeToggle from "@/components/ThemeToggle";
-import ScrollReveal from "@/components/ScrollReveal";
+ 
+ import { LanguageProvider } from "@/context/LanguageContext";
+ import ScrollReveal from "@/components/ScrollReveal";
 import { Providers } from "@/components/Providers";
+import MainLayout from "@/components/MainLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -73,13 +72,9 @@ export default function RootLayout({
         <LanguageProvider>
           <Providers>
             <ScrollReveal />
-            <div className="mainContainer">
-              <Sidebar />
-              <main className="contentWrapper">
-                <ThemeToggle className="floatingToggle" />
-                {children}
-              </main>
-            </div>
+            <MainLayout>
+              {children}
+            </MainLayout>
           </Providers>
         </LanguageProvider>
       </body>
