@@ -95,13 +95,19 @@ ul {
 .contentWrapper {
   flex: 1;
   margin-left: var(--sidebar-width);
-  padding: 5rem 6rem; /* Increased padding for premium feel */
+}
+
+.pageContainer {
+  padding: 5rem 6rem;
   max-width: 1400px;
+  width: 100%;
 }
 
 @media (max-width: 1024px) {
   .contentWrapper {
     margin-left: 0;
+  }
+  .pageContainer {
     padding: 2rem;
     padding-top: 5rem;
   }

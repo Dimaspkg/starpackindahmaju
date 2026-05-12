@@ -11,13 +11,15 @@ export default function Home() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
       <Hero />
-      <AboutSection />
-      <TechnologySection />
-      <EffectsSection />
-      <IndustrySection />
-      <QualitySection />
-      <InquirySection />
-      <Footer />
+      <div className="pageContainer">
+        <AboutSection />
+        <TechnologySection />
+        <EffectsSection />
+        <IndustrySection />
+        <QualitySection />
+        <InquirySection />
+        <Footer />
+      </div>
     </div>
   );
 }
