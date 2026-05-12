@@ -21,7 +21,7 @@
 
 [data-theme="light"] {
   --background: #f7f7f7;
-  --foreground: #111111;
+  --foreground: #000000;
   --primary: #e60000;
   --primary-hover: #cc0000;
   --sidebar-bg: #ffffff;
@@ -29,7 +29,7 @@
   
   --card-bg: #ffffff;
   --card-border: #dddddd;
-  --muted-text: #555555;
+  --muted-text: #222222;
   
   --nav-active-bg: #ff0000;
   --nav-active-text: #ffffff;
