@@ -171,6 +171,12 @@
       "email_placeholder": "your.email@company.com",
       "interest": "Service Interest",
       "interest_placeholder": "Select a service",
+      "interest_options": {
+        "uv": "UV Coating",
+        "vacuum": "Vacuum Metallizing",
+        "both": "Both Services",
+        "consultation": "Technical Consultation"
+      },
       "message": "Message",
       "message_placeholder": "Tell us about your coating needs...",
       "submit": "Send Inquiry"

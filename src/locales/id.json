@@ -171,6 +171,12 @@
       "email_placeholder": "email.anda@perusahaan.com",
       "interest": "Minat Layanan",
       "interest_placeholder": "Pilih layanan",
+      "interest_options": {
+        "uv": "UV Coating",
+        "vacuum": "Vacuum Metallizing",
+        "both": "Kedua Layanan",
+        "consultation": "Konsultasi Teknis"
+      },
       "message": "Pesan",
       "message_placeholder": "Beritahu kami tentang kebutuhan pelapisan Anda...",
       "submit": "Kirim Pertanyaan"

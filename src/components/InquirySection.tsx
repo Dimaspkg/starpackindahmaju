@@ -91,9 +91,10 @@ export default function InquirySection() {
                 <label className={styles.formLabel}>{t.inquiry.form.interest}</label>
                 <select className={styles.select} required defaultValue="">
                   <option value="" disabled>{t.inquiry.form.interest_placeholder}</option>
-                  <option value="uv">UV Coating</option>
-                  <option value="vacuum">Vacuum Metallizing</option>
-                  <option value="custom">Custom Solutions</option>
+                  <option value="uv">{t.inquiry.form.interest_options.uv}</option>
+                  <option value="vacuum">{t.inquiry.form.interest_options.vacuum}</option>
+                  <option value="both">{t.inquiry.form.interest_options.both}</option>
+                  <option value="consultation">{t.inquiry.form.interest_options.consultation}</option>
                 </select>
               </div>
 
