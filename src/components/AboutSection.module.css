@@ -1,37 +1,30 @@
 .aboutContainer {
-  width: 95%;
-  max-width: 1300px;
-  margin: 4rem auto;
-  padding: 2rem 0;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
+  padding: 8rem 0;
+  border-top: 1px solid var(--card-border);
 }
 
 .tag {
   color: var(--primary);
-  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
 }
 
 .title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
   color: var(--foreground);
 }
 
 .description {
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1.25rem;
   color: var(--muted-text);
-  max-width: 900px;
-  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-bottom: 4rem;
+  line-height: 1.8;
 }
 
 .cards {
@@ -41,31 +34,29 @@
 }
 
 .card {
-  background: var(--card-bg);
+  background-color: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 20px;
-  padding: 2.5rem;
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  padding: 3rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary);
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  border-color: var(--primary);
 }
 
 .cardTitle {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: var(--foreground);
+  color: var(--primary);
 }
 
 .cardText {
-  font-size: 1rem;
-  line-height: 1.6;
   color: var(--muted-text);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.7;
 }
 
 .list {
@@ -76,37 +67,27 @@
 
 .listItem {
   display: flex;
-  align-items: flex-start;
   gap: 1rem;
+  align-items: flex-start;
 }
 
 .dot {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   background-color: var(--primary);
   border-radius: 50%;
+  margin-top: 0.6rem;
   flex-shrink: 0;
-  margin-top: 0.4rem;
-  box-shadow: 0 0 10px rgba(227, 52, 54, 0.4);
 }
 
 .itemText {
+  color: #dddddd;
   font-size: 0.95rem;
-  line-height: 1.4;
-  color: var(--foreground);
-  font-weight: 500;
+  line-height: 1.5;
 }
 
-@media (max-width: 968px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-  
-  .title {
-    font-size: 2rem;
-  }
-  
-  .card {
-    padding: 1.5rem;
-  }
+@media (max-width: 768px) {
+  .cards { grid-template-columns: 1fr; }
+  .title { font-size: 2.25rem; }
+  .card { padding: 2rem; }
 }

@@ -1,0 +1,126 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--sidebar-width);
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.logoContainer {
+  padding: 0 2rem 3rem;
+}
+
+.logo {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.navLink {
+  padding: 1.25rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--foreground);
+  transition: all 0.2s ease;
+  border-bottom: 1px solid var(--sidebar-border);
+  display: block;
+}
+
+.navLink:hover {
+  background-color: var(--nav-hover-bg);
+}
+
+.active {
+  background-color: var(--nav-active-bg) !important;
+  color: var(--nav-active-text);
+  font-weight: 600;
+}
+
+.bottomSection {
+  padding: 2rem;
+}
+
+.langSwitch {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.langBtn {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted-text);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.langBtn:hover {
+  color: var(--foreground);
+}
+
+.langActive {
+  color: var(--primary);
+  background-color: rgba(255, 59, 59, 0.1);
+}
+
+.copyright {
+  font-size: 0.7rem;
+  color: var(--muted-text);
+  opacity: 0.5;
+}
+
+.mobileHeader {
+  display: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .mobileOpen {
+    transform: translateX(0);
+  }
+
+  .mobileHeader {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: var(--sidebar-bg);
+    border-bottom: 1px solid var(--sidebar-border);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    z-index: 1100;
+  }
+
+  .menuBtn {
+    color: var(--foreground);
+  }
+
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(4px);
+    z-index: 900;
+  }
+}

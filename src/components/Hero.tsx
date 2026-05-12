@@ -8,49 +8,46 @@ export default function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section className={styles.heroContainer}>
-      <div className={styles.heroContent}>
-        <div className={styles.tag}>{t.hero.tag}</div>
-        <h1 className={styles.title}>
+    <section id="home" className={styles.heroSection}>
+      <header className={styles.header}>
+        <h2 className={styles.companyName}>PT. Starpack Indahmaju</h2>
+        <h1 className={styles.headline}>
           {t.hero.title}
         </h1>
-        <p className={styles.description}>
-          {t.hero.description}
-        </p>
-        
-        <div className={styles.badges}>
-          <span className={styles.badge}>{t.hero.badges.iso}</span>
-          <span className={styles.badge}>{t.hero.badges.units}</span>
-          <span className={styles.badge}>{t.hero.badges.clients}</span>
-        </div>
+        <p className={styles.subHeadline}>{t.hero.tag}</p>
+      </header>
 
-        <div className={styles.actions}>
-          <button className={`${styles.button} ${styles.primaryBtn}`}>{t.hero.buttons.quote}</button>
-          <button className={`${styles.button} ${styles.secondaryBtn}`}>{t.hero.buttons.explore}</button>
-        </div>
-      </div>
-
-      <div className={styles.heroVisual}>
+      <div className={styles.visualContainer}>
         <div className={styles.imageWrapper}>
           <Image 
             src="/images/uv_coating.png" 
-            alt="Coating production" 
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className={styles.heroImage}
+            alt="UV Coating Production" 
+            width={1200}
+            height={600}
+            className={styles.mainImage}
             priority
           />
-          <div className={styles.overlayCards}>
-            <div className={styles.floatingCard}>
-              <h4>{t.hero.cards.uv}</h4>
-              <p>{t.hero.cards.uv_desc}</p>
-            </div>
-            <div className={styles.floatingCard}>
-              <h4>{t.hero.cards.stable}</h4>
-              <p>{t.hero.cards.stable_desc}</p>
-            </div>
-          </div>
+          <div className={styles.imageOverlay} />
         </div>
+      </div>
+
+      <div className={styles.statsGrid}>
+        <div className={styles.statCard}>
+          <div className={styles.statValue}>{t.hero.badges.units.split(' ')[0]}</div>
+          <div className={styles.statLabel}>{t.hero.badges.units}</div>
+        </div>
+        <div className={styles.statCard}>
+          <div className={styles.statValue}>{t.hero.badges.clients.split(' ')[0]}</div>
+          <div className={styles.statLabel}>{t.hero.badges.clients}</div>
+        </div>
+        <div className={styles.statCard}>
+          <div className={styles.statValue}>Since 1996</div>
+          <div className={styles.statLabel}>Jakarta, Indonesia</div>
+        </div>
+      </div>
+
+      <div className={styles.description}>
+        <p>{t.hero.description}</p>
       </div>
     </section>
   );

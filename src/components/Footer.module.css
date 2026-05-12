@@ -1,24 +1,10 @@
 .footer {
   width: 100%;
   padding: 6rem 0 3rem;
-  background-color: var(--background);
+  background-color: #000000;
   border-top: 1px solid var(--card-border);
-  margin-top: 6rem;
   position: relative;
   overflow: hidden;
-}
-
-/* Subtle accent glow */
-.footer::before {
-  content: '';
-  position: absolute;
-  top: -150px;
-  right: -50px;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(227, 52, 54, 0.05) 0%, transparent 70%);
-  z-index: 0;
-  pointer-events: none;
 }
 
 .container {
@@ -55,61 +41,33 @@
   object-fit: contain;
 }
 
-.logoDark {
-  display: none;
-}
-
-.logoLight {
-  display: block;
-}
-
-/* Theme-aware logo display */
-:global([data-theme='dark']) .logoLight {
-  display: none;
-}
-
-:global([data-theme='dark']) .logoDark {
-  display: block;
-}
-
-/* System preference fallback if no data-theme set */
-@media (prefers-color-scheme: dark) {
-  :global(:root:not([data-theme='light'])) .logoLight {
-    display: none;
-  }
-  :global(:root:not([data-theme='light'])) .logoDark {
-    display: block;
-  }
-}
-
 .description {
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--muted-text);
-  max-width: 420px;
+  max-width: 400px;
 }
 
 .columnTitle {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: var(--foreground);
+  color: var(--primary);
   margin-bottom: 2rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  opacity: 0.9;
 }
 
 .footerNav, .contactInfo {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 .footerLink, .contactItem {
-  font-size: 1rem;
-  color: var(--muted-text);
+  font-size: 0.95rem;
+  color: #cccccc;
   text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -117,13 +75,12 @@
 
 .footerLink:hover {
   color: var(--primary);
-  transform: translateX(8px);
+  transform: translateX(5px);
 }
 
 .contactItem a {
   color: inherit;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 .contactItem a:hover {
@@ -131,26 +88,24 @@
 }
 
 .icon {
-  font-size: 1.2rem;
-  width: 24px;
-  display: flex;
-  justify-content: center;
+  color: var(--primary);
+  font-size: 1.1rem;
+  width: 20px;
 }
 
 .mapWrapper {
   width: 100%;
-  height: 200px;
+  height: 180px;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--card-border);
-  filter: grayscale(1) opacity(0.7);
+  filter: grayscale(1) contrast(1.2);
   transition: all 0.5s ease;
 }
 
 .mapWrapper:hover {
-  filter: grayscale(0) opacity(1);
+  filter: grayscale(0);
   border-color: var(--primary);
-  box-shadow: 0 10px 30px rgba(227, 52, 54, 0.1);
 }
 
 .mapIframe {
@@ -167,55 +122,15 @@
 }
 
 .copyright {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--muted-text);
-  opacity: 0.7;
 }
 
 @media (max-width: 1200px) {
-  .footerGrid {
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  .footerGrid {
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-  }
-  
-  .contactColumn, .mapColumn {
-    grid-column: span 1;
-  }
-
-  .bottomBar {
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
-  }
+  .footerGrid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 768px) {
-  .footer {
-    padding: 5rem 0 2.5rem;
-    margin-top: 4rem;
-  }
-
-  .footerGrid {
-    grid-template-columns: 1fr;
-    gap: 3.5rem;
-  }
-
-  .contactColumn, .mapColumn {
-    grid-column: span 1;
-  }
-
-  .description {
-    font-size: 1rem;
-  }
-  
-  .mapWrapper {
-    height: 250px;
-  }
+  .footerGrid { grid-template-columns: 1fr; }
+  .bottomBar { flex-direction: column; gap: 1rem; }
 }

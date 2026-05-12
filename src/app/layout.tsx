@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 
 import { LanguageProvider } from "@/context/LanguageContext";
+import Sidebar from "@/components/Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -66,7 +67,12 @@ export default function RootLayout({
         </Script>
 
         <LanguageProvider>
-          {children}
+          <div className="mainContainer">
+            <Sidebar />
+            <main className="contentWrapper">
+              {children}
+            </main>
+          </div>
         </LanguageProvider>
       </body>
     </html>
