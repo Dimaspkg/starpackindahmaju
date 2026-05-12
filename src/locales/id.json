@@ -102,19 +102,16 @@
     ]
   },
   "industry": {
-    "tag": "APLIKASI",
     "title": "Industri yang Kami Layani",
-    "description": "Dukungan pelapisan plastik UV kami untuk berbagai industri.",
-    "pills": [
-      "Kecantikan & Kosmetik",
-      "Wewangian",
-      "Fashion & Alas Kaki",
-      "Mainan & Boneka",
-      "Alat Tulis",
-      "Elektronik",
-      "FMCG"
-    ],
-    "footer": "Kami membantu tim produksi mencapai hasil finishing yang konsisten untuk manufaktur yang berulang."
+    "description": "Solusi pelapisan kami dipercaya di berbagai industri, mulai dari produk kecantikan mewah hingga komponen otomotif. Kami menyesuaikan layanan kami untuk memenuhi kebutuhan unik setiap sektor.",
+    "items": [
+      { "title": "Kecantikan & Kosmetik", "desc": "Solusi pengemasan premium untuk merek kecantikan mewah" },
+      { "title": "Elektronik", "desc": "Pelapisan presisi tinggi untuk elektronik konsumen" },
+      { "title": "Fashion & Aksesoris", "desc": "Komponen desainer dan pelapisan aksesoris mewah" },
+      { "title": "Makanan & Minuman", "desc": "Pengemasan premium untuk merek makanan gourmet dan minuman" },
+      { "title": "Otomotif", "desc": "Solusi pelapisan komponen interior dan eksterior" },
+      { "title": "Rumah Tangga & Gaya Hidup", "desc": "Pelapisan produk rumah tangga yang dekoratif dan fungsional" }
+    ]
   },
   "quality": {
     "tag": "KUALITAS",

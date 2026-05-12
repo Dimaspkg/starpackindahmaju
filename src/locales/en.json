@@ -102,19 +102,16 @@
     ]
   },
   "industry": {
-    "tag": "APPLICATIONS",
-    "title": "Industry We Serve",
-    "description": "Our UV plastic coating support products across multiple industries.",
-    "pills": [
-      "Beauty & Cosmetics",
-      "Fragrance",
-      "Fashion & Footwear",
-      "Toys & Dolls",
-      "Stationery",
-      "Electronics",
-      "FMCG"
-    ],
-    "footer": "We help production teams achieve consistent finishing results for recurring manufacturing."
+    "title": "Industries We Serve",
+    "description": "Our coating solutions are trusted across diverse industries, from luxury beauty products to automotive components. We customize our services to meet each sector's unique demands.",
+    "items": [
+      { "title": "Beauty & Cosmetics", "desc": "Premium packaging solutions for luxury beauty brands" },
+      { "title": "Electronics", "desc": "High-precision coating for consumer electronics" },
+      { "title": "Fashion & Accessories", "desc": "Designer components and luxury accessories coating" },
+      { "title": "Food & Beverage", "desc": "Premium packaging for gourmet and beverage brands" },
+      { "title": "Automotive", "desc": "Interior and exterior component coating solutions" },
+      { "title": "Home & Lifestyle", "desc": "Decorative and functional home product coating" }
+    ]
   },
   "quality": {
     "tag": "QUALITY",

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import styles from './IndustrySection.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -8,25 +9,32 @@ export default function IndustrySection() {
 
   return (
     <section className={styles.industryContainer} id="industry">
-      <div className={styles.content}>
-        <div className={styles.tag}>{t.industry.tag}</div>
+      <div className={styles.header}>
         <h2 className={styles.title}>{t.industry.title}</h2>
-        <p className={styles.description}>
-          {t.industry.description}
-        </p>
+        <p className={styles.description}>{t.industry.description}</p>
+      </div>
 
-        <div className={styles.mainCard}>
-          <div className={styles.pillContainer}>
-            {t.industry.pills.map((pill: string, index: number) => (
-              <span key={index} className={styles.pill}>
-                {pill}
-              </span>
-            ))}
+      <div className={styles.grid}>
+        {t.industry.items.map((item: any, index: number) => (
+          <div 
+            key={index} 
+            className={`${styles.card} ${index === 5 ? styles.highlight : ''}`}
+          >
+            <div className={styles.imageWrapper}>
+              <Image 
+                src={`/images/industry/industry${index + 1}.png`}
+                alt={item.title}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className={styles.industryImage}
+              />
+            </div>
+            <div className={styles.cardContent}>
+              <h3 className={styles.cardTitle}>{item.title}</h3>
+              <p className={styles.cardDesc}>{item.desc}</p>
+            </div>
           </div>
-          <p className={styles.footerText}>
-            {t.industry.footer}
-          </p>
-        </div>
+        ))}
       </div>
     </section>
   );
