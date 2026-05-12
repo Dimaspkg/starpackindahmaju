@@ -16,7 +16,7 @@
 
 .description {
   font-size: 1.1rem;
-  color: #dddddd;
+  color: var(--muted-text);
   max-width: 900px;
   line-height: 1.8;
 }
@@ -72,7 +72,7 @@
 }
 
 .cardDesc {
-  color: #888888;
+  color: var(--muted-text);
   font-size: 0.9rem;
   line-height: 1.6;
 }

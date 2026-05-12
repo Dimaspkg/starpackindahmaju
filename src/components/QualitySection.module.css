@@ -16,7 +16,7 @@
 
 .description {
   font-size: 1.1rem;
-  color: #dddddd;
+  color: var(--muted-text);
   max-width: 900px;
   line-height: 1.8;
 }
@@ -81,11 +81,11 @@
 
 .itemTitle {
   font-weight: 700;
-  color: #ffffff;
+  color: var(--foreground);
 }
 
 .itemDesc {
-  color: #aaaaaa;
+  color: var(--muted-text);
 }
 
 .capabilitiesBox {
@@ -111,12 +111,12 @@
 .capabilityItem {
   display: flex;
   gap: 0.75rem;
-  color: #cccccc;
+  color: var(--muted-text);
   font-size: 0.95rem;
 }
 
 .bullet {
-  color: #ffffff;
+  color: var(--foreground);
 }
 
 @media (max-width: 1024px) {

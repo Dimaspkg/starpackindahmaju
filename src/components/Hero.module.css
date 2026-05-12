@@ -82,14 +82,14 @@
 }
 
 .lab {
-  color: #888888;
+  color: var(--muted-text);
   font-size: 0.7rem;
   text-align: center;
 }
 
 .descBox {
   max-width: 800px;
-  color: #bbbbbb;
+  color: var(--muted-text);
   font-size: 0.9rem;
   line-height: 1.7;
 }

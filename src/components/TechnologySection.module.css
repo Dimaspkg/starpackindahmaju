@@ -16,7 +16,7 @@
 
 .description {
   font-size: 1.1rem;
-  color: #dddddd;
+  color: var(--muted-text);
   max-width: 900px;
   line-height: 1.8;
 }
@@ -52,13 +52,13 @@
 .listItem {
   display: flex;
   gap: 0.75rem;
-  color: #bbbbbb;
+  color: var(--muted-text);
   font-size: 1rem;
   line-height: 1.6;
 }
 
 .dot {
-  color: #ffffff;
+  color: var(--foreground);
 }
 
 .galleryGrid {
@@ -106,7 +106,7 @@
 
 .galleryDesc {
   font-size: 0.9rem;
-  color: #888888;
+  color: var(--muted-text);
   line-height: 1.5;
 }
 

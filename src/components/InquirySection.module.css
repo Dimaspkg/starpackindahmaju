@@ -16,7 +16,7 @@
 
 .description {
   font-size: 1.1rem;
-  color: #dddddd;
+  color: var(--muted-text);
   max-width: 900px;
   line-height: 1.8;
 }
@@ -56,11 +56,11 @@
 
 .label {
   font-weight: 700;
-  color: #ffffff;
+  color: var(--foreground);
 }
 
 .value {
-  color: #bbbbbb;
+  color: var(--muted-text);
 }
 
 .servicesSection {
@@ -72,7 +72,7 @@
 .servicesTitle {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--foreground);
 }
 
 .servicesList {
@@ -85,12 +85,12 @@
   display: flex;
   gap: 0.75rem;
   align-items: center;
-  color: #aaaaaa;
+  color: var(--muted-text);
   font-size: 1rem;
 }
 
 .check {
-  color: #ffffff;
+  color: var(--foreground);
   font-weight: 800;
 }
 
@@ -117,7 +117,7 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 1rem;
   border-radius: 4px;
-  color: #ffffff;
+  color: var(--foreground);
   font-size: 1rem;
   transition: border-color 0.3s ease;
 }
@@ -137,7 +137,7 @@
 
 .submitBtn {
   background-color: var(--primary);
-  color: #ffffff;
+  color: var(--foreground);
   border: none;
   padding: 1rem 2.5rem;
   border-radius: 4px;

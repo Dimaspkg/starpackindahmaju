@@ -65,7 +65,7 @@
 
 .footerLink, .contactItem {
   font-size: 0.95rem;
-  color: #cccccc;
+  color: var(--muted-text);
   text-decoration: none;
   transition: all 0.3s ease;
   display: flex;

@@ -39,7 +39,7 @@
 .text {
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #dddddd;
+  color: var(--muted-text);
   max-width: 650px;
 }
 
@@ -65,12 +65,12 @@
 
 .itemTitle {
   font-weight: 700;
-  color: #ffffff;
+  color: var(--foreground);
   white-space: nowrap;
 }
 
 .itemText {
-  color: #bbbbbb;
+  color: var(--muted-text);
 }
 
 .imageArea {
