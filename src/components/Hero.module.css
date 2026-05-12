@@ -1,49 +1,31 @@
 .heroSection {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 3rem;
   width: 100%;
   max-width: 100%;
-  border-radius: 24px;
-  overflow: hidden;
   margin-bottom: 6rem;
-  min-height: 80vh;
 }
 
-.heroBackground {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.rightCol {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  min-height: 500px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
 }
 
 .bgImage {
   object-fit: cover;
   object-position: center;
-}
-
-.bgOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(20,0,0,0.7) 100%);
-  z-index: 1;
-}
-
-[data-theme="light"] .bgOverlay {
-  background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,240,240,0.85) 100%);
-}
-
-.heroContent {
-  position: relative;
-  z-index: 2;
-  padding: 4rem 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  height: 100%;
-  justify-content: center;
 }
 
 .textContainer {
@@ -111,16 +93,23 @@
   line-height: 1.7;
 }
 
+@media (max-width: 1024px) {
+  .heroSection {
+    grid-template-columns: 1fr;
+  }
+  .rightCol {
+    order: -1;
+    min-height: 300px;
+  }
+}
+
 @media (max-width: 768px) {
   .heroSection {
-    padding-bottom: 4rem;
-    gap: 1.5rem;
+    margin-bottom: 4rem;
+    gap: 2rem;
   }
   .statsContainer {
     grid-template-columns: 1fr;
-  }
-  .imageBox {
-    width: 100%;
   }
   .headline {
     font-size: 2.2rem;
