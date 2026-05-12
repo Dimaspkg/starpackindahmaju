@@ -95,6 +95,10 @@
 }
 
 @media (max-width: 768px) {
+  .heroSection {
+    padding-bottom: 4rem;
+    gap: 1.5rem;
+  }
   .statsContainer {
     grid-template-columns: 1fr;
   }
@@ -102,6 +106,9 @@
     width: 100%;
   }
   .headline {
-    font-size: 2rem;
+    font-size: 2.2rem;
+  }
+  .companyName {
+    font-size: 1.6rem;
   }
 }

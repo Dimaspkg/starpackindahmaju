@@ -84,10 +84,13 @@
 }
 
 @media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
+  .effectsContainer {
+    padding: 4rem 0;
   }
   .title {
-    font-size: 2.25rem;
+    font-size: 2rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
   }
 }
