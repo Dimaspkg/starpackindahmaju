@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import styles from './ThemeToggle.module.css';
 
-export default function ThemeToggle() {
+export default function ThemeToggle({ className }: { className?: string }) {
   const [theme, setTheme] = useState('dark');
   const [mounted, setMounted] = useState(false);
 
@@ -26,7 +26,7 @@ export default function ThemeToggle() {
 
   return (
     <button 
-      className={styles.themeToggle} 
+      className={`${styles.themeToggle} ${className || ''}`} 
       onClick={toggleTheme}
       aria-label="Toggle Theme"
       title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}

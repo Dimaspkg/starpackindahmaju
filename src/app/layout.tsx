@@ -73,6 +73,7 @@ export default function RootLayout({
           <div className="mainContainer">
             <Sidebar />
             <main className="contentWrapper">
+              <ThemeToggle className="floatingToggle" />
               {children}
             </main>
           </div>

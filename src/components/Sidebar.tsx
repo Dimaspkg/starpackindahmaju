@@ -104,9 +104,6 @@ export default function Sidebar() {
         </div>
 
         <div className={styles.bottomSection}>
-          <div className={styles.themeSwitch}>
-            <ThemeToggle />
-          </div>
           <div className={styles.langSwitch}>
             {['id', 'en', 'zh', 'jp'].map((lang) => (
               <button 
