@@ -38,10 +38,10 @@
 .visualContainer {
   position: relative;
   width: 100%;
-  max-width: 450px; /* Matching the aspect in the image */
+  max-width: 360px; /* Reduced from 450px */
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 0 40px rgba(255, 0, 0, 0.2); /* Red glow from image */
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
