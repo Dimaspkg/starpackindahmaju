@@ -54,62 +54,64 @@ export default function InquirySection() {
         </div>
 
         <div className={`${styles.rightCol} reveal fadeRight`}>
-          <h3 className={styles.subTitle}>{t.inquiry.form.title}</h3>
-          
-          <form className={styles.form} onSubmit={handleSubmit}>
-            <div className={styles.formGroup}>
-              <label className={styles.formLabel}>{t.inquiry.form.name}</label>
-              <input 
-                type="text" 
-                placeholder={t.inquiry.form.name_placeholder}
-                className={styles.input}
-                required
-              />
-            </div>
+          <div className={styles.formCard}>
+            <h3 className={styles.subTitle}>{t.inquiry.form.title}</h3>
+            
+            <form className={styles.form} onSubmit={handleSubmit}>
+              <div className={styles.formGroup}>
+                <label className={styles.formLabel}>{t.inquiry.form.name}</label>
+                <input 
+                  type="text" 
+                  placeholder={t.inquiry.form.name_placeholder}
+                  className={styles.input}
+                  required
+                />
+              </div>
 
-            <div className={styles.formGroup}>
-              <label className={styles.formLabel}>{t.inquiry.form.company}</label>
-              <input 
-                type="text" 
-                placeholder={t.inquiry.form.company_placeholder}
-                className={styles.input}
-              />
-            </div>
+              <div className={styles.formGroup}>
+                <label className={styles.formLabel}>{t.inquiry.form.company}</label>
+                <input 
+                  type="text" 
+                  placeholder={t.inquiry.form.company_placeholder}
+                  className={styles.input}
+                />
+              </div>
 
-            <div className={styles.formGroup}>
-              <label className={styles.formLabel}>{t.inquiry.form.email}</label>
-              <input 
-                type="email" 
-                placeholder={t.inquiry.form.email_placeholder}
-                className={styles.input}
-                required
-              />
-            </div>
+              <div className={styles.formGroup}>
+                <label className={styles.formLabel}>{t.inquiry.form.email}</label>
+                <input 
+                  type="email" 
+                  placeholder={t.inquiry.form.email_placeholder}
+                  className={styles.input}
+                  required
+                />
+              </div>
 
-            <div className={styles.formGroup}>
-              <label className={styles.formLabel}>{t.inquiry.form.interest}</label>
-              <select className={styles.select} required defaultValue="">
-                <option value="" disabled>{t.inquiry.form.interest_placeholder}</option>
-                <option value="uv">UV Coating</option>
-                <option value="vacuum">Vacuum Metallizing</option>
-                <option value="custom">Custom Solutions</option>
-              </select>
-            </div>
+              <div className={styles.formGroup}>
+                <label className={styles.formLabel}>{t.inquiry.form.interest}</label>
+                <select className={styles.select} required defaultValue="">
+                  <option value="" disabled>{t.inquiry.form.interest_placeholder}</option>
+                  <option value="uv">UV Coating</option>
+                  <option value="vacuum">Vacuum Metallizing</option>
+                  <option value="custom">Custom Solutions</option>
+                </select>
+              </div>
 
-            <div className={styles.formGroup}>
-              <label className={styles.formLabel}>{t.inquiry.form.message}</label>
-              <textarea 
-                placeholder={t.inquiry.form.message_placeholder}
-                className={styles.textarea}
-                rows={4}
-                required
-              ></textarea>
-            </div>
+              <div className={styles.formGroup}>
+                <label className={styles.formLabel}>{t.inquiry.form.message}</label>
+                <textarea 
+                  placeholder={t.inquiry.form.message_placeholder}
+                  className={styles.textarea}
+                  rows={4}
+                  required
+                ></textarea>
+              </div>
 
-            <button type="submit" className={styles.submitBtn}>
-              {t.inquiry.form.submit}
-            </button>
-          </form>
+              <button type="submit" className={styles.submitBtn}>
+                {t.inquiry.form.submit}
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>

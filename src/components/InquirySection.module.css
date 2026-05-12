@@ -94,6 +94,20 @@
   font-weight: 800;
 }
 
+.formCard {
+  background-color: var(--card-bg);
+  padding: 3.5rem;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--card-border);
+  position: relative;
+}
+
+[data-theme="light"] .formCard {
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.05);
+  background-color: #ffffff;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -107,9 +121,11 @@
 }
 
 .formLabel {
-  color: var(--primary);
+  color: var(--foreground);
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .input, .select, .textarea {
