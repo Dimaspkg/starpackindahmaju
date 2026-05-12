@@ -97,7 +97,7 @@ export default function InquirySection() {
                 </select>
               </div>
 
-              <div className={styles.formGroup}>
+              <div className={`${styles.formGroup} ${styles.topAlign}`}>
                 <label className={styles.formLabel}>{t.inquiry.form.message}</label>
                 <textarea 
                   placeholder={t.inquiry.form.message_placeholder}

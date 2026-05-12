@@ -116,19 +116,23 @@
 
 .formGroup {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
 }
 
 .formLabel {
   color: var(--foreground);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
+  width: 120px;
+  flex-shrink: 0;
 }
 
 .input, .select, .textarea {
+  flex: 1;
   background-color: var(--card-bg);
   border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 1rem;
@@ -170,6 +174,14 @@
   transform: translateY(-2px);
 }
 
+.topAlign {
+  align-items: flex-start;
+}
+
+.topAlign .formLabel {
+  padding-top: 1rem;
+}
+
 @media (max-width: 1024px) {
   .mainContent {
     flex-direction: column;
@@ -177,6 +189,9 @@
   }
   .title {
     font-size: 2.25rem;
+  }
+  .formCard {
+    padding: 2rem;
   }
 }
 
@@ -189,5 +204,13 @@
   }
   .mainContent {
     gap: 3rem;
+  }
+  .formGroup {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .formLabel {
+    width: 100%;
   }
 }
