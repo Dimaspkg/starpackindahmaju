@@ -1,10 +1,49 @@
 .heroSection {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 1000px;
-  gap: 2.5rem;
-  padding-bottom: 6rem;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 6rem;
+  min-height: 80vh;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.bgImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.bgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(20,0,0,0.7) 100%);
+  z-index: 1;
+}
+
+[data-theme="light"] .bgOverlay {
+  background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,240,240,0.85) 100%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  height: 100%;
+  justify-content: center;
 }
 
 .textContainer {
@@ -14,14 +53,14 @@
 }
 
 .companyName {
-  color: #ff5f5f;
+  color: var(--primary);
   font-size: 2.2rem;
   font-weight: 800;
   margin: 0;
 }
 
 .headline {
-  color: #ff0000;
+  color: var(--foreground);
   font-size: 2.8rem;
   font-weight: 800;
   line-height: 1.1;
@@ -29,32 +68,10 @@
 }
 
 .subHeadline {
-  color: #ff4444;
+  color: var(--primary);
   font-size: 0.85rem;
   font-weight: 500;
   margin-top: 0.5rem;
-}
-
-.imageContainer {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.imageBox {
-  width: 380px;
-  aspect-ratio: 1.4 / 1;
-  position: relative;
-  border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 0 50px rgba(255, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .statsContainer {
