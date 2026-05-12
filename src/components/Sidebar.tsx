@@ -49,7 +49,8 @@ export default function Sidebar() {
       {/* Mobile Header */}
       <div className={styles.mobileHeader}>
         <div className={styles.logoSmall}>
-          <Image src="/logo_starpack_white.png" alt="Logo" width={120} height={20} objectFit="contain" />
+          <Image src="/logo_starpack.png" alt="Logo" width={120} height={20} style={{ objectFit: 'contain' }} className="logoLight" />
+          <Image src="/logo_starpack_white.png" alt="Logo" width={120} height={20} style={{ objectFit: 'contain' }} className="logoDark" />
         </div>
         <button onClick={() => setIsMobileOpen(!isMobileOpen)} className={styles.menuBtn}>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -67,11 +68,19 @@ export default function Sidebar() {
         <div className={styles.topSection}>
           <div className={styles.logoContainer}>
             <Image 
+              src="/logo_starpack.png" 
+              alt="PT. STARPACK INDAHMAJU" 
+              width={200} 
+              height={40} 
+              className={`${styles.logo} logoLight`}
+              priority
+            />
+            <Image 
               src="/logo_starpack_white.png" 
               alt="PT. STARPACK INDAHMAJU" 
               width={200} 
               height={40} 
-              className={styles.logo}
+              className={`${styles.logo} logoDark`}
               priority
             />
           </div>
