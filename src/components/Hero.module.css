@@ -52,24 +52,29 @@
 
 .companyName {
   color: var(--primary);
-  font-size: 2.2rem;
-  font-weight: 800;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   margin: 0;
+  margin-bottom: 0.5rem;
 }
 
 .headline {
   color: var(--foreground);
-  font-size: 2.8rem;
+  font-size: 3.5rem;
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
   margin: 0;
+  max-width: 900px;
 }
 
 .subHeadline {
   color: var(--primary);
-  font-size: 0.85rem;
+  font-size: 1.25rem;
   font-weight: 500;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .statsContainer {
@@ -86,27 +91,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.85); /* Gives a slight glass effect on light theme */
+}
+
+[data-theme="dark"] .card {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .val {
   color: #ff0000;
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: 800;
   line-height: 1;
 }
 
 .lab {
-  color: var(--muted-text);
-  font-size: 0.7rem;
+  color: var(--foreground);
+  font-size: 0.95rem;
+  font-weight: 600;
   text-align: center;
 }
 
 .descBox {
   max-width: 800px;
-  color: var(--muted-text);
-  font-size: 0.9rem;
-  line-height: 1.7;
+  color: var(--foreground);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-weight: 500;
 }
 
 @media (max-width: 1024px) {
@@ -129,6 +142,9 @@
     font-size: 2.2rem;
   }
   .companyName {
-    font-size: 1.6rem;
+    font-size: 0.9rem;
+  }
+  .val {
+    font-size: 2rem;
   }
 }
