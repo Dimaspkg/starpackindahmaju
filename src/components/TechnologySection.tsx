@@ -16,7 +16,7 @@ export default function TechnologySection() {
 
       <div className={styles.categoriesList}>
         {t.tech.categories.map((cat: any, index: number) => (
-          <div key={index} className={styles.categoryCard}>
+          <div key={index} className={`${styles.categoryCard} reveal fadeUp delay${index}`}>
             <h3 className={styles.categoryTitle}>{cat.title}</h3>
             <ul className={styles.itemList}>
               {cat.items.map((item: string, i: number) => (
@@ -32,7 +32,7 @@ export default function TechnologySection() {
 
       <div className={styles.galleryGrid}>
         {t.tech.gallery.map((item: any, index: number) => (
-          <div key={index} className={styles.galleryCard}>
+          <div key={index} className={`${styles.galleryCard} reveal fadeUp delay${index}`}>
             <div className={styles.imageWrapper}>
               <Image 
                 src={`/images/tech/tech${index + 1}.png`} 

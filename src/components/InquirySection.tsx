@@ -20,7 +20,7 @@ export default function InquirySection() {
       </div>
 
       <div className={styles.mainContent}>
-        <div className={styles.leftCol}>
+        <div className={`${styles.leftCol} reveal fadeLeft`}>
           <div className={styles.infoGroup}>
             <h3 className={styles.subTitle}>{t.inquiry.info.title}</h3>
             
@@ -53,7 +53,7 @@ export default function InquirySection() {
           </div>
         </div>
 
-        <div className={styles.rightCol}>
+        <div className={`${styles.rightCol} reveal fadeRight`}>
           <h3 className={styles.subTitle}>{t.inquiry.form.title}</h3>
           
           <form className={styles.form} onSubmit={handleSubmit}>

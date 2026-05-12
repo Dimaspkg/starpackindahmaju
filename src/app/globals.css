@@ -127,3 +127,46 @@ ul {
 [data-theme="light"] .logoLight {
   display: block;
 }
+
+/* Scroll Reveal Animations */
+.reveal {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.fadeUp {
+  transform: translateY(50px);
+}
+
+.fadeUp.active {
+  transform: translateY(0);
+}
+
+.fadeLeft {
+  transform: translateX(-50px);
+}
+
+.fadeLeft.active {
+  transform: translateX(0);
+}
+
+.fadeRight {
+  transform: translateX(50px);
+}
+
+.fadeRight.active {
+  transform: translateX(0);
+}
+
+/* Stagger delay classes */
+.delay1 { transition-delay: 0.1s; }
+.delay2 { transition-delay: 0.2s; }
+.delay3 { transition-delay: 0.3s; }
+.delay4 { transition-delay: 0.4s; }
+.delay5 { transition-delay: 0.5s; }

@@ -44,7 +44,7 @@ export default function Hero() {
       </div>
 
       <div className={styles.heroContent}>
-        <div className={styles.textContainer}>
+        <div className={`${styles.textContainer} reveal fadeUp active`}>
           <h2 className={styles.companyName}>PT. Starpack Indahmaju</h2>
           <h1 className={styles.headline}>
             {t.hero.title}
@@ -53,15 +53,15 @@ export default function Hero() {
         </div>
 
         <div className={styles.statsContainer}>
-          <div className={styles.card}>
+          <div className={`${styles.card} reveal fadeUp active delay1`}>
             <span className={styles.val}>10M+</span>
             <span className={styles.lab}>{t.hero.badges.units.replace('10M+', '').trim()}</span>
           </div>
-          <div className={styles.card}>
+          <div className={`${styles.card} reveal fadeUp active delay2`}>
             <span className={styles.val}>500+</span>
             <span className={styles.lab}>{t.hero.badges.clients.replace('500+', '').trim()}</span>
           </div>
-          <div className={styles.card}>
+          <div className={`${styles.card} reveal fadeUp active delay3`}>
             <span className={styles.val}>Since 1996</span>
             <span className={styles.lab}>Jakarta, Indonesia</span>
           </div>

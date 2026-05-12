@@ -13,17 +13,17 @@ export default function AboutSection() {
       
       <div className={styles.grid}>
         <div className={styles.textContent}>
-          <div className={styles.subSection}>
+          <div className={`${styles.subSection} reveal fadeUp`}>
             <h3 className={styles.subTitle}>{t.about.story.title}</h3>
             <p className={styles.text}>{t.about.story.text}</p>
           </div>
 
-          <div className={styles.subSection}>
+          <div className={`${styles.subSection} reveal fadeUp delay1`}>
             <h3 className={styles.subTitle}>{t.about.mission.title}</h3>
             <p className={styles.text}>{t.about.mission.text}</p>
           </div>
 
-          <div className={styles.subSection}>
+          <div className={`${styles.subSection} reveal fadeUp delay2`}>
             <h3 className={styles.subTitle}>{t.about.values.title}</h3>
             <ul className={styles.valuesList}>
               {t.about.values.items.map((item: any, index: number) => (
@@ -37,7 +37,7 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <div className={styles.imageArea}>
+        <div className={`${styles.imageArea} reveal fadeRight`}>
           <div className={styles.imageWrapper}>
             <Image 
               src="/images/factory_inside.png" 

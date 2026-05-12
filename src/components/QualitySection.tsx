@@ -15,7 +15,7 @@ export default function QualitySection() {
       </div>
 
       <div className={styles.mainContent}>
-        <div className={styles.leftCol}>
+        <div className={`${styles.leftCol} reveal fadeLeft`}>
           <div className={styles.imageWrapper}>
             <Image 
               src="/images/quality/quality-main.png" 
@@ -27,7 +27,7 @@ export default function QualitySection() {
           </div>
         </div>
 
-        <div className={styles.rightCol}>
+        <div className={`${styles.rightCol} reveal fadeRight`}>
           <h3 className={styles.subTitle}>{t.quality.commitment.title}</h3>
           
           <div className={styles.commitmentList}>
@@ -42,7 +42,7 @@ export default function QualitySection() {
             ))}
           </div>
 
-          <div className={styles.capabilitiesBox}>
+          <div className={`${styles.capabilitiesBox} reveal fadeUp`}>
             <h4 className={styles.capabilitiesTitle}>{t.quality.capabilities.title}</h4>
             <ul className={styles.capabilitiesList}>
               {t.quality.capabilities.items.map((item: string, index: number) => (

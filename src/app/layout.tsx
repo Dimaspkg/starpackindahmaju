@@ -6,6 +6,7 @@ import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import Sidebar from "@/components/Sidebar";
 import ThemeToggle from "@/components/ThemeToggle";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -68,6 +69,7 @@ export default function RootLayout({
         </Script>
 
         <LanguageProvider>
+          <ScrollReveal />
           <div className="mainContainer">
             <Sidebar />
             <main className="contentWrapper">
