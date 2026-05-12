@@ -12,13 +12,26 @@ export default function Sidebar() {
   const [mounted, setMounted] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     setMounted(true);
     
     const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Auto-hide header logic
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setShowHeader(false);
+      } else {
+        setShowHeader(true);
+      }
+      setLastScrollY(currentScrollY);
+
+      // Active section tracking
       const sections = ['home', 'about', 'technology', 'premium', 'industry', 'quality', 'inquiry'];
-      const scrollPos = window.scrollY + 100;
+      const scrollPos = currentScrollY + 100;
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -29,9 +42,9 @@ export default function Sidebar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   if (!mounted) return null;
 
@@ -48,7 +61,7 @@ export default function Sidebar() {
   return (
     <>
       {/* Mobile Header */}
-      <div className={styles.mobileHeader}>
+      <div className={`${styles.mobileHeader} ${!showHeader ? styles.headerHidden : ''}`}>
         <div className={styles.logoSmall}>
           <Image src="/logo_starpack.png" alt="Logo" width={120} height={20} style={{ objectFit: 'contain' }} className="logoLight" />
           <Image src="/logo_starpack_white.png" alt="Logo" width={120} height={20} style={{ objectFit: 'contain' }} className="logoDark" />
