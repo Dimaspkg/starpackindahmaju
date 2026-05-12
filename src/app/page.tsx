@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
       <Hero />
       <AboutSection />
       <TechnologySection />
@@ -18,6 +18,6 @@ export default function Home() {
       <QualitySection />
       <InquirySection />
       <Footer />
-    </>
+    </div>
   );
 }
