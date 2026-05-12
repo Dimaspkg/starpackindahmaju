@@ -141,26 +141,39 @@
     }
   },
   "inquiry": {
-    "tag": "CONTACT",
-    "title": "Inquiry",
-    "description": "Tell us about your plastic product and required coating effect. We'll respond with next steps for sampling and production.",
-    "sales": {
-      "title": "Sales",
-      "email": "sales@starpackindahmaju.com",
-      "phone": "+62 21-0000-0000",
-      "note": "Please verify your official contact details before final deployment."
+    "title": "Get In Touch",
+    "description": "Interested in our UV coating and vacuum metallizing services? Contact us today for samples, quotes, or technical consultations.",
+    "info": {
+      "title": "Contact Information",
+      "company": "Company",
+      "company_val": "PT. Starpack Indahmaju",
+      "location": "Location",
+      "location_val": "Jakarta, Indonesia",
+      "founded": "Founded",
+      "founded_val": "1996",
+      "services_title": "Services:",
+      "services": [
+        "UV Coating for Plastic Products",
+        "Vacuum Metallizing (Aluminum & Chrome)",
+        "Premium Finish Effects",
+        "Custom Coating Solutions",
+        "Quality Testing & Certification",
+        "Production Scaling (10M+ units annually)"
+      ]
     },
     "form": {
-      "name": "YOUR NAME",
-      "company": "COMPANY",
-      "email": "EMAIL",
-      "phone": "PHONE",
-      "message": "MESSAGE",
-      "message_placeholder": "Plastic type, coating effect reference, target volume, and timeline...",
-      "submit": "Send Inquiry",
-      "back": "Back to Home",
-      "success": "Inquiry sent successfully! We will contact you soon.",
-      "error": "Failed to send inquiry. Please try again."
+      "title": "Send Us A Message",
+      "name": "Full Name",
+      "name_placeholder": "Your Name",
+      "company": "Company Name",
+      "company_placeholder": "Your Company",
+      "email": "Email Address",
+      "email_placeholder": "your.email@company.com",
+      "interest": "Service Interest",
+      "interest_placeholder": "Select a service",
+      "message": "Message",
+      "message_placeholder": "Tell us about your coating needs...",
+      "submit": "Send Inquiry"
     }
   },
   "errors": {

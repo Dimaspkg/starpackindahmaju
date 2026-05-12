@@ -141,26 +141,39 @@
     }
   },
   "inquiry": {
-    "tag": "KONTAK",
-    "title": "Pertanyaan",
-    "description": "Beritahu kami tentang produk plastik Anda dan efek pelapisan yang diperlukan. Kami akan menanggapi dengan langkah selanjutnya untuk pengambilan sampel dan produksi.",
-    "sales": {
-      "title": "Penjualan",
-      "email": "sales@starpackindahmaju.com",
-      "phone": "+62 21-0000-0000",
-      "note": "Harap verifikasi detail kontak resmi Anda sebelum peluncuran akhir."
+    "title": "Hubungi Kami",
+    "description": "Tertarik dengan layanan UV coating dan vacuum metallizing kami? Hubungi kami hari ini untuk sampel, penawaran, atau konsultasi teknis.",
+    "info": {
+      "title": "Informasi Kontak",
+      "company": "Perusahaan",
+      "company_val": "PT. Starpack Indahmaju",
+      "location": "Lokasi",
+      "location_val": "Jakarta, Indonesia",
+      "founded": "Didirikan",
+      "founded_val": "1996",
+      "services_title": "Layanan:",
+      "services": [
+        "UV Coating untuk Produk Plastik",
+        "Vacuum Metallizing (Aluminium & Krom)",
+        "Efek Finishing Premium",
+        "Solusi Pelapisan Kustom",
+        "Pengujian Kualitas & Sertifikasi",
+        "Skalabilitas Produksi (10Jt+ unit per tahun)"
+      ]
     },
     "form": {
-      "name": "NAMA ANDA",
-      "company": "PERUSAHAAN",
-      "email": "EMAIL",
-      "phone": "TELEPON",
-      "message": "PESAN",
-      "message_placeholder": "Jenis plastik, referensi efek pelapisan, target volume, dan lini masa...",
-      "submit": "Kirim Pertanyaan",
-      "back": "Kembali ke Beranda",
-      "success": "Pertanyaan berhasil dikirim! Kami akan segera menghubungi Anda.",
-      "error": "Gagal mengirim pertanyaan. Silakan coba lagi."
+      "title": "Kirim Pesan",
+      "name": "Nama Lengkap",
+      "name_placeholder": "Nama Anda",
+      "company": "Nama Perusahaan",
+      "company_placeholder": "Perusahaan Anda",
+      "email": "Alamat Email",
+      "email_placeholder": "email.anda@perusahaan.com",
+      "interest": "Minat Layanan",
+      "interest_placeholder": "Pilih layanan",
+      "message": "Pesan",
+      "message_placeholder": "Beritahu kami tentang kebutuhan pelapisan Anda...",
+      "submit": "Kirim Pertanyaan"
     }
   },
   "errors": {

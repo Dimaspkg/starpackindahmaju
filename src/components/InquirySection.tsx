@@ -1,141 +1,115 @@
 "use client";
 
-import { useState } from 'react';
 import styles from './InquirySection.module.css';
 import { useLanguage } from '@/context/LanguageContext';
-import { db } from '@/lib/firebase';
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 export default function InquirySection() {
   const { t } = useLanguage();
-  const [formData, setFormData] = useState({
-    name: '',
-    company: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('loading');
-    
-    try {
-      await addDoc(collection(db, 'inquiries'), {
-        ...formData,
-        createdAt: serverTimestamp()
-      });
-      setStatus('success');
-      setFormData({ name: '', company: '', email: '', phone: '', message: '' });
-      setTimeout(() => setStatus('idle'), 5000);
-    } catch (error) {
-      console.error("Error submitting inquiry:", error);
-      setStatus('error');
-      setTimeout(() => setStatus('idle'), 5000);
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    // Form submission logic would go here
+    alert('Inquiry sent! (Demo)');
   };
 
   return (
     <section className={styles.inquiryContainer} id="inquiry">
-      <div className={styles.content}>
-        <div className={styles.tag}>{t.inquiry.tag}</div>
+      <div className={styles.header}>
         <h2 className={styles.title}>{t.inquiry.title}</h2>
-        <p className={styles.description}>
-          {t.inquiry.description}
-        </p>
+        <p className={styles.description}>{t.inquiry.description}</p>
+      </div>
 
-        <div className={styles.mainCard}>
-          <div className={styles.leftInfo}>
-            <div className={styles.salesInfo}>
-              <h3 className={styles.salesTitle}>{t.inquiry.sales.title}</h3>
-              <div className={styles.contactDetails}>
-                <p className={styles.contactItem}>
-                  <strong>Email:</strong> <a href={`mailto:${t.inquiry.sales.email}`}>{t.inquiry.sales.email}</a>
-                </p>
-                <p className={styles.contactItem}>
-                  <strong>Phone:</strong> {t.inquiry.sales.phone}
-                </p>
+      <div className={styles.mainContent}>
+        <div className={styles.leftCol}>
+          <div className={styles.infoGroup}>
+            <h3 className={styles.subTitle}>{t.inquiry.info.title}</h3>
+            
+            <div className={styles.infoItems}>
+              <div className={styles.infoItem}>
+                <span className={styles.label}>{t.inquiry.info.company}:</span>
+                <span className={styles.value}> {t.inquiry.info.company_val}</span>
               </div>
-              <p className={styles.note}>{t.inquiry.sales.note}</p>
+              <div className={styles.infoItem}>
+                <span className={styles.label}>{t.inquiry.info.location}:</span>
+                <span className={styles.value}> {t.inquiry.info.location_val}</span>
+              </div>
+              <div className={styles.infoItem}>
+                <span className={styles.label}>{t.inquiry.info.founded}:</span>
+                <span className={styles.value}> {t.inquiry.info.founded_val}</span>
+              </div>
+            </div>
+
+            <div className={styles.servicesSection}>
+              <h4 className={styles.servicesTitle}>{t.inquiry.info.services_title}</h4>
+              <ul className={styles.servicesList}>
+                {t.inquiry.info.services.map((service: string, index: number) => (
+                  <li key={index} className={styles.serviceItem}>
+                    <span className={styles.check}>✓</span>
+                    {service}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
+        </div>
 
-          <div className={styles.rightForm}>
-            <form onSubmit={handleSubmit} className={styles.form}>
-              <div className={styles.formGrid}>
-                <div className={styles.inputGroup}>
-                  <label>{t.inquiry.form.name}</label>
-                  <input 
-                    type="text" 
-                    name="name" 
-                    value={formData.name} 
-                    onChange={handleChange} 
-                    required 
-                  />
-                </div>
-                <div className={styles.inputGroup}>
-                  <label>{t.inquiry.form.company}</label>
-                  <input 
-                    type="text" 
-                    name="company" 
-                    value={formData.company} 
-                    onChange={handleChange} 
-                  />
-                </div>
-                <div className={styles.inputGroup}>
-                  <label>{t.inquiry.form.email}</label>
-                  <input 
-                    type="email" 
-                    name="email" 
-                    value={formData.email} 
-                    onChange={handleChange} 
-                    required 
-                  />
-                </div>
-                <div className={styles.inputGroup}>
-                  <label>{t.inquiry.form.phone}</label>
-                  <input 
-                    type="tel" 
-                    name="phone" 
-                    value={formData.phone} 
-                    onChange={handleChange} 
-                  />
-                </div>
-              </div>
-              <div className={styles.inputGroup}>
-                <label>{t.inquiry.form.message}</label>
-                <textarea 
-                  name="message" 
-                  rows={4} 
-                  value={formData.message} 
-                  onChange={handleChange}
-                  placeholder={t.inquiry.form.message_placeholder}
-                  required
-                ></textarea>
-              </div>
+        <div className={styles.rightCol}>
+          <h3 className={styles.subTitle}>{t.inquiry.form.title}</h3>
+          
+          <form className={styles.form} onSubmit={handleSubmit}>
+            <div className={styles.formGroup}>
+              <label className={styles.formLabel}>{t.inquiry.form.name}</label>
+              <input 
+                type="text" 
+                placeholder={t.inquiry.form.name_placeholder}
+                className={styles.input}
+                required
+              />
+            </div>
 
-              <div className={styles.buttonGroup}>
-                <button 
-                  type="submit" 
-                  className={styles.submitBtn}
-                  disabled={status === 'loading'}
-                >
-                  {status === 'loading' ? '...' : t.inquiry.form.submit}
-                </button>
-                <button type="button" className={styles.backBtn} onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
-                  {t.inquiry.form.back}
-                </button>
-              </div>
+            <div className={styles.formGroup}>
+              <label className={styles.formLabel}>{t.inquiry.form.company}</label>
+              <input 
+                type="text" 
+                placeholder={t.inquiry.form.company_placeholder}
+                className={styles.input}
+              />
+            </div>
 
-              {status === 'success' && <p className={styles.successMsg}>{t.inquiry.form.success}</p>}
-              {status === 'error' && <p className={styles.errorMsg}>{t.inquiry.form.error}</p>}
-            </form>
-          </div>
+            <div className={styles.formGroup}>
+              <label className={styles.formLabel}>{t.inquiry.form.email}</label>
+              <input 
+                type="email" 
+                placeholder={t.inquiry.form.email_placeholder}
+                className={styles.input}
+                required
+              />
+            </div>
+
+            <div className={styles.formGroup}>
+              <label className={styles.formLabel}>{t.inquiry.form.interest}</label>
+              <select className={styles.select} required defaultValue="">
+                <option value="" disabled>{t.inquiry.form.interest_placeholder}</option>
+                <option value="uv">UV Coating</option>
+                <option value="vacuum">Vacuum Metallizing</option>
+                <option value="custom">Custom Solutions</option>
+              </select>
+            </div>
+
+            <div className={styles.formGroup}>
+              <label className={styles.formLabel}>{t.inquiry.form.message}</label>
+              <textarea 
+                placeholder={t.inquiry.form.message_placeholder}
+                className={styles.textarea}
+                rows={4}
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" className={styles.submitBtn}>
+              {t.inquiry.form.submit}
+            </button>
+          </form>
         </div>
       </div>
     </section>

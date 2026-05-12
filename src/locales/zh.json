@@ -141,26 +141,39 @@
     }
   },
   "inquiry": {
-    "tag": "联系我们",
-    "title": "询价",
-    "description": "告诉我们您的塑料产品和所需的涂装效果。我们将回复您关于打样和生产的后续步骤。",
-    "sales": {
-      "title": "销售部",
-      "email": "sales@starpackindahmaju.com",
-      "phone": "+62 21-0000-0000",
-      "note": "在最终发布前，请核实您的官方联系详情。"
+    "title": "联系我们",
+    "description": "对我们的紫外线涂装和真空镀膜服务感兴趣？请立即联系我们获取样品、报价或技术咨询。",
+    "info": {
+      "title": "联系信息",
+      "company": "公司",
+      "company_val": "PT. Starpack Indahmaju",
+      "location": "地点",
+      "location_val": "印度尼西亚，雅加达",
+      "founded": "成立于",
+      "founded_val": "1996年",
+      "services_title": "服务项目：",
+      "services": [
+        "塑料制品紫外线涂装",
+        "真空镀膜（铝和铬）",
+        "优质饰面效果",
+        "定制涂层解决方案",
+        "质量测试与认证",
+        "生产规模（每年 10M+ 单位）"
+      ]
     },
     "form": {
-      "name": "您的姓名",
+      "title": "给我们留言",
+      "name": "姓名",
+      "name_placeholder": "您的姓名",
       "company": "公司名称",
-      "email": "电子邮件",
-      "phone": "电话号码",
-      "message": "留言信息",
-      "message_placeholder": "塑料类型、涂装效果参考、目标产量和时间表...",
-      "submit": "发送询价",
-      "back": "返回首页",
-      "success": "询价已成功发送！我们将尽快联系您。",
-      "error": "发送失败。请重试。"
+      "company_placeholder": "您的公司",
+      "email": "电子邮件地址",
+      "email_placeholder": "your.email@company.com",
+      "interest": "服务意向",
+      "interest_placeholder": "选择服务",
+      "message": "留言",
+      "message_placeholder": "告诉我们您的涂装需求...",
+      "submit": "发送询价"
     }
   },
   "errors": {

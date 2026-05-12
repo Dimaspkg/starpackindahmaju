@@ -3,159 +3,163 @@
   border-top: 1px solid var(--card-border);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 4rem;
-}
-
-.tag {
-  color: var(--primary);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+.header {
+  margin-bottom: 4rem;
 }
 
 .title {
   font-size: 3rem;
   font-weight: 800;
-  margin-bottom: 2rem;
-  color: var(--foreground);
+  color: var(--primary);
+  margin-bottom: 1.5rem;
 }
 
 .description {
   font-size: 1.1rem;
-  color: var(--muted-text);
+  color: #dddddd;
+  max-width: 900px;
   line-height: 1.8;
+}
+
+.mainContent {
+  display: flex;
+  gap: 6rem;
+  align-items: flex-start;
+}
+
+.leftCol {
+  flex: 1;
+}
+
+.rightCol {
+  flex: 1.2;
+}
+
+.subTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 2.5rem;
+}
+
+.infoItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
   margin-bottom: 3rem;
 }
 
-.contactInfo {
+.infoItem {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.label {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.value {
+  color: #bbbbbb;
+}
+
+.servicesSection {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
-.contactCard {
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  padding: 2rem;
-  border-radius: 12px;
-  border-left: 3px solid var(--primary);
-}
-
-.contactTitle {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--foreground);
-}
-
-.contactLink {
+.servicesTitle {
   font-size: 1.1rem;
-  color: var(--primary);
-  font-weight: 600;
-  display: block;
-  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #ffffff;
 }
 
-.contactNote {
-  font-size: 0.8rem;
-  color: var(--muted-text);
-  opacity: 0.6;
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.serviceItem {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  color: #aaaaaa;
+  font-size: 1rem;
+}
+
+.check {
+  color: #ffffff;
+  font-weight: 800;
 }
 
 .form {
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  padding: 3rem;
-  border-radius: 16px;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.formGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-.inputGroup {
+.formGroup {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.label {
-  font-size: 0.85rem;
+.formLabel {
+  color: var(--primary);
+  font-size: 0.9rem;
   font-weight: 600;
-  color: #dddddd;
 }
 
-.input, .textarea {
-  background-color: #000000;
-  border: 1px solid var(--card-border);
+.input, .select, .textarea {
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 1rem;
-  border-radius: 8px;
-  color: var(--foreground);
-  font-family: inherit;
+  border-radius: 4px;
+  color: #ffffff;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease;
 }
 
-.input:focus, .textarea:focus {
+.input:focus, .select:focus, .textarea:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 10px rgba(255, 59, 59, 0.1);
 }
 
-.textarea {
-  min-height: 150px;
-  resize: vertical;
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.2rem;
 }
 
 .submitBtn {
   background-color: var(--primary);
-  color: white;
-  padding: 1.25rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
   font-weight: 700;
-  transition: all 0.3s ease;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: fit-content;
   margin-top: 1rem;
 }
 
 .submitBtn:hover {
-  background-color: var(--primary-hover);
+  background-color: #cc0000;
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(255, 59, 59, 0.2);
-}
-
-.statusMessage {
-  padding: 1rem;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: 600;
-}
-
-.success {
-  background-color: rgba(34, 197, 94, 0.1);
-  color: #22c55e;
-  border: 1px solid #22c55e;
-}
-
-.error {
-  background-color: rgba(239, 68, 68, 0.1);
-  color: #ef4444;
-  border: 1px solid #ef4444;
 }
 
 @media (max-width: 1024px) {
-  .grid { grid-template-columns: 1fr; }
-  .form { padding: 2rem; }
-  .formGrid { grid-template-columns: 1fr; }
-  .title { font-size: 2.25rem; }
+  .mainContent {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .title {
+    font-size: 2.25rem;
+  }
 }
