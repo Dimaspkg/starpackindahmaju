@@ -29,13 +29,15 @@
 
 .leftCol {
   flex: 1;
+  width: 100%;
 }
 
 .imageWrapper {
   position: relative;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 0 40px rgba(255, 0, 0, 0.15);
+  border: 1px solid var(--card-border);
 }
 
 .qualityImage {
@@ -46,20 +48,22 @@
 
 .rightCol {
   flex: 1.2;
+  width: 100%;
 }
 
 .subTitle {
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 800;
   color: var(--primary);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.01em;
 }
 
 .commitmentList {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  margin-bottom: 3rem;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .commitmentItem {
@@ -70,58 +74,63 @@
 
 .triangle {
   color: var(--primary);
-  font-size: 0.8rem;
-  margin-top: 0.4rem;
+  font-size: 0.7rem;
+  margin-top: 0.45rem;
+  flex-shrink: 0;
 }
 
 .itemText {
   font-size: 1.05rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .itemTitle {
-  font-weight: 700;
+  font-weight: 800;
   color: var(--foreground);
+  margin-right: 0.25rem;
 }
 
 .itemDesc {
   color: var(--muted-text);
+  display: inline;
 }
 
 .capabilitiesBox {
   background-color: var(--card-bg);
   border-left: 4px solid var(--primary);
-  padding: 2rem;
-  border-radius: 4px;
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
 }
 
 .capabilitiesTitle {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 800;
   color: var(--primary);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .capabilitiesList {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .capabilityItem {
   display: flex;
-  gap: 0.75rem;
+  gap: 1rem;
   color: var(--muted-text);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .bullet {
-  color: var(--foreground);
+  color: var(--primary);
+  font-weight: 800;
 }
 
 @media (max-width: 1024px) {
-  .content {
-    grid-template-columns: 1fr;
+  .mainContent {
+    flex-direction: column;
     gap: 4rem;
   }
   .title {
@@ -136,7 +145,22 @@
   .title {
     font-size: 2rem;
   }
+  .subTitle {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
   .capabilitiesBox {
     padding: 1.5rem;
+  }
+  .commitmentItem {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .triangle {
+    display: none;
+  }
+  .itemTitle {
+    color: var(--primary);
+    font-size: 1.1rem;
   }
 }
