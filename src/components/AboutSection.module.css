@@ -131,6 +131,15 @@
   .mainTitle {
     font-size: 2rem;
   }
+  .text {
+    font-size: 0.95rem;
+  }
+  .itemTitle {
+    font-size: 1rem;
+  }
+  .itemText {
+    font-size: 0.95rem;
+  }
   .imageArea {
     min-height: 300px;
   }

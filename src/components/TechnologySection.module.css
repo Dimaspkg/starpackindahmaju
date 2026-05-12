@@ -126,7 +126,13 @@
   .title {
     font-size: 2rem;
   }
+  .description {
+    font-size: 0.95rem;
+  }
   .categoryCard {
     padding: 1.5rem;
+  }
+  .listItem {
+    font-size: 0.9rem;
   }
 }

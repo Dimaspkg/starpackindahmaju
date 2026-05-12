@@ -94,7 +94,13 @@
   .title {
     font-size: 2rem;
   }
+  .description {
+    font-size: 0.95rem;
+  }
   .grid {
     grid-template-columns: 1fr;
+  }
+  .cardDesc {
+    font-size: 0.85rem;
   }
 }

@@ -211,8 +211,14 @@
   .title {
     font-size: 2rem;
   }
+  .description {
+    font-size: 0.95rem;
+  }
   .mainContent {
     gap: 3rem;
+  }
+  .infoItem {
+    font-size: 0.95rem;
   }
   .formGroup {
     flex-direction: column;
@@ -221,6 +227,7 @@
   }
   .formLabel {
     width: 100%;
+    font-size: 0.8rem;
   }
   .submitBtn {
     margin-left: 0;
