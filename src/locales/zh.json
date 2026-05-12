@@ -171,6 +171,12 @@
       "email_placeholder": "your.email@company.com",
       "interest": "服务意向",
       "interest_placeholder": "选择服务",
+      "interest_options": {
+        "uv": "紫外线涂层",
+        "vacuum": "真空镀膜",
+        "both": "两项服务",
+        "consultation": "技术咨询"
+      },
       "message": "留言",
       "message_placeholder": "告诉我们您的涂装需求...",
       "submit": "发送询价"

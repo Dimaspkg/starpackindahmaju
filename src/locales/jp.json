@@ -171,6 +171,12 @@
       "email_placeholder": "your.email@company.com",
       "interest": "興味のあるサービス",
       "interest_placeholder": "サービスを選択してください",
+      "interest_options": {
+        "uv": "UVコーティング",
+        "vacuum": "真空蒸着",
+        "both": "両方のサービス",
+        "consultation": "技術コンサルティング"
+      },
       "message": "メッセージ",
       "message_placeholder": "コーティングのニーズについてお知らせください...",
       "submit": "お問い合わせを送信"
