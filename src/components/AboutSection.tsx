@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import styles from './AboutSection.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -8,38 +9,43 @@ export default function AboutSection() {
 
   return (
     <section className={styles.aboutContainer} id="about">
-      <div className={styles.content}>
+      <h2 className={styles.mainTitle}>{t.about.title}</h2>
+      
+      <div className={styles.grid}>
+        <div className={styles.textContent}>
+          <div className={styles.subSection}>
+            <h3 className={styles.subTitle}>{t.about.story.title}</h3>
+            <p className={styles.text}>{t.about.story.text}</p>
+          </div>
 
-        <div className={styles.tag}>{t.about.tag}</div>
-        <h2 className={styles.title}>{t.about.title}</h2>
-        <p className={styles.description}>
-          {t.about.description}
-        </p>
+          <div className={styles.subSection}>
+            <h3 className={styles.subTitle}>{t.about.mission.title}</h3>
+            <p className={styles.text}>{t.about.mission.text}</p>
+          </div>
 
-        <div className={styles.cards}>
-          <div className={styles.card}>
-            <h3 className={styles.cardTitle}>{t.about.focus.title}</h3>
-            <p className={styles.cardText}>{t.about.focus.text}</p>
-            <ul className={styles.list}>
-              {t.about.focus.items.map((item, index) => (
-                <li key={index} className={styles.listItem}>
-                  <span className={styles.dot}></span>
-                  <span className={styles.itemText}>{item}</span>
+          <div className={styles.subSection}>
+            <h3 className={styles.subTitle}>{t.about.values.title}</h3>
+            <ul className={styles.valuesList}>
+              {t.about.values.items.map((item: any, index: number) => (
+                <li key={index} className={styles.valueItem}>
+                  <span className={styles.bullet}>►</span>
+                  <span className={styles.itemTitle}>{item.title}:</span>
+                  <span className={styles.itemText}>{item.text}</span>
                 </li>
               ))}
             </ul>
           </div>
+        </div>
 
-          <div className={styles.card}>
-            <h3 className={styles.cardTitle}>{t.about.glance.title}</h3>
-            <ul className={styles.list}>
-              {t.about.glance.items.map((item, index) => (
-                <li key={index} className={styles.listItem}>
-                  <span className={styles.dot}></span>
-                  <span className={styles.itemText}>{item}</span>
-                </li>
-              ))}
-            </ul>
+        <div className={styles.imageArea}>
+          <div className={styles.imageWrapper}>
+            <Image 
+              src="/images/factory_inside.png" 
+              alt="Starpack Factory" 
+              width={600}
+              height={400}
+              className={styles.image}
+            />
           </div>
         </div>
       </div>

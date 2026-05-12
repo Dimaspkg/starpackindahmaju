@@ -29,25 +29,23 @@
     }
   },
   "about": {
-    "tag": "COMPANY",
-    "title": "About Starpack",
-    "description": "Established in January 1996 and headquartered in Jakarta, PT. Starpack Indahmaju supports manufacturing teams with reliable UV plastic coating production.",
-    "focus": {
-      "title": "What we focus on",
-      "text": "We specialize in plastic coating to help products achieve premium surface finishing and consistent appearance.",
-      "items": [
-        "Wide coating effect options for different product requirements",
-        "Process stability supported by structured production control",
-        "Built for production scale and recurring orders"
-      ]
+    "title": "About PT. Starpack Indahmaju",
+    "story": {
+      "title": "Our Story",
+      "text": "Founded in 1996 in Jakarta, PT. Starpack Indahmaju has established itself as a leading provider of UV coating and vacuum metallizing solutions for plastic products. What started as a small operation has grown into a trusted partner for over 500 clients across multiple industries."
     },
-    "glance": {
-      "title": "At a glance",
+    "mission": {
+      "title": "Our Mission",
+      "text": "To provide innovative coating solutions that enhance product aesthetics, durability, and market appeal while maintaining the highest standards of quality and environmental responsibility."
+    },
+    "values": {
+      "title": "Our Values",
       "items": [
-        "30+ years experience since 1996",
-        "500+ clients supported",
-        "10M+ units per year",
-        "ISO 9001:2015 certified (upgraded April 2022)"
+        { "title": "Quality First", "text": "Unwavering commitment to excellence" },
+        { "title": "Innovation", "text": "Continuous technological advancement" },
+        { "title": "Reliability", "text": "Consistent delivery and service" },
+        { "title": "Partnership", "text": "Long-term client relationships" },
+        { "title": "Sustainability", "text": "Environmentally responsible practices" }
       ]
     }
   },

@@ -29,25 +29,23 @@
     }
   },
   "about": {
-    "tag": "PERUSAHAAN",
-    "title": "Tentang Starpack",
-    "description": "Didirikan pada Januari 1996 dan berkantor pusat di Jakarta, PT. Starpack Indahmaju mendukung tim manufaktur dengan produksi UV coating plastik yang andal.",
-    "focus": {
-      "title": "Apa yang kami fokuskan",
-      "text": "Kami berspesialisasi dalam pelapisan plastik untuk membantu produk mencapai penyelesaian permukaan premium dan penampilan yang konsisten.",
-      "items": [
-        "Opsi efek pelapisan yang luas untuk kebutuhan produk yang berbeda",
-        "Stabilitas proses yang didukung oleh kontrol produksi terstruktur",
-        "Dibangun untuk skala produksi dan pesanan berulang"
-      ]
+    "title": "Tentang PT. Starpack Indahmaju",
+    "story": {
+      "title": "Kisah Kami",
+      "text": "Didirikan pada tahun 1996 di Jakarta, PT. Starpack Indahmaju telah memantapkan dirinya sebagai penyedia terkemuka solusi UV coating dan vacuum metallizing untuk produk plastik. Apa yang dimulai sebagai operasi kecil telah berkembang menjadi mitra tepercaya bagi lebih dari 500 klien di berbagai industri."
     },
-    "glance": {
-      "title": "Sekilas pandang",
+    "mission": {
+      "title": "Misi Kami",
+      "text": "Menyediakan solusi pelapisan inovatif yang meningkatkan estetika produk, daya tahan, dan daya tarik pasar sambil mempertahankan standar kualitas tertinggi dan tanggung jawab lingkungan."
+    },
+    "values": {
+      "title": "Nilai-Nilai Kami",
       "items": [
-        "Pengalaman 30+ tahun sejak 1996",
-        "500+ klien didukung",
-        "10Jt+ unit per tahun",
-        "Tersertifikasi ISO 9001:2015 (diperbarui April 2022)"
+        { "title": "Kualitas Utama", "text": "Komitmen teguh terhadap keunggulan" },
+        { "title": "Inovasi", "text": "Kemajuan teknologi yang berkelanjutan" },
+        { "title": "Keandalan", "text": "Pengiriman dan layanan yang konsisten" },
+        { "title": "Kemitraan", "text": "Hubungan klien jangka panjang" },
+        { "title": "Keberlanjutan", "text": "Praktik yang bertanggung jawab terhadap lingkungan" }
       ]
     }
   },
