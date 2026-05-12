@@ -19,6 +19,24 @@
   --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
+[data-theme="light"] {
+  --background: #f7f7f7;
+  --foreground: #111111;
+  --primary: #e60000;
+  --primary-hover: #cc0000;
+  --sidebar-bg: #ffffff;
+  --sidebar-border: #e0e0e0;
+  
+  --card-bg: #ffffff;
+  --card-border: #dddddd;
+  --muted-text: #555555;
+  
+  --nav-active-bg: #ff0000;
+  --nav-active-text: #ffffff;
+  --nav-hover-bg: #f0f0f0;
+}
+
+
 * {
   box-sizing: border-box;
   padding: 0;

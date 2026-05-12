@@ -29,7 +29,7 @@
 }
 
 .categoryCard {
-  background-color: #1a1a1a;
+  background-color: var(--card-bg);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-left: 4px solid var(--primary);
   padding: 2.5rem;
@@ -68,7 +68,7 @@
 }
 
 .galleryCard {
-  background-color: #1a1a1a;
+  background-color: var(--card-bg);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 8px;
   overflow: hidden;

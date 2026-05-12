@@ -89,7 +89,7 @@
 }
 
 .capabilitiesBox {
-  background-color: #1a1a1a;
+  background-color: var(--card-bg);
   border-left: 4px solid var(--primary);
   padding: 2rem;
   border-radius: 4px;

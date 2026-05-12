@@ -1,0 +1,29 @@
+.themeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--foreground);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .themeToggle {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.themeToggle:hover {
+  transform: scale(1.1);
+  border-color: var(--primary);
+  color: var(--primary);
+}
