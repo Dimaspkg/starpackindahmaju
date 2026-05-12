@@ -17,18 +17,11 @@ export default function Footer() {
           <div className={styles.branding}>
             <div className={styles.logoWrapper}>
               <Image 
-                src="/logo_starpack.png"
-                alt="PT. STARPACK INDAHMAJU Logo" 
-                width={200} 
-                height={40} 
-                className={`${styles.logoImage} ${styles.logoLight}`}
-              />
-              <Image 
                 src="/logo_starpack_white.png"
                 alt="PT. STARPACK INDAHMAJU Logo" 
                 width={200} 
                 height={40} 
-                className={`${styles.logoImage} ${styles.logoDark}`}
+                className={styles.logoImage}
               />
             </div>
             <p className={styles.description}>
