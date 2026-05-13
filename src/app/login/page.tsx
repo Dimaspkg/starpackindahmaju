@@ -13,7 +13,7 @@ const SLIDES = [
   '/images/effects/effect4.png',
   '/images/effects/effect5.png',
   '/images/effects/effect6.png',
-  '/images/effects/effect7.png',
+  '/images/effects/holographic2.png',
   '/images/effects/effect8.png',
 ];
 
