@@ -52,7 +52,7 @@ import Counter from './Counter';
         className={styles.heroBackground}
       >
         <Image 
-          src="/images/uv_coating.png" 
+          src={t.hero.image} 
           alt="Product finishing background" 
           fill
           priority
