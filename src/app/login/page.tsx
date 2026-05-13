@@ -1,17 +1,36 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import styles from './login.module.css';
+
+const SLIDES = [
+  '/images/effects/effect1.png',
+  '/images/effects/effect2.png',
+  '/images/effects/effect3.png',
+  '/images/effects/effect4.png',
+  '/images/effects/effect5.png',
+  '/images/effects/effect6.png',
+  '/images/effects/effect7.png',
+  '/images/effects/effect8.png',
+];
 
 export default function LoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const router = useRouter();
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % SLIDES.length);
+    }, 3500);
+    return () => clearInterval(timer);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,44 +53,32 @@ export default function LoginPage() {
 
   return (
     <div className={styles.loginPage}>
-      {/* Left decorative panel */}
+      {/* Left image slideshow panel */}
       <div className={styles.leftPanel}>
-        <div className={styles.circle} style={{ width: 300, height: 300, top: -100, left: -100 }} />
-        <div className={styles.circle} style={{ width: 500, height: 500, bottom: -200, right: -200 }} />
-        <div className={styles.circle} style={{ width: 200, height: 200, top: '50%', left: '50%', transform: 'translate(-50%,-50%)', background: 'rgba(255,51,51,0.05)' }} />
-
-        <div className={styles.leftPanelContent}>
-          <div className={styles.brandLogo}>
-            <Image
-              src="/logo_starpack_white.png"
-              alt="PT. Starpack Indahmaju"
-              width={200}
-              height={80}
-              style={{ objectFit: 'contain' }}
-              priority
+        {SLIDES.map((src, i) => (
+          <div
+            key={src}
+            className={`${styles.slide} ${i === currentSlide ? styles.slideActive : ''}`}
+          >
+            <Image src={src} alt={`slide ${i + 1}`} fill className={styles.slideImage} priority={i === 0} />
+          </div>
+        ))}
+        {/* Dark overlay */}
+        <div className={styles.slideOverlay} />
+        {/* Logo on top */}
+        <div className={styles.slideLogoWrap}>
+          <Image src="/logo_starpack_white.png" alt="Starpack" width={180} height={72} style={{ objectFit: 'contain' }} priority />
+        </div>
+        {/* Dot indicators */}
+        <div className={styles.dotRow}>
+          {SLIDES.map((_, i) => (
+            <button
+              key={i}
+              className={`${styles.dot} ${i === currentSlide ? styles.dotActive : ''}`}
+              onClick={() => setCurrentSlide(i)}
+              aria-label={`Slide ${i + 1}`}
             />
-          </div>
-          <p className={styles.brandTagline}>
-            PT. Starpack Indahmaju<br />
-            Admin Management Panel<br />
-            <br />
-            UV Plastic Coating Specialist<br />
-            Jakarta, Indonesia — Est. 1996
-          </p>
-          <div className={styles.brandStat}>
-            <div className={styles.statItem}>
-              <span className={styles.statNum}>10M+</span>
-              <span className={styles.statLabel}>Units Produced</span>
-            </div>
-            <div className={styles.statItem}>
-              <span className={styles.statNum}>500+</span>
-              <span className={styles.statLabel}>Clients</span>
-            </div>
-            <div className={styles.statItem}>
-              <span className={styles.statNum}>28+</span>
-              <span className={styles.statLabel}>Years</span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
