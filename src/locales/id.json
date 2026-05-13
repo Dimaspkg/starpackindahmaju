@@ -108,7 +108,7 @@
     "title": "Industri yang Kami Layani",
     "description": "Solusi pelapisan kami dipercaya di berbagai industri, mulai dari produk kecantikan mewah hingga komponen otomotif. Kami menyesuaikan layanan kami untuk memenuhi kebutuhan unik setiap sektor.",
     "items": [
-      { "title": "Kecantikan & Kosmetik", "desc": "Solusi pengemasan premium untuk merek kecantikan mewah", "image": "/images/industry/industry1.png" },
+      { "title": "Kecantikan & Kosmetik", "desc": "Solusi pengemasan premium untuk merek kecantikan mewah", "image": "/images/Beauty_&_Cosmetics/Beauty_&_Cosmetics.png" },
       { "title": "Elektronik", "desc": "Pelapisan presisi tinggi untuk elektronik konsumen", "image": "/images/industry/industry2.png" },
       { "title": "Fashion & Aksesoris", "desc": "Komponen desainer dan pelapisan aksesoris mewah", "image": "/images/industry/industry3.png" },
       { "title": "Makanan & Minuman", "desc": "Pengemasan premium untuk merek makanan gourmet dan minuman", "image": "/images/industry/industry4.png" },

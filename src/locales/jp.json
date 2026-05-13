@@ -108,7 +108,7 @@
     "title": "提供業界",
     "description": "当社のコーティングソリューションは、高級美容製品から自動車部品に至るまで、多様な業界で信頼されています。各セクターの固有の要求に応えるため、サービスをカスタマイズしています。",
     "items": [
-      { "title": "美容・化粧品", "desc": "高級美容ブランド向けのプレミアムパッケージソリューション", "image": "/images/industry/industry1.png" },
+      { "title": "美容・化粧品", "desc": "高級美容ブランド向けのプレミアムパッケージソリューション", "image": "/images/Beauty_&_Cosmetics/Beauty_&_Cosmetics.png" },
       { "title": "電子機器", "desc": "コンシューマーエレクトロニクス向けの高精度コーティング", "image": "/images/industry/industry2.png" },
       { "title": "ファッション・アクセサリー", "desc": "デザイナーコンポーネントおよび高級アクセサリーのコーティング", "image": "/images/industry/industry3.png" },
       { "title": "食品・飲料", "desc": "グルメおよび飲料ブランド向けのプレミアムパッケージ", "image": "/images/industry/industry4.png" },

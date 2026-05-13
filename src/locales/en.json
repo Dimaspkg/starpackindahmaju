@@ -108,7 +108,7 @@
     "title": "Industries We Serve",
     "description": "Our coating solutions are trusted across diverse industries, from luxury beauty products to automotive components. We customize our services to meet each sector's unique demands.",
     "items": [
-      { "title": "Beauty & Cosmetics", "desc": "Premium packaging solutions for luxury beauty brands", "image": "/images/industry/industry1.png" },
+      { "title": "Beauty & Cosmetics", "desc": "Premium packaging solutions for luxury beauty brands", "image": "/images/Beauty_&_Cosmetics/Beauty_&_Cosmetics.png" },
       { "title": "Electronics", "desc": "High-precision coating for consumer electronics", "image": "/images/industry/industry2.png" },
       { "title": "Fashion & Accessories", "desc": "Designer components and luxury accessories coating", "image": "/images/industry/industry3.png" },
       { "title": "Food & Beverage", "desc": "Premium packaging for gourmet and beverage brands", "image": "/images/industry/industry4.png" },
