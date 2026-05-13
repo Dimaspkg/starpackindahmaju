@@ -99,7 +99,7 @@
       { "title": "ハイグロス (High Gloss)", "desc": "プレミアムで豪華な製品向けの鏡面仕上げ", "image": "/images/High_Gloss/High_Gloss.png" },
       { "title": "マット仕上げ (Matte Finish)", "desc": "洗練された非反射の表面質感", "image": "/images/effects/effect2.png" },
       { "title": "メタリックシルバー (Metallic Silver)", "desc": "深みと輝きのあるプレミアムシルバーコーティング", "image": "/images/effects/effect3.png" },
-      { "title": "ゴールドクローム (Gold Chrome)", "desc": "ハイエンド製品向けの豪華なゴールドメタリック仕上げ", "image": "/images/effects/effect4.png" },
+      { "title": "ゴールドクローム (Gold Chrome)", "desc": "ハイエンド製品向けの豪華なゴールドメタリック仕上げ", "image": "/images/gold_chrome/Gold_Chrome.png" },
       { "title": "ホログラフィック (Holographic)", "desc": "光反応性のあるレインボーイリディセント効果", "image": "/images/effects/Holographic.png" },
       { "title": "パール効果 (Pearl Effect)", "desc": "エレガンスを演出する、繊細で洗練されたパールコーティング", "image": "/images/effects/pearl-final.png" }
     ]
