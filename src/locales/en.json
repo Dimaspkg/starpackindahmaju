@@ -97,7 +97,7 @@
     "description": "We offer a comprehensive range of coating finishes tailored to your specific application and market requirements. Each effect is engineered for durability and visual excellence.",
     "items": [
       { "title": "High Gloss", "desc": "Mirror-like finish for premium luxury products", "image": "/images/High_Gloss/High_Gloss.png" },
-      { "title": "Matte Finish", "desc": "Sophisticated non-reflective surface texture", "image": "/images/effects/effect2.png" },
+      { "title": "Matte Finish", "desc": "Sophisticated non-reflective surface texture", "image": "/images/Matte_Finish/Matte_Finish.png" },
       { "title": "Metallic Silver", "desc": "Premium silver coating with depth and shimmer", "image": "/images/effects/effect3.png" },
       { "title": "Gold Chrome", "desc": "Luxurious gold metallic finish for high-end products", "image": "/images/gold_chrome/Gold_Chrome.png" },
       { "title": "Holographic", "desc": "Rainbow iridescent effect with light-reactive finish", "image": "/images/effects/Holographic.png" },
