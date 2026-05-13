@@ -93,12 +93,12 @@
     "title": "优质涂层效果",
     "description": "我们提供全面的涂层饰面系列，根据您的具体应用和市场需求量身定制。每种效果都经过精心设计，以确保耐用性和视觉上的卓越性。",
     "items": [
-      { "title": "高光 (High Gloss)", "desc": "为高档奢侈品打造的镜面饰面" },
-      { "title": "磨砂 (Matte Finish)", "desc": "精致的非反射表面质感" },
-      { "title": "金属银 (Metallic Silver)", "desc": "具有深度和闪光的优质银色涂层" },
-      { "title": "镀金 (Gold Chrome)", "desc": "为高端产品打造的豪华金属金饰面" },
-      { "title": "全息效果 (Holographic)", "desc": "具有光反应饰面的彩虹色效果" },
-      { "title": "珍珠效果 (Pearl Effect)", "desc": "细腻、精致的珍珠涂层，尽显优雅" }
+      { "title": "高光 (High Gloss)", "desc": "为高档奢侈品打造的镜面饰面", "image": "/images/effects/effect1.png" },
+      { "title": "磨砂 (Matte Finish)", "desc": "精致的非反射表面质感", "image": "/images/effects/effect2.png" },
+      { "title": "金属银 (Metallic Silver)", "desc": "具有深度和闪光的优质银色涂层", "image": "/images/effects/effect3.png" },
+      { "title": "镀金 (Gold Chrome)", "desc": "为高端产品打造的豪华金属金饰面", "image": "/images/effects/effect4.png" },
+      { "title": "全息效果 (Holographic)", "desc": "具有光反应饰面的彩虹色效果", "image": "/images/effects/effect5.png" },
+      { "title": "珍珠效果 (Pearl Effect)", "desc": "细腻、精致的珍珠涂层，尽显优雅", "image": "/images/effects/effect6.png" }
     ]
   },
   "industry": {

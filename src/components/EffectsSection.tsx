@@ -19,7 +19,7 @@ export default function EffectsSection() {
           <div key={index} className={styles.card}>
             <div className={styles.imageWrapper}>
               <Image 
-                src={`/images/effects/effect${index + 1}.png`}
+                src={item.image}
                 alt={item.title}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

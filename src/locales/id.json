@@ -93,12 +93,12 @@
     "title": "Efek Coating Premium",
     "description": "Kami menawarkan rangkaian lengkap finishing pelapisan yang disesuaikan dengan aplikasi spesifik dan kebutuhan pasar Anda. Setiap efek dirancang untuk daya tahan dan keunggulan visual.",
     "items": [
-      { "title": "High Gloss", "desc": "Finishing seperti cermin untuk produk mewah premium" },
-      { "title": "Matte Finish", "desc": "Tekstur permukaan non-reflektif yang canggih" },
-      { "title": "Metallic Silver", "desc": "Pelapisan perak premium dengan kedalaman dan kilauan" },
-      { "title": "Gold Chrome", "desc": "Finishing logam emas mewah untuk produk kelas atas" },
-      { "title": "Holographic", "desc": "Efek pelangi warna-warni dengan finishing reaktif cahaya" },
-      { "title": "Pearl Effect", "desc": "Pelapisan mutiara yang halus dan canggih untuk keanggunan" }
+      { "title": "High Gloss", "desc": "Finishing seperti cermin untuk produk mewah premium", "image": "/images/effects/effect1.png" },
+      { "title": "Matte Finish", "desc": "Tekstur permukaan non-reflektif yang canggih", "image": "/images/effects/effect2.png" },
+      { "title": "Metallic Silver", "desc": "Pelapisan perak premium dengan kedalaman dan kilauan", "image": "/images/effects/effect3.png" },
+      { "title": "Gold Chrome", "desc": "Finishing logam emas mewah untuk produk kelas atas", "image": "/images/effects/effect4.png" },
+      { "title": "Holographic", "desc": "Efek pelangi warna-warni dengan finishing reaktif cahaya", "image": "/images/effects/effect5.png" },
+      { "title": "Pearl Effect", "desc": "Pelapisan mutiara yang halus dan canggih untuk keanggunan", "image": "/images/effects/effect6.png" }
     ]
   },
   "industry": {
