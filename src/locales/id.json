@@ -108,12 +108,12 @@
     "title": "Industri yang Kami Layani",
     "description": "Solusi pelapisan kami dipercaya di berbagai industri, mulai dari produk kecantikan mewah hingga komponen otomotif. Kami menyesuaikan layanan kami untuk memenuhi kebutuhan unik setiap sektor.",
     "items": [
-      { "title": "Kecantikan & Kosmetik", "desc": "Solusi pengemasan premium untuk merek kecantikan mewah" },
-      { "title": "Elektronik", "desc": "Pelapisan presisi tinggi untuk elektronik konsumen" },
-      { "title": "Fashion & Aksesoris", "desc": "Komponen desainer dan pelapisan aksesoris mewah" },
-      { "title": "Makanan & Minuman", "desc": "Pengemasan premium untuk merek makanan gourmet dan minuman" },
-      { "title": "Otomotif", "desc": "Solusi pelapisan komponen interior dan eksterior" },
-      { "title": "Rumah Tangga & Gaya Hidup", "desc": "Pelapisan produk rumah tangga yang dekoratif dan fungsional" }
+      { "title": "Kecantikan & Kosmetik", "desc": "Solusi pengemasan premium untuk merek kecantikan mewah", "image": "/images/industry/industry1.png" },
+      { "title": "Elektronik", "desc": "Pelapisan presisi tinggi untuk elektronik konsumen", "image": "/images/industry/industry2.png" },
+      { "title": "Fashion & Aksesoris", "desc": "Komponen desainer dan pelapisan aksesoris mewah", "image": "/images/industry/industry3.png" },
+      { "title": "Makanan & Minuman", "desc": "Pengemasan premium untuk merek makanan gourmet dan minuman", "image": "/images/industry/industry4.png" },
+      { "title": "Otomotif", "desc": "Solusi pelapisan komponen interior dan eksterior", "image": "/images/industry/industry5.png" },
+      { "title": "Rumah Tangga & Gaya Hidup", "desc": "Pelapisan produk rumah tangga yang dekoratif dan fungsional", "image": "/images/Home_&_Lifestyle/Home_&_Lifestyle.png" }
     ]
   },
   "quality": {

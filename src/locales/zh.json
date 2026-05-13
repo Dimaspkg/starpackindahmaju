@@ -108,12 +108,12 @@
     "title": "我们服务的行业",
     "description": "我们的涂层解决方案深受各行各业的信赖，从豪华美容产品到汽车零部件。我们定制服务以满足每个领域的独特需求。",
     "items": [
-      { "title": "美容与化妆品", "desc": "为奢侈美容品牌提供优质包装解决方案" },
-      { "title": "电子产品", "desc": "为消费电子产品提供高精度涂层" },
-      { "title": "时尚与配件", "desc": "设计师组件和奢侈配饰涂层" },
-      { "title": "食品与饮料", "desc": "为高级食品和饮料品牌提供优质包装" },
-      { "title": "汽车工业", "desc": "内饰和外饰组件涂层解决方案" },
-      { "title": "家居与生活方式", "desc": "装饰性和功能性家居产品涂层" }
+      { "title": "美容与化妆品", "desc": "为奢侈美容品牌提供优质包装解决方案", "image": "/images/industry/industry1.png" },
+      { "title": "电子产品", "desc": "为消费电子产品提供高精度涂层", "image": "/images/industry/industry2.png" },
+      { "title": "时尚与配件", "desc": "设计师组件和奢侈配饰涂层", "image": "/images/industry/industry3.png" },
+      { "title": "食品与饮料", "desc": "为高级食品和饮料品牌提供优质包装", "image": "/images/industry/industry4.png" },
+      { "title": "汽车工业", "desc": "内饰和外饰组件涂层解决方案", "image": "/images/industry/industry5.png" },
+      { "title": "家居与生活方式", "desc": "装饰性和功能性家居产品涂层", "image": "/images/Home_&_Lifestyle/Home_&_Lifestyle.png" }
     ]
   },
   "quality": {
