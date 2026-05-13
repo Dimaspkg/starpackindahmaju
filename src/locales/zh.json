@@ -101,7 +101,7 @@
       { "title": "金属银 (Metallic Silver)", "desc": "具有深度和闪光的优质银色涂层", "image": "/images/effects/effect3.png" },
       { "title": "镀金 (Gold Chrome)", "desc": "为高端产品打造的豪华金属金饰面", "image": "/images/gold_chrome/Gold_Chrome.png" },
       { "title": "全息效果 (Holographic)", "desc": "具有光反应饰面的彩虹色效果", "image": "/images/effects/Holographic.png" },
-      { "title": "珍珠效果 (Pearl Effect)", "desc": "细腻、精致的珍珠涂层，尽显优雅", "image": "/images/Pearl_Effect/Pearl_Effect.png" }
+      { "title": "珍珠效果 (Pearl Effect)", "desc": "细腻、精致的珍珠涂层，尽显优雅", "image": "/images/Pearl_Effect/Pearl_Effect_v2.png" }
     ]
   },
   "industry": {

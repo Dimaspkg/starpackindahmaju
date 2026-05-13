@@ -101,7 +101,7 @@
       { "title": "Metallic Silver", "desc": "Premium silver coating with depth and shimmer", "image": "/images/effects/effect3.png" },
       { "title": "Gold Chrome", "desc": "Luxurious gold metallic finish for high-end products", "image": "/images/gold_chrome/Gold_Chrome.png" },
       { "title": "Holographic", "desc": "Rainbow iridescent effect with light-reactive finish", "image": "/images/effects/Holographic.png" },
-      { "title": "Pearl Effect", "desc": "Subtle, sophisticated pearl coating for elegance", "image": "/images/Pearl_Effect/Pearl_Effect.png" }
+      { "title": "Pearl Effect", "desc": "Subtle, sophisticated pearl coating for elegance", "image": "/images/Pearl_Effect/Pearl_Effect_v2.png" }
     ]
   },
   "industry": {
