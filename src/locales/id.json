@@ -97,8 +97,8 @@
       { "title": "Matte Finish", "desc": "Tekstur permukaan non-reflektif yang canggih", "image": "/images/effects/effect2.png" },
       { "title": "Metallic Silver", "desc": "Pelapisan perak premium dengan kedalaman dan kilauan", "image": "/images/effects/effect3.png" },
       { "title": "Gold Chrome", "desc": "Finishing logam emas mewah untuk produk kelas atas", "image": "/images/effects/effect4.png" },
-      { "title": "Holographic", "desc": "Efek pelangi warna-warni dengan finishing reaktif cahaya", "image": "/images/effects/effect5.png" },
-      { "title": "Pearl Effect", "desc": "Pelapisan mutiara yang halus dan canggih untuk keanggunan", "image": "/images/effects/effect6.png" }
+      { "title": "Holographic", "desc": "Efek pelangi warna-warni dengan finishing reaktif cahaya", "image": "/images/effects/holographic-final.png" },
+      { "title": "Pearl Effect", "desc": "Pelapisan mutiara yang halus dan canggih untuk keanggunan", "image": "/images/effects/pearl-final.png" }
     ]
   },
   "industry": {

@@ -97,8 +97,8 @@
       { "title": "磨砂 (Matte Finish)", "desc": "精致的非反射表面质感", "image": "/images/effects/effect2.png" },
       { "title": "金属银 (Metallic Silver)", "desc": "具有深度和闪光的优质银色涂层", "image": "/images/effects/effect3.png" },
       { "title": "镀金 (Gold Chrome)", "desc": "为高端产品打造的豪华金属金饰面", "image": "/images/effects/effect4.png" },
-      { "title": "全息效果 (Holographic)", "desc": "具有光反应饰面的彩虹色效果", "image": "/images/effects/effect5.png" },
-      { "title": "珍珠效果 (Pearl Effect)", "desc": "细腻、精致的珍珠涂层，尽显优雅", "image": "/images/effects/effect6.png" }
+      { "title": "全息效果 (Holographic)", "desc": "具有光反应饰面的彩虹色效果", "image": "/images/effects/holographic-final.png" },
+      { "title": "珍珠效果 (Pearl Effect)", "desc": "细腻、精致的珍珠涂层，尽显优雅", "image": "/images/effects/pearl-final.png" }
     ]
   },
   "industry": {
