@@ -103,15 +103,7 @@ export default function LoginPage() {
               priority
             />
           </div>
-
-          <div className={styles.loginHeader}>
-            <h1 className={styles.loginTitle}>
-              Selamat <span>Datang</span>
-            </h1>
-            <p className={styles.loginSubtitle}>
-              Akses terbatas. Masukkan kredensial Anda untuk melanjutkan.
-            </p>
-          </div>
+          <p className={styles.loginSubtitle}>Silakan masuk untuk melanjutkan.</p>
 
           {error && (
             <div className={styles.errorBox}>
@@ -121,7 +113,6 @@ export default function LoginPage() {
 
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.formGroup}>
-              <label className={styles.label}>Username</label>
               <div className={styles.inputWrapper}>
                 <span className={styles.inputIcon}>👤</span>
                 <input
@@ -137,7 +128,6 @@ export default function LoginPage() {
             </div>
 
             <div className={styles.formGroup}>
-              <label className={styles.label}>Password</label>
               <div className={styles.inputWrapper}>
                 <span className={styles.inputIcon}>🔒</span>
                 <input
@@ -153,7 +143,7 @@ export default function LoginPage() {
 
             <button type="submit" className={styles.submitBtn} disabled={loading}>
               {loading && <span className={styles.spinner} />}
-              {loading ? 'Memverifikasi...' : 'Masuk ke Dashboard'}
+              {loading ? 'Memverifikasi...' : 'Masuk'}
             </button>
           </form>
 

@@ -151,6 +151,8 @@
 
 .formLogo {
   margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: flex-start;
 }
 
 /* Show light logo by default, hide dark logo */
@@ -179,6 +181,7 @@
 .loginSubtitle {
   color: var(--text-secondary);
   font-size: 0.95rem;
+  margin-bottom: 1.75rem;
 }
 
 /* Error box */
