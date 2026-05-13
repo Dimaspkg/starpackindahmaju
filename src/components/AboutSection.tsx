@@ -40,7 +40,7 @@ export default function AboutSection() {
         <div className={`${styles.imageArea} reveal fadeRight`}>
           <div className={styles.imageWrapper}>
             <Image 
-              src="/images/factory_inside.png" 
+              src={t.about.image} 
               alt="Starpack Factory" 
               width={600}
               height={400}
