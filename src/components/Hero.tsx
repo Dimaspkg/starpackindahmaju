@@ -4,6 +4,7 @@ import Image from 'next/image';
 import styles from './Hero.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 import { useEffect, useRef, useState } from 'react';
+import Counter from './Counter';
  
  export default function Hero() {
    const { t } = useLanguage();
@@ -71,15 +72,21 @@ import { useEffect, useRef, useState } from 'react';
 
         <div className={styles.statsContainer}>
           <div className={`${styles.card} reveal fadeUp active delay1`}>
-            <span className={styles.val}>10M+</span>
+            <span className={styles.val}>
+              <Counter target={10} suffix="M+" />
+            </span>
             <span className={styles.lab}>{t.hero.badges.units.replace('10M+', '').trim()}</span>
           </div>
           <div className={`${styles.card} reveal fadeUp active delay2`}>
-            <span className={styles.val}>500+</span>
+            <span className={styles.val}>
+              <Counter target={500} suffix="+" />
+            </span>
             <span className={styles.lab}>{t.hero.badges.clients.replace('500+', '').trim()}</span>
           </div>
           <div className={`${styles.card} reveal fadeUp active delay3`}>
-            <span className={styles.val}>Since 1996</span>
+            <span className={styles.val}>
+              <Counter target={1996} prefix="Since " />
+            </span>
             <span className={styles.lab}>Jakarta, Indonesia</span>
           </div>
         </div>
