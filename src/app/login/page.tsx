@@ -85,6 +85,17 @@ export default function LoginPage() {
       {/* Right login panel */}
       <div className={styles.rightPanel}>
         <div className={styles.loginBox}>
+          <div className={styles.formLogo}>
+            <Image
+              src="/logo_starpack.png"
+              alt="PT. Starpack Indahmaju"
+              width={160}
+              height={64}
+              style={{ objectFit: 'contain' }}
+              priority
+            />
+          </div>
+
           <div className={styles.loginHeader}>
             <h1 className={styles.loginTitle}>
               Selamat <span>Datang</span>

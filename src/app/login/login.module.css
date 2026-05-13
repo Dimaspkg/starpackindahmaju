@@ -149,6 +149,10 @@
   max-width: 420px;
 }
 
+.formLogo {
+  margin-bottom: 1.75rem;
+}
+
 .loginHeader {
   margin-bottom: 2.5rem;
 }
