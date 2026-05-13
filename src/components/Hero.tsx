@@ -84,9 +84,7 @@ import Counter from './Counter';
             <span className={styles.lab}>{t.hero.badges.clients.replace('500+', '').trim()}</span>
           </div>
           <div className={`${styles.card} reveal fadeUp active delay3`}>
-            <span className={styles.val}>
-              <Counter target={1996} prefix="Since " />
-            </span>
+            <span className={styles.val}>Since 1996</span>
             <span className={styles.lab}>Jakarta, Indonesia</span>
           </div>
         </div>
