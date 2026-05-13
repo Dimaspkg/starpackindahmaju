@@ -96,7 +96,7 @@
     "title": "プレミアムコーティング効果",
     "description": "当社は、お客様の特定の用途や市場の要求に合わせた包括的なコーティング仕上げを提供しています。各効果は、耐久性と視覚的な卓越性のために設計されています。",
     "items": [
-      { "title": "ハイグロス (High Gloss)", "desc": "プレミアムで豪華な製品向けの鏡面仕上げ", "image": "/images/effects/effect1.png" },
+      { "title": "ハイグロス (High Gloss)", "desc": "プレミアムで豪華な製品向けの鏡面仕上げ", "image": "/images/High_Gloss/High_Gloss.png" },
       { "title": "マット仕上げ (Matte Finish)", "desc": "洗練された非反射の表面質感", "image": "/images/effects/effect2.png" },
       { "title": "メタリックシルバー (Metallic Silver)", "desc": "深みと輝きのあるプレミアムシルバーコーティング", "image": "/images/effects/effect3.png" },
       { "title": "ゴールドクローム (Gold Chrome)", "desc": "ハイエンド製品向けの豪華なゴールドメタリック仕上げ", "image": "/images/effects/effect4.png" },

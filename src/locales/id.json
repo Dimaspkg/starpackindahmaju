@@ -96,7 +96,7 @@
     "title": "Efek Coating Premium",
     "description": "Kami menawarkan rangkaian lengkap finishing pelapisan yang disesuaikan dengan aplikasi spesifik dan kebutuhan pasar Anda. Setiap efek dirancang untuk daya tahan dan keunggulan visual.",
     "items": [
-      { "title": "High Gloss", "desc": "Finishing seperti cermin untuk produk mewah premium", "image": "/images/effects/effect1.png" },
+      { "title": "High Gloss", "desc": "Finishing seperti cermin untuk produk mewah premium", "image": "/images/High_Gloss/High_Gloss.png" },
       { "title": "Matte Finish", "desc": "Tekstur permukaan non-reflektif yang canggih", "image": "/images/effects/effect2.png" },
       { "title": "Metallic Silver", "desc": "Pelapisan perak premium dengan kedalaman dan kilauan", "image": "/images/effects/effect3.png" },
       { "title": "Gold Chrome", "desc": "Finishing logam emas mewah untuk produk kelas atas", "image": "/images/effects/effect4.png" },
