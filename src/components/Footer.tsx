@@ -63,6 +63,12 @@ export default function Footer() {
                 <a href={`tel:${t.inquiry.sales.phone}`}>{t.inquiry.sales.phone}</a>
               </p>
               <p className={styles.contactItem}>
+                <span className={styles.icon}>💬</span>
+                <a href={`https://wa.me/${t.inquiry.sales.whatsapp.replace(/\s+/g, '').replace(/^0/, '62')}`} target="_blank" rel="noopener noreferrer">
+                  {t.inquiry.sales.whatsapp}
+                </a>
+              </p>
+              <p className={styles.contactItem}>
                 <span className={styles.icon}>✉️</span>
                 <a href={`mailto:${t.inquiry.sales.email}`}>{t.inquiry.sales.email}</a>
               </p>
