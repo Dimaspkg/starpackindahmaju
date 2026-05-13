@@ -110,7 +110,7 @@
     "items": [
       { "title": "Beauty & Cosmetics", "desc": "Premium packaging solutions for luxury beauty brands", "image": "/images/Beauty_&_Cosmetics/Beauty_&_Cosmetics.png" },
       { "title": "Electronics", "desc": "High-precision coating for consumer electronics", "image": "/images/Electronics/Electronics.png" },
-      { "title": "Fashion & Accessories", "desc": "Designer components and luxury accessories coating", "image": "/images/Fashion_&_Accessories/Fashion_&_Accessories.png" },
+      { "title": "Fashion & Accessories", "desc": "Designer components and luxury accessories coating", "image": "/images/Fashion_&_Accessories/Fashion_&_Accessories_v2.png" },
       { "title": "Home & Lifestyle", "desc": "Decorative and functional home product coating", "image": "/images/Home_&_Lifestyle/Home_&_Lifestyle.png" },
       { "title": "Automotive", "desc": "Interior and exterior component coating solutions", "image": "/images/industry/industry5.png" },
       { "title": "Many More", "desc": "Custom coating services for various other industrial specifications and requirements", "image": "/images/industry/industry4.png" }
