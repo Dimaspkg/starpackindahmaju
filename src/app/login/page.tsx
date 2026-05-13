@@ -89,8 +89,8 @@ export default function LoginPage() {
             <Image
               src="/logo_starpack.png"
               alt="PT. Starpack Indahmaju"
-              width={160}
-              height={64}
+              width={240}
+              height={96}
               style={{ objectFit: 'contain' }}
               priority
             />
