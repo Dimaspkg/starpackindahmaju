@@ -7,10 +7,14 @@ import Image from 'next/image';
 import styles from './login.module.css';
 
 const SLIDES = [
-  '/images/effects/holographic1.png',
-  '/images/effects/holographic2.png',
-  '/images/effects/holographic3.png',
-  '/images/effects/holographic4.png',
+  '/images/effects/effect1.png',
+  '/images/effects/effect2.png',
+  '/images/effects/effect3.png',
+  '/images/effects/effect4.png',
+  '/images/effects/effect5.png',
+  '/images/effects/effect6.png',
+  '/images/effects/effect7.png',
+  '/images/effects/effect8.png',
 ];
 
 export default function LoginPage() {
