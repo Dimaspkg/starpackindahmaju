@@ -53,105 +53,79 @@ export default function LoginPage() {
 
   return (
     <div className={styles.loginPage}>
-      {/* Left image slideshow panel */}
+
+      {/* LEFT: Form Panel */}
       <div className={styles.leftPanel}>
+        {/* Logo */}
+        <div className={styles.formLogo}>
+          <Image src="/logo_starpack.png" alt="PT. Starpack Indahmaju"
+            width={200} height={80} style={{ objectFit: 'contain' }}
+            className={styles.logoLight} priority />
+          <Image src="/logo_starpack_white.png" alt="PT. Starpack Indahmaju"
+            width={200} height={80} style={{ objectFit: 'contain' }}
+            className={styles.logoDark} priority />
+        </div>
+
+        <p className={styles.loginSubtitle}>Silakan masuk untuk melanjutkan.</p>
+
+        {error && (
+          <div className={styles.errorBox}>
+            <span>⚠</span> {error}
+          </div>
+        )}
+
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <div className={styles.formGroup}>
+            <div className={styles.inputWrapper}>
+              <span className={styles.inputIcon}>👤</span>
+              <input type="text" className={styles.input}
+                placeholder="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required autoFocus />
+            </div>
+          </div>
+
+          <div className={styles.formGroup}>
+            <div className={styles.inputWrapper}>
+              <span className={styles.inputIcon}>🔒</span>
+              <input type="password" className={styles.input}
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required />
+            </div>
+          </div>
+
+          <button type="submit" className={styles.submitBtn} disabled={loading}>
+            {loading && <span className={styles.spinner} />}
+            {loading ? 'Memverifikasi...' : 'Masuk'}
+          </button>
+        </form>
+
+        <p className={styles.footer}>
+          © {new Date().getFullYear()} PT. Starpack Indahmaju. All rights reserved.
+        </p>
+      </div>
+
+      {/* RIGHT: Slideshow Panel */}
+      <div className={styles.rightPanel}>
         {SLIDES.map((src, i) => (
-          <div
-            key={src}
-            className={`${styles.slide} ${i === currentSlide ? styles.slideActive : ''}`}
-          >
+          <div key={src} className={`${styles.slide} ${i === currentSlide ? styles.slideActive : ''}`}>
             <Image src={src} alt={`slide ${i + 1}`} fill className={styles.slideImage} priority={i === 0} />
           </div>
         ))}
-        {/* Dark overlay */}
         <div className={styles.slideOverlay} />
-        {/* Dot indicators */}
         <div className={styles.dotRow}>
           {SLIDES.map((_, i) => (
-            <button
-              key={i}
+            <button key={i}
               className={`${styles.dot} ${i === currentSlide ? styles.dotActive : ''}`}
               onClick={() => setCurrentSlide(i)}
-              aria-label={`Slide ${i + 1}`}
-            />
+              aria-label={`Slide ${i + 1}`} />
           ))}
         </div>
       </div>
 
-      {/* Right login panel */}
-      <div className={styles.rightPanel}>
-        <div className={styles.loginBox}>
-          <div className={styles.formLogo}>
-            {/* Light mode logo */}
-            <Image
-              src="/logo_starpack.png"
-              alt="PT. Starpack Indahmaju"
-              width={240}
-              height={96}
-              style={{ objectFit: 'contain' }}
-              className={styles.logoLight}
-              priority
-            />
-            {/* Dark mode logo */}
-            <Image
-              src="/logo_starpack_white.png"
-              alt="PT. Starpack Indahmaju"
-              width={240}
-              height={96}
-              style={{ objectFit: 'contain' }}
-              className={styles.logoDark}
-              priority
-            />
-          </div>
-          <p className={styles.loginSubtitle}>Silakan masuk untuk melanjutkan.</p>
-
-          {error && (
-            <div className={styles.errorBox}>
-              <span>⚠</span> {error}
-            </div>
-          )}
-
-          <form className={styles.form} onSubmit={handleSubmit}>
-            <div className={styles.formGroup}>
-              <div className={styles.inputWrapper}>
-                <span className={styles.inputIcon}>👤</span>
-                <input
-                  type="text"
-                  className={styles.input}
-                  placeholder="Masukkan username"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  required
-                  autoFocus
-                />
-              </div>
-            </div>
-
-            <div className={styles.formGroup}>
-              <div className={styles.inputWrapper}>
-                <span className={styles.inputIcon}>🔒</span>
-                <input
-                  type="password"
-                  className={styles.input}
-                  placeholder="Masukkan password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
-              </div>
-            </div>
-
-            <button type="submit" className={styles.submitBtn} disabled={loading}>
-              {loading && <span className={styles.spinner} />}
-              {loading ? 'Memverifikasi...' : 'Masuk'}
-            </button>
-          </form>
-
-          <p className={styles.footer}>
-            © {new Date().getFullYear()} PT. Starpack Indahmaju. All rights reserved.
-          </p>
-        </div>
-      </div>
     </div>
   );
 }

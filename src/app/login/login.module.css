@@ -1,28 +1,46 @@
+/* === PAGE WRAPPER === */
 .loginPage {
   min-height: 100vh;
   display: flex;
-  background: var(--bg-primary);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Left decorative panel */
-.leftPanel {
-  display: none;
-  flex: 1;
-  position: relative;
-  overflow: hidden;
   align-items: center;
   justify-content: center;
+  background: #f0f0f0;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+[data-theme="dark"] .loginPage {
+  background: #0f0f0f;
+}
+
+/* === LEFT FORM PANEL === */
+.leftPanel {
+  flex: 1;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+}
+
+/* === RIGHT IMAGE PANEL === */
+.rightPanel {
+  flex: 1.1;
+  max-width: 560px;
+  height: 560px;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  display: none;
 }
 
 @media (min-width: 1024px) {
-  .leftPanel {
-    display: flex;
+  .rightPanel {
+    display: block;
   }
 }
 
-/* Slides */
+/* === SLIDES === */
 .slide {
   position: absolute;
   inset: 0;
@@ -40,27 +58,17 @@
   object-fit: cover;
 }
 
-/* Dark overlay on top of images */
 .slideOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.65) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 100%);
   z-index: 2;
-}
-
-/* Logo on top of overlay */
-.slideLogoWrap {
-  position: absolute;
-  top: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
 }
 
 /* Dot indicators */
 .dotRow {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -69,11 +77,11 @@
 }
 
 .dot {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   border: none;
-  background: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.5);
   cursor: pointer;
   padding: 0;
   transition: background 0.3s, transform 0.3s;
@@ -84,146 +92,64 @@
   transform: scale(1.3);
 }
 
-.brandLogo {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-}
-
-.brandTagline {
-  font-size: 1rem;
-  color: rgba(255,255,255,0.6);
-  line-height: 1.6;
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-.brandStat {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.statItem {
-  text-align: center;
-}
-
-.statNum {
-  display: block;
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: #ff3333;
-}
-
-.statLabel {
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.5);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Decorative circles */
-.circle {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid rgba(255,51,51,0.15);
-}
-
-.circle1 { width: 300px; height: 300px; top: -100px; left: -100px; }
-.circle2 { width: 500px; height: 500px; bottom: -200px; right: -200px; }
-.circle3 { width: 200px; height: 200px; top: 50%; left: 50%; transform: translate(-50%,-50%); background: rgba(255,51,51,0.05); }
-
-/* Right login panel */
-.rightPanel {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  min-height: 100vh;
-}
-
-.loginBox {
-  width: 100%;
-  max-width: 420px;
-}
-
+/* === FORM LOGO === */
 .formLogo {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   display: flex;
   justify-content: flex-start;
 }
 
-/* Show light logo by default, hide dark logo */
+/* Light/dark logo switching */
 .logoLight { display: block; }
 .logoDark  { display: none; }
 
-/* In dark mode: swap them */
 [data-theme="dark"] .logoLight { display: none; }
 [data-theme="dark"] .logoDark  { display: block; }
 
-.loginHeader {
-  margin-bottom: 2.5rem;
-}
-
-.loginTitle {
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
-}
-
-.loginTitle span {
-  color: #dc2626;
-}
-
+/* === SUBTITLE === */
 .loginSubtitle {
   color: var(--text-secondary);
-  font-size: 0.95rem;
-  margin-bottom: 1.75rem;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
 }
 
-/* Error box */
+/* === ERROR BOX === */
 .errorBox {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.85rem 1rem;
+  padding: 0.75rem 1rem;
   background: rgba(220,38,38,0.1);
   border: 1px solid rgba(220,38,38,0.3);
-  border-radius: 10px;
+  border-radius: 50px;
   color: #dc2626;
-  font-size: 0.875rem;
-  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  margin-bottom: 1.25rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* Form */
+/* === FORM === */
 .form {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
+  width: 100%;
 }
 
 .formGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  width: 100%;
 }
 
-.label {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
+/* === PILL INPUTS === */
 .inputWrapper {
   position: relative;
+  width: 100%;
 }
 
 .inputIcon {
   position: absolute;
-  left: 1rem;
+  left: 1.1rem;
   top: 50%;
   transform: translateY(-50%);
   color: var(--text-secondary);
@@ -233,72 +159,65 @@
 
 .input {
   width: 100%;
-  padding: 0.875rem 1rem 0.875rem 2.75rem;
-  background: var(--bg-secondary);
-  border: 1.5px solid var(--border-color);
-  border-radius: 12px;
+  padding: 0.9rem 1.1rem 0.9rem 2.8rem;
+  background: #efefef;
+  border: none;
+  border-radius: 50px;
   color: var(--text-primary);
   font-size: 0.95rem;
-  transition: border-color 0.2s, background 0.2s;
+  transition: background 0.2s, box-shadow 0.2s;
   box-sizing: border-box;
 }
 
+[data-theme="dark"] .input {
+  background: #1e1e1e;
+}
+
 .input::placeholder {
-  color: var(--text-secondary);
-  opacity: 0.6;
+  color: #aaa;
 }
 
 .input:focus {
   outline: none;
-  border-color: #dc2626;
-  background: var(--bg-primary);
+  background: #e5e5e5;
+  box-shadow: 0 0 0 2px rgba(220,38,38,0.25);
 }
 
+[data-theme="dark"] .input:focus {
+  background: #2a2a2a;
+}
+
+/* === PILL BUTTON === */
 .submitBtn {
   width: 100%;
   padding: 1rem;
-  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  background: #dc2626;
   color: white;
   border: none;
-  border-radius: 12px;
+  border-radius: 50px;
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
   margin-top: 0.5rem;
-  position: relative;
-  overflow: hidden;
-  transition: opacity 0.2s, transform 0.2s;
-  letter-spacing: 0.5px;
+  transition: opacity 0.2s, transform 0.15s;
+  letter-spacing: 0.3px;
 }
 
 .submitBtn:hover:not(:disabled) {
-  opacity: 0.92;
+  opacity: 0.88;
   transform: translateY(-1px);
 }
 
 .submitBtn:disabled {
-  opacity: 0.6;
+  opacity: 0.55;
   cursor: not-allowed;
 }
 
-.submitBtn::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
-}
-
-.footer {
-  margin-top: 2rem;
-  text-align: center;
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-}
-
+/* === SPINNER === */
 .spinner {
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   border: 2px solid rgba(255,255,255,0.4);
   border-top-color: white;
   border-radius: 50%;
@@ -309,4 +228,11 @@
 
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+
+/* === FOOTER === */
+.footer {
+  margin-top: 2rem;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
 }
