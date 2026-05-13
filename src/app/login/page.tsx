@@ -65,10 +65,6 @@ export default function LoginPage() {
         ))}
         {/* Dark overlay */}
         <div className={styles.slideOverlay} />
-        {/* Logo on top */}
-        <div className={styles.slideLogoWrap}>
-          <Image src="/logo_starpack_white.png" alt="Starpack" width={180} height={72} style={{ objectFit: 'contain' }} priority />
-        </div>
         {/* Dot indicators */}
         <div className={styles.dotRow}>
           {SLIDES.map((_, i) => (
@@ -86,12 +82,24 @@ export default function LoginPage() {
       <div className={styles.rightPanel}>
         <div className={styles.loginBox}>
           <div className={styles.formLogo}>
+            {/* Light mode logo */}
             <Image
               src="/logo_starpack.png"
               alt="PT. Starpack Indahmaju"
               width={240}
               height={96}
               style={{ objectFit: 'contain' }}
+              className={styles.logoLight}
+              priority
+            />
+            {/* Dark mode logo */}
+            <Image
+              src="/logo_starpack_white.png"
+              alt="PT. Starpack Indahmaju"
+              width={240}
+              height={96}
+              style={{ objectFit: 'contain' }}
+              className={styles.logoDark}
               priority
             />
           </div>

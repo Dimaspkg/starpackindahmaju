@@ -150,8 +150,16 @@
 }
 
 .formLogo {
-  margin-bottom: 1.75rem;
+  margin-bottom: 0.75rem;
 }
+
+/* Show light logo by default, hide dark logo */
+.logoLight { display: block; }
+.logoDark  { display: none; }
+
+/* In dark mode: swap them */
+[data-theme="dark"] .logoLight { display: none; }
+[data-theme="dark"] .logoDark  { display: block; }
 
 .loginHeader {
   margin-bottom: 2.5rem;
