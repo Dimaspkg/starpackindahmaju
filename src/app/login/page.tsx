@@ -73,7 +73,7 @@ export default function LoginPage() {
               Selamat <span>Datang</span>
             </h1>
             <p className={styles.loginSubtitle}>
-              Masuk ke panel admin untuk mengelola data leads
+              Akses terbatas. Masukkan kredensial Anda untuk melanjutkan.
             </p>
           </div>
 
