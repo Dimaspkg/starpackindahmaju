@@ -132,7 +132,7 @@ export default function LoginPage() {
           </form>
 
           <p className={styles.footer}>
-            © 2024 PT. Starpack Indahmaju. All rights reserved.
+            © {new Date().getFullYear()} PT. Starpack Indahmaju. All rights reserved.
           </p>
         </div>
       </div>
