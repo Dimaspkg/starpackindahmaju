@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import styles from './login.module.css';
 
 export default function LoginPage() {
@@ -40,7 +41,16 @@ export default function LoginPage() {
         <div className={styles.circle} style={{ width: 200, height: 200, top: '50%', left: '50%', transform: 'translate(-50%,-50%)', background: 'rgba(255,51,51,0.05)' }} />
 
         <div className={styles.leftPanelContent}>
-          <div className={styles.brandLogo}>STARPACK</div>
+          <div className={styles.brandLogo}>
+            <Image
+              src="/logo_starpack_white.png"
+              alt="PT. Starpack Indahmaju"
+              width={200}
+              height={80}
+              style={{ objectFit: 'contain' }}
+              priority
+            />
+          </div>
           <p className={styles.brandTagline}>
             PT. Starpack Indahmaju<br />
             Admin Management Panel<br />

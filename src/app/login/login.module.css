@@ -32,14 +32,9 @@
 }
 
 .brandLogo {
-  font-size: 3rem;
-  font-weight: 900;
-  letter-spacing: -1px;
-  background: linear-gradient(135deg, #ff3333 0%, #ff6666 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
 .brandTagline {
