@@ -35,7 +35,7 @@ export default function TechnologySection() {
           <div key={index} className={`${styles.galleryCard} reveal fadeUp delay${index}`}>
             <div className={styles.imageWrapper}>
               <Image 
-                src={`/images/tech/tech${index + 1}.png`} 
+                src={item.image} 
                 alt={item.title}
                 width={400}
                 height={250}

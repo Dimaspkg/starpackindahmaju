@@ -77,15 +77,18 @@
     "gallery": [
       {
         "title": "UV硬化システム",
-        "desc": "瞬間硬化とプレミアムな仕上げのための精密機器"
+        "desc": "瞬間硬化とプレミアムな仕上がりのための精密装置",
+        "image": "/images/UV_Curing_Systems/UV-Curing-Systems.png"
       },
       {
-        "title": "真空蒸着",
-        "desc": "プロフェッショナルな金属蒸着のための高度な真空チャンバー"
+        "title": "真空蒸着 (Vacuum Metallizing)",
+        "desc": "プロフェッショナルな金属蒸着のための最新鋭チャンバー",
+        "image": "/images/tech/tech2.png"
       },
       {
-        "title": "品質監視",
-        "desc": "リアルタイムの精密制御システム"
+        "title": "品質モニタリング",
+        "desc": "リアルタイムの精密制御システム",
+        "image": "/images/tech/tech3.png"
       }
     ]
   },

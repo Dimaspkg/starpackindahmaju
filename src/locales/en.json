@@ -77,15 +77,18 @@
     "gallery": [
       {
         "title": "UV Curing Systems",
-        "desc": "Precision equipment for instant hardening and premium finishes"
+        "desc": "Precision equipment for instant curing and premium finishes",
+        "image": "/images/UV_Curing_Systems/UV-Curing-Systems.png"
       },
       {
         "title": "Vacuum Metallizing",
-        "desc": "Advanced chambers for professional metal deposition"
+        "desc": "State-of-the-art chambers for professional metal deposition",
+        "image": "/images/tech/tech2.png"
       },
       {
         "title": "Quality Monitoring",
-        "desc": "Real-time precision control systems"
+        "desc": "Real-time precision control systems",
+        "image": "/images/tech/tech3.png"
       }
     ]
   },

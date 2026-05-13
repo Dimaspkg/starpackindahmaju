@@ -76,16 +76,19 @@
     ],
     "gallery": [
       {
-        "title": "紫外线固化系统",
-        "desc": "用于瞬间硬化和优质饰面的精密设备"
+        "title": "UV 固化系统",
+        "desc": "用于即时固化和优质饰面的精密设备",
+        "image": "/images/UV_Curing_Systems/UV-Curing-Systems.png"
       },
       {
         "title": "真空镀膜",
-        "desc": "用于专业金属沉积的先进真空室"
+        "desc": "用于专业金属沉积的最先进真空室",
+        "image": "/images/tech/tech2.png"
       },
       {
-        "title": "质量监测",
-        "desc": "实时精密控制系统"
+        "title": "质量监控",
+        "desc": "实时精度控制系统",
+        "image": "/images/tech/tech3.png"
       }
     ]
   },

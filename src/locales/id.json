@@ -77,15 +77,18 @@
     "gallery": [
       {
         "title": "Sistem Pengeringan UV",
-        "desc": "Peralatan presisi untuk pengerasan instan dan finishing premium"
+        "desc": "Peralatan presisi untuk pengerasan instan dan finishing premium",
+        "image": "/images/UV_Curing_Systems/UV-Curing-Systems.png"
       },
       {
         "title": "Vacuum Metallizing",
-        "desc": "Ruang canggih untuk deposisi logam profesional"
+        "desc": "Ruang canggih untuk deposisi logam profesional",
+        "image": "/images/tech/tech2.png"
       },
       {
         "title": "Pemantauan Kualitas",
-        "desc": "Sistem kontrol presisi secara real-time"
+        "desc": "Sistem kontrol presisi secara real-time",
+        "image": "/images/tech/tech3.png"
       }
     ]
   },
