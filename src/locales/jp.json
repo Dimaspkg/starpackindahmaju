@@ -111,9 +111,9 @@
       { "title": "美容・化粧品", "desc": "高級美容ブランド向けのプレミアムパッケージソリューション", "image": "/images/Beauty_&_Cosmetics/Beauty_&_Cosmetics.png" },
       { "title": "電子機器", "desc": "コンシューマーエレクトロニクス向けの高精度コーティング", "image": "/images/Electronics/Electronics.png" },
       { "title": "ファッション・アクセサリー", "desc": "デザイナーコンポーネントおよび高級アクセサリーのコーティング", "image": "/images/Fashion_&_Accessories/Fashion_&_Accessories.png" },
-      { "title": "その他多数", "desc": "その他の様々な産業仕様や要件に合わせたカスタムコーティングサービス", "image": "/images/industry/industry4.png" },
+      { "title": "ホーム＆ライフスタイル", "desc": "装飾的かつ機能的な家庭用品のコーティング", "image": "/images/Home_&_Lifestyle/Home_&_Lifestyle.png" },
       { "title": "自動車", "desc": "内装および外装コンポーネントのコーティングソリューション", "image": "/images/industry/industry5.png" },
-      { "title": "ホーム＆ライフスタイル", "desc": "装飾的かつ機能的な家庭用品のコーティング", "image": "/images/Home_&_Lifestyle/Home_&_Lifestyle.png" }
+      { "title": "その他多数", "desc": "その他の様々な産業仕様や要件に合わせたカスタムコーティングサービス", "image": "/images/industry/industry4.png" }
     ]
   },
   "quality": {
