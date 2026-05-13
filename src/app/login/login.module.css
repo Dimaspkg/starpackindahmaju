@@ -1,90 +1,249 @@
-.loginContainer {
+.loginPage {
   min-height: 100vh;
+  display: flex;
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Left decorative panel */
+.leftPanel {
+  display: none;
+  flex: 1;
+  background: linear-gradient(135deg, #1a0000 0%, #3d0000 50%, #1a0000 100%);
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .leftPanel {
+    display: flex;
+  }
+}
+
+.leftPanelContent {
+  position: relative;
+  z-index: 2;
+  padding: 3rem;
+  color: white;
+  text-align: center;
+}
+
+.brandLogo {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  background: linear-gradient(135deg, #ff3333 0%, #ff6666 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.brandTagline {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.brandStat {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statNum {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ff3333;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Decorative circles */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255,51,51,0.15);
+}
+
+.circle1 { width: 300px; height: 300px; top: -100px; left: -100px; }
+.circle2 { width: 500px; height: 500px; bottom: -200px; right: -200px; }
+.circle3 { width: 200px; height: 200px; top: 50%; left: 50%; transform: translate(-50%,-50%); background: rgba(255,51,51,0.05); }
+
+/* Right login panel */
+.rightPanel {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--bg-primary);
-  padding: 1rem;
+  padding: 2rem;
+  min-height: 100vh;
 }
 
-.loginCard {
-  background: var(--bg-secondary);
-  padding: 2.5rem;
-  border-radius: 16px;
+.loginBox {
   width: 100%;
-  max-width: 400px;
-  border: 1px solid var(--border-color);
+  max-width: 420px;
 }
 
-.title {
-  font-size: 1.8rem;
-  font-weight: 700;
+.loginHeader {
+  margin-bottom: 2.5rem;
+}
+
+.loginTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
-  text-align: center;
 }
 
-.subtitle {
+.loginTitle span {
+  color: #dc2626;
+}
+
+.loginSubtitle {
   color: var(--text-secondary);
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
-.formGroup {
+/* Error box */
+.errorBox {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1rem;
+  background: rgba(220,38,38,0.1);
+  border: 1px solid rgba(220,38,38,0.3);
+  border-radius: 10px;
+  color: #dc2626;
+  font-size: 0.875rem;
   margin-bottom: 1.5rem;
 }
 
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  font-size: 1rem;
+  pointer-events: none;
 }
 
 .input {
   width: 100%;
-  padding: 0.8rem 1rem;
-  background: var(--bg-primary);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
+  padding: 0.875rem 1rem 0.875rem 2.75rem;
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--border-color);
+  border-radius: 12px;
   color: var(--text-primary);
-  font-size: 1rem;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, background 0.2s;
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
 }
 
 .input:focus {
   outline: none;
-  border-color: var(--accent-color);
+  border-color: #dc2626;
+  background: var(--bg-primary);
 }
 
 .submitBtn {
   width: 100%;
   padding: 1rem;
-  background: var(--accent-color);
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  transition: opacity 0.2s;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.2s, transform 0.2s;
+  letter-spacing: 0.5px;
 }
 
-.submitBtn:hover {
-  opacity: 0.9;
+.submitBtn:hover:not(:disabled) {
+  opacity: 0.92;
+  transform: translateY(-1px);
 }
 
 .submitBtn:disabled {
-  opacity: 0.5;
+  opacity: 0.6;
   cursor: not-allowed;
 }
 
-.error {
-  background: rgba(231, 76, 60, 0.1);
-  color: #e74c3c;
-  padding: 0.75rem;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  margin-bottom: 1.5rem;
+.submitBtn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+}
+
+.footer {
+  margin-top: 2rem;
   text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
