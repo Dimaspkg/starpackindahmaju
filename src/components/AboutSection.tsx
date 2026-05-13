@@ -42,8 +42,7 @@ export default function AboutSection() {
             <Image 
               src={t.about.image} 
               alt="Starpack Factory" 
-              width={600}
-              height={600}
+              fill
               className={styles.image}
               style={{ objectFit: 'cover' }}
             />
