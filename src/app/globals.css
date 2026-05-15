@@ -43,9 +43,10 @@
   margin: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-  background-color: var(--background);
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 body {
@@ -53,6 +54,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter);
   min-height: 100vh;
+  min-height: 100dvh;
   line-height: 1.6;
 }
 
@@ -106,10 +108,14 @@ ul {
 @media (max-width: 1024px) {
   .contentWrapper {
     margin-left: 0;
+    width: 100%;
+    min-width: 100%;
   }
   .pageContainer {
-    padding: 0.75rem;
-    padding-top: 4.5rem;
+    padding: 1rem;
+    padding-top: 5rem;
+    width: 100%;
+    overflow-x: hidden;
   }
 }
 
