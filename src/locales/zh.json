@@ -9,7 +9,7 @@
     "inquiry": "联系我们"
   },
   "hero": {
-    "image": "/images/About/About.png",
+    "image": "/images/herro/herro.png",
     "tag": "树立塑料产品卓越品质的标杆",
     "title": "优质 UV 塑料涂装与真空镀膜 — 为一致性而生。",
     "description": "PT. Starpack Indahmaju 提供具有先进生产控制、稳定输出和多种优质涂层效果的塑料紫外线涂层。旨在帮助您的产品脱颖而出。",
@@ -31,7 +31,7 @@
   },
   "about": {
     "title": "关于 PT. Starpack Indahmaju",
-    "image": "/images/About/About.png",
+    "image": "/images/herro/herro.png",
     "story": {
       "title": "我们的故事",
       "text": "PT. Starpack Indahmaju 于 1996 年在雅加达成立，现已成为塑料产品紫外线涂装和真空镀膜解决方案的领先供应商。从最初的小型运营发展至今，我们已成为多个行业 500 多家客户信赖的合作伙伴。"
@@ -174,6 +174,8 @@
       "company_placeholder": "您的公司",
       "email": "电子邮件地址",
       "email_placeholder": "your.email@company.com",
+      "phone": "电话 / WhatsApp",
+      "phone_placeholder": "您的电话号码",
       "interest": "服务意向",
       "interest_placeholder": "选择服务",
       "interest_options": {

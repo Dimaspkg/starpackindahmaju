@@ -9,7 +9,7 @@
     "inquiry": "お問い合わせ"
   },
   "hero": {
-    "image": "/images/About/About.png",
+    "image": "/images/herro/herro.png",
     "tag": "プラスチック製品の卓越性の基準を確立する",
     "title": "プレミアム UVプラスチックコーティング & 真空蒸着 — 一貫性のために構築。",
     "description": "PT. Starpack Indahmajuは、高度な生産管理、安定した出力、および幅広いプレミアムコーティング効果を備えたプラスチックUVコーティングを提供します。製品を際立たせるように設計されています。",
@@ -31,7 +31,7 @@
   },
   "about": {
     "title": "PT. Starpack Indahmaju について",
-    "image": "/images/About/About.png",
+    "image": "/images/herro/herro.png",
     "story": {
       "title": "私たちの歩み",
       "text": "1996年にジャカルタで設立されたPT. Starpack Indahmajuは、プラスチック製品向けのUVコーティングおよび真空蒸着ソリューションのリーディングプロバイダーとして地位を確立してきました。小さな事業からスタートした当社は、現在では複数の業界にわたる500社以上のクライアントに信頼されるパートナーへと成長しました。"
@@ -174,6 +174,8 @@
       "company_placeholder": "貴社名を入力してください",
       "email": "メールアドレス",
       "email_placeholder": "your.email@company.com",
+      "phone": "電話 / WhatsApp",
+      "phone_placeholder": "電話番号を入力してください",
       "interest": "興味のあるサービス",
       "interest_placeholder": "サービスを選択してください",
       "interest_options": {
