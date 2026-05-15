@@ -1,9 +1,20 @@
-.adminContainer {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+.layoutWrapper {
+  display: flex;
   min-height: 100vh;
   background-color: var(--bg-primary);
+}
+
+.mainContent {
+  flex-grow: 1;
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  transition: all 0.3s ease;
+}
+
+.adminContainer {
+  padding: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
   color: var(--text-primary);
 }
 
@@ -19,11 +30,56 @@
   font-weight: 700;
 }
 
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.cardLabel {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.cardValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.cardTrend {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.trendUp { color: #2ecc71; }
+.trendDown { color: #e74c3c; }
+
 .tableWrapper {
-  background: var(--bg-secondary);
+  background: var(--card-bg);
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--card-border);
 }
 
 .table {
@@ -34,14 +90,14 @@
 
 .th {
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(128, 128, 128, 0.05);
   font-weight: 600;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--card-border);
 }
 
 .td {
   padding: 1rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--card-border);
   font-size: 0.9rem;
 }
 
@@ -87,9 +143,88 @@
   color: #e74c3c;
 }
 
+.settingsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.field label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.field input, .field textarea, .field select {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--card-border);
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.field p {
+  font-size: 0.8rem;
+  color: var(--muted-text);
+}
+
+.saveBtn {
+  background: var(--primary);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+  align-self: flex-start;
+}
+
+.saveBtn:hover {
+  opacity: 0.9;
+}
+
+.saveBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 @media (max-width: 768px) {
+  .mainContent {
+    margin-left: 0;
+    width: 100%;
+  }
+
   .adminContainer {
-    padding: 1rem;
+    padding: 1.5rem;
   }
   
   .tableWrapper {

@@ -10,6 +10,7 @@ export default function InquirySection() {
     name: '',
     company: '',
     email: '',
+    phone: '',
     interest: '',
     message: ''
   });
@@ -30,7 +31,7 @@ export default function InquirySection() {
 
       if (response.ok) {
         setStatus('success');
-        setFormData({ name: '', company: '', email: '', interest: '', message: '' });
+        setFormData({ name: '', company: '', email: '', phone: '', interest: '', message: '' });
       } else {
         setStatus('error');
       }
@@ -128,6 +129,18 @@ export default function InquirySection() {
                   placeholder={t.inquiry.form.email_placeholder}
                   className={styles.input}
                   required
+                />
+              </div>
+
+              <div className={styles.formGroup}>
+                <label className={styles.formLabel}>{t.inquiry.form.phone}</label>
+                <input 
+                  type="tel" 
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder={t.inquiry.form.phone_placeholder}
+                  className={styles.input}
                 />
               </div>
 

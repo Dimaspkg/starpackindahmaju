@@ -6,12 +6,13 @@ import ThemeToggle from "./ThemeToggle";
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const isAdminPage = pathname?.startsWith("/admin");
   const isLoginPage = pathname === "/login";
 
-  if (isLoginPage) {
+  if (isLoginPage || isAdminPage) {
     return (
       <main style={{ width: '100%' }}>
-        <ThemeToggle className="floatingToggle" />
+        {!isAdminPage && <ThemeToggle className="floatingToggle" />}
         {children}
       </main>
     );

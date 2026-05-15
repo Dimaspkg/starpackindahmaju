@@ -35,8 +35,6 @@
 .imageWrapper {
   position: relative;
   border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--card-border);
 }
 
 .qualityImage {

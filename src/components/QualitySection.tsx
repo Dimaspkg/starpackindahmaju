@@ -18,11 +18,12 @@ export default function QualitySection() {
         <div className={`${styles.leftCol} reveal fadeLeft`}>
           <div className={styles.imageWrapper}>
             <Image 
-              src="/images/quality/quality-main.png" 
-              alt="Quality Control"
+              src="/images/ISO_Certification.png" 
+              alt="ISO 9001:2015 Certification"
               width={500}
-              height={400}
+              height={600}
               className={styles.qualityImage}
+              style={{ objectFit: 'contain' }}
             />
           </div>
         </div>

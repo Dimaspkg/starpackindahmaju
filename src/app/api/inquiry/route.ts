@@ -5,7 +5,7 @@ import { sendInquiryEmail } from '@/lib/mail';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, company, email, interest, message } = body;
+    const { name, company, email, phone, interest, message } = body;
 
     // Basic validation
     if (!name || !email || !interest || !message) {
@@ -17,13 +17,13 @@ export async function POST(request: Request) {
 
     // 1. Save to Database
     const [result] = await pool.execute(
-      'INSERT INTO leads (name, company, email, interest, message) VALUES (?, ?, ?, ?, ?)',
-      [name, company || '', email, interest, message]
+      'INSERT INTO leads (name, company, email, phone, interest, message) VALUES (?, ?, ?, ?, ?, ?)',
+      [name, company || '', email, phone || '', interest, message]
     );
 
     // 2. Send Email Notification
     try {
-      await sendInquiryEmail({ name, company, email, interest, message });
+      await sendInquiryEmail({ name, company, email, phone, interest, message });
     } catch (emailError) {
       // We don't want to fail the whole request if only the email fails,
       // but we should log it.
