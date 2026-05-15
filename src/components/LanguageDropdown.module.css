@@ -7,9 +7,9 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--nav-hover-bg);
-  border: 1px solid var(--sidebar-border);
-  padding: 0.4rem 0.75rem;
+  background: transparent;
+  border: none;
+  padding: 0.4rem 0.5rem;
   border-radius: 10px;
   color: var(--foreground);
   cursor: pointer;
@@ -19,8 +19,7 @@
 }
 
 .trigger:hover {
-  border-color: var(--primary);
-  background: var(--sidebar-bg);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .flag {
