@@ -97,11 +97,16 @@
 @media (max-width: 1024px) {
   .sidebar {
     transform: translateX(-100%);
-    z-index: 9999; /* Ensure it is on top of everything */
+    z-index: 9999;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s;
   }
 
   .mobileOpen {
     transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .mobileHeader {
@@ -157,6 +162,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .overlay {
