@@ -116,7 +116,16 @@
     left: 0;
     right: 0;
     height: 70px;
-    background-color: var(--sidebar-bg);
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  :global([data-theme="light"]) .mobileHeader {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .mobileHeader {
     border-bottom: 1px solid var(--sidebar-border);
     align-items: center;
     justify-content: space-between;
