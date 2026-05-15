@@ -21,18 +21,27 @@ export const metadata: Metadata = {
   authors: [{ name: "PT. STARPACK INDAHMAJU" }],
   creator: "PT. STARPACK INDAHMAJU",
   publisher: "PT. STARPACK INDAHMAJU",
-  openGraph: {
+    openGraph: {
     type: "website",
     locale: "id_ID",
     url: "https://starpackindahmaju.com",
     title: "PT. STARPACK INDAHMAJU | UV Plastic Coating Specialist",
     description: "Premium finishing for plastic products with advanced production control and stable output.",
     siteName: "PT. STARPACK INDAHMAJU",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "PT. STARPACK INDAHMAJU UV Coating Solutions",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "PT. STARPACK INDAHMAJU | UV Plastic Coating Specialist",
     description: "Premium finishing for plastic products with advanced production control.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
