@@ -9,27 +9,32 @@ export default function ThemeToggle({ className }: { className?: string }) {
 
   useEffect(() => {
     setMounted(true);
-    const savedTheme = localStorage.getItem('theme');
     
-    // Check system preference if no saved theme exists
-    const systemTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-    const finalTheme = savedTheme || systemTheme;
-    
-    setTheme(finalTheme);
-    document.documentElement.setAttribute('data-theme', finalTheme);
+    // Function to apply theme
+    const applyTheme = (themeToApply: string) => {
+      setTheme(themeToApply);
+      document.documentElement.setAttribute('data-theme', themeToApply);
+    };
 
-    // Optional: Listen for system theme changes
+    const savedTheme = localStorage.getItem('theme');
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleChange = (e: MediaQueryListEvent) => {
+
+    // Initial setup
+    if (savedTheme) {
+      applyTheme(savedTheme);
+    } else {
+      applyTheme(mediaQuery.matches ? 'dark' : 'light');
+    }
+
+    // Listener for system changes
+    const handler = (e: MediaQueryListEvent) => {
       if (!localStorage.getItem('theme')) {
-        const newTheme = e.matches ? 'dark' : 'light';
-        setTheme(newTheme);
-        document.documentElement.setAttribute('data-theme', newTheme);
+        applyTheme(e.matches ? 'dark' : 'light');
       }
     };
 
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
+    mediaQuery.addEventListener('change', handler);
+    return () => mediaQuery.removeEventListener('change', handler);
   }, []);
 
   const toggleTheme = () => {
