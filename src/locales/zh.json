@@ -116,7 +116,7 @@
       { "title": "时尚与配件", "desc": "设计师组件和奢侈配饰涂层", "image": "/images/Fashion_&_Accessories/Fashion_&_Accessories_v2.png" },
       { "title": "家居与生活方式", "desc": "装饰性和功能性家居产品涂层", "image": "/images/Home_&_Lifestyle/Home_&_Lifestyle.png" },
       { "title": "汽车工业", "desc": "内饰和外饰组件涂层解决方案", "image": "/images/industry/industry5.png" },
-      { "title": "更多其他", "desc": "满足各种其他工业规格 and 需求的定制涂层服务", "image": "/images/Many_More/many_more.png" }
+      { "title": "更多其他", "desc": "满足各种其他工业规格和需求的定制涂层服务", "image": "/images/Many_More/many_more.png" }
     ]
   },
   "quality": {
