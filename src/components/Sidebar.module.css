@@ -116,22 +116,19 @@
     left: 0;
     right: 0;
     height: 70px;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
-
-  :global([data-theme="light"]) .mobileHeader {
-    background-color: rgba(255, 255, 255, 0.7);
-  }
-  
-  .mobileHeader {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--sidebar-border);
     align-items: center;
     justify-content: space-between;
     padding: 0 1.5rem;
-    z-index: 9998; /* Header just below the sidebar when open */
+    z-index: 9998;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  :global([data-theme="light"]) .mobileHeader {
+    background-color: rgba(255, 255, 255, 0.6);
   }
 
   .headerHidden {
