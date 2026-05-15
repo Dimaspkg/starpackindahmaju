@@ -75,7 +75,7 @@ import Counter from './Counter';
             <span className={styles.val}>
               <Counter target={10} suffix="M+" />
             </span>
-            <span className={styles.lab}>{t.hero.badges.units.replace('10M+', '').trim()}</span>
+            <span className={styles.lab}>{t.hero.badges.units.replace('10M+', '').replace('10Jt+', '').replace('10M', '').trim()}</span>
           </div>
           <div className={`${styles.card} reveal fadeUp active delay2`}>
             <span className={styles.val}>
@@ -84,8 +84,14 @@ import Counter from './Counter';
             <span className={styles.lab}>{t.hero.badges.clients.replace('500+', '').trim()}</span>
           </div>
           <div className={`${styles.card} reveal fadeUp active delay3`}>
-            <span className={styles.val}>Since 1996</span>
-            <span className={styles.lab}>Jakarta, Indonesia</span>
+            <span className={styles.val}>
+              <Counter target={20} suffix="+" />
+            </span>
+            <span className={styles.lab}>{t.hero.badges.effects.replace('20+', '').trim()}</span>
+          </div>
+          <div className={`${styles.card} reveal fadeUp active delay4`}>
+            <span className={styles.val}>{t.hero.badges.iso}</span>
+            <span className={styles.lab}>{t.inquiry.info.location_val}</span>
           </div>
         </div>
 
