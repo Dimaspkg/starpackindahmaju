@@ -228,19 +228,25 @@
   .formGroup {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 0.75rem;
+    width: 100%;
   }
   .formLabel {
     width: 100%;
     font-size: 0.8rem;
+    margin-bottom: 0.25rem;
   }
   .input, .select, .textarea {
-    padding: 0.85rem 1rem;
+    width: 100%;
+    padding: 1rem 1.25rem;
     font-size: 0.95rem;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
   }
   .submitBtn {
     margin-left: 0;
     width: 100%;
-    padding: 1rem;
+    padding: 1.1rem;
+    margin-top: 1.5rem;
+    border-radius: 12px; /* Matching input border radius for better symmetry */
   }
 }
