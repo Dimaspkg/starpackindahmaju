@@ -218,12 +218,18 @@
   .infoItem {
     font-size: 0.95rem;
   }
+  .rightCol {
+    width: 100%;
+  }
   .formCard {
-    padding: 1.5rem;
+    padding: 1.25rem;
     border-radius: 16px;
+    width: 100%;
+    box-sizing: border-box;
   }
   .form {
     gap: 1.25rem;
+    width: 100%;
   }
   .formGroup {
     flex-direction: column;
@@ -235,6 +241,7 @@
     width: 100%;
     font-size: 0.8rem;
     margin-bottom: 0.25rem;
+    text-align: left;
   }
   .input, .select, .textarea {
     width: 100%;
