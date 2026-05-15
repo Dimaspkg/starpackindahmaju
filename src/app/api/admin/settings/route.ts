@@ -27,7 +27,7 @@ export async function POST(request: Request) {
     const body = await request.json();
     
     for (const [key, value] of Object.entries(body)) {
-      await pool.execute(
+      await (pool as any).query(
         'INSERT INTO settings (setting_key, setting_value) VALUES (?, ?) ON DUPLICATE KEY UPDATE setting_value = ?',
         [key, value, value]
       );

@@ -16,7 +16,7 @@ export async function POST(request: Request) {
     }
 
     // 1. Save to Database
-    const [result] = await pool.execute(
+    const [result] = await (pool as any).execute(
       'INSERT INTO leads (name, company, email, phone, interest, message) VALUES (?, ?, ?, ?, ?, ?)',
       [name, company || '', email, phone || '', interest, message]
     );

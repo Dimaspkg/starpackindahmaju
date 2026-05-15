@@ -9,7 +9,7 @@ export async function GET() {
   if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
   try {
-    const [rows] = await pool.execute('SELECT * FROM brochures ORDER BY created_at DESC');
+    const [rows] = await (pool as any).execute('SELECT * FROM brochures ORDER BY created_at DESC');
     return NextResponse.json(rows);
   } catch (error) {
     return NextResponse.json({ error: 'Failed to fetch brochures' }, { status: 500 });
@@ -41,7 +41,7 @@ export async function POST(request: Request) {
     const fileUrl = `/uploads/brochures/${filename}`;
 
     // Save to database
-    const [result] = await pool.execute(
+    const [result] = await (pool as any).execute(
       'INSERT INTO brochures (title, file_url) VALUES (?, ?)',
       [title, fileUrl]
     );
@@ -63,7 +63,7 @@ export async function DELETE(request: Request) {
 
   try {
     const { id } = await request.json();
-    await pool.execute('DELETE FROM brochures WHERE id = ?', [id]);
+    await (pool as any).execute('DELETE FROM brochures WHERE id = ?', [id]);
     // Note: We could also delete the physical file here if needed
     return NextResponse.json({ success: true });
   } catch (error) {
