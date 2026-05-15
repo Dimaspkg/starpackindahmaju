@@ -57,6 +57,12 @@
   line-height: 1.6;
 }
 
+.contentRow {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  flex: 1;
+}
+
 .bullet {
   color: var(--primary);
   font-size: 0.7rem;
@@ -67,7 +73,6 @@
 .itemTitle {
   font-weight: 800;
   color: var(--foreground);
-  margin-right: 0.25rem;
 }
 
 .itemText {
@@ -76,15 +81,15 @@
 }
 
 @media (max-width: 768px) {
-  .valueItem {
-    flex-direction: column;
-    gap: 0.5rem;
+  .contentRow {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
   }
   .bullet {
-    display: none; /* Hide bullets on mobile column layout for cleaner look */
+    display: none;
   }
   .itemTitle {
-    color: var(--primary); /* Highlight title on mobile */
+    color: var(--primary);
     font-size: 1.1rem;
   }
 }

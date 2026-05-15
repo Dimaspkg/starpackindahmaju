@@ -29,8 +29,10 @@ export default function AboutSection() {
               {t.about.values.items.map((item: any, index: number) => (
                 <li key={index} className={styles.valueItem}>
                   <span className={styles.bullet}>►</span>
-                  <span className={styles.itemTitle}>{item.title}:</span>
-                  <span className={styles.itemText}>{item.text}</span>
+                  <div className={styles.contentRow}>
+                    <span className={styles.itemTitle}>{item.title}:</span>
+                    <span className={styles.itemText}>{item.text}</span>
+                  </div>
                 </li>
               ))}
             </ul>
