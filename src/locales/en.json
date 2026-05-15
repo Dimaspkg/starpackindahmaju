@@ -9,7 +9,7 @@
     "inquiry": "Contact Us"
   },
   "hero": {
-    "image": "/images/About_Starpack.png",
+    "image": "/images/herro/herro.png",
     "tag": "Setting the Standard for Plastic Product Excellence",
     "title": "Premium UV Coating & Vacuum Metallizing Solutions",
     "description": "We specialize in advanced UV coating and vacuum metallizing services for plastic products. With nearly three decades of industry expertise, we deliver premium finishes that elevate your brand and protect your products.",
@@ -31,7 +31,7 @@
   },
   "about": {
     "title": "About PT. Starpack Indahmaju",
-    "image": "/images/About_Starpack.png",
+    "image": "/images/herro/herro.png",
     "story": {
       "title": "Our Story",
       "text": "Founded in 1996 in Jakarta, PT. Starpack Indahmaju has established itself as a leading provider of UV coating and vacuum metallizing solutions for plastic products. What started as a small operation has grown into a trusted partner for over 500 clients across multiple industries."
