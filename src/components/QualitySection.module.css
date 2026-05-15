@@ -56,40 +56,74 @@
   letter-spacing: -0.01em;
 }
 
-.commitmentList {
+.accordion {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.5rem;
   margin-bottom: 3.5rem;
 }
 
-.commitmentItem {
+.accordionItem {
+  border-bottom: 1px solid var(--card-border);
+  transition: all 0.3s ease;
+}
+
+.accordionHeader {
+  width: 100%;
   display: flex;
+  align-items: center;
   gap: 1rem;
-  align-items: flex-start;
+  padding: 1.25rem 0;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.accordionHeader:hover .itemTitle {
+  color: var(--primary);
 }
 
 .triangle {
   color: var(--primary);
-  font-size: 0.7rem;
-  margin-top: 0.45rem;
+  font-size: 0.6rem;
+  transition: transform 0.3s ease;
   flex-shrink: 0;
 }
 
-.itemText {
-  font-size: 1.05rem;
-  line-height: 1.6;
+.active .triangle {
+  transform: rotate(90deg);
 }
 
 .itemTitle {
-  font-weight: 800;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: var(--foreground);
-  margin-right: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+.active .itemTitle {
+  color: var(--primary);
+}
+
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+}
+
+.active .accordionContent {
+  max-height: 200px;
+  padding-bottom: 1.5rem;
+  opacity: 1;
 }
 
 .itemDesc {
   color: var(--muted-text);
-  display: inline;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .capabilitiesBox {
@@ -151,20 +185,6 @@
   }
   .capabilitiesBox {
     padding: 1.5rem;
-  }
-  .commitmentItem {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .triangle {
-    display: none;
-  }
-  .itemTitle {
-    color: var(--primary);
-    font-size: 1rem;
-  }
-  .itemText {
-    font-size: 0.95rem;
   }
   .capabilityItem {
     font-size: 0.9rem;

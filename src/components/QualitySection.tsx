@@ -1,11 +1,17 @@
 "use client";
 
+import { useState } from 'react';
 import Image from 'next/image';
 import styles from './QualitySection.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function QualitySection() {
   const { t } = useLanguage();
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   return (
     <section className={styles.qualityContainer} id="quality">
@@ -31,13 +37,21 @@ export default function QualitySection() {
         <div className={`${styles.rightCol} reveal fadeRight`}>
           <h3 className={styles.subTitle}>{t.quality.commitment.title}</h3>
           
-          <div className={styles.commitmentList}>
+          <div className={styles.accordion}>
             {t.quality.commitment.items.map((item: any, index: number) => (
-              <div key={index} className={styles.commitmentItem}>
-                <span className={styles.triangle}>►</span>
-                <div className={styles.itemText}>
-                  <span className={styles.itemTitle}>{item.title}:</span>
-                  <span className={styles.itemDesc}> {item.text}</span>
+              <div 
+                key={index} 
+                className={`${styles.accordionItem} ${activeIndex === index ? styles.active : ''}`}
+              >
+                <button 
+                  className={styles.accordionHeader} 
+                  onClick={() => toggleAccordion(index)}
+                >
+                  <span className={styles.triangle}>►</span>
+                  <span className={styles.itemTitle}>{item.title}</span>
+                </button>
+                <div className={styles.accordionContent}>
+                  <p className={styles.itemDesc}>{item.text}</p>
                 </div>
               </div>
             ))}
