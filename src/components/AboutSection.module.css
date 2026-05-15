@@ -59,8 +59,13 @@
 
 .contentRow {
   display: grid;
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: 140px 20px 1fr;
   flex: 1;
+}
+
+.colon {
+  font-weight: 800;
+  color: var(--foreground);
 }
 
 .bullet {
@@ -85,7 +90,7 @@
     grid-template-columns: 1fr;
     gap: 0.25rem;
   }
-  .bullet {
+  .bullet, .colon {
     display: none;
   }
   .itemTitle {

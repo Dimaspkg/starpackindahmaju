@@ -30,7 +30,8 @@ export default function AboutSection() {
                 <li key={index} className={styles.valueItem}>
                   <span className={styles.bullet}>►</span>
                   <div className={styles.contentRow}>
-                    <span className={styles.itemTitle}>{item.title}:</span>
+                    <span className={styles.itemTitle}>{item.title}</span>
+                    <span className={styles.colon}>:</span>
                     <span className={styles.itemText}>{item.text}</span>
                   </div>
                 </li>
