@@ -121,19 +121,13 @@
     justify-content: space-between;
     z-index: 9998;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    
-    /* Premium Glassmorphism */
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+    background: var(--sidebar-bg);
+    border-bottom: 1px solid var(--sidebar-border);
   }
 
   :global([data-theme="light"]) .mobileHeader {
-    background: rgba(255, 255, 255, 0.7);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
   }
 
   .headerHidden {
