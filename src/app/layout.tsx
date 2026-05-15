@@ -10,8 +10,10 @@ import MainLayout from "@/components/MainLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://starpackindahmaju.com'),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "PT. STARPACK INDAHMAJU | UV Plastic Coating Specialist",
     template: "%s | PT. STARPACK INDAHMAJU"
@@ -24,13 +26,13 @@ export const metadata: Metadata = {
     openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://starpackindahmaju.com",
+    url: siteUrl,
     title: "PT. STARPACK INDAHMAJU | UV Plastic Coating Specialist",
     description: "Premium finishing for plastic products with advanced production control and stable output.",
     siteName: "PT. STARPACK INDAHMAJU",
     images: [
       {
-        url: "https://starpackindahmaju.com/PT_STARPACK_INDAH_MAJU.png",
+        url: `${siteUrl}/PT_STARPACK_INDAH_MAJU.png`,
         width: 1200,
         height: 630,
         alt: "PT. STARPACK INDAHMAJU UV Coating Solutions",
@@ -41,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "PT. STARPACK INDAHMAJU | UV Plastic Coating Specialist",
     description: "Premium finishing for plastic products with advanced production control.",
-    images: ["https://starpackindahmaju.com/PT_STARPACK_INDAH_MAJU.png"],
+    images: [`${siteUrl}/PT_STARPACK_INDAH_MAJU.png`],
   },
   robots: {
     index: true,
