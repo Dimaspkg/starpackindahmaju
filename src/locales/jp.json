@@ -11,11 +11,11 @@
   "hero": {
     "image": "/images/herro/herro.png",
     "tag": "プラスチック製品の卓越性の基準を確立する",
-    "title": "プレミアム UVプラスチックコーティング & 真空蒸着 — 一貫性のために構築。",
+    "title": "プレミアム UVプラスチックコーティング & 真空蒸着 — 信頼の一貫生産体制。",
     "description": "PT. Starpack Indahmajuは、高度な生産管理、安定した出力、および幅広いプレミアムコーティング効果を備えたプラスチックUVコーティングを提供します。製品を際立たせるように設計されています。",
     "badges": {
       "iso": "ISO 9001:2015",
-      "units": "年間1000万ユニット以上",
+      "units": "年間生産能力 1,000万個以上",
       "clients": "500社以上のクライアント",
       "effects": "20種類以上のプレミアムコーティング効果"
     },
@@ -208,7 +208,7 @@
     "retry": "再試行"
   },
   "footer": {
-    "description": "1996年以来、品質、一貫性、および高度な生産管理に重点を置いたプレミアムUVプラスチックコーティングサービス。",
+    "description": "1996年創業。品質、一貫性、高度な生産管理に特化したプレミアムUVプラスチックコーティングサービス。",
     "quickLinks": "クイックリンク",
     "contact": "お問い合わせ",
     "address": "Jl. Pulogadung Kav. 1D No. 6B/6C Blok 3, Kawasan Industri Pulogadung, Rawa Terate, Cakung, Jakarta Timur, 13920"
