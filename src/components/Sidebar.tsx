@@ -67,6 +67,20 @@ export default function Sidebar() {
           <Image src="/logo_starpack_white.png" alt="Logo" width={120} height={20} style={{ objectFit: 'contain' }} className="logoDark" />
         </div>
         <div className={styles.mobileActions}>
+          <div className={styles.mobileLangSwitch}>
+            <button 
+              onClick={() => setLanguage('id')} 
+              className={`${styles.mobileLangBtn} ${language === 'id' ? styles.mobileLangActive : ''}`}
+            >
+              ID
+            </button>
+            <button 
+              onClick={() => setLanguage('en')} 
+              className={`${styles.mobileLangBtn} ${language === 'en' ? styles.mobileLangActive : ''}`}
+            >
+              EN
+            </button>
+          </div>
           <ThemeToggle />
           <button onClick={() => setIsMobileOpen(!isMobileOpen)} className={styles.menuBtn}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
