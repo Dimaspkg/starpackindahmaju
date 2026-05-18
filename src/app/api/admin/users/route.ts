@@ -1,11 +1,12 @@
 import { NextResponse } from 'next/server';
 import pool from '@/lib/db';
 import { getServerSession } from 'next-auth';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import bcrypt from 'bcryptjs';
 
 // GET all users
 export async function GET() {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
   const role = (session.user as any)?.role;
@@ -24,7 +25,7 @@ export async function GET() {
 
 // POST create a new user
 export async function POST(request: Request) {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
   const role = (session.user as any)?.role;
@@ -66,7 +67,7 @@ export async function POST(request: Request) {
 
 // DELETE a user
 export async function DELETE(request: Request) {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
   const role = (session.user as any)?.role;
@@ -105,7 +106,7 @@ export async function DELETE(request: Request) {
 
 // PUT update a user (password or role)
 export async function PUT(request: Request) {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
   const role = (session.user as any)?.role;
