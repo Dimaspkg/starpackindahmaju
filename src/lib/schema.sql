@@ -33,6 +33,15 @@ CREATE TABLE IF NOT EXISTS brochures (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS customer_logos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  logo_url VARCHAR(255) NOT NULL,
+  display_order INT DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
 -- Default Admin User (Username: admin, Password: admin123)
 INSERT IGNORE INTO users (id, username, password, role) VALUES 
 (1, 'admin', '$2b$10$jOiq3cGERpaQ5qHkmwvkIuslaeRrzeiDo4NCQKiNzOXYcKS2quuwO', 'admin');
