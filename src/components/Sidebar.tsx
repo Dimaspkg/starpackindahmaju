@@ -31,7 +31,7 @@ export default function Sidebar() {
       setLastScrollY(currentScrollY);
 
       // Active section tracking
-      const sections = ['home', 'about', 'technology', 'premium', 'industry', 'quality', 'inquiry'];
+      const sections = ['home', 'about', 'technology', 'premium', 'industry', 'quality', 'customers', 'inquiry'];
       const scrollPos = currentScrollY + 100;
 
       for (const section of sections) {
@@ -56,6 +56,7 @@ export default function Sidebar() {
     { id: 'premium', label: t.nav.premium, href: '/#premium' },
     { id: 'industry', label: t.nav.industry, href: '/#industry' },
     { id: 'quality', label: t.nav.quality, href: '/#quality' },
+    { id: 'customers', label: t.nav.customers, href: '/#customers' },
     { id: 'inquiry', label: t.nav.inquiry, href: '/#inquiry' },
   ];
 
