@@ -23,6 +23,39 @@ export default function BrochuresPage() {
   const [creatingFolder, setCreatingFolder] = useState(false);
   const [message, setMessage] = useState({ type: '', text: '' });
 
+  // Premium Dialog State
+  const [dialog, setDialog] = useState<{
+    isOpen: boolean;
+    type: 'success' | 'error' | 'confirm' | 'info';
+    title: string;
+    message: string;
+    onConfirm?: () => void;
+  }>({
+    isOpen: false,
+    type: 'info',
+    title: '',
+    message: ''
+  });
+
+  const showDialog = (
+    type: 'success' | 'error' | 'confirm' | 'info',
+    title: string,
+    message: string,
+    onConfirm?: () => void
+  ) => {
+    setDialog({
+      isOpen: true,
+      type,
+      title,
+      message,
+      onConfirm
+    });
+  };
+
+  const closeDialog = () => {
+    setDialog((prev) => ({ ...prev, isOpen: false }));
+  };
+
   const fetchBrochures = async () => {
     try {
       const response = await fetch('/api/admin/brochures');
@@ -74,14 +107,14 @@ export default function BrochuresPage() {
         setNewFolderName('');
         fetchFolders();
         setSelectedUploadFolder(data.folder);
-        alert(`Folder "${data.folder}" created successfully!`);
+        showDialog('success', 'Folder Created', `Folder "${data.folder}" has been created successfully.`);
       } else {
         const data = await response.json();
-        alert(data.error || 'Failed to create folder.');
+        showDialog('error', 'Failed to Create Folder', data.error || 'Failed to create folder.');
       }
     } catch (error) {
       console.error('Create folder error:', error);
-      alert('Failed to create folder.');
+      showDialog('error', 'Error', 'An unexpected error occurred while creating the folder.');
     } finally {
       setCreatingFolder(false);
     }
@@ -125,22 +158,25 @@ export default function BrochuresPage() {
   };
 
   const handleDelete = async (id: number) => {
-    if (!confirm('Are you sure you want to delete this brochure?')) return;
+    showDialog('confirm', 'Confirm Deletion', 'Are you sure you want to delete this brochure? This action cannot be undone.', async () => {
+      try {
+        const response = await fetch('/api/admin/brochures', {
+          method: 'DELETE',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id }),
+        });
 
-    try {
-      const response = await fetch('/api/admin/brochures', {
-        method: 'DELETE',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id }),
-      });
-
-      if (response.ok) {
-        fetchBrochures();
+        if (response.ok) {
+          fetchBrochures();
+          showDialog('success', 'Deleted Successfully', 'The brochure has been permanently deleted.');
+        } else {
+          showDialog('error', 'Delete Failed', 'Failed to delete the brochure.');
+        }
+      } catch (error) {
+        console.error('Delete brochure error:', error);
+        showDialog('error', 'Delete Failed', 'Failed to delete the brochure due to a server error.');
       }
-    } catch (error) {
-      console.error('Delete brochure error:', error);
-      alert('Delete failed');
-    }
+    });
   };
 
   // Helper to parse folder from URL: /uploads/brochures/filename.pdf OR /uploads/brochures/folder-name/filename.pdf
@@ -472,6 +508,170 @@ export default function BrochuresPage() {
           )}
         </div>
       </div>
+
+      {/* Premium Custom Modal Dialog */}
+      {dialog.isOpen && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: 'rgba(0, 0, 0, 0.65)',
+          backdropFilter: 'blur(8px)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 9999
+        }}>
+          <div style={{
+            background: 'var(--card-bg)',
+            borderRadius: '24px',
+            border: '1px solid var(--card-border)',
+            padding: '2.25rem',
+            width: '90%',
+            maxWidth: '400px',
+            boxShadow: '0 20px 40px rgba(0, 0, 0, 0.4)',
+            textAlign: 'center',
+            position: 'relative',
+            overflow: 'hidden'
+          }}>
+            {/* Soft background glow */}
+            <div style={{
+              position: 'absolute',
+              top: '-50px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              width: '150px',
+              height: '150px',
+              borderRadius: '50%',
+              filter: 'blur(40px)',
+              background: dialog.type === 'success' ? 'rgba(46, 204, 113, 0.15)' :
+                          dialog.type === 'error' ? 'rgba(231, 76, 60, 0.15)' :
+                          dialog.type === 'confirm' ? 'rgba(241, 196, 15, 0.15)' :
+                          'rgba(52, 152, 219, 0.15)',
+              zIndex: 0
+            }} />
+
+            <div style={{ position: 'relative', zIndex: 1 }}>
+              {/* Icon Badges */}
+              <div style={{
+                width: '64px',
+                height: '64px',
+                margin: '0 auto 1.5rem auto',
+                borderRadius: '20px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '2rem',
+                background: dialog.type === 'success' ? 'rgba(46, 204, 113, 0.1)' :
+                            dialog.type === 'error' ? 'rgba(231, 76, 60, 0.1)' :
+                            dialog.type === 'confirm' ? 'rgba(241, 196, 15, 0.1)' :
+                            'rgba(52, 152, 219, 0.1)',
+                color: dialog.type === 'success' ? '#2ecc71' :
+                       dialog.type === 'error' ? '#e74c3c' :
+                       dialog.type === 'confirm' ? '#f1c40f' :
+                       '#3498db',
+                border: `1px solid ${
+                  dialog.type === 'success' ? 'rgba(46, 204, 113, 0.2)' :
+                  dialog.type === 'error' ? 'rgba(231, 76, 60, 0.2)' :
+                  dialog.type === 'confirm' ? 'rgba(241, 196, 15, 0.2)' :
+                  'rgba(52, 152, 219, 0.2)'
+                }`
+              }}>
+                {dialog.type === 'success' ? '✓' :
+                 dialog.type === 'error' ? '✕' :
+                 dialog.type === 'confirm' ? '?' :
+                 'i'}
+              </div>
+
+              <h3 style={{
+                margin: '0 0 0.75rem 0',
+                fontSize: '1.25rem',
+                fontWeight: 800,
+                color: 'var(--text-color)'
+              }}>{dialog.title}</h3>
+
+              <p style={{
+                margin: '0 0 2rem 0',
+                fontSize: '0.9rem',
+                color: 'var(--muted-text)',
+                lineHeight: 1.5
+              }}>{dialog.message}</p>
+
+              {/* Action Buttons */}
+              <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+                {dialog.type === 'confirm' ? (
+                  <>
+                    <button
+                      onClick={closeDialog}
+                      style={{
+                        flex: 1,
+                        padding: '0.8rem 1.5rem',
+                        borderRadius: '12px',
+                        border: '1px solid var(--card-border)',
+                        background: 'transparent',
+                        color: 'var(--text-color)',
+                        cursor: 'pointer',
+                        fontWeight: 600,
+                        fontSize: '0.85rem',
+                        transition: 'background 0.2s'
+                      }}
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      onClick={() => {
+                        if (dialog.onConfirm) dialog.onConfirm();
+                        closeDialog();
+                      }}
+                      style={{
+                        flex: 1,
+                        padding: '0.8rem 1.5rem',
+                        borderRadius: '12px',
+                        border: 'none',
+                        background: '#e74c3c',
+                        color: '#fff',
+                        cursor: 'pointer',
+                        fontWeight: 600,
+                        fontSize: '0.85rem',
+                        boxShadow: '0 4px 12px rgba(231, 76, 60, 0.2)',
+                        transition: 'background 0.2s'
+                      }}
+                    >
+                      Delete
+                    </button>
+                  </>
+                ) : (
+                  <button
+                    onClick={closeDialog}
+                    style={{
+                      padding: '0.8rem 2.5rem',
+                      borderRadius: '12px',
+                      border: 'none',
+                      background: dialog.type === 'success' ? '#2ecc71' :
+                                  dialog.type === 'error' ? '#e74c3c' :
+                                  '#3498db',
+                      color: '#fff',
+                      cursor: 'pointer',
+                      fontWeight: 600,
+                      fontSize: '0.85rem',
+                      minWidth: '120px',
+                      boxShadow: `0 4px 12px ${
+                        dialog.type === 'success' ? 'rgba(46, 204, 113, 0.2)' :
+                        dialog.type === 'error' ? 'rgba(231, 76, 60, 0.2)' :
+                        'rgba(52, 152, 219, 0.2)'
+                      }`
+                    }}
+                  >
+                    OK
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
