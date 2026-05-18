@@ -36,6 +36,12 @@ export const metadata: Metadata = {
     siteName: "PT. STARPACK INDAHMAJU",
     images: [
       {
+        url: "/images/og-starpack.png",
+        width: 1200,
+        height: 630,
+        alt: "PT. STARPACK INDAHMAJU UV Coating Solutions",
+      },
+      {
         url: "/images/starpackindahmaju.png",
         width: 1200,
         height: 630,
@@ -47,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "PT. STARPACK INDAHMAJU | UV Plastic Coating Specialist",
     description: "Premium finishing for plastic products with advanced production control.",
-    images: ["/images/starpackindahmaju.png"],
+    images: ["/images/og-starpack.png", "/images/starpackindahmaju.png"],
   },
   robots: {
     index: true,
