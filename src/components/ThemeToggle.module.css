@@ -29,9 +29,6 @@
   }
 }
 
-[data-theme="light"] .themeToggle {
-}
-
 .themeToggle:hover {
   transform: scale(1.1);
   border-color: var(--primary);

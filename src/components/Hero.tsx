@@ -73,9 +73,9 @@ import Counter from './Counter';
         <div className={styles.statsContainer}>
           <div className={`${styles.card} reveal fadeUp active delay1`}>
             <span className={styles.val}>
-              <Counter target={10} suffix="M+" />
+              <Counter target={100} suffix="M+" />
             </span>
-            <span className={styles.lab}>{t.hero.badges.units.replace('10M+', '').replace('10Jt+', '').replace('10M', '').trim()}</span>
+            <span className={styles.lab}>{t.hero.badges.units.replace('100M+', '').replace('100Jt+', '').replace('100M', '').replace('10M+', '').replace('10Jt+', '').replace('10M', '').replace('1億', '').trim()}</span>
           </div>
           <div className={`${styles.card} reveal fadeUp active delay2`}>
             <span className={styles.val}>
@@ -85,9 +85,9 @@ import Counter from './Counter';
           </div>
           <div className={`${styles.card} reveal fadeUp active delay3`}>
             <span className={styles.val}>
-              <Counter target={20} suffix="+" />
+              <Counter target={50} suffix="+" />
             </span>
-            <span className={styles.lab}>{t.hero.badges.effects.replace('20+', '').trim()}</span>
+            <span className={styles.lab}>{t.hero.badges.effects.replace('50+', '').replace('50种类', '').replace('50種類', '').replace('20+', '').trim()}</span>
           </div>
           <div className={`${styles.card} reveal fadeUp active delay4`}>
             <span className={styles.val}>{t.hero.badges.iso}</span>
