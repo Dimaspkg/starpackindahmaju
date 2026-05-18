@@ -207,6 +207,9 @@
     "button": "返回首页",
     "retry": "重试"
   },
+  "customers": {
+    "title": "我们的客户"
+  },
   "footer": {
     "description": "自 1996 年以来的优质塑料紫外线涂层服务，专注于质量、一致性和先进的生产控制。",
     "quickLinks": "快速链接",

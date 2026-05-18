@@ -207,6 +207,9 @@
     "button": "Back to Home",
     "retry": "Try Again"
   },
+  "customers": {
+    "title": "Our Customers"
+  },
   "footer": {
     "description": "Premium UV plastic coating services since 1996, focused on quality, consistency, and advanced production control.",
     "quickLinks": "Quick Links",
