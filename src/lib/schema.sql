@@ -26,13 +26,6 @@ CREATE TABLE IF NOT EXISTS settings (
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
--- Default Settings for Email Routing
-INSERT INTO settings (setting_key, setting_value, description) VALUES 
-('email_routing_enabled', 'true', 'Enable or disable automatic email notifications'),
-('notification_recipient', 'marketing@starpack.co.id', 'Main email address to receive lead notifications'),
-('smtp_sender_name', 'Starpack Admin', 'Name that appears as the sender'),
-('email_footer', 'Sent from Starpack Dashboard', 'Footer text for automated emails');
-
 CREATE TABLE IF NOT EXISTS brochures (
   id INT AUTO_INCREMENT PRIMARY KEY,
   title VARCHAR(255) NOT NULL,
@@ -40,3 +33,13 @@ CREATE TABLE IF NOT EXISTS brochures (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Default Admin User (Username: admin, Password: admin123)
+INSERT IGNORE INTO users (id, username, password, role) VALUES 
+(1, 'admin', '$2b$10$jOiq3cGERpaQ5qHkmwvkIuslaeRrzeiDo4NCQKiNzOXYcKS2quuwO', 'admin');
+
+-- Default Settings for Email Routing
+INSERT IGNORE INTO settings (setting_key, setting_value, description) VALUES 
+('email_routing_enabled', 'true', 'Enable or disable automatic email notifications'),
+('notification_recipient', 'marketing@starpack.co.id', 'Main email address to receive lead notifications'),
+('smtp_sender_name', 'Starpack Admin', 'Name that appears as the sender'),
+('email_footer', 'Sent from Starpack Dashboard', 'Footer text for automated emails');
