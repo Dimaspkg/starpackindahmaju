@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react';
 import Counter from './Counter';
  
  export default function Hero() {
-   const { t } = useLanguage();
+   const { language, t } = useLanguage();
    const bgRef = useRef<HTMLDivElement>(null);
    const sectionRef = useRef<HTMLElement>(null);
    const [isVisible, setIsVisible] = useState(false);
@@ -73,9 +73,23 @@ import Counter from './Counter';
         <div className={styles.statsContainer}>
           <div className={`${styles.card} reveal fadeUp active delay1`}>
             <span className={styles.val}>
-              <Counter target={100} suffix="M+" />
+              <Counter 
+                target={language === 'jp' ? 1 : 100} 
+                suffix={language === 'id' ? 'Jt+' : language === 'jp' ? '億+' : 'M+'} 
+              />
             </span>
-            <span className={styles.lab}>{t.hero.badges.units.replace('100M+', '').replace('100Jt+', '').replace('100M', '').replace('10M+', '').replace('10Jt+', '').replace('10M', '').replace('1億', '').trim()}</span>
+            <span className={styles.lab}>
+              {t.hero.badges.units
+                .replace('100M+', '')
+                .replace('100Jt+', '')
+                .replace('100M', '')
+                .replace('10M+', '')
+                .replace('10Jt+', '')
+                .replace('10M', '')
+                .replace('1億個以上', '')
+                .replace('1億', '')
+                .trim()}
+            </span>
           </div>
           <div className={`${styles.card} reveal fadeUp active delay2`}>
             <span className={styles.val}>
