@@ -179,6 +179,43 @@ export default function BrochuresPage() {
     });
   };
 
+  const handleDeleteFolder = async (folderName: string) => {
+    const catalogCount = brochures.filter(b => getBrochureFolder(b.file_url) === folderName).length;
+    
+    let warningMsg = `Are you sure you want to delete the folder "${folderName.replace(/_/g, ' ')}"?`;
+    if (catalogCount > 0) {
+      warningMsg += ` Deleting this folder will permanently delete all ${catalogCount} catalog file(s) inside it from both the database and the server disk. This action cannot be undone!`;
+    }
+
+    showDialog('confirm', 'Confirm Folder Deletion', warningMsg, async () => {
+      try {
+        const response = await fetch('/api/admin/folders', {
+          method: 'DELETE',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: folderName }),
+        });
+
+        if (response.ok) {
+          fetchFolders();
+          fetchBrochures();
+          if (activeFolderFilter === folderName) {
+            setActiveFolderFilter('all');
+          }
+          if (selectedUploadFolder === folderName) {
+            setSelectedUploadFolder('');
+          }
+          showDialog('success', 'Folder Deleted', `The folder "${folderName.replace(/_/g, ' ')}" and its contents have been permanently deleted.`);
+        } else {
+          const data = await response.json();
+          showDialog('error', 'Delete Failed', data.error || 'Failed to delete folder.');
+        }
+      } catch (error) {
+        console.error('Delete folder error:', error);
+        showDialog('error', 'Delete Failed', 'Failed to delete the folder due to a server error.');
+      }
+    });
+  };
+
   // Helper to parse folder from URL: /uploads/brochures/filename.pdf OR /uploads/brochures/folder-name/filename.pdf
   const getBrochureFolder = (url: string) => {
     const parts = url.split('/');
@@ -264,27 +301,61 @@ export default function BrochuresPage() {
             📁 Root ({brochures.filter(b => getBrochureFolder(b.file_url) === 'root').length})
           </button>
           {folders.map(folder => (
-            <button 
+            <div 
               key={folder}
-              onClick={() => setActiveFolderFilter(folder)}
               style={{
-                padding: '0.5rem 1rem',
-                borderRadius: '8px',
-                border: 'none',
-                background: activeFolderFilter === folder ? 'var(--primary)' : 'rgba(255,255,255,0.05)',
-                color: '#fff',
-                cursor: 'pointer',
-                fontWeight: 600,
-                fontSize: '0.85rem',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '0.4rem',
+                background: activeFolderFilter === folder ? 'var(--primary)' : 'rgba(255,255,255,0.05)',
+                borderRadius: '8px',
+                padding: '2px',
                 transition: 'all 0.2s',
                 opacity: activeFolderFilter === folder ? 1 : 0.75
               }}
             >
-              📁 {folder.replace(/_/g, ' ')} ({brochures.filter(b => getBrochureFolder(b.file_url) === folder).length})
-            </button>
+              <button 
+                onClick={() => setActiveFolderFilter(folder)}
+                style={{
+                  padding: '0.4rem 0.4rem 0.4rem 0.75rem',
+                  border: 'none',
+                  background: 'transparent',
+                  color: '#fff',
+                  cursor: 'pointer',
+                  fontWeight: 600,
+                  fontSize: '0.85rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.4rem'
+                }}
+              >
+                📁 {folder.replace(/_/g, ' ')} ({brochures.filter(b => getBrochureFolder(b.file_url) === folder).length})
+              </button>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleDeleteFolder(folder);
+                }}
+                title={`Delete folder "${folder.replace(/_/g, ' ')}"`}
+                style={{
+                  background: 'transparent',
+                  border: 'none',
+                  color: activeFolderFilter === folder ? 'rgba(255,255,255,0.8)' : '#e74c3c',
+                  cursor: 'pointer',
+                  padding: '0.4rem 0.5rem',
+                  borderRadius: '6px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '0.8rem',
+                  fontWeight: 'bold',
+                  transition: 'background 0.2s'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.15)'}
+                onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}
+              >
+                ✕
+              </button>
+            </div>
           ))}
         </div>
 
