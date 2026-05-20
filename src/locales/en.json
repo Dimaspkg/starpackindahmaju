@@ -1,16 +1,20 @@
 {
   "nav": {
     "home": "Home",
-    "about": "About Starpack",
-    "technology": "Technology & Machinery",
+    "about": "About",
+    "technology": "Technology",
     "premium": "Coating Effects",
     "industry": "Industries",
     "quality": "Quality & Certification",
     "customers": "Our Customers",
-    "inquiry": "Contact Us"
+    "insights": "Insights",
+    "inquiry": "Contact Us",
+    "contact": "Contact"
   },
   "hero": {
-    "image": "/images/herro/herro.png",
+    "image": "/images/herro/premium_hero_cosmetic.png",
+    "signature": ["Innovate.", "Create.", "Elevate."],
+    "story_btn": "Our Story",
     "tag": "Setting the Standard for Plastic Product Excellence",
     "title": "Premium UV Coating & Vacuum Metallizing Solutions",
     "description": "We specialize in advanced UV coating and vacuum metallizing services for plastic products. With nearly three decades of industry expertise, we deliver premium finishes that elevate your brand and protect your products.",
@@ -216,5 +220,67 @@
     "quickLinks": "Quick Links",
     "contact": "Contact Us",
     "address": "Jl. Pulogadung Kav. 1D No. 6B/6C Blok 3, Kawasan Industri Pulogadung, Rawa Terate, Cakung, Jakarta Timur, 13920"
+  },
+  "insights": {
+    "title": "News & Insights",
+    "description": "Stay informed with the latest updates from PT. Starpack Indahmaju and educational articles about UV coating, vacuum metallizing, and premium packaging solutions.",
+    "read_more": "Read More",
+    "view_all": "View All Insights",
+    "back": "Back to Insights",
+    "published_on": "Published on",
+    "items": [
+      {
+        "slug": "understanding-uv-coating-cosmetic-packaging",
+        "category": "Educational",
+        "date": "May 10, 2026",
+        "title": "Understanding UV Coating: Elevating Cosmetic Packaging",
+        "desc": "Discover how UV coating technology creates premium, chemical-resistant, and scratch-resistant finishes for your cosmetic packaging.",
+        "image": "/images/Beauty_&_Cosmetics/Beauty_&_Cosmetics.png",
+        "content": [
+          "In the highly competitive beauty industry, packaging is the first point of physical contact between a consumer and a brand. PT. Starpack Indahmaju's premium UV coating solutions elevate simple plastic packaging into luxurious containers that stand out on retail shelves.",
+          "UV coating involves applying a liquid resin containing photoinitiators to the plastic surface, which is then instantly cured under high-intensity ultraviolet lights. This creates an extremely hard, chemical-resistant, and high-gloss protective barrier.",
+          "For cosmetic packaging, UV coating offers several key advantages:",
+          "1. Luxurious Gloss: It provides a mirror-like finish that instantly elevates the perception of product luxury and quality.",
+          "2. Chemical Resistance: Cosmetic products often contain oils, solvents, and active ingredients that can degrade untreated plastics. UV coating protects the container from discoloration and chemical breakdown.",
+          "3. Scratch Resistance: During transit and customer handling, packaging is subject to friction. Our UV coating ensures the surface remains flawless and scratch-free.",
+          "By combining aesthetic brilliance with extreme durability, UV coating remains the gold standard for premium beauty brands worldwide."
+        ]
+      },
+      {
+        "slug": "science-vacuum-metallizing-process",
+        "category": "Technology",
+        "date": "April 28, 2026",
+        "title": "The Science of Vacuum Metallizing: Turning Plastics into Metals",
+        "desc": "An in-depth look into the vacuum metallizing process, vacuum chambers, and how metal finishes are applied to electronics and automotive parts.",
+        "image": "/images/Vacuum_Metallizing/Vacuum-Metallizing.png",
+        "content": [
+          "Vacuum metallizing is a physical vapor deposition (PVD) process where a metal (usually aluminum) is vaporized inside a high-vacuum chamber to create a thin, highly reflective metallic layer on plastic surfaces.",
+          "At PT. Starpack Indahmaju, we utilize industrial-grade vacuum chambers to ensure precise, uniform, and stable metal deposition. This technology allows plastic components to achieve the exact look and feel of genuine metal at a fraction of the weight and cost.",
+          "This process is essential for various high-spec industries:",
+          "- Automotive: Used for headlight reflectors, interior trim panels, and exterior accessories to provide a weather-resistant chrome effect.",
+          "- Consumer Electronics: Delivers a premium, sleek look to mobile phone casings, buttons, and audio components.",
+          "- Luxury Packaging: Adds a high-end metal shimmer to perfume bottle caps and cosmetic containers.",
+          "Through strict process control and regular adhesion cross-cut testing, we guarantee that our metallized coatings deliver superior bonding and excellent long-term durability."
+        ]
+      },
+      {
+        "slug": "choosing-right-finish-gloss-vs-matte",
+        "category": "Guide",
+        "date": "April 15, 2026",
+        "title": "Choosing the Right Finish: High Gloss vs. Matte Finish",
+        "desc": "A comprehensive guide to choosing the best coating effect based on your target market, brand identity, and functional product requirements.",
+        "image": "/images/Matte_Finish/Matte_Finish.png",
+        "content": [
+          "Deciding between a brilliant High Gloss finish and a sophisticated Matte texture is one of the most critical design decisions for your product's packaging and components.",
+          "High Gloss finishes offer a high-intensity, mirror-like reflectivity that immediately catches the eye. This effect is perfect for luxury cosmetics, high-end products, and decorative elements aiming for maximum glamour. However, gloss surfaces are more prone to showing fingerprints and smudges.",
+          "On the other hand, a Matte Finish provides a non-reflective, soft-touch texture that exudes modern sophistication and understated elegance. It is excellent at hiding fine scratches and fingerprints, making it highly popular in consumer electronics, automotive interiors, and men's grooming products.",
+          "Consider the following factors when making your choice:",
+          "1. Brand Identity: Does your brand convey high-octane luxury (gloss) or modern minimalism (matte)?",
+          "2. Product Handling: For products handled frequently, a matte finish offers a cleaner, more practical everyday experience.",
+          "3. Target Market: Match the coating aesthetic with the design expectations of your target consumer demographic.",
+          "At PT. Starpack Indahmaju, we provide both gloss and matte coatings engineered to the highest standards, tailored to your product's unique requirements."
+        ]
+      }
+    ]
   }
 }

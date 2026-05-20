@@ -155,3 +155,32 @@
     min-height: 300px;
   }
 }
+
+.readMoreBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 0.8rem 1.8rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.readMoreBtn:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.readMoreBtn svg {
+  transition: transform 0.2s ease;
+}
+
+.readMoreBtn:hover svg {
+  transform: translateX(4px);
+}

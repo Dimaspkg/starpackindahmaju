@@ -1,6 +1,7 @@
 "use client";
 
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './Hero.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 import { useEffect, useRef, useState } from 'react';
@@ -33,7 +34,7 @@ import Counter from './Counter';
      const handleScroll = () => {
        if (bgRef.current) {
          const scrollY = window.scrollY;
-         bgRef.current.style.transform = `translateY(${scrollY * 0.3}px)`;
+         bgRef.current.style.transform = `translateY(${scrollY * 0.15}px)`;
        }
        requestRef = requestAnimationFrame(handleScroll);
      };
@@ -46,73 +47,91 @@ import Counter from './Counter';
    }, [isVisible]);
  
    return (
-     <section id="home" ref={sectionRef} className={styles.heroSection}>
-      <div 
-        ref={bgRef}
-        className={styles.heroBackground}
-      >
-        <Image 
-          src={t.hero.image} 
-          alt="Product finishing background" 
-          fill
-          priority
-          className={styles.bgImage}
-        />
-        <div className={styles.bgOverlay} />
-      </div>
+    <div className={styles.heroContainer}>
+      <section id="home" ref={sectionRef} className={styles.heroSection}>
+        {/* Left Column: Image Container */}
+        <div className={styles.imageColumn}>
+          <div ref={bgRef} className={styles.heroBackground}>
+            <Image 
+              src={t.hero.image || "/images/herro/premium_hero_cosmetic.png"} 
+              alt="Premium Cosmetic Packaging Finishing" 
+              fill
+              priority
+              className={styles.bgImage}
+            />
+          </div>
+        </div>
 
-      <div className={styles.heroContent}>
-        <div className={`${styles.textContainer} reveal fadeUp active`}>
-          <h2 className={styles.companyName}>PT. Starpack Indahmaju</h2>
-          <h1 className={styles.headline}>
+        {/* Right Column: Empty spacer area on desktop */}
+        <div className={styles.spacerColumn} />
+
+        {/* Overlapping Text Card */}
+        <div className={`${styles.overlapCard} reveal fadeUp active`}>
+          <span className={styles.companyLabel}>
+            PT. STARPACK INDAHMAJU
+          </span>
+          
+          <h1 className={styles.heroTitle}>
             {t.hero.title}
           </h1>
-          <p className={styles.subHeadline}>{t.hero.tag}</p>
-        </div>
 
-        <div className={styles.statsContainer}>
-          <div className={`${styles.card} reveal fadeUp active delay1`}>
-            <span className={styles.val}>
-              <Counter 
-                target={language === 'jp' ? 1 : 100} 
-                suffix={language === 'id' ? 'Jt+' : language === 'jp' ? '億+' : 'M+'} 
-              />
-            </span>
-            <span className={styles.lab}>
-              {t.hero.badges.units
-                .replace('100M+', '')
-                .replace('100Jt+', '')
-                .replace('100M', '')
-                .replace('10M+', '')
-                .replace('10Jt+', '')
-                .replace('10M', '')
-                .replace('1億個以上', '')
-                .replace('1億', '')
-                .trim()}
-            </span>
-          </div>
-          <div className={`${styles.card} reveal fadeUp active delay2`}>
-            <span className={styles.val}>
-              <Counter target={500} suffix="+" />
-            </span>
-            <span className={styles.lab}>{t.hero.badges.clients.replace('500+', '').trim()}</span>
-          </div>
-          <div className={`${styles.card} reveal fadeUp active delay3`}>
-            <span className={styles.val}>
-              <Counter target={50} suffix="+" />
-            </span>
-            <span className={styles.lab}>{t.hero.badges.effects.replace('50+', '').replace('50种类', '').replace('50種類', '').replace('20+', '').trim()}</span>
-          </div>
-          <div className={`${styles.card} reveal fadeUp active delay4`}>
-            <span className={styles.val}>{t.hero.badges.iso}</span>
-            <span className={styles.lab}>{t.inquiry.info.location_val}</span>
-          </div>
-        </div>
+          <p className={styles.heroTag}>
+            {t.hero.tag}
+          </p>
 
-        <div className={styles.descBox}>
-          <p>{t.hero.description}</p>
+          <p className={styles.heroDescription}>
+            {t.hero.description}
+          </p>
+
+          <Link href="/about" className={styles.storyBtn}>
+            {t.hero.story_btn || "Our Story"}
+          </Link>
+        </div>
+      </section>
+
+      {/* Stats Band Section below the Hero banner */}
+      <div className={styles.statsBandSection}>
+        <div className={styles.statsInner}>
+          <div className={styles.statsGrid}>
+            <div className={`${styles.card} reveal fadeUp active delay1`}>
+              <span className={styles.lab}>
+                {t.hero.badges.units
+                  .replace('100Jt+', '')
+                  .replace('100M+', '')
+                  .replace('100M', '')
+                  .replace('10M+', '')
+                  .replace('10Jt+', '')
+                  .replace('10M', '')
+                  .replace('1億個以上', '')
+                  .replace('1億', '')
+                  .trim()}
+              </span>
+              <span className={styles.val}>
+                <Counter 
+                  target={language === 'jp' ? 1 : 100} 
+                  suffix={language === 'id' ? 'Jt+' : language === 'jp' ? '億+' : 'M+'} 
+                />
+              </span>
+            </div>
+            <div className={`${styles.card} reveal fadeUp active delay2`}>
+              <span className={styles.lab}>{t.hero.badges.clients.replace('500+', '').trim()}</span>
+              <span className={styles.val}>
+                <Counter target={500} suffix="+" />
+              </span>
+            </div>
+            <div className={`${styles.card} reveal fadeUp active delay3`}>
+              <span className={styles.lab}>{t.hero.badges.effects.replace('50+', '').replace('50种类', '').replace('50種類', '').replace('20+', '').trim()}</span>
+              <span className={styles.val}>
+                <Counter target={50} suffix="+" />
+              </span>
+            </div>
+            <div className={`${styles.card} reveal fadeUp active delay4`}>
+              <span className={styles.lab}>{t.inquiry.info.location_val}</span>
+              <span className={styles.val}>{t.hero.badges.iso}</span>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

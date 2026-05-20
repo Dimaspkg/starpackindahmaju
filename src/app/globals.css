@@ -1,12 +1,13 @@
 :root {
-  /* Exact Design Tokens from User Image */
-  --background: #111111; /* Very dark grey background */
+  /* Design Tokens */
+  --background: #111111;
   --foreground: #ffffff;
-  --primary: #ff0000;    /* Pure red */
+  --primary: #ff0000;
   --primary-hover: #cc0000;
-  --sidebar-bg: #0a0a0a;  /* Near black sidebar */
+  --sidebar-bg: #0a0a0a;
   --sidebar-border: #1a1a1a;
-  --sidebar-width: 280px;
+  --sidebar-width: 200px;
+  --header-height: 64px;
   
   --card-bg: #1e1e1e;
   --card-border: #2a2a2a;
@@ -29,7 +30,7 @@
   
   --card-bg: #ffffff;
   --card-border: #dddddd;
-  --muted-text: #222222;
+  --muted-text: #555555;
   
   --nav-active-bg: #ff0000;
   --nav-active-text: #ffffff;
@@ -89,35 +90,32 @@ ul {
 }
 
 /* Layout Classes */
-.mainContainer {
-  display: flex;
-  min-height: 100vh;
-}
-
 .contentWrapper {
-  flex: 1;
-  margin-left: var(--sidebar-width);
+  width: 100%;
+  padding-top: var(--header-height);
 }
 
 .pageContainer {
   padding: 5rem 6rem;
   max-width: 1400px;
   width: 100%;
+  margin: 0 auto;
 }
 
 @media (max-width: 1024px) {
-  .contentWrapper {
-    margin-left: 0;
-    width: 100%;
-    min-width: 100%;
-  }
   .pageContainer {
-    padding: 1rem;
-    padding-top: 5rem;
+    padding: 2.5rem 1.5rem;
     width: 100%;
     overflow-x: hidden;
   }
 }
+
+@media (max-width: 640px) {
+  .pageContainer {
+    padding: 2rem 1rem;
+  }
+}
+
 
 /* Theme based logo toggle */
 .logoDark {

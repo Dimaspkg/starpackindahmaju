@@ -245,7 +245,6 @@ export default function CustomersAdminPage() {
           padding: '2rem',
           borderRadius: '20px',
           border: '1px solid var(--card-border)',
-          boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
           position: 'sticky',
           top: '20px'
         }}>
@@ -389,8 +388,7 @@ export default function CustomersAdminPage() {
                 fontSize: '0.9rem',
                 cursor: 'pointer',
                 marginTop: '1.5rem',
-                transition: 'all 0.2s',
-                boxShadow: '0 4px 15px rgba(0,0,0,0.1)'
+                transition: 'all 0.2s'
               }}
             >
               {uploading ? 'Uploading...' : editingId ? 'Update Brand' : 'Add Brand'}
@@ -449,7 +447,7 @@ export default function CustomersAdminPage() {
                     alignItems: 'center',
                     justifyContent: 'space-between',
                     minHeight: '200px',
-                    boxShadow: editingId === logo.id ? '0 0 0 2px var(--primary)' : 'none'
+                    outline: editingId === logo.id ? '2px solid var(--primary)' : 'none'
                   }}
                 >
                   {/* Order Badge */}
@@ -558,7 +556,6 @@ export default function CustomersAdminPage() {
             padding: '2.25rem',
             width: '90%',
             maxWidth: '400px',
-            boxShadow: '0 20px 40px rgba(0, 0, 0, 0.4)',
             textAlign: 'center',
             position: 'relative',
             overflow: 'hidden'
@@ -627,9 +624,8 @@ export default function CustomersAdminPage() {
                         closeDialog();
                       }}
                       style={{
-                        flex: 1, padding: '0.8rem 1.5rem', borderRadius: '12px', border: 'none',
-                        background: '#e74c3c', color: '#fff', cursor: 'pointer', fontWeight: 600, fontSize: '0.85rem',
-                        boxShadow: '0 4px 12px rgba(231, 76, 60, 0.2)'
+                         flex: 1, padding: '0.8rem 1.5rem', borderRadius: '12px', border: 'none',
+                         background: '#e74c3c', color: '#fff', cursor: 'pointer', fontWeight: 600, fontSize: '0.85rem'
                       }}
                     >
                       Delete
@@ -643,7 +639,7 @@ export default function CustomersAdminPage() {
                       background: dialog.type === 'success' ? '#2ecc71' :
                                   dialog.type === 'error' ? '#e74c3c' : '#3498db',
                       color: '#fff', cursor: 'pointer', fontWeight: 600, fontSize: '0.85rem',
-                      minWidth: '120px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+                      minWidth: '120px'
                     }}
                   >
                     OK

@@ -1,8 +1,9 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import Sidebar from "./Sidebar";
+import Header from "./Header";
 import ThemeToggle from "./ThemeToggle";
+import Footer from "./Footer";
 import { useUI } from "@/context/UIContext";
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
@@ -22,12 +23,13 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
   }
 
   return (
-    <div className="mainContainer">
-      <Sidebar />
+    <>
+      <Header />
       <main className="contentWrapper">
-        <ThemeToggle className="floatingToggle" />
         {children}
       </main>
-    </div>
+      <Footer />
+    </>
   );
 }
+

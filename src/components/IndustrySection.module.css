@@ -105,3 +105,37 @@
     font-size: 0.85rem;
   }
 }
+
+.footerActions {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5rem;
+}
+
+.viewMoreBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 0.9rem 2.2rem;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.viewMoreBtn:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.viewMoreBtn svg {
+  transition: transform 0.2s ease;
+}
+
+.viewMoreBtn:hover svg {
+  transform: translateX(4px);
+}

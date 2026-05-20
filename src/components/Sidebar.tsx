@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import styles from './Sidebar.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 import ThemeToggle from './ThemeToggle';
@@ -10,6 +11,7 @@ import LanguageDropdown from './LanguageDropdown';
 
 export default function Sidebar() {
   const { language, setLanguage, t } = useLanguage();
+  const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -17,9 +19,29 @@ export default function Sidebar() {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
+    if (pathname === '/about') {
+      setActiveSection('about');
+    } else if (pathname === '/technology') {
+      setActiveSection('technology');
+    } else if (pathname === '/industries') {
+      setActiveSection('industry');
+    } else if (pathname === '/quality-certification') {
+      setActiveSection('quality');
+    } else if (pathname === '/contact') {
+      setActiveSection('contact');
+    } else if (pathname === '/insights' || pathname.startsWith('/insights/')) {
+      setActiveSection('insights');
+    } else if (pathname === '/') {
+      setActiveSection('home');
+    }
+  }, [pathname]);
+
+  useEffect(() => {
     setMounted(true);
     
     const handleScroll = () => {
+      if (pathname !== '/') return;
+
       const currentScrollY = window.scrollY;
       
       // Auto-hide header logic
@@ -31,7 +53,7 @@ export default function Sidebar() {
       setLastScrollY(currentScrollY);
 
       // Active section tracking
-      const sections = ['home', 'about', 'technology', 'premium', 'industry', 'quality', 'customers', 'inquiry'];
+      const sections = ['home', 'about', 'technology', 'premium', 'industry', 'quality', 'customers', 'insights', 'inquiry'];
       const scrollPos = currentScrollY + 100;
 
       for (const section of sections) {
@@ -45,19 +67,21 @@ export default function Sidebar() {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, [lastScrollY, pathname]);
 
   if (!mounted) return null;
 
   const navItems = [
     { id: 'home', label: t.nav.home, href: '/' },
-    { id: 'about', label: t.nav.about, href: '/#about' },
-    { id: 'technology', label: t.nav.technology, href: '/#technology' },
+    { id: 'about', label: t.nav.about, href: pathname === '/' ? '/#about' : '/about' },
+    { id: 'technology', label: t.nav.technology, href: pathname === '/' ? '/#technology' : '/technology' },
     { id: 'premium', label: t.nav.premium, href: '/#premium' },
-    { id: 'industry', label: t.nav.industry, href: '/#industry' },
-    { id: 'quality', label: t.nav.quality, href: '/#quality' },
+    { id: 'industry', label: t.nav.industry, href: pathname === '/' ? '/#industry' : '/industries' },
+    { id: 'quality', label: t.nav.quality, href: pathname === '/' ? '/#quality' : '/quality-certification' },
     { id: 'customers', label: t.nav.customers, href: '/#customers' },
+    { id: 'insights', label: t.nav.insights, href: '/#insights' },
     { id: 'inquiry', label: t.nav.inquiry, href: '/#inquiry' },
+    { id: 'contact', label: t.nav.contact ?? 'Contact', href: '/contact' },
   ];
 
   return (

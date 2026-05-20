@@ -1,0 +1,262 @@
+.container {
+  min-height: 80vh;
+}
+
+.header {
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.description {
+  color: var(--muted-text);
+  max-width: 800px;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Quality Core Layout */
+.mainContent {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 4rem;
+  margin-bottom: 5rem;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .mainContent {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* Left Column: ISO Certificate Banner */
+.leftCol {
+  position: sticky;
+  top: 2rem;
+}
+
+.imageWrapper {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 0.3s ease;
+}
+
+.imageWrapper:hover {
+  border-color: var(--primary);
+}
+
+.qualityImage {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+}
+
+/* Right Column: Accordion */
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.subTitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--foreground);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordionItem {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordionItem:hover {
+  border-color: var(--primary);
+}
+
+.accordionHeader {
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  color: var(--foreground);
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: color 0.3s ease;
+}
+
+.accordionHeader:hover {
+  color: var(--primary);
+}
+
+.triangle {
+  font-size: 0.8rem;
+  color: var(--primary);
+  transition: transform 0.3s ease;
+}
+
+.active .triangle {
+  transform: rotate(90deg);
+}
+
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+  padding: 0 1.5rem;
+}
+
+.active .accordionContent {
+  max-height: 1000px;
+  padding: 0 1.5rem 1.5rem;
+  transition: max-height 0.3s ease-in;
+}
+
+.itemDesc {
+  color: var(--muted-text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Capabilities Box */
+.capabilitiesBox {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.capabilitiesBox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--primary);
+}
+
+.capabilitiesTitle {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.capabilitiesList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2rem;
+}
+
+@media (max-width: 600px) {
+  .capabilitiesList {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+
+.capabilityItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  color: var(--muted-text);
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.bullet {
+  color: var(--primary);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* bottom CTA Section */
+.ctaSection {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 4rem 3rem;
+  text-align: center;
+  margin-bottom: 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--primary);
+}
+
+.ctaTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--foreground);
+}
+
+.ctaDesc {
+  color: var(--muted-text);
+  margin-bottom: 2rem;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  font-weight: 700;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.ctaBtn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}

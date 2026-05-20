@@ -15,7 +15,7 @@
 }
 
 .logoContainer {
-  padding: 0 2rem 3rem;
+  padding: 0 1rem 2rem;
 }
 
 .logo {
@@ -30,8 +30,8 @@
 }
 
 .navLink {
-  padding: 1.25rem 2rem;
-  font-size: 0.95rem;
+  padding: 1rem 1.25rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--foreground);
   transition: all 0.2s ease;
@@ -50,7 +50,7 @@
 }
 
 .bottomSection {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .themeSwitch {
@@ -61,7 +61,7 @@
 
 .langSwitch {
   display: flex;
-  gap: 0.75rem;
+  gap: 0.5rem;
   margin-bottom: 1.5rem;
 }
 

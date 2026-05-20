@@ -2,37 +2,47 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
- 
- import { LanguageProvider } from "@/context/LanguageContext";
- import ScrollReveal from "@/components/ScrollReveal";
+
+import { LanguageProvider } from "@/context/LanguageContext";
+import ScrollReveal from "@/components/ScrollReveal";
 import { Providers } from "@/components/Providers";
 import MainLayout from "@/components/MainLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL 
-  ? process.env.NEXT_PUBLIC_SITE_URL 
-  : process.env.VERCEL_URL 
-    ? `https://${process.env.VERCEL_URL}` 
-    : 'http://localhost:3000';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://starpack.co.id';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "PT. STARPACK INDAHMAJU | UV Plastic Coating Specialist",
+    default: "Perusahaan UV Coating & Vacuum Metallizing Plastik Indonesia | PT. STARPACK INDAHMAJU",
     template: "%s | PT. STARPACK INDAHMAJU"
   },
-  description: "PT. Starpack Indahmaju specializes in premium UV plastic coating, offering consistent finishing results, advanced production control, and ISO 9001:2015 certified quality for manufacturing teams.",
-  keywords: ["UV Plastic Coating", "PT Starpack Indahmaju", "Plastic Finishing", "Manufacturing Jakarta", "UV Coating Indonesia", "ISO 9001:2015", "Premium Plastic Coating"],
+  description: "Dapatkan jasa UV plastic coating & vacuum metallizing plastic coating terbaik di Indonesia. PT. Starpack Indahmaju menawarkan coating plastic service premium, konsisten, dan bersertifikasi ISO 9001:2015.",
+  keywords: [
+    "Jasa plastik Coating",
+    "Coating Plastic",
+    "Coating Plastic Service",
+    "Vacuum Metallizing Plastic Coating Indonesia",
+    "Jasa Vacuum Metallizing",
+    "Chrome Plastik Jakarta",
+    "UV Coating Kemasan Kosmetik",
+    "PT Starpack Indahmaju",
+    "UV Plastic Coating",
+    "Plastic Finishing",
+    "Manufacturing Jakarta",
+    "ISO 9001:2015",
+    "Premium Plastic Coating"
+  ],
   authors: [{ name: "PT. STARPACK INDAHMAJU" }],
   creator: "PT. STARPACK INDAHMAJU",
   publisher: "PT. STARPACK INDAHMAJU",
-    openGraph: {
+  openGraph: {
     type: "website",
     locale: "id_ID",
     url: siteUrl,
-    title: "PT. STARPACK INDAHMAJU | UV Plastic Coating Specialist",
-    description: "Premium finishing for plastic products with advanced production control and stable output.",
+    title: "Jasa UV Coating & Vacuum Metallizing Plastik Indonesia | PT. STARPACK INDAHMAJU",
+    description: "Coating plastic service & vacuum metallizing plastic coating premium dengan kontrol produksi canggih dan hasil stabil di Indonesia.",
     siteName: "PT. STARPACK INDAHMAJU",
     images: [
       {
@@ -51,8 +61,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PT. STARPACK INDAHMAJU | UV Plastic Coating Specialist",
-    description: "Premium finishing for plastic products with advanced production control.",
+    title: "Jasa UV Coating & Vacuum Metallizing Plastik Indonesia | PT. STARPACK INDAHMAJU",
+    description: "Coating plastic service & vacuum metallizing plastic coating premium dengan kontrol produksi canggih dan hasil stabil di Indonesia.",
     images: ["/images/og-starpack.png", "/images/starpackindahmaju.png"],
   },
   robots: {

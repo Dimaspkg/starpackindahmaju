@@ -358,8 +358,7 @@ export default function UsersPage() {
             borderRadius: '16px',
             padding: '2rem',
             width: '100%',
-            maxWidth: '450px',
-            boxShadow: '0 10px 25px rgba(0,0,0,0.2)'
+            maxWidth: '450px'
           }}>
             <h2 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '1.5rem', color: 'var(--text-primary)' }}>Add New User</h2>
             
@@ -498,8 +497,7 @@ export default function UsersPage() {
             borderRadius: '16px',
             padding: '2rem',
             width: '100%',
-            maxWidth: '450px',
-            boxShadow: '0 10px 25px rgba(0,0,0,0.2)'
+            maxWidth: '450px'
           }}>
             <h2 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '0.5rem', color: 'var(--text-primary)' }}>Edit User</h2>
             <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>

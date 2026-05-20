@@ -7,7 +7,7 @@ import { useLanguage } from '@/context/LanguageContext';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   
   return (
     <div className={styles.footerWrapper}>
@@ -42,11 +42,13 @@ export default function Footer() {
             <h3 className={styles.columnTitle}>{t.footer.quickLinks}</h3>
             <nav className={styles.footerNav}>
               <Link href="/" className={styles.footerLink}>{t.nav.home}</Link>
-              <Link href="/#about" className={styles.footerLink}>{t.nav.about}</Link>
-              <Link href="/#technology" className={styles.footerLink}>{t.nav.technology}</Link>
-              <Link href="/#premium" className={styles.footerLink}>{t.nav.premium}</Link>
-              <Link href="/#industry" className={styles.footerLink}>{t.nav.industry}</Link>
-              <Link href="/#quality" className={styles.footerLink}>{t.nav.quality}</Link>
+              <Link href="/about" className={styles.footerLink}>{t.nav.about}</Link>
+              <Link href="/technology" className={styles.footerLink}>{t.nav.technology}</Link>
+              <Link href="/industries" className={styles.footerLink}>{t.nav.industry}</Link>
+              <Link href="/quality-certification" className={styles.footerLink}>{t.nav.quality}</Link>
+              <Link href="/insights" className={styles.footerLink}>{t.nav.insights}</Link>
+              <Link href="/contact" className={styles.footerLink}>{t.nav.contact ?? 'Contact'}</Link>
+              <Link href="/sitemap" className={styles.footerLink}>{language === 'id' ? 'Peta Situs' : language === 'jp' ? 'サイトマップ' : language === 'zh' ? '网站地图' : 'Sitemap'}</Link>
             </nav>
           </div>
 

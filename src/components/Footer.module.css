@@ -1,23 +1,25 @@
 .footerWrapper {
   width: 100%;
-  padding: 0 2rem 2rem;
+  padding: 0;
   display: flex;
   justify-content: center;
 }
 
 .footer {
   width: 100%;
-  max-width: 1300px;
-  padding: 4rem 3rem 2rem;
+  padding: 5rem 6rem 3rem;
   background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 24px;
+  border: none;
+  border-top: 1px solid var(--card-border);
+  border-radius: 0px;
   position: relative;
   overflow: hidden;
 }
 
 .container {
   width: 100%;
+  max-width: 1208px;
+  margin: 0 auto;
   position: relative;
   z-index: 1;
 }
@@ -135,6 +137,9 @@
 }
 
 @media (max-width: 1024px) {
+  .footer {
+    padding: 4rem 2.5rem 2rem;
+  }
   .footerGrid { 
     grid-template-columns: 1fr 1fr; 
     gap: 3rem;
@@ -150,7 +155,7 @@
     border-radius: 0;
     border: none;
     border-top: 1px solid var(--card-border);
-    background-color: transparent;
+    background-color: var(--card-bg);
   }
   .description {
     font-size: 0.9rem;

@@ -38,7 +38,7 @@ export function getEmailTemplate(data: {
 
   return `
     <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; background-color: #f9f9f9; padding: 20px; color: #333;">
-      <div style="background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #eeeeee;">
+      <div style="background-color: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid #eeeeee;">
         <!-- Header -->
         <div style="background-color: #ffffff; padding: 30px; text-align: center; border-bottom: 1px solid #eeeeee;">
           <img src="${logoUrl}" alt="PT. STARPACK INDAHMAJU" style="max-height: 40px; width: auto;" />

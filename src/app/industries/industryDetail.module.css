@@ -1,0 +1,242 @@
+.container {
+  min-height: 100vh;
+  padding-bottom: 6rem;
+}
+
+/* 1. Hero Section */
+.hero {
+  position: relative;
+  padding: 8rem 0 6rem;
+  margin-bottom: 5rem;
+  border-bottom: 1px solid var(--sidebar-border);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.heroTag {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  max-width: 900px;
+}
+
+.description {
+  color: var(--muted-text);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 5rem 0 4rem;
+  }
+  .title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 2.2rem;
+  }
+}
+
+/* 2. Content Layout */
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 5rem;
+  margin-bottom: 8rem;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.sectionDesc {
+  color: var(--muted-text);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.featureItem:hover {
+  border-color: var(--primary);
+  transform: translateX(8px);
+}
+
+.checkIcon {
+  color: var(--primary);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.featureText {
+  color: var(--foreground);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.featureDesc {
+  color: var(--muted-text);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+/* Image Visual */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  border-radius: 16px;
+  border: 1px solid var(--sidebar-border);
+  overflow: hidden;
+  background-color: var(--sidebar-bg);
+}
+
+@media (max-width: 1024px) {
+  .imageWrapper {
+    height: 450px;
+  }
+}
+
+@media (max-width: 600px) {
+  .imageWrapper {
+    height: 350px;
+  }
+}
+
+.imageWrapper img {
+  object-fit: cover;
+  transition: transform 2.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.imageWrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* 3. CTA Section */
+.ctaSection {
+  text-align: center;
+  padding: 5rem 2rem;
+  background-color: #161616;
+  border: 1px solid var(--sidebar-border);
+  border-radius: 18px;
+}
+
+[data-theme="light"] .ctaSection {
+  background-color: #ffffff;
+}
+
+.ctaTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.ctaDesc {
+  color: var(--muted-text);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  height: 56px;
+  padding: 0 3rem;
+  background-color: var(--foreground);
+  color: var(--background);
+  font-weight: 800;
+  font-size: 1.05rem;
+  border-radius: 28px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+[data-theme="dark"] .ctaBtn {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+[data-theme="light"] .ctaBtn {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] .ctaBtn:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.ctaBtn svg {
+  transition: transform 0.3s ease;
+}
+
+.ctaBtn:hover svg {
+  transform: translateX(4px);
+}

@@ -1,16 +1,20 @@
 {
   "nav": {
     "home": "Beranda",
-    "about": "Tentang Starpack",
-    "technology": "Teknologi & Mesin",
+    "about": "About",
+    "technology": "Technology",
     "premium": "Efek Coating",
-    "industry": "Industri",
-    "quality": "Kualitas & Sertifikasi",
+    "industry": "Industries",
+    "quality": "Quality & Certification",
     "customers": "Pelanggan Kami",
-    "inquiry": "Hubungi Kami"
+    "insights": "Insights",
+    "inquiry": "Hubungi Kami",
+    "contact": "Contact"
   },
   "hero": {
-    "image": "/images/herro/herro.png",
+    "image": "/images/herro/premium_hero_cosmetic.png",
+    "signature": ["Inovasi.", "Cipta.", "Elevasi."],
+    "story_btn": "Kisah Kami",
     "tag": "Menetapkan Standar Keunggulan Produk Plastik",
     "title": "Solusi Premium UV Coating & Vacuum Metallizing",
     "description": "Kami berspesialisasi dalam layanan UV coating dan vacuum metallizing canggih untuk produk plastik. Dengan hampir tiga dekade keahlian industri, kami menghadirkan finishing premium yang mengangkat merek Anda dan melindungi produk Anda.",
@@ -216,5 +220,67 @@
     "quickLinks": "Tautan Langsung",
     "contact": "Hubungi Kami",
     "address": "Jl. Pulogadung Kav. 1D No. 6B/6C Blok 3, Kawasan Industri Pulogadung, Rawa Terate, Cakung, Jakarta Timur, 13920"
+  },
+  "insights": {
+    "title": "Berita & Wawasan",
+    "description": "Dapatkan informasi terbaru seputar aktivitas PT. Starpack Indahmaju serta artikel edukasi mengenai UV coating, vacuum metallizing, dan solusi kemasan premium.",
+    "read_more": "Baca Selengkapnya",
+    "view_all": "Lihat Semua Berita & Wawasan",
+    "back": "Kembali ke Berita & Wawasan",
+    "published_on": "Diterbitkan pada",
+    "items": [
+      {
+        "slug": "understanding-uv-coating-cosmetic-packaging",
+        "category": "Edukasi",
+        "date": "10 Mei 2026",
+        "title": "Memahami UV Coating: Meningkatkan Estetika Kemasan Kosmetik",
+        "desc": "Temukan bagaimana teknologi UV coating menghasilkan finishing premium yang tahan gores dan tahan bahan kimia pada produk kemasan kosmetik Anda.",
+        "image": "/images/Beauty_&_Cosmetics/Beauty_&_Cosmetics.png",
+        "content": [
+          "Dalam industri kecantikan yang kompetitif, kemasan adalah titik sentuhan pertama antara konsumen dan merek. Solusi UV coating premium dari PT. Starpack Indahmaju meningkatkan kualitas kemasan plastik sederhana menjadi wadah mewah yang menonjol di rak ritel.",
+          "UV coating melibatkan pengaplikasian cairan resin yang mengandung photoinitiator ke permukaan plastik, yang kemudian dikeringkan secara instan di bawah sinar ultraviolet berintensitas tinggi. Proses ini menciptakan lapisan pelindung yang sangat keras, mengkilap, dan tahan bahan kimia.",
+          "Untuk kemasan kosmetik, UV coating memberikan beberapa keunggulan utama:",
+          "1. Kilau Mewah (High Gloss): Memberikan efek mengkilap seperti cermin yang meningkatkan persepsi kemewahan dan kualitas produk.",
+          "2. Ketahanan Bahan Kimia: Produk kosmetik sering mengandung minyak dan bahan aktif yang dapat merusak plastik biasa. Lapisan UV melindungi wadah dari perubahan warna dan pelapukan kimia.",
+          "3. Ketahanan Gores: Selama pengiriman dan penanganan konsumen, kemasan rentan terhadap gesekan. UV coating kami memastikan permukaan tetap mulus tanpa cacat.",
+          "Dengan menggabungkan keindahan visual dan daya tahan tinggi, UV coating tetap menjadi standar emas bagi merek kosmetik premium di seluruh dunia."
+        ]
+      },
+      {
+        "slug": "science-vacuum-metallizing-process",
+        "category": "Teknologi",
+        "date": "28 April 2026",
+        "title": "Sains di Balik Vacuum Metallizing: Mengubah Plastik Menjadi Logam",
+        "desc": "Penjelasan mendalam tentang proses vacuum metallizing, teknologi ruang hampa udara, dan bagaimana lapisan logam diaplikasikan pada komponen elektronik dan otomotif.",
+        "image": "/images/Vacuum_Metallizing/Vacuum-Metallizing.png",
+        "content": [
+          "Vacuum metallizing adalah proses pelapisan fisik (PVD) di mana logam (biasanya aluminium) diuapkan di dalam ruang hampa udara untuk menciptakan lapisan logam tipis yang reflektif pada permukaan plastik.",
+          "Di PT. Starpack Indahmaju, kami menggunakan ruang vakum kelas industri untuk memastikan proses deposisi logam berjalan secara presisi dan merata. Teknologi ini memungkinkan plastik mendapatkan tampilan estetika logam asli dengan berat yang jauh lebih ringan dan biaya produksi yang efisien.",
+          "Proses ini sangat penting untuk berbagai industri:",
+          "- Otomotif: Digunakan pada reflektor lampu depan, panel interior, dan aksesoris eksterior untuk memberikan efek krom yang tahan cuaca.",
+          "- Elektronik Konsumen: Memberikan estetika premium pada casing ponsel, tombol, dan komponen audio.",
+          "- Kemasan Mewah: Memberikan efek kilau logam pada tutup botol parfum dan wadah kosmetik kelas atas.",
+          "Melalui kontrol proses yang ketat dan pengujian adhesi berkala, kami menjamin lapisan metallizing kami memiliki daya rekat yang luar biasa dan tidak mudah terkelupas."
+        ]
+      },
+      {
+        "slug": "choosing-right-finish-gloss-vs-matte",
+        "category": "Panduan",
+        "date": "15 April 2026",
+        "title": "Memilih Finishing yang Tepat: High Gloss vs. Matte Finish",
+        "desc": "Panduan lengkap untuk memilih efek pelapisan terbaik berdasarkan target pasar, identitas merek, dan kebutuhan fungsional produk Anda.",
+        "image": "/images/Matte_Finish/Matte_Finish.png",
+        "content": [
+          "Memilih antara finishing High Gloss yang berkilau atau Matte yang bertekstur halus adalah salah satu keputusan desain terpenting untuk kemasan dan komponen produk Anda.",
+          "Finishing High Gloss menawarkan efek reflektif seperti cermin yang langsung menarik perhatian. Efek ini sangat cocok untuk produk mewah, kosmetik premium, dan dekorasi yang ingin menonjolkan kesan berkilau dan mewah. Namun, permukaan gloss lebih mudah memperlihatkan sidik jari.",
+          "Di sisi lain, Matte Finish menawarkan tekstur permukaan non-reflektif yang canggih, modern, dan elegan. Efek matte memberikan kesan minimalis dan modern, serta sangat baik dalam menyembuyen goresan halus dan sidik jari. Ini populer di industri elektronik konsumen dan produk perawatan pria.",
+          "Pertimbangkan hal-hal berikut saat memilih:",
+          "1. Identitas Merek: Apakah merek Anda ingin terlihat glamor (gloss) atau minimalis modern (matte)?",
+          "2. Penggunaan Produk: Untuk produk yang sering disentuh, matte bisa menjadi pilihan yang lebih praktis karena bebas sidik jari.",
+          "3. Target Pasar: Pahami preferensi estetika dari segmen konsumen target Anda.",
+          "Di PT. Starpack Indahmaju, kami menyediakan kedua jenis efek coating ini dengan standar kualitas tertinggi, disesuaikan dengan spesifikasi unik produk Anda."
+        ]
+      }
+    ]
   }
 }

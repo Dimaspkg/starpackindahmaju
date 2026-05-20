@@ -255,8 +255,7 @@ export default function BrochuresPage() {
         background: 'var(--card-bg)',
         padding: '1.2rem 1.5rem',
         borderRadius: '16px',
-        border: '1px solid var(--card-border)',
-        boxShadow: '0 4px 20px rgba(0,0,0,0.02)'
+        border: '1px solid var(--card-border)'
       }}>
         {/* Horizontal Navigation Tabs */}
         <div style={{ display: 'flex', gap: '0.6rem', overflowX: 'auto', maxWidth: '100%', paddingBottom: '4px' }}>
@@ -403,8 +402,7 @@ export default function BrochuresPage() {
           background: 'var(--card-bg)', 
           padding: '2rem', 
           borderRadius: '20px', 
-          border: '1px solid var(--card-border)',
-          boxShadow: '0 10px 30px rgba(0,0,0,0.05)'
+          border: '1px solid var(--card-border)'
         }}>
           <h3 style={{ marginBottom: '1.5rem', fontSize: '1.1rem', fontWeight: 700 }}>Add New Document</h3>
           
@@ -602,7 +600,6 @@ export default function BrochuresPage() {
             padding: '2.25rem',
             width: '90%',
             maxWidth: '400px',
-            boxShadow: '0 20px 40px rgba(0, 0, 0, 0.4)',
             textAlign: 'center',
             position: 'relative',
             overflow: 'hidden'
@@ -706,7 +703,6 @@ export default function BrochuresPage() {
                         cursor: 'pointer',
                         fontWeight: 600,
                         fontSize: '0.85rem',
-                        boxShadow: '0 4px 12px rgba(231, 76, 60, 0.2)',
                         transition: 'background 0.2s'
                       }}
                     >
@@ -727,12 +723,7 @@ export default function BrochuresPage() {
                       cursor: 'pointer',
                       fontWeight: 600,
                       fontSize: '0.85rem',
-                      minWidth: '120px',
-                      boxShadow: `0 4px 12px ${
-                        dialog.type === 'success' ? 'rgba(46, 204, 113, 0.2)' :
-                        dialog.type === 'error' ? 'rgba(231, 76, 60, 0.2)' :
-                        'rgba(52, 152, 219, 0.2)'
-                      }`
+                      minWidth: '120px'
                     }}
                   >
                     OK

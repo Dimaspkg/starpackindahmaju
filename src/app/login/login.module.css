@@ -165,7 +165,7 @@
   border-radius: 50px;
   color: var(--text-primary);
   font-size: 0.95rem;
-  transition: background 0.2s, box-shadow 0.2s;
+  transition: background 0.2s, outline 0.2s;
   box-sizing: border-box;
 }
 
@@ -178,9 +178,8 @@
 }
 
 .input:focus {
-  outline: none;
+  outline: 2px solid rgba(220, 38, 38, 0.5);
   background: #e5e5e5;
-  box-shadow: 0 0 0 2px rgba(220,38,38,0.25);
 }
 
 [data-theme="dark"] .input:focus {
