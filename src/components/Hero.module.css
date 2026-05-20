@@ -73,7 +73,6 @@
   font-weight: 700;
   letter-spacing: 3px;
   color: var(--primary);
-  text-transform: uppercase;
 }
 
 [data-theme="light"] .companyLabel {
@@ -102,7 +101,6 @@
   font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 1.5px;
-  text-transform: uppercase;
   color: var(--primary);
   margin-top: -0.5rem;
   line-height: 1.4;
@@ -127,7 +125,6 @@
   padding: 1.1rem 2.5rem;
   font-size: 0.85rem;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 2px;
   transition: all 0.3s ease;
   border-radius: 0px; /* Sharp editorial look */
@@ -231,7 +228,6 @@
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
-  text-transform: uppercase;
   text-align: center;
   line-height: 1.3;
 }

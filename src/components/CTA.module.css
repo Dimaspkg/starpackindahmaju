@@ -1,0 +1,80 @@
+.ctaSection {
+  background-color: var(--foreground);
+  color: var(--background);
+  padding: 5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.ctaContent {
+  max-width: 600px;
+}
+
+.ctaTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.ctaDesc {
+  font-size: 1.15rem;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.ctaBtn {
+  background-color: var(--background);
+  color: var(--foreground);
+  padding: 1.25rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid var(--sidebar-border);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.ctaBtn:hover {
+  background-color: transparent;
+  color: var(--background);
+  border-color: var(--background);
+}
+
+.ctaBtnSecondary {
+  background-color: transparent;
+  color: var(--background);
+  padding: 1.25rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid var(--background);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.ctaBtnSecondary:hover {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+@media (max-width: 1024px) {
+  .ctaSection {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ctaSection {
+    padding: 2rem;
+  }
+}

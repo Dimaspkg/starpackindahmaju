@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import CTA from '@/components/CTA';
 import styles from '../industryDetail.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -92,17 +93,12 @@ export default function AutomotivePage() {
           </div>
         </section>
 
-        <section className={styles.ctaSection}>
-          <h2 className={styles.ctaTitle}>{content.ctaTitle}</h2>
-          <p className={styles.ctaDesc}>{content.ctaDesc}</p>
-          <Link href="/contact" className={styles.ctaBtn}>
-            {content.ctaBtn}
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </Link>
-        </section>
+        <CTA 
+          title={content.ctaTitle}
+          description={content.ctaDesc}
+          btnText={content.ctaBtn}
+          href="/contact"
+        />
       </div>
     </div>
   );

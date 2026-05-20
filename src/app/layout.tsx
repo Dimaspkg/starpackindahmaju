@@ -76,6 +76,36 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  other: {
+    "geo.region": "ID-JK",
+    "geo.placename": "Jakarta",
+    "geo.position": "-6.190754;106.918095",
+    "ICBM": "-6.190754, 106.918095",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "PT. STARPACK INDAHMAJU",
+  "image": `${siteUrl}/images/starpackindahmaju.png`,
+  "description": "Perusahaan UV Coating & Vacuum Metallizing Plastik berstandar ISO 9001:2015 di Indonesia.",
+  "url": siteUrl,
+  "telephone": "+622154376174", // Placeholder phone
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kw. Industri Pulogadung, 3, Jl. Pulogadung No.6B, RW.3, Rw. Terate, Kec. Cakung",
+    "addressLocality": "Kota Jakarta Timur",
+    "addressRegion": "Daerah Khusus Ibukota Jakarta",
+    "postalCode": "13920",
+    "addressCountry": "ID"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -6.190754,
+    "longitude": 106.918095
+  },
+  "priceRange": "$$"
 };
 
 export default function RootLayout({
@@ -100,6 +130,10 @@ export default function RootLayout({
               })();
             `,
           }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className={inter.className}>

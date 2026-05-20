@@ -43,7 +43,6 @@
   color: #fff;
   font-size: 0.75rem;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 1.5px;
   padding: 0.35rem 1rem;
   border-radius: 30px;
@@ -54,7 +53,6 @@
   font-size: 3.5rem;
   font-weight: 800;
   color: #ffffff;
-  text-transform: uppercase;
   letter-spacing: -2px;
   line-height: 1;
 }
@@ -106,7 +104,6 @@
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.8);
   font-weight: 600;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
@@ -141,7 +138,6 @@
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--primary);
-  text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 0.7rem;
 }
@@ -150,7 +146,6 @@
   font-size: 2.3rem;
   font-weight: 800;
   color: var(--foreground);
-  text-transform: uppercase;
   letter-spacing: -1px;
   margin-bottom: 1rem;
 }
@@ -204,7 +199,6 @@
   font-weight: 800;
   color: var(--foreground);
   margin-bottom: 1rem;
-  text-transform: uppercase;
 }
 
 .storyCardText {
@@ -540,7 +534,6 @@
   font-size: 0.85rem;
   color: var(--primary);
   font-weight: 600;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
@@ -571,7 +564,6 @@
   font-size: 2.3rem;
   font-weight: 800;
   color: var(--foreground);
-  text-transform: uppercase;
   letter-spacing: -1px;
   margin-bottom: 1rem;
 }
@@ -598,7 +590,7 @@
   background-color: var(--primary);
   color: #ffffff;
   padding: 1rem 2.5rem;
-  border-radius: 30px;
+  border-radius: 0px;
   font-weight: 700;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -616,7 +608,7 @@
   color: var(--foreground);
   border: 1px solid var(--card-border);
   padding: 1rem 2.5rem;
-  border-radius: 30px;
+  border-radius: 0px;
   font-weight: 700;
   font-size: 1rem;
   transition: all 0.3s ease;

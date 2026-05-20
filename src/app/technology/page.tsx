@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import CTA from '@/components/CTA';
 import styles from './technologyPage.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -108,16 +109,12 @@ export default function TechnologyPage() {
         </section>
 
         {/* bottom CTA Section */}
-        <section className={styles.ctaSection}>
-          <h2 className={styles.ctaTitle}>{ctaTitle}</h2>
-          <p className={styles.ctaDesc}>{ctaDesc}</p>
-          <Link href="/#inquiry" className={styles.ctaBtn}>
-            {ctaBtnText}
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </Link>
-        </section>
+        <CTA 
+          title={ctaTitle}
+          description={ctaDesc}
+          btnText={ctaBtnText}
+          href="/#inquiry"
+        />
       </div>
     </div>
   );

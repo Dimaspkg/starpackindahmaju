@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Hero from '@/components/Hero';
+import CTA from '@/components/CTA';
 import styles from './homePage.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -364,21 +365,14 @@ export default function Home() {
         </section>
 
         {/* ===== CONTACT CTA ===== */}
-        <section className={styles.section} id="inquiry">
-          <div className={styles.contactCta}>
-            <h2 className={styles.ctaTitle}>{l.ctaTitle}</h2>
-            <p className={styles.ctaDesc}>{l.ctaDesc}</p>
-            <div className={styles.ctaButtons}>
-              <Link href="/contact" className={styles.ctaBtnPrimary}>
-                {l.ctaContact}
-                <Arrow />
-              </Link>
-              <Link href="/insights" className={styles.ctaBtnSecondary}>
-                {l.ctaBrochure}
-              </Link>
-            </div>
-          </div>
-        </section>
+        <CTA 
+          title={l.ctaTitle}
+          description={l.ctaDesc}
+          btnText={l.ctaContact}
+          href="/contact"
+          secondaryBtnText={l.ctaBrochure}
+          secondaryHref="/insights"
+        />
 
       </div>
 

@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Teknologi Pelapisan | Inovasi Coating',
-  description: 'Temukan teknologi pelapisan canggih kami, mulai dari mesin penyemprotan otomatis hingga ruang hampa udara untuk vacuum metallizing.',
+  title: 'Teknologi UV Coating & Vacuum Metallizing | PT. STARPACK INDAHMAJU',
+  description: 'Jasa teknologi pelapisan plastik tercanggih di Indonesia: Automatic Spray Painting, UV Curing, dan Vacuum Metallizing untuk hasil premium.',
+  keywords: 'Teknologi UV Coating, Mesin Vacuum Metallizing, Automatic Spray Painting, Pabrik Coating Modern',
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

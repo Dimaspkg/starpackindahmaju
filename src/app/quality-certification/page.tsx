@@ -3,13 +3,13 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import CTA from '@/components/CTA';
 import styles from './qualityPage.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function QualityCertificationPage() {
   const { t, language } = useLanguage();
   const [mounted, setMounted] = useState(false);
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -20,10 +20,6 @@ export default function QualityCertificationPage() {
       document.title = `${t.quality.title} | PT. STARPACK INDAHMAJU`;
     }
   }, [mounted, t]);
-
-  const toggleAccordion = (index: number) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
 
   if (!mounted || !t.quality) return null;
 
@@ -54,76 +50,64 @@ export default function QualityCertificationPage() {
   return (
     <div className="pageContainer">
       <div className={styles.container}>
-        {/* Header Section */}
-        <header className={styles.header}>
-          <h1 className={styles.title}>{t.quality.title}</h1>
-          <p className={styles.description}>{t.quality.description}</p>
-        </header>
+        
+        {/* Hero Section */}
+        <section className={styles.hero}>
+          <h1 className={styles.heroTitle}>{t.quality.title}</h1>
+          <p className={styles.heroDesc}>{t.quality.description}</p>
+        </section>
 
-        {/* Quality Core Content */}
-        <section className={styles.mainContent}>
-          <div className={styles.leftCol}>
-            <div className={styles.imageWrapper}>
-              <Image 
-                src="/images/ISO_Certification.png" 
-                alt="ISO 9001:2015 Certificate PT. Starpack Indahmaju"
-                width={400}
-                height={550}
-                className={styles.qualityImage}
-                priority
-              />
-            </div>
-          </div>
+        {/* ISO Certification Showcase */}
+        <section className={styles.isoSection}>
+          <div className={styles.isoContent}>
+            <h2 className={styles.isoTitle}>{t.quality.commitment.title}</h2>
+            <p className={styles.isoText}>
+              {language === 'id' 
+                ? 'Sertifikasi ISO 9001:2015 kami bukan sekadar lencana, melainkan bukti komitmen tanpa henti PT. Starpack Indahmaju terhadap keunggulan manufaktur. Setiap proses produksi dikontrol dan dilacak secara presisi.' 
+                : language === 'jp'
+                  ? '当社のISO 9001:2015認証は単なるバッジではなく、PT. Starpack Indahmajuの製造の卓越性に対する絶え間ない取り組みの証です。すべての製造プロセスは正確に管理および追跡されます。'
+                  : language === 'zh'
+                    ? '我们的 ISO 9001:2015 认证不仅仅是一枚徽章，更是 PT. Starpack Indahmaju 对卓越制造不懈承诺的证明。每个生产过程都受到精确控制和跟踪。'
+                    : 'Our ISO 9001:2015 certification is not just a badge, but a testament to PT. Starpack Indahmaju\'s relentless commitment to manufacturing excellence. Every production process is precisely controlled and tracked.'}
+            </p>
 
-          <div className={styles.rightCol}>
-            <h2 className={styles.subTitle}>{t.quality.commitment.title}</h2>
-            
-            <div className={styles.accordion}>
-              {t.quality.commitment.items.map((item: any, index: number) => (
-                <div 
-                  key={index} 
-                  className={`${styles.accordionItem} ${activeIndex === index ? styles.active : ''}`}
-                >
-                  <button 
-                    className={styles.accordionHeader} 
-                    onClick={() => toggleAccordion(index)}
-                  >
-                    <span className={styles.triangle}>►</span>
-                    {item.title}
-                  </button>
-                  <div className={styles.accordionContent}>
-                    <p className={styles.itemDesc}>{item.text}</p>
+            {/* Commitment Points List */}
+            {t.quality.commitment.items && t.quality.commitment.items.length > 0 && (
+              <div className={styles.commitmentList}>
+                {t.quality.commitment.items.map((item: any, idx: number) => (
+                  <div key={idx} className={styles.commitmentListItem}>
+                    <div className={styles.checkIcon}>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </div>
+                    <div>
+                      <h4 className={styles.commitmentListTitle}>{item.title}</h4>
+                      <p className={styles.commitmentListText}>{item.text}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Testing Capabilities Box */}
-            <div className={styles.capabilitiesBox}>
-              <h2 className={styles.capabilitiesTitle}>{t.quality.capabilities.title}</h2>
-              <ul className={styles.capabilitiesList}>
-                {t.quality.capabilities.items.map((item: string, index: number) => (
-                  <li key={index} className={styles.capabilityItem}>
-                    <span className={styles.bullet}>✔</span>
-                    {item}
-                  </li>
                 ))}
-              </ul>
-            </div>
+              </div>
+            )}
+          </div>
+          <div className={styles.isoImageWrapper}>
+            <Image 
+              src="/images/ISO_Certification.png" 
+              alt="ISO 9001:2015 Certificate PT. Starpack Indahmaju"
+              width={500}
+              height={700}
+              className={styles.isoImage}
+              priority
+            />
           </div>
         </section>
 
-        {/* bottom CTA Section */}
-        <section className={styles.ctaSection}>
-          <h2 className={styles.ctaTitle}>{ctaTitle}</h2>
-          <p className={styles.ctaDesc}>{ctaDesc}</p>
-          <Link href="/#inquiry" className={styles.ctaBtn}>
-            {ctaBtnText}
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </Link>
-        </section>
+        {/* CTA Banner */}
+        <CTA 
+          title={ctaTitle}
+          description={ctaDesc}
+          btnText={ctaBtnText}
+          href="/contact"
+        />
+
       </div>
     </div>
   );

@@ -112,7 +112,7 @@
   background-color: var(--primary);
   color: #ffffff !important;
   padding: 0.55rem 1.3rem;
-  border-radius: 30px;
+  border-radius: 0px;
   font-weight: 700;
   font-size: 0.85rem;
   transition: all 0.3s ease;

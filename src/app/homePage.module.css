@@ -26,7 +26,6 @@
   font-size: 2.5rem;
   font-weight: 800;
   color: var(--foreground);
-  text-transform: uppercase;
   letter-spacing: -1px;
   position: relative;
   padding-bottom: 0.7rem;
@@ -59,7 +58,7 @@
   font-size: 0.9rem;
   border: 1px solid var(--primary);
   padding: 0.6rem 1.4rem;
-  border-radius: 30px;
+  border-radius: 0px;
   transition: all 0.3s ease;
   flex-shrink: 0;
 }
@@ -102,12 +101,11 @@
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.15em;
-  text-transform: uppercase;
 }
 
 .aboutOverhaulTitle {
   font-size: 2.25rem;
-  font-weight: 300;
+  font-weight: 800;
   color: var(--foreground);
   line-height: 1.3;
   letter-spacing: -0.5px;
@@ -121,7 +119,6 @@
   color: var(--foreground);
   font-weight: 700;
   font-size: 0.85rem;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
   border: 1px solid var(--card-border);
   padding: 0.8rem 1.6rem;
@@ -211,7 +208,6 @@
 .valuesGroupTitle {
   font-size: 1.1rem;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--foreground);
   margin: 0;
@@ -620,7 +616,6 @@
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--primary);
-  text-transform: uppercase;
   letter-spacing: 1px;
 }
 
@@ -640,88 +635,4 @@
   font-size: 0.8rem;
   color: var(--muted-text);
   margin-top: auto;
-}
-
-/* ============================================
-   CONTACT CTA SECTION
-   ============================================ */
-.contactCta {
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
-  padding: 5rem 4rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.contactCta::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, var(--primary), transparent);
-}
-
-.ctaTitle {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--foreground);
-  margin-bottom: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-}
-
-.ctaDesc {
-  color: var(--muted-text);
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto 2.5rem;
-}
-
-.ctaButtons {
-  display: flex;
-  justify-content: center;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-}
-
-.ctaBtnPrimary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background-color: var(--primary);
-  color: #ffffff;
-  padding: 1rem 2.5rem;
-  border-radius: 30px;
-  font-weight: 700;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.ctaBtnPrimary:hover {
-  background-color: var(--primary-hover);
-  transform: translateY(-2px);
-}
-
-.ctaBtnSecondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background-color: transparent;
-  color: var(--foreground);
-  border: 1px solid var(--card-border);
-  padding: 1rem 2.5rem;
-  border-radius: 30px;
-  font-weight: 700;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.ctaBtnSecondary:hover {
-  border-color: var(--foreground);
-  transform: translateY(-2px);
 }

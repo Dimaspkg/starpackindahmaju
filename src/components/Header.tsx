@@ -101,7 +101,7 @@ export default function Header() {
     { 
       id: 'industry',   
       label: t.nav.industry,   
-      href: isHome ? '/#industry' : '/industries',
+      href: '/industries',
       subItems: [
         { 
           label: language === 'id' ? 'Kecantikan & Kosmetik' : language === 'jp' ? '美容・化粧品' : language === 'zh' ? '美容与化妆品' : 'Beauty & Cosmetics',
@@ -135,7 +135,7 @@ export default function Header() {
         }
       ]
     },
-    { id: 'quality',    label: t.nav.quality,    href: isHome ? '/#quality'     : '/quality-certification' },
+    { id: 'quality',    label: t.nav.quality,    href: '/quality-certification' },
     { id: 'insights',   label: t.nav.insights,   href: '/insights' },
   ];
 

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import CTA from '@/components/CTA';
 import styles from './aboutPage.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -190,19 +191,14 @@ export default function AboutPage() {
         </section>
 
         {/* --- CTA Section --- */}
-        <div className={styles.ctaSection}>
-          <h2 className={styles.ctaTitle}>{L.ctaTitle}</h2>
-          <p className={styles.ctaDesc}>{L.ctaDesc}</p>
-          <div className={styles.ctaButtons}>
-            <Link href="/contact" className={styles.ctaBtnPrimary}>
-              {L.ctaContact}
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-            </Link>
-            <Link href="/insights" className={styles.ctaBtnSecondary}>
-              {L.ctaInsights}
-            </Link>
-          </div>
-        </div>
+        <CTA 
+          title={L.ctaTitle}
+          description={L.ctaDesc}
+          btnText={L.ctaContact}
+          href="/contact"
+          secondaryBtnText={L.ctaInsights}
+          secondaryHref="/insights"
+        />
 
       </div>
 

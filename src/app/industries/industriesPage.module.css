@@ -12,7 +12,6 @@
   font-weight: 800;
   color: var(--foreground);
   margin-bottom: 1.5rem;
-  text-transform: uppercase;
   letter-spacing: -1px;
 }
 
@@ -119,60 +118,4 @@
   height: 50px;
   background: linear-gradient(135deg, transparent 50%, var(--primary) 50%);
   opacity: 0.8;
-}
-
-/* bottom CTA Section */
-.ctaSection {
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 12px;
-  padding: 4rem 3rem;
-  text-align: center;
-  margin-bottom: 6rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.ctaSection::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background-color: var(--primary);
-}
-
-.ctaTitle {
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  color: var(--foreground);
-}
-
-.ctaDesc {
-  color: var(--muted-text);
-  margin-bottom: 2rem;
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.05rem;
-  line-height: 1.6;
-}
-
-.ctaBtn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
-  background-color: var(--primary);
-  color: #ffffff;
-  padding: 1rem 2.5rem;
-  font-weight: 700;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-}
-
-.ctaBtn:hover {
-  background-color: var(--primary-hover);
-  transform: translateY(-2px);
 }

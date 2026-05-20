@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import CTA from '@/components/CTA';
 import styles from './uvCoating.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -218,17 +219,12 @@ export default function UvCoatingPage() {
         </section>
 
         {/* 5. CTA Section */}
-        <section className={styles.ctaSection}>
-          <h2 className={styles.ctaTitle}>{labels.ctaTitle}</h2>
-          <p className={styles.ctaDesc}>{labels.ctaDesc}</p>
-          <Link href="/contact" className={styles.ctaBtn}>
-            {labels.ctaBtn}
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </Link>
-        </section>
+        <CTA 
+          title={labels.ctaTitle}
+          description={labels.ctaDesc}
+          btnText={labels.ctaBtn}
+          href="/contact"
+        />
 
       </div>
     </div>

@@ -51,7 +51,7 @@
   background: var(--primary);
   color: white;
   border: none;
-  border-radius: 50px;
+  border-radius: 0px;
   padding: 1rem 2.5rem;
   font-size: 1rem;
   font-weight: 700;
@@ -67,7 +67,7 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--card-border);
   color: var(--foreground);
-  border-radius: 50px;
+  border-radius: 0px;
   padding: 1rem 2.5rem;
   font-size: 1rem;
   font-weight: 700;
