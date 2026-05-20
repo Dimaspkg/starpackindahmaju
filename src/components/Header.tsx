@@ -40,18 +40,7 @@ export default function Header() {
       else setHidden(false);
       setLastScrollY(currentY);
 
-      // Scroll-spy on homepage
-      if (pathname === '/') {
-        const sections = ['home', 'about', 'technology', 'industry', 'quality', 'insights', 'inquiry'];
-        const offset = currentY + 100;
-        for (const id of sections) {
-          const el = document.getElementById(id);
-          if (el && offset >= el.offsetTop && offset < el.offsetTop + el.offsetHeight) {
-            setActiveSection(id);
-            break;
-          }
-        }
-      }
+      // Scroll-spy removed: active state is now strictly route-based
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
