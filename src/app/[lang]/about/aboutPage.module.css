@@ -1,0 +1,620 @@
+/* ============================================
+   ABOUT PAGE — FULL REDESIGN
+   ============================================ */
+
+/* ---- Hero Banner ---- */
+.heroBanner {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.heroBg {
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 60%,
+    rgba(255, 0, 0, 0.15) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 4rem 6rem;
+}
+
+@media (max-width: 768px) {
+  .heroBanner { height: 280px; }
+  .heroOverlay { padding: 2rem 1.5rem; }
+}
+
+
+
+.heroTag {
+  display: inline-block;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 0.35rem 1rem;
+  border-radius: 30px;
+  margin-bottom: 1rem;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .heroTitle { font-size: 2.2rem; letter-spacing: -1px; }
+}
+
+/* ---- Stats Band ---- */
+.statsBand {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: var(--primary);
+}
+
+@media (max-width: 900px) {
+  .statsBand { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .statsBand { grid-template-columns: repeat(2, 1fr); }
+}
+
+.statItem {
+  padding: 2.2rem 2rem;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.statItem:last-child {
+  border-right: none;
+}
+
+.statItem:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.statValue {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ---- Page body ---- */
+.body {
+  padding: 5rem 6rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .body { padding: 3rem 2rem; }
+}
+
+@media (max-width: 640px) {
+  .body { padding: 2rem 1rem; }
+}
+
+/* ---- Section Header ---- */
+.section {
+  padding: 5rem 0;
+  border-top: 1px solid var(--card-border);
+}
+
+.section:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.sectionLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 2px;
+  margin-bottom: 0.7rem;
+}
+
+.sectionTitle {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--foreground);
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+}
+
+.sectionText {
+  color: var(--muted-text);
+  font-size: 1.1rem;
+  line-height: 1.75;
+  max-width: 700px;
+}
+
+/* ---- Story & Mission Layout ---- */
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 900px) {
+  .storyGrid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+.storyCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.storyCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--primary);
+}
+
+.storyCard:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.storyCardTitle {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.storyCardText {
+  color: var(--muted-text);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ---- Milestones Layout ---- */
+.milestonesContainer {
+  display: block;
+  max-width: 860px;
+  margin-top: 4rem;
+}
+
+.milestonesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: relative;
+}
+
+.milestonesList::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0.3) 0%,
+    rgba(255, 0, 0, 0.05) 100%
+  );
+  z-index: 1;
+}
+
+.milestoneRow {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.8rem 1rem 0.8rem 2.5rem;
+  position: relative;
+}
+
+.milestoneRow::before {
+  content: '';
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--card-border);
+  border: 2px solid var(--background);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+
+
+.milestoneDate {
+  font-weight: 800;
+  color: var(--foreground);
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  min-width: 140px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+
+
+.milestoneLine {
+  flex-grow: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--card-border) 50%, transparent 100%);
+}
+
+.milestoneDesc {
+  color: var(--muted-text);
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .milestoneRow {
+    padding-left: 2rem;
+  }
+  .milestoneRow::before {
+    left: 11px;
+  }
+  .milestonesList::before {
+    left: 15px;
+  }
+  .milestoneDate {
+    min-width: 120px;
+  }
+  .milestoneDesc {
+    width: 250px;
+  }
+}
+
+@media (max-width: 640px) {
+  .milestoneRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1rem 1rem 1rem 2rem;
+    border-bottom: 1px solid var(--card-border);
+  }
+  .milestoneLine {
+    display: none;
+  }
+  .milestoneDesc {
+    width: 100%;
+  }
+}
+
+.milestoneImageBox {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.milestoneImageFrame {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  z-index: 2;
+}
+
+.milestoneImage {
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.milestoneImageBox:hover .milestoneImage {
+  transform: scale(1.05);
+}
+
+.milestoneImageBox::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: -15px;
+  bottom: -15px;
+  border: 2px solid var(--primary);
+  border-radius: 16px;
+  z-index: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.milestoneImageBox:hover::after {
+  top: 8px;
+  left: 8px;
+  right: -8px;
+  bottom: -8px;
+}
+
+@media (max-width: 1100px) {
+  .milestoneImageBox {
+    max-width: 600px;
+    height: 450px;
+    margin: 0 auto;
+  }
+}
+
+.dotsWrapper {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.dotSquare {
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary);
+  animation: pulseSquare 2s infinite ease-in-out;
+}
+
+.dotSquare:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.dotSquare:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes pulseSquare {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.8);
+    opacity: 0.5;
+    background-color: var(--foreground);
+  }
+}
+
+/* ---- Values Grid ---- */
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 900px) {
+  .valuesGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 580px) {
+  .valuesGrid { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+
+.valueCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.valueCard:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+}
+
+.valueNumber {
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgba(255, 0, 0, 0.08);
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.valueTitle {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 0.7rem;
+  position: relative;
+}
+
+.valueTitle::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: var(--primary);
+  margin-top: 0.5rem;
+  transition: width 0.3s ease;
+}
+
+.valueCard:hover .valueTitle::after {
+  width: 60px;
+}
+
+.valueText {
+  color: var(--muted-text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* ---- Team / Leadership ---- */
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 900px) {
+  .teamGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 580px) {
+  .teamGrid { grid-template-columns: 1fr; }
+}
+
+.teamCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.teamCard:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+}
+
+.teamAvatar {
+  width: 72px;
+  height: 72px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem;
+  font-size: 1.8rem;
+}
+
+.teamName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 0.3rem;
+}
+
+.teamRole {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ---- CTA ---- */
+.ctaSection {
+  background: linear-gradient(135deg, var(--card-bg) 0%, rgba(255, 0, 0, 0.04) 100%);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 5rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.ctaSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+}
+
+.ctaTitle {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--foreground);
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+}
+
+.ctaDesc {
+  color: var(--muted-text);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaBtnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  border-radius: 0px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.ctaBtnPrimary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.ctaBtnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--foreground);
+  border: 1px solid var(--card-border);
+  padding: 1rem 2.5rem;
+  border-radius: 0px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.ctaBtnSecondary:hover {
+  border-color: var(--foreground);
+  transform: translateY(-2px);
+}

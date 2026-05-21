@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image';
-import Link from 'next/link';
+import LocalizedLink from "@/components/LocalizedLink";
 import styles from './InsightsSection.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -20,7 +20,7 @@ export default function InsightsSection() {
 
       <div className={styles.grid}>
         {t.insights.items.map((item: any, index: number) => (
-          <Link 
+          <LocalizedLink 
             key={item.slug} 
             href={`/insights/${item.slug}`}
             className={`${styles.card} reveal fadeUp delay${index + 1}`}
@@ -49,17 +49,17 @@ export default function InsightsSection() {
                 </svg>
               </div>
             </div>
-          </Link>
+          </LocalizedLink>
         ))}
       </div>
 
       <div className={`${styles.footerActions} reveal fadeUp delay3`}>
-        <Link href="/insights" className={styles.viewAllBtn}>
+        <LocalizedLink href="/insights" className={styles.viewAllBtn}>
           {t.insights.view_all}
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
-        </Link>
+        </LocalizedLink>
       </div>
     </section>
   );

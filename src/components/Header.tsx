@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import LocalizedLink from "@/components/LocalizedLink";
 import { usePathname } from 'next/navigation';
 import styles from './Header.module.css';
 import { useLanguage } from '@/context/LanguageContext';
@@ -147,7 +147,7 @@ export default function Header() {
       >
         <div className={styles.inner}>
           {/* Logo */}
-          <Link href="/" className={styles.logo} aria-label="PT. STARPACK INDAHMAJU - Home">
+          <LocalizedLink href="/" className={styles.logo} aria-label="PT. STARPACK INDAHMAJU - Home">
             <Image
               src="/logo_starpack.png"
               alt="Starpack"
@@ -166,7 +166,7 @@ export default function Header() {
               priority
               style={{ objectFit: 'contain' }}
             />
-          </Link>
+          </LocalizedLink>
 
           {/* Desktop Nav */}
           <nav className={styles.nav} aria-label="Main navigation">
@@ -174,7 +174,7 @@ export default function Header() {
               if (item.subItems) {
                 return (
                   <div key={item.id} className={styles.navDropdownContainer}>
-                    <Link
+                    <LocalizedLink
                       href={item.href}
                       className={`${styles.navLink} ${activeSection === item.id ? styles.active : ''} ${styles.hasSub}`}
                     >
@@ -182,25 +182,25 @@ export default function Header() {
                       <svg className={styles.chevron} width="10" height="6" viewBox="0 0 10 6" fill="none">
                         <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
-                    </Link>
+                    </LocalizedLink>
                     <div className={styles.megaMenuPanel}>
                       <div className={styles.megaMenuInner}>
                         <div className={styles.megaMenuGrid}>
                           {item.subItems.map((sub, i) => (
-                            <Link key={i} href={sub.href} className={styles.megaMenuItem}>
+                            <LocalizedLink key={i} href={sub.href} className={styles.megaMenuItem}>
                               <h3 className={styles.megaMenuTitle}>{sub.label}</h3>
                               <p className={styles.megaMenuDesc}>{sub.description}</p>
-                            </Link>
+                            </LocalizedLink>
                           ))}
                         </div>
                         <div className={styles.megaMenuBottom}>
-                          <Link href={item.href} className={styles.viewAllTechLink}>
+                          <LocalizedLink href={item.href} className={styles.viewAllTechLink}>
                             {item.id === 'technology' 
                               ? (language === 'id' ? 'Lihat Semua Teknologi' : language === 'jp' ? 'すべての技術を見る' : language === 'zh' ? '查看所有技术' : 'View All Technologies')
                               : (language === 'id' ? 'Lihat Semua Industri' : language === 'jp' ? 'すべての産業を見る' : language === 'zh' ? '查看所有行业' : 'View All Industries')
                             }
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginLeft: '6px' }}><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-                          </Link>
+                          </LocalizedLink>
                         </div>
                       </div>
                     </div>
@@ -208,21 +208,21 @@ export default function Header() {
                 );
               }
               return (
-                <Link
+                <LocalizedLink
                   key={item.id}
                   href={item.href}
                   className={`${styles.navLink} ${activeSection === item.id ? styles.active : ''}`}
                 >
                   {item.label}
-                </Link>
+                </LocalizedLink>
               );
             })}
-            <Link
+            <LocalizedLink
               href="/contact"
               className={`${styles.navLink} ${styles.ctaBtn} ${activeSection === 'contact' ? styles.active : ''}`}
             >
               {t.nav.contact ?? 'Contact'}
-            </Link>
+            </LocalizedLink>
           </nav>
 
           {/* Controls */}
@@ -256,48 +256,48 @@ export default function Header() {
           if (item.subItems) {
             return (
               <div key={item.id} className={styles.mobileDropdownContainer}>
-                <Link
+                <LocalizedLink
                   href={item.href}
                   className={`${styles.mobileNavLink} ${activeSection === item.id ? styles.active : ''}`}
                   onClick={() => setMobileOpen(false)}
                 >
                   {item.label}
-                </Link>
+                </LocalizedLink>
                 <div className={styles.mobileSubMenu}>
                   {item.subItems.map((sub, i) => (
-                    <Link
+                    <LocalizedLink
                       key={i}
                       href={sub.href}
                       className={styles.mobileSubNavLink}
                       onClick={() => setMobileOpen(false)}
                     >
                       {sub.label}
-                    </Link>
+                    </LocalizedLink>
                   ))}
                 </div>
               </div>
             );
           }
           return (
-            <Link
+            <LocalizedLink
               key={item.id}
               href={item.href}
               className={`${styles.mobileNavLink} ${activeSection === item.id ? styles.active : ''}`}
               onClick={() => setMobileOpen(false)}
             >
               {item.label}
-            </Link>
+            </LocalizedLink>
           );
         })}
         <div className={styles.mobileDivider} />
-        <Link
+        <LocalizedLink
           href="/contact"
           className={`${styles.mobileNavLink} ${activeSection === 'contact' ? styles.active : ''}`}
           onClick={() => setMobileOpen(false)}
           style={{ color: 'var(--primary)', fontWeight: 700 }}
         >
           {t.nav.contact ?? 'Contact'}
-        </Link>
+        </LocalizedLink>
         <div className={styles.mobileDivider} />
         <div className={styles.mobileControls}>
           {langs.map((l) => (

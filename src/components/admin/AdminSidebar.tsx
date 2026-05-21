@@ -1,6 +1,6 @@
 "use client";
 
-import Link from 'next/link';
+import LocalizedLink from "@/components/LocalizedLink";
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { signOut, useSession } from 'next-auth/react';
@@ -97,18 +97,18 @@ export default function AdminSidebar() {
         {navItems.map((item) => {
           const isActive = pathname === item.href;
           return (
-            <Link 
+            <LocalizedLink 
               key={item.href} 
               href={item.href}
               className={`${styles.navLink} ${isActive ? styles.active : ''}`}
             >
               <span className={styles.icon}>{item.icon}</span>
               {item.label}
-            </Link>
+            </LocalizedLink>
           );
         })}
         {(session?.user as any)?.role === 'admin' && (
-          <Link 
+          <LocalizedLink 
             href="/admin/users"
             className={`${styles.navLink} ${pathname === '/admin/users' ? styles.active : ''}`}
           >
@@ -121,7 +121,7 @@ export default function AdminSidebar() {
               </svg>
             </span>
             Users
-          </Link>
+          </LocalizedLink>
         )}
       </nav>
 

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image';
-import Link from 'next/link';
+import LocalizedLink from "@/components/LocalizedLink";
 import styles from './IndustrySection.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -39,12 +39,12 @@ export default function IndustrySection() {
       </div>
 
       <div className={styles.footerActions}>
-        <Link href="/industries" className={styles.viewMoreBtn}>
+        <LocalizedLink href="/industries" className={styles.viewMoreBtn}>
           {language === 'id' ? 'Lihat Semua Industri yang Kami Layani' : language === 'jp' ? '対応業界の一覧を見る' : language === 'zh' ? '查看我们服务的全部行业' : 'View All Industries We Serve'}
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginLeft: '0.5rem' }}>
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
-        </Link>
+        </LocalizedLink>
       </div>
     </section>
   );

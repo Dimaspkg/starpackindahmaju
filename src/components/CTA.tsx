@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import LocalizedLink from "@/components/LocalizedLink";
 import styles from './CTA.module.css';
 
 interface CTAProps {
@@ -19,13 +19,13 @@ export default function CTA({ title, description, btnText, href = "/contact", se
         <p className={styles.ctaDesc}>{description}</p>
       </div>
       <div className={styles.ctaButtons}>
-        <Link href={href} className={styles.ctaBtn}>
+        <LocalizedLink href={href} className={styles.ctaBtn}>
           {btnText}
-        </Link>
+        </LocalizedLink>
         {secondaryBtnText && secondaryHref && (
-          <Link href={secondaryHref} className={styles.ctaBtnSecondary}>
+          <LocalizedLink href={secondaryHref} className={styles.ctaBtnSecondary}>
             {secondaryBtnText}
-          </Link>
+          </LocalizedLink>
         )}
       </div>
     </section>

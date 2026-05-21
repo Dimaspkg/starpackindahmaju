@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image';
-import Link from 'next/link';
+import LocalizedLink from "@/components/LocalizedLink";
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import styles from './Sidebar.module.css';
@@ -131,14 +131,14 @@ export default function Sidebar() {
 
           <nav className={styles.nav}>
             {navItems.map((item) => (
-              <Link 
+              <LocalizedLink 
                 key={item.id}
                 href={item.href}
                 className={`${styles.navLink} ${activeSection === item.id ? styles.active : ''}`}
                 onClick={() => setIsMobileOpen(false)}
               >
                 {item.label}
-              </Link>
+              </LocalizedLink>
             ))}
           </nav>
         </div>

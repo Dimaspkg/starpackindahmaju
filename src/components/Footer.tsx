@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image';
-import Link from 'next/link';
+import LocalizedLink from "@/components/LocalizedLink";
 import styles from './Footer.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -41,14 +41,14 @@ export default function Footer() {
           <div className={styles.linksColumn}>
             <h3 className={styles.columnTitle}>{t.footer.quickLinks}</h3>
             <nav className={styles.footerNav}>
-              <Link href="/" className={styles.footerLink}>{t.nav.home}</Link>
-              <Link href="/about" className={styles.footerLink}>{t.nav.about}</Link>
-              <Link href="/technology" className={styles.footerLink}>{t.nav.technology}</Link>
-              <Link href="/industries" className={styles.footerLink}>{t.nav.industry}</Link>
-              <Link href="/quality-certification" className={styles.footerLink}>{t.nav.quality}</Link>
-              <Link href="/insights" className={styles.footerLink}>{t.nav.insights}</Link>
-              <Link href="/contact" className={styles.footerLink}>{t.nav.contact ?? 'Contact'}</Link>
-              <Link href="/sitemap" className={styles.footerLink}>{language === 'id' ? 'Peta Situs' : language === 'jp' ? 'サイトマップ' : language === 'zh' ? '网站地图' : 'Sitemap'}</Link>
+              <LocalizedLink href="/" className={styles.footerLink}>{t.nav.home}</LocalizedLink>
+              <LocalizedLink href="/about" className={styles.footerLink}>{t.nav.about}</LocalizedLink>
+              <LocalizedLink href="/technology" className={styles.footerLink}>{t.nav.technology}</LocalizedLink>
+              <LocalizedLink href="/industries" className={styles.footerLink}>{t.nav.industry}</LocalizedLink>
+              <LocalizedLink href="/quality-certification" className={styles.footerLink}>{t.nav.quality}</LocalizedLink>
+              <LocalizedLink href="/insights" className={styles.footerLink}>{t.nav.insights}</LocalizedLink>
+              <LocalizedLink href="/contact" className={styles.footerLink}>{t.nav.contact ?? 'Contact'}</LocalizedLink>
+              <LocalizedLink href="/sitemap" className={styles.footerLink}>{language === 'id' ? 'Peta Situs' : language === 'jp' ? 'サイトマップ' : language === 'zh' ? '网站地图' : 'Sitemap'}</LocalizedLink>
             </nav>
           </div>
 

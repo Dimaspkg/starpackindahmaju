@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image';
-import Link from 'next/link';
+import LocalizedLink from "@/components/LocalizedLink";
 import styles from './Hero.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 import { useEffect, useRef, useState } from 'react';
@@ -83,9 +83,9 @@ import Counter from './Counter';
             {t.hero.description}
           </p>
 
-          <Link href="/about" className={styles.storyBtn}>
+          <LocalizedLink href="/about" className={styles.storyBtn}>
             {t.hero.story_btn || "Our Story"}
-          </Link>
+          </LocalizedLink>
         </div>
       </section>
 

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image';
-import Link from 'next/link';
+import LocalizedLink from "@/components/LocalizedLink";
 import styles from './TechnologySection.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -52,12 +52,12 @@ export default function TechnologySection() {
       </div>
 
       <div className={styles.footerActions}>
-        <Link href="/technology" className={styles.viewMoreBtn}>
+        <LocalizedLink href="/technology" className={styles.viewMoreBtn}>
           {language === 'id' ? 'Lihat Detail Mesin & Teknologi Kami' : language === 'jp' ? '機械とテクノロジーの詳細を見る' : language === 'zh' ? '查看我们的设备与技术详情' : 'View Our Machinery & Technology Details'}
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginLeft: '0.5rem' }}>
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
-        </Link>
+        </LocalizedLink>
       </div>
     </section>
   );

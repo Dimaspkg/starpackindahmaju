@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import LocalizedLink from "@/components/LocalizedLink";
 import styles from './QualitySection.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -73,12 +73,12 @@ export default function QualitySection() {
       </div>
 
       <div className={styles.footerActions}>
-        <Link href="/quality-certification" className={styles.viewMoreBtn}>
+        <LocalizedLink href="/quality-certification" className={styles.viewMoreBtn}>
           {language === 'id' ? 'Lihat Spesifikasi Kualitas & ISO Selengkapnya' : language === 'jp' ? '品質仕様とISO認証の詳細を見る' : language === 'zh' ? '查看更多质量规格与ISO认证' : 'View Complete QA & ISO Specifications'}
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginLeft: '0.5rem' }}>
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
-        </Link>
+        </LocalizedLink>
       </div>
     </section>
   );

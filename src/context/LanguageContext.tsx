@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
 import en from '../locales/en.json';
 import id from '../locales/id.json';
 import zh from '../locales/zh.json';
@@ -20,34 +21,37 @@ const translations = { en, id, zh, jp };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguageState] = useState<Language>('id'); // Default to Indonesian
+interface ProviderProps {
+  children: React.ReactNode;
+  initialLang?: Language;
+}
+
+export const LanguageProvider: React.FC<ProviderProps> = ({ children, initialLang = 'id' }) => {
+  const [language, setLanguageState] = useState<Language>(initialLang);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
-    const savedLang = localStorage.getItem('language') as Language;
-    
-    if (savedLang && translations[savedLang]) {
-      setLanguageState(savedLang);
-    } else {
-      // Auto-detect browser language
-      const browserLang = navigator.language.split('-')[0] as any;
-      const supportedLangs: Language[] = ['en', 'id', 'zh', 'jp'];
-      
-      if (supportedLangs.includes(browserLang)) {
-        setLanguageState(browserLang);
-        localStorage.setItem('language', browserLang);
-      } else {
-        setLanguageState('id'); // Fallback to Indonesian
-      }
+    // If the server provided an initialLang (via i18n routing), use it.
+    if (initialLang && translations[initialLang]) {
+      setLanguageState(initialLang);
     }
-  }, []);
+  }, [initialLang]);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem('language', lang);
+    
+    // Redirect to the new language route
+    if (pathname) {
+      const segments = pathname.split('/');
+      // The first segment is empty string (because it starts with /)
+      // The second segment is the current language code
+      segments[1] = lang;
+      router.push(segments.join('/') || '/');
+    }
   };
 
-  const t = translations[language];
+  const t = translations[language] || translations.id;
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>
