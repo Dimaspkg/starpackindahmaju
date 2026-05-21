@@ -22,21 +22,21 @@ export default function AccecoriesPage() {
     heroTag: language === 'id' ? 'Industri' : language === 'jp' ? '産業' : language === 'zh' ? '行业' : 'Industry',
     title: language === 'id' ? 'Aksesoris' : language === 'jp' ? 'アクセサリー' : language === 'zh' ? '配饰' : 'Accessories',
     desc: language === 'id' 
-      ? 'Solusi pelapisan dekoratif presisi tinggi untuk gantungan kunci, gesper sabuk, perhiasan mewah, dan komponen aksesoris mode logam.'
+      ? 'Solusi pelapisan dekoratif presisi tinggi untuk berbagai komponen aksesoris dan elemen visual produk berkualitas tinggi.'
       : language === 'jp'
-        ? 'キーホルダー、ベルトバックル、高級ジュエリー、金属製ファッションアクセサリー部品向けの精密な装飾用コーティングソリューション。'
+        ? '高品質な様々なアクセサリー部品や製品のビジュアル要素向けの精密な装飾用コーティングソリューション。'
         : language === 'zh'
-          ? '适用于钥匙扣、皮带扣、奢华首饰和金属时尚配饰部件的高精度装饰性金属电镀与涂装解决方案。'
-          : 'High-precision decorative metal plating and coating solutions for keychains, belt buckles, luxury jewelry, and fashion accessory components.',
+          ? '适用于各种配饰部件和高品质产品视觉元素的高精度装饰性金属电镀与涂装解决方案。'
+          : 'High-precision decorative metal plating and coating solutions for various accessory components and high-quality product visual elements.',
     
     sectionTitle: language === 'id' ? 'Keunggulan Finis Aksesoris' : language === 'jp' ? 'アクセサリー仕上げの強み' : language === 'zh' ? '配饰涂装与电镀优势' : 'Accessory Finishing Advantages',
     sectionDesc: language === 'id' 
-      ? 'Aksesoris logam memerlukan keindahan visual yang sempurna dan ketahanan gores yang luar biasa untuk pemakaian harian. Pelapisan vakum dan UV kami menjamin daya tahan karat serta kilau emas/krom yang premium.' 
+      ? 'Komponen aksesoris memerlukan keindahan visual yang sempurna dan ketahanan gores yang luar biasa untuk pemakaian harian. Pelapisan vakum dan UV kami menjamin daya tahan karat serta kilau emas/krom yang premium.' 
       : language === 'jp' 
-        ? '金属アクセサリーには、日常の使用に耐えうる完璧な美観と卓越した耐傷性が求められます。当社の真空蒸着およびUVコーティングは、プレミアムなゴールド/クロームの輝きと高い防錆性を保証します。' 
+        ? 'アクセサリー部品には、日常の使用に耐えうる完璧な美観と卓越した耐傷性が求められます。当社の真空蒸着およびUVコーティングは、プレミアムなゴールド/クロームの輝きと高い防錆性を保証します。' 
         : language === 'zh' 
-          ? '金属配饰在日常佩戴中需要完美无瑕的视觉美感和出色的耐磨损性能。我们的真空镀膜和 UV 涂装工艺可确保高级的金/银/铬色泽，同时具备长效防锈能力。' 
-          : 'Metal accessories require flawless visual aesthetics and exceptional scratch resistance for daily wear. Our vacuum metallizing and UV coatings ensure rust protection and premium gold/chrome lustre.',
+          ? '配饰部件在日常使用中需要完美无瑕的视觉美感和出色的耐磨损性能。我们的真空镀膜和 UV 涂装工艺可确保高级的金/银/铬色泽，同时具备长效防锈能力。' 
+          : 'Accessory components require flawless visual aesthetics and exceptional scratch resistance for daily use. Our vacuum metallizing and UV coatings ensure rust protection and premium gold/chrome lustre.',
     
     features: [
       {
@@ -49,12 +49,12 @@ export default function AccecoriesPage() {
       },
       {
         title: language === 'id' ? 'Ketahanan Gores Tinggi' : language === 'jp' ? '高耐傷性' : language === 'zh' ? '卓越的耐划伤性' : 'High Scratch Resistance',
-        desc: language === 'id' ? 'Topcoat UV khusus mencegah gesekan sehari-hari merusak keindahan visual aksesori Anda.' : language === 'jp' ? '特殊なUVトップコートが、日常の摩擦によるアクセサリーの美観損ねを防ぎます。' : language === 'zh' ? '特殊的 UV 保护清漆可防止日常摩擦损坏配饰的外观质感。' : 'Specialized UV topcoat prevents daily friction from degrading your accessory’s visual finish.'
+        desc: language === 'id' ? 'Topcoat UV khusus mencegah gesekan sehari-hari merusak keindahan visual aksesori Anda.' : language === 'jp' ? '特殊なUVトップコートが、日常の摩擦によるアクセサリーの美観損ねを防ぎます。' : language === 'zh' ? '特殊的 UV 保护清漆可防止日常摩擦损坏配饰外观的质感。' : 'Specialized UV topcoat prevents daily friction from degrading your accessory’s visual finish.'
       }
     ],
 
     ctaTitle: language === 'id' ? 'Mulai Proyek Aksesoris Anda' : language === 'jp' ? 'アクセサリープロジェクトを開始する' : language === 'zh' ? '启动您的配饰项目' : 'Start Your Accessories Project',
-    ctaDesc: language === 'id' ? 'Dapatkan spesifikasi pelapisan terbaik untuk gantungan kunci, gesper, dan perhiasan mode Anda.' : language === 'jp' ? 'キーホルダー、バックル、ファッションジュエリーに最適なコーティング仕様をご提案します。' : language === 'zh' ? '为您的钥匙扣、皮带扣和时尚首饰获取最佳的表面电镀与涂装解决方案。' : 'Get the best coating specifications for your keychains, buckles, and fashion jewelry.',
+    ctaDesc: language === 'id' ? 'Dapatkan spesifikasi pelapisan terbaik untuk berbagai kebutuhan komponen aksesoris Anda.' : language === 'jp' ? '様々なアクセサリー部品のニーズに最適なコーティング仕様をご提案します。' : language === 'zh' ? '为您的各种配饰部件需求获取最佳的表面电镀与涂装解决方案。' : 'Get the best coating specifications for all your accessory component requirements.',
     ctaBtn: language === 'id' ? 'Konsultasi Sekarang' : language === 'jp' ? '今すぐ相談する' : language === 'zh' ? '立即咨询' : 'Consult Our Specialists'
   };
 

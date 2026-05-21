@@ -117,7 +117,7 @@ export default function Header() {
         { 
           label: language === 'id' ? 'Aksesoris' : language === 'jp' ? 'アクセサリー' : language === 'zh' ? '配饰' : 'Accessories',
           href: '/industries/accecories',
-          description: language === 'id' ? 'Pelapisan logam dekoratif presisi tinggi untuk perhiasan dan sabuk.' : language === 'jp' ? 'ジュエリーやベルト向けの精密な装飾用金属めっき。' : language === 'zh' ? '用于珠宝与皮带的高精度装饰性金属电镀。' : 'High-precision decorative metal plating for jewelry and belts.'
+          description: language === 'id' ? 'Pelapisan logam dekoratif presisi tinggi untuk komponen aksesoris.' : language === 'jp' ? '様々なアクセサリー部品向けの精密な装飾用金属めっき。' : language === 'zh' ? '用于各种配饰部件的高精度装饰性金属电镀。' : 'High-precision decorative metal plating for accessory components.'
         },
         { 
           label: language === 'id' ? 'Peralatan Rumah' : language === 'jp' ? 'ホーム＆ライフスタイル' : language === 'zh' ? '家居与生活方式' : 'Home & Lifestyle',
