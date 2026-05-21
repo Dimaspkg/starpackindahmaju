@@ -288,7 +288,7 @@ export default function ContactPage() {
             </form>
           </div>
 
-          {/* Right Column: Visual Journey Image Card with overlay badge */}
+          {/* Right Column: Visual Image Card */}
           <div className={styles.imageSection}>
             <div className={styles.showcaseImageWrapper}>
               <Image
@@ -299,10 +299,6 @@ export default function ContactPage() {
                 sizes="(max-width: 1100px) 100vw, 50vw"
                 className={styles.showcaseImage}
               />
-              <div className={styles.imageOverlay} />
-              <div className={styles.floatingBadge}>
-                <span>Your Project</span>
-              </div>
             </div>
           </div>
         </div>
