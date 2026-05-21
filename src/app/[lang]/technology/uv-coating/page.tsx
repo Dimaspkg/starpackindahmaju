@@ -133,7 +133,7 @@ export default function UvCoatingPage() {
                           : index === 2
                             ? (language === 'id' ? 'Pemantauan Real-Time' : language === 'jp' ? 'リアルタイム監視' : language === 'zh' ? '实时厚度监控' : 'Real-Time Monitoring')
                             : index === 3
-                              ? (language === 'id' ? 'Ramah Lingkungan' : language === 'jp' ? '環境対応・無溶剤' : language === 'zh' ? '环保无溶剂' : 'Solvent-Free & Eco-Friendly')
+                              ? (language === 'id' ? 'Ramah Lingkungan & Aman' : language === 'jp' ? '環境対応・安全設計' : language === 'zh' ? '环保与安全' : 'Eco-Friendly & Safe')
                               : (language === 'id' ? 'Produksi Skala Cepat' : language === 'jp' ? '高速量产サイクル' : language === 'zh' ? '高效大批量生产' : 'Rapid High-Volume Production')}
                     </h3>
                   </div>
