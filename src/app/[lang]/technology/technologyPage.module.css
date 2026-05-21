@@ -109,6 +109,42 @@
   flex-shrink: 0;
 }
 
+.cardAction {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cardBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: transparent;
+  border: 1px solid var(--card-border);
+  color: var(--foreground);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.techCard:hover .cardBtn {
+  border-color: var(--primary);
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.cardBtn svg {
+  transition: transform 0.3s ease;
+}
+
+.cardBtn:hover svg,
+.techCard:hover .cardBtn svg {
+  transform: translateX(4px);
+}
+
 /* Machinery Gallery Section */
 .gallerySection {
   margin-bottom: 6rem;

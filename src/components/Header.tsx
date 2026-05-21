@@ -21,13 +21,19 @@ export default function Header() {
 
   // Determine active section from pathname
   useEffect(() => {
-    if (pathname === '/about') setActiveSection('about');
-    else if (pathname === '/technology') setActiveSection('technology');
-    else if (pathname === '/industries') setActiveSection('industry');
-    else if (pathname === '/quality-certification') setActiveSection('quality');
-    else if (pathname === '/insights' || pathname.startsWith('/insights/')) setActiveSection('insights');
-    else if (pathname === '/contact') setActiveSection('contact');
-    else setActiveSection('home');
+    if (!pathname) return;
+    
+    // Strip language prefix (e.g. /id, /en, /zh, /jp) to match paths correctly
+    const cleanPath = pathname.replace(/^\/(id|en|zh|jp)/, '') || '/';
+
+    if (cleanPath === '/about') setActiveSection('about');
+    else if (cleanPath === '/technology' || cleanPath.startsWith('/technology/')) setActiveSection('technology');
+    else if (cleanPath === '/industries' || cleanPath.startsWith('/industries/')) setActiveSection('industry');
+    else if (cleanPath === '/quality-certification') setActiveSection('quality');
+    else if (cleanPath === '/insights' || cleanPath.startsWith('/insights/')) setActiveSection('insights');
+    else if (cleanPath === '/contact') setActiveSection('contact');
+    else if (cleanPath === '/') setActiveSection('home');
+    else setActiveSection('');
   }, [pathname]);
 
   // Scroll behavior
@@ -53,7 +59,8 @@ export default function Header() {
 
   if (!mounted) return null;
 
-  const isHome = pathname === '/';
+  const cleanPath = pathname ? pathname.replace(/^\/(id|en|zh|jp)/, '') || '/' : '/';
+  const isHome = cleanPath === '/';
 
   const navItems = [
     { id: 'home',       label: t.nav.home,       href: '/' },
@@ -151,8 +158,8 @@ export default function Header() {
             <Image
               src="/logo_starpack.png"
               alt="Starpack"
-              width={130}
-              height={30}
+              width={170}
+              height={40}
               className="logoLight"
               priority
               style={{ objectFit: 'contain' }}
@@ -160,8 +167,8 @@ export default function Header() {
             <Image
               src="/logo_starpack_white.png"
               alt="Starpack"
-              width={130}
-              height={30}
+              width={170}
+              height={40}
               className="logoDark"
               priority
               style={{ objectFit: 'contain' }}
@@ -227,10 +234,12 @@ export default function Header() {
 
           {/* Controls */}
           <div className={styles.controls}>
-            {/* Language Dropdown with Globe Icon */}
-            <LanguageDropdown />
+            <div className={styles.desktopControlsOnly}>
+              {/* Language Dropdown with Globe Icon */}
+              <LanguageDropdown />
 
-            <ThemeToggle />
+              <ThemeToggle />
+            </div>
 
             {/* Mobile menu toggle */}
             <button

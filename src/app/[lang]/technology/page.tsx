@@ -67,21 +67,36 @@ export default function TechnologyPage() {
 
         {/* Categories Section */}
         <section className={styles.techGrid}>
-          {t.tech.categories.map((cat: any, index: number) => (
-            <div key={index} className={styles.techCard}>
-              <h2 className={styles.techCardTitle}>{cat.title}</h2>
-              <ul className={styles.itemList}>
-                {cat.items.map((item: string, i: number) => (
-                  <li key={i} className={styles.listItem}>
-                    <svg className={styles.icon} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <path d="M20 6L9 17l-5-5" />
+          {t.tech.categories.map((cat: any, index: number) => {
+            const targetUrl = index === 0 ? '/technology/uv-coating' : '/technology/vacuum-metallizing';
+            const btnLabel = index === 0 
+              ? (language === 'id' ? 'Jelajahi UV Coating' : language === 'jp' ? 'UVコーティングを探索' : language === 'zh' ? '探索UV涂装' : 'Explore UV Coating')
+              : (language === 'id' ? 'Jelajahi Vacuum Metallizing' : language === 'jp' ? '真空蒸着を探索' : language === 'zh' ? '探索真空电镀' : 'Explore Vacuum Metallizing');
+            
+            return (
+              <div key={index} className={styles.techCard}>
+                <h2 className={styles.techCardTitle}>{cat.title}</h2>
+                <ul className={styles.itemList}>
+                  {cat.items.map((item: string, i: number) => (
+                    <li key={i} className={styles.listItem}>
+                      <svg className={styles.icon} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className={styles.cardAction}>
+                  <LocalizedLink href={targetUrl} className={styles.cardBtn}>
+                    {btnLabel}
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <polyline points="9 18 15 12 9 6"></polyline>
                     </svg>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+                  </LocalizedLink>
+                </div>
+              </div>
+            );
+          })}
         </section>
 
         {/* Machinery Gallery Section */}

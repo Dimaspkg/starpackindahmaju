@@ -1,0 +1,106 @@
+.section {
+  padding: 2.25rem 0;
+  background-color: var(--card-bg);
+  border-top: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
+  overflow: hidden;
+  width: 100%;
+}
+
+.container {
+  max-width: var(--max-width, 1200px);
+  margin: 0 auto;
+  padding: 0;
+}
+
+.marquee {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  display: flex;
+}
+
+/* Elegant side gradients for smooth fading */
+.marquee::before,
+.marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 15%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee::before {
+  left: 0;
+  background: linear-gradient(to right, var(--background) 0%, transparent 100%);
+}
+
+[data-theme="light"] .marquee::before {
+  background: linear-gradient(to right, #ffffff 0%, transparent 100%);
+}
+
+.marquee::after {
+  right: 0;
+  background: linear-gradient(to left, var(--background) 0%, transparent 100%);
+}
+
+[data-theme="light"] .marquee::after {
+  background: linear-gradient(to left, #ffffff 0%, transparent 100%);
+}
+
+/* The actual running track */
+.track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  animation: scroll 150s linear infinite;
+  gap: 4.5rem;
+  padding: 0.5rem 0;
+}
+
+/* Pause scroll animation on hover */
+.track:hover {
+  animation-play-state: paused;
+}
+
+.logoItem {
+  width: 110px;
+  height: 45px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.logoImage {
+  object-fit: contain;
+  filter: grayscale(1) contrast(0.7) opacity(0.5);
+  transition: all 0.4s ease;
+}
+
+.logoItem:hover .logoImage {
+  filter: grayscale(0) contrast(1) opacity(0.9);
+  transform: scale(1.08);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  /* Loop at exactly 1/3rd of the duplicated sets */
+  100% {
+    transform: translateX(-33.3333%);
+  }
+}

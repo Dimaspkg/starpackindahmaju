@@ -1,5 +1,5 @@
 .effectsContainer {
-  padding: 8rem 0;
+  padding: 6rem 0;
   border-top: 1px solid var(--card-border);
   position: relative;
   overflow: hidden; /* Prevent horizontal scroll bar on body if any */
@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
   gap: 2rem;
 }
 
@@ -18,17 +18,32 @@
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
-  color: var(--primary);
-  margin-bottom: 1.5rem;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+  position: relative;
+  padding-bottom: 0.7rem;
+  display: inline-block;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary);
 }
 
 .description {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--muted-text);
-  max-width: 800px;
-  line-height: 1.8;
+  max-width: 600px;
+  line-height: 1.6;
+  margin-top: 1rem;
 }
 
 .headerActions {
@@ -45,9 +60,9 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: var(--card-bg, #111);
-  color: var(--text-color, #fff);
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--foreground);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,9 +71,9 @@
 }
 
 .controlBtn:hover {
-  background: rgba(255, 0, 0, 0.8); /* Reusing the brand color theme if any, or primary */
+  background: var(--primary);
   color: #fff;
-  border-color: rgba(255, 0, 0, 0.8);
+  border-color: var(--primary);
 }
 
 .carouselContainer {
@@ -83,10 +98,10 @@
 
 .card {
   background-color: var(--card-bg);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--card-border);
   border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -94,7 +109,12 @@
 
 .card:hover {
   transform: translateY(-8px);
-  border-color: rgba(255, 0, 0, 0.3);
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .imageWrapper {
@@ -125,8 +145,13 @@
 .cardTitle {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--foreground);
   margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.card:hover .cardTitle {
+  color: var(--primary);
 }
 
 .cardDesc {
@@ -138,7 +163,8 @@
 
 .actionContainer {
   margin-top: 3rem;
-  text-align: center;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .primaryBtn {
@@ -146,19 +172,20 @@
   align-items: center;
   justify-content: center;
   padding: 1rem 2.5rem;
-  background-color: rgba(255, 0, 0, 0.8); /* Reusing their active brand theme color approach */
+  background-color: var(--primary);
   color: #fff;
   font-weight: 600;
-  border-radius: 4px;
+  border-radius: 0;
   text-decoration: none;
   transition: all 0.3s ease;
   font-size: 1.1rem;
 }
 
 .primaryBtn:hover {
-  background-color: rgba(255, 0, 0, 1);
+  background-color: var(--foreground);
+  color: var(--background);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 1024px) {
@@ -184,6 +211,9 @@
   }
   .carouselItem {
     flex: 0 0 85%; /* 1 item per view + peek */
+  }
+  .actionContainer {
+    display: block;
   }
   .primaryBtn {
     width: 100%;

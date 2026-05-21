@@ -164,6 +164,7 @@ export default async function RootLayout({
     <html lang={lang} suppressHydrationWarning>
       <head>
         <script
+          id="theme-initializer"
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
@@ -178,7 +179,8 @@ export default async function RootLayout({
             `,
           }}
         />
-        <script
+        <Script
+          id="json-ld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />

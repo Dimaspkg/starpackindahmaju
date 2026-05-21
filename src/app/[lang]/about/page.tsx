@@ -125,12 +125,12 @@ export default function AboutPage() {
       <div className={styles.body}>
 
         {/* --- Story & Mission --- */}
-        <section className={`${styles.section} ${styles.section}`} style={{ borderTop: 'none', paddingTop: '5rem' }}>
+        <section className={`${styles.section} reveal`} style={{ borderTop: 'none', paddingTop: '5rem' }}>
           <p className={styles.sectionLabel}>{L.storyLabel}</p>
           <h2 className={styles.sectionTitle}>{t.about.story.title}</h2>
           <p className={styles.sectionText}>{t.about.story.text}</p>
 
-          <div className={styles.storyGrid}>
+          <div className={`${styles.storyGrid} reveal delay1`}>
             <div className={styles.storyCard}>
               <h3 className={styles.storyCardTitle}>{t.about.mission.title}</h3>
               <p className={styles.storyCardText}>{t.about.mission.text}</p>
@@ -141,7 +141,7 @@ export default function AboutPage() {
                 {language === 'id'
                   ? 'Pabrik kami yang berlokasi di Jakarta dilengkapi dengan mesin UV Coating dan Vacuum Metallizing terkini, mampu memproses lebih dari 100 juta unit per tahun dengan standar kualitas ISO 9001:2015.'
                   : language === 'jp'
-                    ? '東京に位置する工場には最新 of UVコーティングおよび真空蒸着機械が設置されており、ISO 9001:2015の品質基準のもと年間1億個以上を処理できます。'
+                    ? '東京に位置する工場には最新 of UVコーティングおよび真空蒸着機械が設置されており、ISO 9001:2015 of 品質基準のもと年間1億個以上を処理できます。'
                     : language === 'zh'
                       ? '我们位于雅加达的工厂配备了最先进的UV涂层和真空镀铝设备，每年可按照ISO 9001:2015质量标准处理超过1亿件产品。'
                       : 'Our Jakarta factory is equipped with the latest UV Coating and Vacuum Metallizing machinery, capable of processing over 100 million units per year under ISO 9001:2015 quality standards.'}
@@ -157,16 +157,16 @@ export default function AboutPage() {
             <span className={styles.dotSquare}></span>
             <span className={styles.dotSquare}></span>
           </div>
-          <h2 className={styles.sectionTitle} style={{ fontSize: '3rem', marginBottom: '2rem' }}>
+          <h2 className={`${styles.sectionTitle} reveal`} style={{ fontSize: '3rem', marginBottom: '2rem' }}>
             {language === 'id' ? 'Milestone' : language === 'jp' ? 'マイルストーン' : language === 'zh' ? '里程碑' : 'Milestone'}
           </h2>
 
           <div className={styles.milestonesContainer}>
             <div className={styles.milestonesList}>
               {milestones.map((m, i) => (
-                <div key={i} className={styles.milestoneRow}>
+                <div key={i} className={`${styles.milestoneRow} reveal`}>
                   <span className={styles.milestoneDate}>{m.date}</span>
-                  <span className={styles.milestoneLine}></span>
+                  <span className={styles.milestoneLine}>{/* Spacer Line */}</span>
                   <span className={styles.milestoneDesc}>{m.desc}</span>
                 </div>
               ))}
@@ -177,9 +177,9 @@ export default function AboutPage() {
         {/* --- Values Grid --- */}
         <section className={styles.section}>
           <p className={styles.sectionLabel}>{L.valuesLabel}</p>
-          <h2 className={styles.sectionTitle}>{t.about.values.title}</h2>
+          <h2 className={`${styles.sectionTitle} reveal`}>{t.about.values.title}</h2>
 
-          <div className={styles.valuesGrid}>
+          <div className={`${styles.valuesGrid} reveal delay1`}>
             {t.about.values.items.map((item: any, i: number) => (
               <div key={i} className={styles.valueCard}>
                 <span className={styles.valueNumber}>{String(i + 1).padStart(2, '0')}</span>

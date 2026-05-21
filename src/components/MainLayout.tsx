@@ -26,7 +26,9 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
     <>
       <Header />
       <main className="contentWrapper">
-        {children}
+        <div key={pathname} className="pageTransition">
+          {children}
+        </div>
       </main>
       <Footer />
     </>

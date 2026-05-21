@@ -8,7 +8,7 @@
 .heroSection {
   position: relative;
   width: 100%;
-  min-height: 85vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
   overflow: hidden;
@@ -19,7 +19,7 @@
   flex: 0 0 55%;
   position: relative;
   overflow: hidden;
-  height: 85vh;
+  height: 100vh;
 }
 
 .heroBackground {
@@ -53,10 +53,12 @@
 /* Overlapping Text Card */
 .overlapCard {
   position: absolute;
-  top: 10%; /* Shifted upwards significantly to align perfectly with the upper packaging shot */
-  left: 38%; /* Adjusted left offset to balance the wider card */
-  transform: none; /* Removed vertical center pull to prevent top-cutoff and lift from bottom */
-  width: 680px; /* Substantially increased card width for premium breathing room */
+  top: 0;
+  bottom: 0;
+  height: fit-content;
+  margin: auto 0;
+  left: 38%;
+  width: 680px;
   max-width: 90%;
   background-color: var(--background);
   padding: 4.5rem 3.5rem;
@@ -89,9 +91,9 @@
 }
 
 .heroTitle {
-  font-size: 2.3rem;
+  font-size: 3.2rem;
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 1.15;
   letter-spacing: -0.02em;
   margin: 0;
   color: #111111;
@@ -107,7 +109,7 @@
 }
 
 .heroTag {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 1.5px;
   color: var(--primary);
@@ -116,7 +118,7 @@
 }
 
 .heroDescription {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   line-height: 1.8;
   color: #555555;
   margin: 0;
@@ -255,7 +257,7 @@
     padding: 3.5rem 2.5rem;
   }
   .heroTitle {
-    font-size: 1.9rem;
+    font-size: 2.4rem;
   }
   .statsInner {
     padding: 0 2rem;
@@ -270,7 +272,7 @@
   }
   .imageColumn {
     width: 100%;
-    height: 420px;
+    height: 75vh;
     flex: none;
   }
   .spacerColumn {
@@ -279,17 +281,20 @@
   .overlapCard {
     position: relative;
     top: auto;
+    bottom: auto;
+    height: auto;
+    margin: 0;
+    margin-top: -60px;
     left: auto;
     transform: none;
     width: 100%;
     max-width: 100%;
-    margin-top: -60px;
     padding: 3.5rem 2rem 2.5rem 2rem;
     box-shadow: none; /* Flat design - no drop shadow as requested */
     border-radius: 0;
   }
   .heroTitle {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
   .statsBandSection {
     padding: 3.5rem 0; /* Increased mobile vertical padding */

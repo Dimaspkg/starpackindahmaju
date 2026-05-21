@@ -1,34 +1,47 @@
 "use client";
 
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function ScrollReveal() {
+  const pathname = usePathname();
+
   useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1,
-    };
+    let observer: IntersectionObserver | null = null;
+    let targets: NodeListOf<Element> | null = null;
 
-    const handleIntersect = (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          // Optionally unobserve after revealing
-          // observer.unobserve(entry.target);
-        }
+    const timer = setTimeout(() => {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1,
+      };
+
+      const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      };
+
+      observer = new IntersectionObserver(handleIntersect, observerOptions);
+      targets = document.querySelectorAll('.reveal');
+      
+      targets.forEach((target) => {
+        // Reset active state so reveal plays fresh when navigating/switching languages
+        target.classList.remove('active');
+        observer?.observe(target);
       });
-    };
-
-    const observer = new IntersectionObserver(handleIntersect, observerOptions);
-    const targets = document.querySelectorAll('.reveal');
-    
-    targets.forEach((target) => observer.observe(target));
+    }, 100); // Small delay to guarantee DOM has finished updating
 
     return () => {
-      targets.forEach((target) => observer.unobserve(target));
+      clearTimeout(timer);
+      if (observer && targets) {
+        targets.forEach((target) => observer?.unobserve(target));
+      }
     };
-  }, []);
+  }, [pathname]);
 
   return null; // This component doesn't render anything
 }

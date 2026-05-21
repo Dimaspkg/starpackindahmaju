@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import LocalizedLink from './LocalizedLink';
 import styles from './EffectsSection.module.css';
@@ -12,21 +12,69 @@ export default function EffectsSection() {
 
   const scrollLeft = () => {
     if (carouselRef.current) {
-      const scrollAmount = carouselRef.current.clientWidth > 768 ? 400 : 300;
-      carouselRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      const card = carouselRef.current.firstElementChild as HTMLElement;
+      if (card) {
+        const cardWidth = card.clientWidth;
+        const gap = parseFloat(getComputedStyle(carouselRef.current).gap) || 40;
+        carouselRef.current.scrollBy({ left: -(cardWidth + gap), behavior: 'smooth' });
+      }
     }
   };
 
   const scrollRight = () => {
     if (carouselRef.current) {
-      const scrollAmount = carouselRef.current.clientWidth > 768 ? 400 : 300;
-      carouselRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      const card = carouselRef.current.firstElementChild as HTMLElement;
+      if (card) {
+        const cardWidth = card.clientWidth;
+        const gap = parseFloat(getComputedStyle(carouselRef.current).gap) || 40;
+        carouselRef.current.scrollBy({ left: cardWidth + gap, behavior: 'smooth' });
+      }
     }
   };
 
+  useEffect(() => {
+    const container = carouselRef.current;
+    if (!container) return;
+
+    let intervalId: NodeJS.Timeout;
+
+    const startAutoScroll = () => {
+      intervalId = setInterval(() => {
+        const card = container.firstElementChild as HTMLElement;
+        if (card) {
+          const cardWidth = card.clientWidth;
+          const gap = parseFloat(getComputedStyle(container).gap) || 40;
+          const scrollAmount = cardWidth + gap;
+          const maxScrollLeft = container.scrollWidth - container.clientWidth;
+          
+          if (container.scrollLeft >= maxScrollLeft - 10) {
+            container.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+          }
+        }
+      }, 4000); // Auto-scroll every 4 seconds
+    };
+
+    startAutoScroll();
+
+    // Pause on hover
+    const handleMouseEnter = () => clearInterval(intervalId);
+    const handleMouseLeave = () => startAutoScroll();
+
+    container.addEventListener('mouseenter', handleMouseEnter);
+    container.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      clearInterval(intervalId);
+      container.removeEventListener('mouseenter', handleMouseEnter);
+      container.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
+
   return (
     <section className={styles.effectsContainer} id="premium">
-      <div className={styles.header}>
+      <div className={`${styles.header} reveal`}>
         <div className={styles.headerContent}>
           <h2 className={styles.title}>{t.effects.title}</h2>
           <p className={styles.description}>{t.effects.description}</p>
@@ -43,7 +91,7 @@ export default function EffectsSection() {
         </div>
       </div>
 
-      <div className={styles.carouselContainer} ref={carouselRef}>
+      <div className={`${styles.carouselContainer} reveal delay1`} ref={carouselRef}>
         {t.effects.items.map((item: any, index: number) => (
           <div key={index} className={styles.carouselItem}>
             <div className={styles.card}>
@@ -65,8 +113,8 @@ export default function EffectsSection() {
         ))}
       </div>
 
-      <div className={styles.actionContainer}>
-        <LocalizedLink href="/technology/vacuum-metallizing" className={styles.primaryBtn}>
+      <div className={`${styles.actionContainer} reveal delay2`}>
+        <LocalizedLink href="/technology/uv-coating" className={styles.primaryBtn}>
           {t.hero.buttons.explore || "Explore Coating Effects"}
         </LocalizedLink>
       </div>

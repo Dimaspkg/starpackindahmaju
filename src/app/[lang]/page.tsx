@@ -5,6 +5,8 @@ import Image from 'next/image';
 import LocalizedLink from "@/components/LocalizedLink";
 import Hero from '@/components/Hero';
 import CTA from '@/components/CTA';
+import EffectsSection from '@/components/EffectsSection';
+import PortfolioCarousel from '@/components/PortfolioCarousel';
 import styles from './homePage.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -128,12 +130,14 @@ export default function Home() {
       {/* ===== HERO ===== */}
       <Hero />
 
+      <PortfolioCarousel />
+
       <div className="pageContainer">
 
         {/* ===== ABOUT SECTION ===== */}
         <section className={styles.section} id="about">
           {/* Sophisticated Overhaul Header */}
-          <div className={styles.aboutOverhaulHeader}>
+          <div className={`${styles.aboutOverhaulHeader} reveal`}>
             <div className={styles.aboutHeaderLeft}>
               <span className={styles.aboutSectionSubtitle}>{l.aboutTitle}</span>
               <h2 className={styles.aboutOverhaulTitle}>{l.aboutSlogan}</h2>
@@ -146,7 +150,7 @@ export default function Home() {
           {/* Asymmetrical 2-Column Content Grid */}
           <div className={styles.aboutNewGrid}>
             {/* Left Column: Story, Mission Card, and Core Values */}
-            <div className={styles.aboutLeftColumn}>
+            <div className={`${styles.aboutLeftColumn} reveal delay1`}>
               <p className={styles.aboutStoryParagraph}>{t.about.story.text}</p>
               
               {/* Mission Statement */}
@@ -184,7 +188,7 @@ export default function Home() {
             </div>
 
             {/* Right Column: Layered Premium Image Showcase */}
-            <div className={styles.aboutRightColumn}>
+            <div className={`${styles.aboutRightColumn} reveal delay2`}>
               <div className={styles.imageShowcaseContainer}>
                 {/* Flat physical offset frame in the background */}
                 <div className={styles.imageShowcaseFrame} />
@@ -209,9 +213,11 @@ export default function Home() {
           </div>
         </section>
 
+        <EffectsSection />
+
         {/* ===== TECHNOLOGY SECTION ===== */}
         <section className={styles.section} id="technology">
-          <div className={styles.sectionHeader}>
+          <div className={`${styles.sectionHeader} reveal`}>
             <div>
               <h2 className={styles.sectionTitle}>{l.techTitle}</h2>
               <p className={styles.sectionDesc}>{t.tech?.description}</p>
@@ -221,7 +227,7 @@ export default function Home() {
             </LocalizedLink>
           </div>
 
-          <div className={styles.techGrid}>
+          <div className={`${styles.techGrid} reveal delay1`}>
             {t.tech?.categories?.map((cat: any, i: number) => (
               <div key={i} className={styles.techCard}>
                 <h3 className={styles.techCardTitle}>{cat.title}</h3>
@@ -240,7 +246,7 @@ export default function Home() {
 
         {/* ===== INDUSTRIES SECTION ===== */}
         <section className={styles.section} id="industry">
-          <div className={styles.sectionHeader}>
+          <div className={`${styles.sectionHeader} reveal`}>
             <div>
               <h2 className={styles.sectionTitle}>{l.industryTitle}</h2>
               <p className={styles.sectionDesc}>{l.industryDesc}</p>
@@ -250,7 +256,7 @@ export default function Home() {
             </LocalizedLink>
           </div>
 
-          <div className={styles.industriesGrid}>
+          <div className={`${styles.industriesGrid} reveal delay1`}>
             {t.industry?.items?.slice(0, 6).map((item: any, i: number) => {
               const slugMap = [
                 'beauty-cosmetics',
@@ -281,7 +287,7 @@ export default function Home() {
 
         {/* ===== QUALITY SECTION ===== */}
         <section className={styles.section} id="quality">
-          <div className={styles.sectionHeader}>
+          <div className={`${styles.sectionHeader} reveal`}>
             <div>
               <h2 className={styles.sectionTitle}>{l.qualityTitle}</h2>
               <p className={styles.sectionDesc}>{l.qualityDesc}</p>
@@ -291,7 +297,7 @@ export default function Home() {
             </LocalizedLink>
           </div>
 
-          <div className={styles.qualityLayout}>
+          <div className={`${styles.qualityLayout} reveal delay1`}>
             <div className={styles.qualityImgBox}>
               <Image
                 src="/images/ISO_Certification.png"
@@ -332,7 +338,7 @@ export default function Home() {
 
         {/* ===== INSIGHTS SECTION ===== */}
         <section className={styles.section} id="insights">
-          <div className={styles.sectionHeader}>
+          <div className={`${styles.sectionHeader} reveal`}>
             <div>
               <h2 className={styles.sectionTitle}>{l.insightsTitle}</h2>
             </div>
@@ -342,7 +348,7 @@ export default function Home() {
           </div>
 
           {latestPosts.length > 0 ? (
-            <div className={styles.insightsGrid}>
+            <div className={`${styles.insightsGrid} reveal delay1`}>
               {latestPosts.map((post: any, i: number) => (
                 <LocalizedLink key={i} href={`/insights/${post.slug}`} className={styles.insightCard}>
                   <div className={styles.insightImgWrapper}>
@@ -364,7 +370,7 @@ export default function Home() {
             </div>
           ) : (
             /* Fallback if no articles in locale */
-            <div style={{ textAlign: 'center', padding: '4rem 0', color: 'var(--muted-text)' }}>
+            <div className="reveal delay1" style={{ textAlign: 'center', padding: '4rem 0', color: 'var(--muted-text)' }}>
               <p style={{ marginBottom: '1.5rem' }}>
                 {language === 'id' ? 'Artikel terbaru akan segera tersedia.' : 'Latest articles coming soon.'}
               </p>

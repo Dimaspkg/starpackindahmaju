@@ -10,6 +10,7 @@ import { useLanguage } from '@/context/LanguageContext';
 export default function UvCoatingPage() {
   const { t, language } = useLanguage();
   const [mounted, setMounted] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -111,19 +112,20 @@ export default function UvCoatingPage() {
         </section>
 
         {/* 2. Core Tech Section */}
-        <section>
+        <section className={styles.advantagesSection}>
           <h2 className={styles.sectionTitle}>
             {language === 'id' ? 'Keunggulan Inti' : language === 'jp' ? '主な利点' : language === 'zh' ? '核心优势' : 'Core Advantages'}
           </h2>
           <div className={styles.techGrid}>
             <div className={styles.techList}>
               {category.items.map((item: string, index: number) => (
-                <div key={index} className={styles.techCard}>
-                  <div className={styles.iconWrapper}>
-                    {getIcon(index)}
-                  </div>
-                  <div>
-                    <h3 className={styles.cardTitle}>
+                <div key={index} className={styles.advantageItem}>
+                  <div className={styles.advantageHeader}>
+                    <span className={styles.advantageNumber}>0{index + 1}</span>
+                    <div className={styles.iconContainer}>
+                      {getIcon(index)}
+                    </div>
+                    <h3 className={styles.advantageTitle}>
                       {index === 0 
                         ? (language === 'id' ? 'Pengeringan UV Instan' : language === 'jp' ? '瞬間UV硬化' : language === 'zh' ? '瞬间UV固化' : 'Instant UV Curing')
                         : index === 1
@@ -132,10 +134,10 @@ export default function UvCoatingPage() {
                             ? (language === 'id' ? 'Pemantauan Real-Time' : language === 'jp' ? 'リアルタイム監視' : language === 'zh' ? '实时厚度监控' : 'Real-Time Monitoring')
                             : index === 3
                               ? (language === 'id' ? 'Ramah Lingkungan' : language === 'jp' ? '環境対応・無溶剤' : language === 'zh' ? '环保无溶剂' : 'Solvent-Free & Eco-Friendly')
-                              : (language === 'id' ? 'Produksi Skala Cepat' : language === 'jp' ? '高速量産サイクル' : language === 'zh' ? '高效大批量生产' : 'Rapid High-Volume Production')}
+                              : (language === 'id' ? 'Produksi Skala Cepat' : language === 'jp' ? '高速量产サイクル' : language === 'zh' ? '高效大批量生产' : 'Rapid High-Volume Production')}
                     </h3>
-                    <p className={styles.cardDesc}>{item}</p>
                   </div>
+                  <p className={styles.advantageDesc}>{item}</p>
                 </div>
               ))}
             </div>
@@ -152,27 +154,94 @@ export default function UvCoatingPage() {
           </div>
         </section>
 
-        {/* 3. Effects Showcase */}
+        {/* 3. Product Photo Gallery */}
         <section className={styles.effectsSection}>
           <h2 className={styles.sectionTitle}>{labels.effectsTitle}</h2>
-          <div className={styles.effectsGrid}>
+          <div className={styles.galleryGrid}>
             {t.effects.items.map((effect: any, idx: number) => (
-              <div key={idx} className={styles.effectCard}>
-                <div className={styles.effectImageContainer}>
+              <div key={idx} className={styles.galleryItem} onClick={() => setLightboxIndex(idx)}>
+                <div className={styles.galleryImageContainer}>
                   <Image
                     src={effect.image}
                     alt={effect.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className={styles.galleryImage}
                   />
-                </div>
-                <div className={styles.effectContent}>
-                  <h3 className={styles.effectTitle}>{effect.title}</h3>
-                  <p className={styles.effectDesc}>{effect.desc}</p>
+                  <div className={styles.galleryOverlay}>
+                    <span className={styles.galleryCategory}>{effect.title}</span>
+                    <p className={styles.galleryDesc}>{effect.desc}</p>
+                    <div className={styles.zoomIcon}>
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
+
+          {/* Lightbox Modal */}
+          {lightboxIndex !== null && (
+            <div className={styles.lightbox} onClick={() => setLightboxIndex(null)}>
+              <button 
+                className={styles.closeBtn} 
+                onClick={(e) => { e.stopPropagation(); setLightboxIndex(null); }}
+                aria-label="Close lightbox"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+              
+              <button 
+                className={styles.prevBtn} 
+                onClick={(e) => { 
+                  e.stopPropagation(); 
+                  setLightboxIndex((prev) => (prev !== null ? (prev - 1 + t.effects.items.length) % t.effects.items.length : null)); 
+                }}
+                aria-label="Previous image"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+
+              <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
+                <div className={styles.lightboxImageWrapper}>
+                  <Image 
+                    src={t.effects.items[lightboxIndex].image} 
+                    alt={t.effects.items[lightboxIndex].title}
+                    fill
+                    sizes="90vw"
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
+                <div className={styles.lightboxCaption}>
+                  <h3 className={styles.lightboxTitle}>{t.effects.items[lightboxIndex].title}</h3>
+                  <p className={styles.lightboxDesc}>{t.effects.items[lightboxIndex].desc}</p>
+                </div>
+              </div>
+
+              <button 
+                className={styles.nextBtn} 
+                onClick={(e) => { 
+                  e.stopPropagation(); 
+                  setLightboxIndex((prev) => (prev !== null ? (prev + 1) % t.effects.items.length : null)); 
+                }}
+                aria-label="Next image"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          )}
         </section>
 
         {/* 4. Quality Section */}
