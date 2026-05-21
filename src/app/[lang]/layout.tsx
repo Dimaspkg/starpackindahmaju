@@ -179,11 +179,6 @@ export default async function RootLayout({
             `,
           }}
         />
-        <Script
-          id="json-ld"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
       </head>
       <body className={inter.className}>
         {/* Google Analytics */}
@@ -199,6 +194,12 @@ export default async function RootLayout({
             gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
           `}
         </Script>
+
+        <Script
+          id="json-ld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
 
         <LanguageProvider initialLang={lang as any}>
           <Providers>
