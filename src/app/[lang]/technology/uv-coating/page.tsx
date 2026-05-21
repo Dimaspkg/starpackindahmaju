@@ -83,23 +83,7 @@ export default function UvCoatingPage() {
     ctaBtn: language === 'id' ? 'Kirim Permintaan Proyek' : language === 'jp' ? 'プロジェクト相談を送信する' : language === 'zh' ? '提交项目咨询' : 'Submit Project Inquiry'
   };
 
-  const effects = [
-    {
-      title: language === 'id' ? 'Hasil Akhir High Gloss' : language === 'jp' ? 'ハイグロス仕上げ' : language === 'zh' ? '高光泽饰面' : 'High Gloss Finish',
-      desc: language === 'id' ? 'Kilau dan kedalaman luar biasa untuk kemasan premium.' : language === 'jp' ? 'プレミアムパッケージのための卓越した輝きと深み。' : language === 'zh' ? '为优质包装提供卓越的光泽和深度。' : 'Exceptional shine and depth for premium packaging.',
-      image: '/images/High_Gloss/High_Gloss.png'
-    },
-    {
-      title: language === 'id' ? 'Matte Mewah' : language === 'jp' ? 'ラグジュアリー・マット' : language === 'zh' ? '奢华哑光' : 'Luxurious Matte',
-      desc: language === 'id' ? 'Permukaan sentuhan lembut yang canggih dan tidak memantulkan cahaya.' : language === 'jp' ? '洗練された無反射のソフトタッチ表面。' : language === 'zh' ? '精致无反光的柔软触感表面。' : 'Sophisticated, non-reflective soft-touch surface.',
-      image: '/images/Matte_Finish/Matte_Finish.png'
-    },
-    {
-      title: language === 'id' ? 'Efek Mutiara' : language === 'jp' ? 'パール効果' : language === 'zh' ? '珍珠效果' : 'Pearl Effect',
-      desc: language === 'id' ? 'Warna-warni halus untuk daya tarik visual yang elegan.' : language === 'jp' ? 'エレガントな視覚的魅力をもたらす繊細な虹色。' : language === 'zh' ? '微妙的虹彩，带来优雅的视觉吸引力。' : 'Subtle iridescence for an elegant visual appeal.',
-      image: '/images/Pearl_Effect/Pearl_Effect_v2.png'
-    }
-  ];
+
 
   const qualityFeatures = [
     language === 'id' ? 'Kontrol Ketebalan Otomatis' : language === 'jp' ? '自動厚さ制御' : language === 'zh' ? '自动厚度控制' : 'Automated Thickness Control',
@@ -172,7 +156,7 @@ export default function UvCoatingPage() {
         <section className={styles.effectsSection}>
           <h2 className={styles.sectionTitle}>{labels.effectsTitle}</h2>
           <div className={styles.effectsGrid}>
-            {effects.map((effect, idx) => (
+            {t.effects.items.map((effect: any, idx: number) => (
               <div key={idx} className={styles.effectCard}>
                 <div className={styles.effectImageContainer}>
                   <Image
