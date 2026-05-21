@@ -261,7 +261,7 @@ export default function Home() {
               const slugMap = [
                 'beauty-cosmetics',
                 'electronics',
-                'accecories',
+                'fashion',
                 'home-lifestyle',
                 'automotive',
                 'foot-wear',

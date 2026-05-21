@@ -44,7 +44,7 @@ export default function SitemapPage() {
         links: [
           { label: language === 'id' ? 'Kecantikan & Kosmetik' : language === 'jp' ? '美容・化粧品' : language === 'zh' ? '美容与化妆品' : 'Beauty & Cosmetics', href: '/industries/beauty-cosmetics' },
           { label: language === 'id' ? 'Elektronik Konsumen' : language === 'jp' ? '家電製品' : language === 'zh' ? '消费电子' : 'Consumer Electronics', href: '/industries/electronics' },
-          { label: language === 'id' ? 'Fashion & Aksesoris' : language === 'jp' ? 'ファッション＆アクセサリー' : language === 'zh' ? '时尚与配饰' : 'Fashion & Accessories', href: '/industries/accecories' },
+          { label: language === 'id' ? 'Fashion & Aksesoris' : language === 'jp' ? 'ファッション＆アクセサリー' : language === 'zh' ? '时尚与配饰' : 'Fashion & Accessories', href: '/industries/fashion' },
           { label: language === 'id' ? 'Peralatan Rumah' : language === 'jp' ? 'ホーム＆ライフスタイル' : language === 'zh' ? '家居与生活方式' : 'Home & Lifestyle', href: '/industries/home-lifestyle' },
           { label: language === 'id' ? 'Otomotif' : language === 'jp' ? '自動車' : language === 'zh' ? '汽车' : 'Automotive', href: '/industries/automotive' },
           { label: language === 'id' ? 'Alas Kaki & Sepatu' : language === 'jp' ? 'フットウェア' : language === 'zh' ? '鞋类' : 'Footwear', href: '/industries/foot-wear' },

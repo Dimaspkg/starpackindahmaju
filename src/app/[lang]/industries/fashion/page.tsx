@@ -7,7 +7,7 @@ import CTA from '@/components/CTA';
 import styles from '../industryDetail.module.css';
 import { useLanguage } from '@/context/LanguageContext';
 
-export default function AccecoriesPage() {
+export default function FashionPage() {
   const { language } = useLanguage();
   const [mounted, setMounted] = useState(false);
 

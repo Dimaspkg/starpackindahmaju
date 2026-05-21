@@ -111,7 +111,7 @@ export default function Header() {
         },
         { 
           label: language === 'id' ? 'Fashion & Aksesoris' : language === 'jp' ? 'ファッション＆アクセサリー' : language === 'zh' ? '时尚与配饰' : 'Fashion & Accessories',
-          href: '/industries/accecories',
+          href: '/industries/fashion',
           description: language === 'id' ? 'Sentuhan estetika mengkilap dan bebas kusam.' : language === 'jp' ? '光沢のある色褪せない美的なタッチ。' : language === 'zh' ? '光泽且不褪色的美学触感。' : 'Glossy, tarnish-free aesthetic touches.'
         },
         { 

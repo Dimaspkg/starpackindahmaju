@@ -62,7 +62,7 @@ export default function IndustriesPage() {
             const slugMap = [
               'beauty-cosmetics',
               'electronics',
-              'accecories',
+              'fashion',
               'home-lifestyle',
               'automotive',
               'foot-wear',
