@@ -34,6 +34,15 @@
 .bgImage {
   object-fit: cover;
   object-position: center;
+  transition: opacity 1s ease-in-out;
+}
+
+.activeImage {
+  opacity: 1;
+}
+
+.inactiveImage {
+  opacity: 0;
 }
 
 .spacerColumn {
