@@ -118,7 +118,8 @@
     "items": [
       { "title": "Kecantikan & Kosmetik", "desc": "Solusi pengemasan premium untuk merek kecantikan mewah", "image": "/images/Beauty_&_Cosmetics/Beauty_&_Cosmetics.png" },
       { "title": "Elektronik", "desc": "Pelapisan presisi tinggi untuk elektronik konsumen", "image": "/images/Electronics/Electronics.png" },
-      { "title": "Fashion & Aksesoris", "desc": "Komponen desainer dan pelapisan aksesoris mewah", "image": "/images/Fashion_&_Accessories/Fashion_&_Accessories_v2.png" },
+      { "title": "Fashion", "desc": "Penambahan nilai estetika tinggi pada aksesoris fashion melalui pelapisan yang mengkilap", "image": "/images/Fashion_&_Accessories/Fashion_&_Accessories_v2.png" },
+      { "title": "Aksesoris", "desc": "Pelapisan logam dekoratif presisi tinggi untuk gantungan kunci, gesper sabuk, dan perhiasan mewah", "image": "/images/industry/accessories.png" },
       { "title": "Rumah Tangga & Gaya Hidup", "desc": "Pelapisan produk rumah tangga yang dekoratif dan fungsional", "image": "/images/Home_&_Lifestyle/Home_&_Lifestyle.png" },
       { "title": "Otomotif", "desc": "Solusi pelapisan komponen interior dan eksterior", "image": "/images/industry/industry5.png" },
       { "title": "Alas Kaki & Sepatu", "desc": "Pelapisan vakum dan pelindung premium untuk komponen sepatu desainer dan elemen branding olahraga", "image": "/images/industry/footwear.svg" },

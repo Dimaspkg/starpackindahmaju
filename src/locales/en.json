@@ -118,7 +118,8 @@
     "items": [
       { "title": "Beauty & Cosmetics", "desc": "Premium packaging solutions for luxury beauty brands", "image": "/images/Beauty_&_Cosmetics/Beauty_&_Cosmetics.png" },
       { "title": "Electronics", "desc": "High-precision coating for consumer electronics", "image": "/images/Electronics/Electronics.png" },
-      { "title": "Fashion & Accessories", "desc": "Designer components and luxury accessories coating", "image": "/images/Fashion_&_Accessories/Fashion_&_Accessories_v2.png" },
+      { "title": "Fashion", "desc": "Adding high aesthetic value to fashion pieces through glossy coatings", "image": "/images/Fashion_&_Accessories/Fashion_&_Accessories_v2.png" },
+      { "title": "Accessories", "desc": "High-precision decorative metal plating for keychains, belt buckles, and luxury jewelry", "image": "/images/industry/accessories.png" },
       { "title": "Home & Lifestyle", "desc": "Decorative and functional home product coating", "image": "/images/Home_&_Lifestyle/Home_&_Lifestyle.png" },
       { "title": "Automotive", "desc": "Interior and exterior component coating solutions", "image": "/images/industry/industry5.png" },
       { "title": "Footwear", "desc": "Premium vacuum metallizing and protective coatings for designer footwear components and athletic branding elements", "image": "/images/industry/footwear.svg" },

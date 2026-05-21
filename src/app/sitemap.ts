@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/industries/beauty-cosmetics',
     '/industries/electronics',
     '/industries/fashion',
+    '/industries/accecories',
     '/industries/home-lifestyle',
     '/industries/automotive',
     '/industries/foot-wear',

@@ -257,11 +257,12 @@ export default function Home() {
           </div>
 
           <div className={`${styles.industriesGrid} reveal delay1`}>
-            {t.industry?.items?.slice(0, 7).map((item: any, i: number) => {
+            {t.industry?.items?.slice(0, 8).map((item: any, i: number) => {
               const slugMap = [
                 'beauty-cosmetics',
                 'electronics',
                 'fashion',
+                'accecories',
                 'home-lifestyle',
                 'automotive',
                 'foot-wear',

@@ -110,9 +110,14 @@ export default function Header() {
           description: language === 'id' ? 'Perlindungan anti gores elegan untuk perangkat elektronik.' : language === 'jp' ? '電子デバイス向けのエレガントな傷防止保護。' : language === 'zh' ? '电子设备的优雅防刮保护。' : 'Elegant anti-scratch protection for electronic devices.'
         },
         { 
-          label: language === 'id' ? 'Fashion & Aksesoris' : language === 'jp' ? 'ファッション＆アクセサリー' : language === 'zh' ? '时尚与配饰' : 'Fashion & Accessories',
+          label: language === 'id' ? 'Fashion' : language === 'jp' ? 'ファッション' : language === 'zh' ? '时尚' : 'Fashion',
           href: '/industries/fashion',
           description: language === 'id' ? 'Sentuhan estetika mengkilap dan bebas kusam.' : language === 'jp' ? '光沢のある色褪せない美的なタッチ。' : language === 'zh' ? '光泽且不褪色的美学触感。' : 'Glossy, tarnish-free aesthetic touches.'
+        },
+        { 
+          label: language === 'id' ? 'Aksesoris' : language === 'jp' ? 'アクセサリー' : language === 'zh' ? '配饰' : 'Accessories',
+          href: '/industries/accecories',
+          description: language === 'id' ? 'Pelapisan logam dekoratif presisi tinggi untuk perhiasan dan sabuk.' : language === 'jp' ? 'ジュエリーやベルト向けの精密な装飾用金属めっき。' : language === 'zh' ? '用于珠宝与皮带的高精度装饰性金属电镀。' : 'High-precision decorative metal plating for jewelry and belts.'
         },
         { 
           label: language === 'id' ? 'Peralatan Rumah' : language === 'jp' ? 'ホーム＆ライフスタイル' : language === 'zh' ? '家居与生活方式' : 'Home & Lifestyle',

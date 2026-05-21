@@ -63,6 +63,7 @@ export default function IndustriesPage() {
               'beauty-cosmetics',
               'electronics',
               'fashion',
+              'accecories',
               'home-lifestyle',
               'automotive',
               'foot-wear',

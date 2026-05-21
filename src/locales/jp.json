@@ -118,7 +118,8 @@
     "items": [
       { "title": "美容・化粧品", "desc": "高級美容ブランド向けのプレミアムパッケージソリューション", "image": "/images/Beauty_&_Cosmetics/Beauty_&_Cosmetics.png" },
       { "title": "電子機器", "desc": "コンシューマーエレクトロニクス向けの高精度コーティング", "image": "/images/Electronics/Electronics.png" },
-      { "title": "ファッション・アクセサリー", "desc": "デザイナーコンポーネントおよび高級アクセサリーのコーティング", "image": "/images/Fashion_&_Accessories/Fashion_&_Accessories_v2.png" },
+      { "title": "ファッション", "desc": "光沢のあるコーティングを通じて、ファッション製品に高い美的価値を加えます", "image": "/images/Fashion_&_Accessories/Fashion_&_Accessories_v2.png" },
+      { "title": "アクセサリー", "desc": "キーホルダー、ベルトバックル、高級ジュエリー要素向けの精密な装飾用金属めっきコーティング", "image": "/images/industry/accessories.png" },
       { "title": "ホーム＆ライフスタイル", "desc": "装飾的かつ機能的な家庭用品のコーティング", "image": "/images/Home_&_Lifestyle/Home_&_Lifestyle.png" },
       { "title": "自動車", "desc": "内装および外装コンポーネントのコーティングソリューション", "image": "/images/industry/industry5.png" },
       { "title": "フットウェア", "desc": "デザイナーズシューズのコンポーネントやスポーツブランド向けのプレミアム真空蒸着・保護コーティング", "image": "/images/industry/footwear.svg" },
