@@ -23,7 +23,7 @@ export default function ContactPage() {
 
   useEffect(() => {
     setMounted(true);
-    document.title = 'Contact Us | PT. STARPACK INDAHMAJU';
+    document.title = 'Contact Us | PT. STARPACK INDAH MAJU';
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {

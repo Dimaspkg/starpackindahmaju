@@ -41,7 +41,7 @@ export function getEmailTemplate(data: {
       <div style="background-color: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid #eeeeee;">
         <!-- Header -->
         <div style="background-color: #ffffff; padding: 30px; text-align: center; border-bottom: 1px solid #eeeeee;">
-          <img src="${logoUrl}" alt="PT. STARPACK INDAHMAJU" style="max-height: 40px; width: auto;" />
+          <img src="${logoUrl}" alt="PT. STARPACK INDAH MAJU" style="max-height: 40px; width: auto;" />
         </div>
         
         <!-- Content -->
@@ -98,7 +98,7 @@ export function getEmailTemplate(data: {
         <!-- Footer -->
         <div style="background-color: #f0f0f0; padding: 20px; text-align: center; border-top: 1px solid #eeeeee;">
           <p style="margin: 0; font-size: 12px; color: #999;">${footer || ''}</p>
-          <p style="margin: 5px 0 0 0; font-size: 11px; color: #bbb;">&copy; 2026 PT. Starpack Indahmaju. All rights reserved.</p>
+          <p style="margin: 5px 0 0 0; font-size: 11px; color: #bbb;">&copy; 2026 PT. Starpack Indah Maju. All rights reserved.</p>
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@ export default function FashionAccessoriesPage() {
 
   useEffect(() => {
     setMounted(true);
-    document.title = 'Fashion & Accessories | PT. STARPACK INDAHMAJU';
+    document.title = 'Fashion & Accessories | PT. STARPACK INDAH MAJU';
   }, []);
 
   if (!mounted) return null;

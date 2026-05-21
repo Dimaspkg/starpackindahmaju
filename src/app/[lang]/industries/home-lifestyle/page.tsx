@@ -13,7 +13,7 @@ export default function HomeLifestylePage() {
 
   useEffect(() => {
     setMounted(true);
-    document.title = 'Home & Lifestyle | PT. STARPACK INDAHMAJU';
+    document.title = 'Home & Lifestyle | PT. STARPACK INDAH MAJU';
   }, []);
 
   if (!mounted) return null;

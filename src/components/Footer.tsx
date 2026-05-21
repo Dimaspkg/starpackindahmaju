@@ -19,14 +19,14 @@ export default function Footer() {
             <div className={styles.logoWrapper}>
               <Image 
                 src="/logo_starpack.png"
-                alt="PT. STARPACK INDAHMAJU Logo" 
+                alt="PT. STARPACK INDAH MAJU Logo" 
                 width={200} 
                 height={40} 
                 className={`${styles.logoImage} logoLight`}
               />
               <Image 
                 src="/logo_starpack_white.png"
-                alt="PT. STARPACK INDAHMAJU Logo" 
+                alt="PT. STARPACK INDAH MAJU Logo" 
                 width={200} 
                 height={40} 
                 className={`${styles.logoImage} logoDark`}
@@ -96,7 +96,7 @@ export default function Footer() {
 
         <div className={styles.bottomBar}>
           <p className={styles.copyright}>
-            © {currentYear} PT. Starpack Indahmaju. All rights reserved.
+            © {currentYear} PT. Starpack Indah Maju. All rights reserved.
           </p>
         </div>
       </div>
