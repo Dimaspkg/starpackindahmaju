@@ -58,7 +58,7 @@
   transform: none; /* Removed vertical center pull to prevent top-cutoff and lift from bottom */
   width: 680px; /* Substantially increased card width for premium breathing room */
   max-width: 90%;
-  background-color: #ffffff;
+  background-color: var(--background);
   padding: 4.5rem 3.5rem;
   display: flex;
   flex-direction: column;
@@ -66,13 +66,13 @@
   z-index: 10;
   box-shadow: none; /* Flat design - no drop shadow as requested */
   border-radius: 0px; /* Sharp luxury editorial look */
-  border: 1px solid rgba(0, 0, 0, 0.08); /* Sharp higher contrast outline border */
+  border: none;
   transition: all 0.4s ease;
 }
 
 [data-theme="dark"] .overlapCard {
-  background-color: #161616;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: var(--background);
+  border: none;
   border-left: 4px solid var(--primary);
   box-shadow: none; /* Flat design - no drop shadow as requested */
 }
