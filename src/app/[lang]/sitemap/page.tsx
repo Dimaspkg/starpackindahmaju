@@ -11,14 +11,14 @@ export default function SitemapPage() {
 
   useEffect(() => {
     setMounted(true);
-    document.title = 'Sitemap | PT. STARPACK INDAH MAJU';
+    document.title = 'Sitemap | PT STARPACK INDAH MAJU';
   }, []);
 
   if (!mounted) return null;
 
   const content = {
     title: language === 'id' ? 'Peta Situs' : language === 'jp' ? 'サイトマップ' : language === 'zh' ? '网站地图' : 'Sitemap',
-    desc: language === 'id' ? 'Navigasi lengkap seluruh halaman website PT. Starpack Indah Maju.' : language === 'jp' ? 'PT. Starpack Indah Maju の全ウェブサイトページの完全なナビゲーション。' : language === 'zh' ? 'PT. Starpack Indah Maju 所有网站页面的完整导航。' : 'Complete navigation of all PT. Starpack Indah Maju website pages.',
+    desc: language === 'id' ? 'Navigasi lengkap seluruh halaman website PT Starpack Indah Maju.' : language === 'jp' ? 'PT Starpack Indah Maju の全ウェブサイトページの完全なナビゲーション。' : language === 'zh' ? 'PT Starpack Indah Maju 所有网站页面的完整导航。' : 'Complete navigation of all PT Starpack Indah Maju website pages.',
     
     sections: [
       {

@@ -88,7 +88,7 @@ export default function Hero() {
         {/* Overlapping Text Card */}
         <div className={`${styles.overlapCard} reveal fadeUp active`}>
           <span className={styles.companyLabel}>
-            PT. STARPACK INDAH MAJU
+            PT STARPACK INDAH MAJU
           </span>
           
           <h1 className={styles.heroTitle}>

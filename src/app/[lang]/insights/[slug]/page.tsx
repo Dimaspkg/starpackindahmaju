@@ -25,9 +25,9 @@ export default function ArticleDetailPage({ params }: PageProps) {
 
   useEffect(() => {
     if (mounted && article) {
-      document.title = `${article.title} | PT. STARPACK INDAH MAJU`;
+      document.title = `${article.title} | PT STARPACK INDAH MAJU`;
     } else if (mounted && !article) {
-      document.title = `Article Not Found | PT. STARPACK INDAH MAJU`;
+      document.title = `Article Not Found | PT STARPACK INDAH MAJU`;
     }
   }, [mounted, article]);
 

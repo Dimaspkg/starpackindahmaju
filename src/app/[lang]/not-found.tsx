@@ -24,7 +24,7 @@ export default function NotFound() {
         <div className={styles.logoContainer}>
           <Image 
             src="/logo_starpack.png" 
-            alt="PT. STARPACK INDAH MAJU" 
+            alt="PT STARPACK INDAH MAJU" 
             width={200} 
             height={40} 
             className="logoLight"
@@ -32,7 +32,7 @@ export default function NotFound() {
           />
           <Image 
             src="/logo_starpack_white.png" 
-            alt="PT. STARPACK INDAH MAJU" 
+            alt="PT STARPACK INDAH MAJU" 
             width={200} 
             height={40} 
             className="logoDark"

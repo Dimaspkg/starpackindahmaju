@@ -13,7 +13,7 @@ export default function AutomotivePage() {
 
   useEffect(() => {
     setMounted(true);
-    document.title = 'Automotive | PT. STARPACK INDAH MAJU';
+    document.title = 'Automotive | PT STARPACK INDAH MAJU';
   }, []);
 
   if (!mounted) return null;

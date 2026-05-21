@@ -26,13 +26,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     metadataBase: new URL(siteUrl),
     title: {
       default: isEn 
-        ? "UV Coating & Vacuum Metallizing Plastic Company Indonesia | PT. STARPACK INDAH MAJU"
-        : "Perusahaan UV Coating & Vacuum Metallizing Plastik Indonesia | PT. STARPACK INDAH MAJU",
-      template: "%s | PT. STARPACK INDAH MAJU"
+        ? "UV Coating & Vacuum Metallizing Plastic Company Indonesia | PT STARPACK INDAH MAJU"
+        : "Perusahaan UV Coating & Vacuum Metallizing Plastik Indonesia | PT STARPACK INDAH MAJU",
+      template: "%s | PT STARPACK INDAH MAJU"
     },
     description: isEn
-      ? "Get the best UV plastic coating & vacuum metallizing plastic coating services in Indonesia. PT. Starpack Indah Maju offers premium, consistent, and ISO 9001:2015 certified plastic coating services."
-      : "Dapatkan jasa UV plastic coating & vacuum metallizing plastic coating terbaik di Indonesia. PT. Starpack Indah Maju menawarkan coating plastic service premium, konsisten, dan bersertifikasi ISO 9001:2015.",
+      ? "Get the best UV plastic coating & vacuum metallizing plastic coating services in Indonesia. PT Starpack Indah Maju offers premium, consistent, and ISO 9001:2015 certified plastic coating services."
+      : "Dapatkan jasa UV plastic coating & vacuum metallizing plastic coating terbaik di Indonesia. PT Starpack Indah Maju menawarkan coating plastic service premium, konsisten, dan bersertifikasi ISO 9001:2015.",
     keywords: isEn ? [
       "Plastic Coating Services",
       "Plastic Coating",
@@ -62,9 +62,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "ISO 9001:2015",
       "Premium Plastic Coating"
     ],
-    authors: [{ name: "PT. STARPACK INDAH MAJU" }],
-    creator: "PT. STARPACK INDAH MAJU",
-    publisher: "PT. STARPACK INDAH MAJU",
+    authors: [{ name: "PT STARPACK INDAH MAJU" }],
+    creator: "PT STARPACK INDAH MAJU",
+    publisher: "PT STARPACK INDAH MAJU",
     verification: {
       google: "ISI_DENGAN_KODE_VERIFIKASI_GOOGLE_ANDA_DISINI",
     },
@@ -81,30 +81,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       locale: isEn ? "en_US" : "id_ID",
       url: `${siteUrl}/${lang}`,
       title: isEn 
-        ? "UV Coating & Vacuum Metallizing Plastic Services Indonesia | PT. STARPACK INDAH MAJU"
-        : "Jasa UV Coating & Vacuum Metallizing Plastik Indonesia | PT. STARPACK INDAH MAJU",
+        ? "UV Coating & Vacuum Metallizing Plastic Services Indonesia | PT STARPACK INDAH MAJU"
+        : "Jasa UV Coating & Vacuum Metallizing Plastik Indonesia | PT STARPACK INDAH MAJU",
       description: isEn
         ? "Premium plastic coating service & vacuum metallizing plastic coating with advanced production control and stable results in Indonesia."
         : "Coating plastic service & vacuum metallizing plastic coating premium dengan kontrol produksi canggih dan hasil stabil di Indonesia.",
-      siteName: "PT. STARPACK INDAH MAJU",
+      siteName: "PT STARPACK INDAH MAJU",
       images: [
         {
           url: "/images/og-starpack.png",
           width: 1200,
           height: 630,
-          alt: "PT. STARPACK INDAH MAJU UV Coating Solutions",
+          alt: "PT STARPACK INDAH MAJU UV Coating Solutions",
         },
         {
           url: "/images/starpackindahmaju.png",
           width: 1200,
           height: 630,
-          alt: "PT. STARPACK INDAH MAJU UV Coating Solutions",
+          alt: "PT STARPACK INDAH MAJU UV Coating Solutions",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Jasa UV Coating & Vacuum Metallizing Plastik Indonesia | PT. STARPACK INDAH MAJU",
+      title: "Jasa UV Coating & Vacuum Metallizing Plastik Indonesia | PT STARPACK INDAH MAJU",
       description: "Coating plastic service & vacuum metallizing plastic coating premium dengan kontrol produksi canggih dan hasil stabil di Indonesia.",
       images: ["/images/og-starpack.png", "/images/starpackindahmaju.png"],
     },
@@ -138,7 +138,7 @@ export default async function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "PT. STARPACK INDAH MAJU",
+    "name": "PT STARPACK INDAH MAJU",
     "image": `${siteUrl}/images/starpackindahmaju.png`,
     "description": isEn 
       ? "ISO 9001:2015 certified UV Coating & Vacuum Metallizing Plastic Company in Indonesia."

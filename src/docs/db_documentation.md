@@ -1,6 +1,6 @@
 # Database Documentation: Starpack Lead Management
 
-This document provides technical details for the MySQL database used to store and manage customer inquiries (leads) for the PT. Starpack Indah Maju website.
+This document provides technical details for the MySQL database used to store and manage customer inquiries (leads) for the PT Starpack Indah Maju website.
 
 ## 1. Overview
 The database system is designed to capture, store, and track potential customer inquiries submitted through the contact form. It serves as the backbone for the Admin Dashboard located at `/admin`.

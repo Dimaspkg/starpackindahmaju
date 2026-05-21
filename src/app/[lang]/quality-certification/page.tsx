@@ -17,7 +17,7 @@ export default function QualityCertificationPage() {
 
   useEffect(() => {
     if (mounted && t.quality) {
-      document.title = `${t.quality.title} | PT. STARPACK INDAH MAJU`;
+      document.title = `${t.quality.title} | PT STARPACK INDAH MAJU`;
     }
   }, [mounted, t]);
 
@@ -63,12 +63,12 @@ export default function QualityCertificationPage() {
             <h2 className={styles.isoTitle}>{t.quality.commitment.title}</h2>
             <p className={styles.isoText}>
               {language === 'id' 
-                ? 'Sertifikasi ISO 9001:2015 kami bukan sekadar lencana, melainkan bukti komitmen tanpa henti PT. Starpack Indah Maju terhadap keunggulan manufaktur. Setiap proses produksi dikontrol dan dilacak secara presisi.' 
+                ? 'Sertifikasi ISO 9001:2015 kami bukan sekadar lencana, melainkan bukti komitmen tanpa henti PT Starpack Indah Maju terhadap keunggulan manufaktur. Setiap proses produksi dikontrol dan dilacak secara presisi.' 
                 : language === 'jp'
-                  ? '当社のISO 9001:2015認証は単なるバッジではなく、PT. Starpack Indah Majuの製造の卓越性に対する絶え間ない取り組みの証です。すべての製造プロセスは正確に管理および追跡されます。'
+                  ? '当社のISO 9001:2015認証は単なるバッジではなく、PT Starpack Indah Majuの製造の卓越性に対する絶え間ない取り組みの証です。すべての製造プロセスは正確に管理および追跡されます。'
                   : language === 'zh'
-                    ? '我们的 ISO 9001:2015 认证不仅仅是一枚徽章，更是 PT. Starpack Indah Maju 对卓越制造不懈承诺的证明。每个生产过程都受到精确控制和跟踪。'
-                    : 'Our ISO 9001:2015 certification is not just a badge, but a testament to PT. Starpack Indah Maju\'s relentless commitment to manufacturing excellence. Every production process is precisely controlled and tracked.'}
+                    ? '我们的 ISO 9001:2015 认证不仅仅是一枚徽章，更是 PT Starpack Indah Maju 对卓越制造不懈承诺的证明。每个生产过程都受到精确控制和跟踪。'
+                    : 'Our ISO 9001:2015 certification is not just a badge, but a testament to PT Starpack Indah Maju\'s relentless commitment to manufacturing excellence. Every production process is precisely controlled and tracked.'}
             </p>
 
             {/* Commitment Points List */}
@@ -91,7 +91,7 @@ export default function QualityCertificationPage() {
           <div className={styles.isoImageWrapper}>
             <Image 
               src="/images/ISO_Certification.png" 
-              alt="ISO 9001:2015 Certificate PT. Starpack Indah Maju"
+              alt="ISO 9001:2015 Certificate PT Starpack Indah Maju"
               width={500}
               height={700}
               className={styles.isoImage}

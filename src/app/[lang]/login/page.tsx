@@ -58,10 +58,10 @@ export default function LoginPage() {
       <div className={styles.leftPanel}>
         {/* Logo */}
         <div className={styles.formLogo}>
-          <Image src="/logo_starpack.png" alt="PT. Starpack Indah Maju"
+          <Image src="/logo_starpack.png" alt="PT Starpack Indah Maju"
             width={200} height={80} style={{ objectFit: 'contain' }}
             className={styles.logoLight} priority />
-          <Image src="/logo_starpack_white.png" alt="PT. Starpack Indah Maju"
+          <Image src="/logo_starpack_white.png" alt="PT Starpack Indah Maju"
             width={200} height={80} style={{ objectFit: 'contain' }}
             className={styles.logoDark} priority />
         </div>
@@ -108,7 +108,7 @@ export default function LoginPage() {
         </form>
 
         <p className={styles.footer}>
-          © {new Date().getFullYear()} PT. Starpack Indah Maju. All rights reserved.
+          © {new Date().getFullYear()} PT Starpack Indah Maju. All rights reserved.
         </p>
       </div>
 
