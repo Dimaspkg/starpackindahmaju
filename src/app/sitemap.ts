@@ -1,8 +1,14 @@
 import { MetadataRoute } from 'next';
+import id from '../locales/id.json';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://starpack.co.id';
+  const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://starpack.co.id';
+  const siteUrl = rawSiteUrl.endsWith('/') ? rawSiteUrl.slice(0, -1) : rawSiteUrl;
+  const locales = ['id', 'en', 'zh', 'jp'];
   
+  // Extract dynamic article slugs from locales
+  const articleSlugs = id.insights?.items?.map((item: any) => `/insights/${item.slug}`) || [];
+
   const routes = [
     '',
     '/about',
@@ -18,13 +24,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/industries/home-lifestyle',
     '/industries/automotive',
     '/industries/many-more',
-    '/sitemap'
+    '/sitemap',
+    ...articleSlugs
   ];
 
-  return routes.map((route) => ({
-    url: `${siteUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: route === '' || route === '/insights' ? 'weekly' : 'monthly',
-    priority: route === '' ? 1 : route.startsWith('/industries') || route.startsWith('/technology') ? 0.9 : 0.8,
-  }));
+  const sitemapEntries: MetadataRoute.Sitemap = [];
+
+  routes.forEach((route) => {
+    locales.forEach((lang) => {
+      // Map alternate languages
+      const languagesAlternate: Record<string, string> = {};
+      locales.forEach((l) => {
+        // Hreflang code for Japanese is 'ja' but the path segment is 'jp'
+        const hreflang = l === 'jp' ? 'ja' : l;
+        languagesAlternate[hreflang] = `${siteUrl}/${l}${route}`;
+      });
+
+      // Add x-default pointing to the default language (id)
+      languagesAlternate['x-default'] = `${siteUrl}/id${route}`;
+
+      sitemapEntries.push({
+        url: `${siteUrl}/${lang}${route}`,
+        lastModified: new Date(),
+        changeFrequency: route === '' || route === '/insights' ? 'weekly' : 'monthly',
+        priority: route === '' ? 1.0 : route.startsWith('/industries') || route.startsWith('/technology') ? 0.9 : 0.8,
+        alternates: {
+          languages: languagesAlternate,
+        },
+      });
+    });
+  });
+
+  return sitemapEntries;
 }
