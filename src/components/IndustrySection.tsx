@@ -19,7 +19,7 @@ export default function IndustrySection() {
         {t.industry.items.map((item: any, index: number) => (
           <div 
             key={index} 
-            className={`${styles.card} ${index === 5 ? styles.highlight : ''} reveal fadeUp delay${index % 5}`}
+            className={`${styles.card} ${index === t.industry.items.length - 1 ? styles.highlight : ''} reveal fadeUp delay${index % 5}`}
           >
             <div className={styles.imageWrapper}>
               <Image 

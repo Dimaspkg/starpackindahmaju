@@ -52,3 +52,7 @@ INSERT IGNORE INTO settings (setting_key, setting_value, description) VALUES
 ('notification_recipient', 'marketing@starpack.co.id', 'Main email address to receive lead notifications'),
 ('smtp_sender_name', 'Starpack Admin', 'Name that appears as the sender'),
 ('email_footer', 'Sent from Starpack Dashboard', 'Footer text for automated emails');
+
+-- Default Customer Logos
+INSERT IGNORE INTO customer_logos (id, name, logo_url, display_order) VALUES
+(1, 'Nike', '/images/nike_logo.svg', 1);

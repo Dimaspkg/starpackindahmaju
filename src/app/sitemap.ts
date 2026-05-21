@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/industries/fashion-accessories',
     '/industries/home-lifestyle',
     '/industries/automotive',
+    '/industries/footwear',
     '/industries/many-more',
     '/sitemap',
     ...articleSlugs

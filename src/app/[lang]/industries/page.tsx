@@ -65,6 +65,7 @@ export default function IndustriesPage() {
               'fashion-accessories',
               'home-lifestyle',
               'automotive',
+              'footwear',
               'many-more',
             ];
             const slug = slugMap[index];
