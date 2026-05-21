@@ -20,10 +20,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/technology/vacuum-metallizing',
     '/industries/beauty-cosmetics',
     '/industries/electronics',
-    '/industries/fashion-accessories',
+    '/industries/accecories',
     '/industries/home-lifestyle',
     '/industries/automotive',
-    '/industries/footwear',
+    '/industries/foot-wear',
     '/industries/many-more',
     '/sitemap',
     ...articleSlugs

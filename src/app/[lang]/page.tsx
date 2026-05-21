@@ -257,16 +257,17 @@ export default function Home() {
           </div>
 
           <div className={`${styles.industriesGrid} reveal delay1`}>
-            {t.industry?.items?.slice(0, 6).map((item: any, i: number) => {
+            {t.industry?.items?.slice(0, 7).map((item: any, i: number) => {
               const slugMap = [
                 'beauty-cosmetics',
                 'electronics',
-                'fashion-accessories',
+                'accecories',
                 'home-lifestyle',
                 'automotive',
+                'foot-wear',
                 'many-more',
               ];
-              const slug = slugMap[i] ?? 'industries';
+              const slug = slugMap[i] ?? 'many-more';
               return (
                 <LocalizedLink key={i} href={`/industries/${slug}`} className={styles.industryCard}>
                   <Image

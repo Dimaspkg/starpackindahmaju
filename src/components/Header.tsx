@@ -111,7 +111,7 @@ export default function Header() {
         },
         { 
           label: language === 'id' ? 'Fashion & Aksesoris' : language === 'jp' ? 'ファッション＆アクセサリー' : language === 'zh' ? '时尚与配饰' : 'Fashion & Accessories',
-          href: '/industries/fashion-accessories',
+          href: '/industries/accecories',
           description: language === 'id' ? 'Sentuhan estetika mengkilap dan bebas kusam.' : language === 'jp' ? '光沢のある色褪せない美的なタッチ。' : language === 'zh' ? '光泽且不褪色的美学触感。' : 'Glossy, tarnish-free aesthetic touches.'
         },
         { 
@@ -122,7 +122,12 @@ export default function Header() {
         { 
           label: language === 'id' ? 'Otomotif' : language === 'jp' ? '自動車' : language === 'zh' ? '汽车' : 'Automotive',
           href: '/industries/automotive',
-          description: language === 'id' ? 'Pelapisan komponen plastik dengan standar keamanan tinggi.' : language === 'jp' ? '高い安全基準を満たすプラスチック部品のコーティング。' : language === 'zh' ? '符合高安全标准的塑料部件涂层。' : 'Plastic component coatings meeting strict safety standards.'
+          description: language === 'id' ? 'Pelapisan komponen plastik dengan standar keamanan tinggi.' : language === 'jp' ? '高い安全基準を満たすプラスチック部品 coating。' : language === 'zh' ? '符合高安全标准的塑料部件涂层。' : 'Plastic component coatings meeting strict safety standards.'
+        },
+        { 
+          label: language === 'id' ? 'Alas Kaki & Sepatu' : language === 'jp' ? 'フットウェア' : language === 'zh' ? '鞋类' : 'Footwear',
+          href: '/industries/foot-wear',
+          description: language === 'id' ? 'Lapisan premium tahan lentur untuk sepatu dan komponen olahraga.' : language === 'jp' ? 'シューズやスポーツ部品向けのプレミアム屈曲耐性コーティング。' : language === 'zh' ? '适用于鞋类与运动部件的优质屈曲涂层。' : 'Premium flex-resistant coatings for footwear and sports components.'
         },
         { 
           label: language === 'id' ? 'Dan Banyak Lagi' : language === 'jp' ? 'その他多数' : language === 'zh' ? '以及更多' : 'Many More',
