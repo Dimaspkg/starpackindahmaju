@@ -305,16 +305,14 @@
 }
 
 .megaMenuPanel {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(8px);
-  background-color: #161616; /* Solid dark background */
-  border: 1px solid var(--sidebar-border);
-  border-radius: 10px;
-  width: fit-content;
-  min-width: 280px;
-  max-width: min(94vw, 900px);
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #161616;
+  border-top: 1px solid var(--sidebar-border);
+  border-bottom: 1px solid var(--sidebar-border);
   opacity: 0;
   visibility: hidden;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -330,7 +328,6 @@
 .navDropdownContainer:hover .megaMenuPanel {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(0);
   pointer-events: all;
 }
 
@@ -341,9 +338,11 @@
 
 .megaMenuGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 190px);
-  gap: 0.25rem 0.5rem;
-  padding: 1.25rem 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.25rem 1rem;
+  padding: 1.5rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .megaMenuItem {
