@@ -263,7 +263,7 @@ export default function ContactPage() {
 
               </div>
 
-              {/* Action Button: Styled as pill button alongside independent arrow circle button */}
+              {/* Action Button: Styled as pill button */}
               <div className={styles.submitRow}>
                 <button
                   type="submit"
@@ -272,12 +272,6 @@ export default function ContactPage() {
                 >
                   {isSubmitting ? labels.sending : labels.submitBtn}
                 </button>
-                <div className={styles.submitArrowCircle}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </div>
               </div>
 
               {/* Status Alert Panels */}
@@ -298,7 +292,7 @@ export default function ContactPage() {
           <div className={styles.imageSection}>
             <div className={styles.showcaseImageWrapper}>
               <Image
-                src="/images/Beauty_&_Cosmetics/Beauty_&_Cosmetics.png"
+                src="/images/contact/contact.png"
                 alt="Premium Finishing"
                 fill
                 priority

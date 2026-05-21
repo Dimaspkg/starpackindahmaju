@@ -251,20 +251,31 @@ export default function Home() {
           </div>
 
           <div className={styles.industriesGrid}>
-            {t.industry?.items?.slice(0, 6).map((item: any, i: number) => (
-              <LocalizedLink key={i} href="/industries" className={styles.industryCard}>
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className={styles.industryImg}
-                />
-                <div className={styles.industryOverlay}>
-                  <span className={styles.industryName}>{item.title}</span>
-                </div>
-              </LocalizedLink>
-            ))}
+            {t.industry?.items?.slice(0, 6).map((item: any, i: number) => {
+              const slugMap = [
+                'beauty-cosmetics',
+                'electronics',
+                'fashion-accessories',
+                'home-lifestyle',
+                'automotive',
+                'many-more',
+              ];
+              const slug = slugMap[i] ?? 'industries';
+              return (
+                <LocalizedLink key={i} href={`/industries/${slug}`} className={styles.industryCard}>
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className={styles.industryImg}
+                  />
+                  <div className={styles.industryOverlay}>
+                    <span className={styles.industryName}>{item.title}</span>
+                  </div>
+                </LocalizedLink>
+              );
+            })}
           </div>
         </section>
 

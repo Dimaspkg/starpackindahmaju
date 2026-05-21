@@ -1,15 +1,15 @@
 {
   "nav": {
     "home": "Beranda",
-    "about": "About",
-    "technology": "Technology",
+    "about": "Tentang Kami",
+    "technology": "Teknologi",
     "premium": "Efek Coating",
-    "industry": "Industries",
-    "quality": "Quality & Certification",
+    "industry": "Industri",
+    "quality": "Sertifikasi Kualitas",
     "customers": "Pelanggan Kami",
-    "insights": "Insights",
+    "insights": "Wawasan",
     "inquiry": "Hubungi Kami",
-    "contact": "Contact"
+    "contact": "Kontak"
   },
   "hero": {
     "image": "/images/herro/premium_hero_cosmetic.png",

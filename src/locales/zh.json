@@ -1,15 +1,15 @@
 {
   "nav": {
     "home": "首页",
-    "about": "About",
-    "technology": "Technology",
+    "about": "关于我们",
+    "technology": "技术",
     "premium": "涂层效果",
-    "industry": "Industries",
-    "quality": "Quality & Certification",
+    "industry": "行业",
+    "quality": "质量与认证",
     "customers": "我们的客户",
-    "insights": "Insights",
+    "insights": "洞察",
     "inquiry": "联系我们",
-    "contact": "Contact"
+    "contact": "联系方式"
   },
   "hero": {
     "image": "/images/herro/premium_hero_cosmetic.png",

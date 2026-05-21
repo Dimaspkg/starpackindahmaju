@@ -59,11 +59,22 @@ export default function IndustriesPage() {
         {/* Industries Grid */}
         <section className={styles.grid}>
           {t.industry.items.map((item: any, index: number) => {
+            const slugMap = [
+              'beauty-cosmetics',
+              'electronics',
+              'fashion-accessories',
+              'home-lifestyle',
+              'automotive',
+              'many-more',
+            ];
+            const slug = slugMap[index];
             const isLastItem = index === t.industry.items.length - 1;
             return (
-              <div 
-                key={index} 
+              <LocalizedLink
+                key={index}
+                href={slug ? `/industries/${slug}` : '/industries'}
                 className={`${styles.card} ${isLastItem ? styles.highlight : ''}`}
+                style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
               >
                 <div className={styles.imageWrapper}>
                   <Image 
@@ -78,7 +89,7 @@ export default function IndustriesPage() {
                   <h2 className={styles.cardTitle}>{item.title}</h2>
                   <p className={styles.cardDesc}>{item.desc}</p>
                 </div>
-              </div>
+              </LocalizedLink>
             );
           })}
         </section>

@@ -231,12 +231,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--foreground);
-  color: var(--background);
+  background-color: var(--primary);
+  color: #ffffff;
   padding: 0 3rem;
   border: none;
-  border-radius: 0px; /* Perfect pill shape matching 56px height */
-  font-weight: 800; /* Chunky bold typographic presence matching the mockup */
+  border-radius: 0px;
+  font-weight: 800;
   font-size: 1.05rem;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -245,22 +245,23 @@
 }
 
 [data-theme="dark"] .submitBtn {
-  background-color: #ffffff;
-  color: #111111;
+  background-color: var(--primary);
+  color: #ffffff;
 }
 
 [data-theme="light"] .submitBtn {
-  background-color: #111111;
+  background-color: var(--primary);
   color: #ffffff;
 }
 
 .submitBtn:hover:not(:disabled) {
+  background-color: var(--primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(200, 0, 0, 0.25);
 }
 
 [data-theme="dark"] .submitBtn:hover:not(:disabled) {
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 25px rgba(200, 0, 0, 0.3);
 }
 
 .submitBtn:disabled {

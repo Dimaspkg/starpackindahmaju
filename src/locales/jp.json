@@ -1,15 +1,15 @@
 {
   "nav": {
     "home": "ホーム",
-    "about": "About",
-    "technology": "Technology",
+    "about": "会社概要",
+    "technology": "技術",
     "premium": "コーティング効果",
-    "industry": "Industries",
-    "quality": "Quality & Certification",
+    "industry": "産業",
+    "quality": "品質と認証",
     "customers": "主要取引先",
-    "insights": "Insights",
+    "insights": "インサイト",
     "inquiry": "お問い合わせ",
-    "contact": "Contact"
+    "contact": "連絡先"
   },
   "hero": {
     "image": "/images/herro/premium_hero_cosmetic.png",
