@@ -281,6 +281,17 @@
   display: inline-block;
 }
 
+/* Invisible bridge from nav link down to the fixed panel — prevents gap from closing dropdown */
+.navDropdownContainer::after {
+  content: '';
+  position: absolute;
+  bottom: -24px;   /* must cover the gap between header bottom and panel top */
+  left: -40px;
+  right: -40px;
+  height: 28px;
+  background: transparent;
+}
+
 .navLink.hasSub {
   display: flex;
   align-items: center;
@@ -329,7 +340,8 @@
   box-shadow: 0 8px 32px rgba(0,0,0,0.12);
 }
 
-.navDropdownContainer:hover .megaMenuPanel {
+.navDropdownContainer:hover .megaMenuPanel,
+.megaMenuPanel:hover {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
