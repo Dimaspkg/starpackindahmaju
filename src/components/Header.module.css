@@ -310,9 +310,10 @@
   left: 0;
   right: 0;
   width: 100%;
-  background-color: #161616;
-  border-top: 1px solid var(--sidebar-border);
-  border-bottom: 1px solid var(--sidebar-border);
+  background: linear-gradient(135deg, #0e0e10 0%, #141416 50%, #1a1012 100%);
+  border-top: 2px solid var(--primary);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.45);
   opacity: 0;
   visibility: hidden;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -322,7 +323,10 @@
 }
 
 [data-theme="light"] .megaMenuPanel {
-  background-color: #ffffff; /* Solid light background */
+  background: linear-gradient(135deg, #ffffff 0%, #f7f7f8 60%, #fdf4f4 100%);
+  border-top: 2px solid var(--primary);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
 }
 
 .navDropdownContainer:hover .megaMenuPanel {
