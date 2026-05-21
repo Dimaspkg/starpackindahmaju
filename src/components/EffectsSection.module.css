@@ -1,10 +1,20 @@
 .effectsContainer {
   padding: 8rem 0;
   border-top: 1px solid var(--card-border);
+  position: relative;
+  overflow: hidden; /* Prevent horizontal scroll bar on body if any */
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   margin-bottom: 4rem;
+  gap: 2rem;
+}
+
+.headerContent {
+  flex: 1;
 }
 
 .title {
@@ -17,14 +27,58 @@
 .description {
   font-size: 1.1rem;
   color: var(--muted-text);
-  max-width: 900px;
+  max-width: 800px;
   line-height: 1.8;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.headerActions {
+  display: flex;
+  align-items: center;
+}
+
+.carouselControls {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.controlBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--card-bg, #111);
+  color: var(--text-color, #fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.controlBtn:hover {
+  background: rgba(255, 0, 0, 0.8); /* Reusing the brand color theme if any, or primary */
+  color: #fff;
+  border-color: rgba(255, 0, 0, 0.8);
+}
+
+.carouselContainer {
+  display: flex;
+  overflow-x: auto;
   gap: 2.5rem;
+  padding-bottom: 2rem;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.carouselContainer::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.carouselItem {
+  flex: 0 0 calc(33.333% - 1.666rem); /* 3 items per view */
+  scroll-snap-align: start;
 }
 
 .card {
@@ -35,6 +89,7 @@
   transition: transform 0.3s ease, border-color 0.3s ease;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .card:hover {
@@ -62,6 +117,9 @@
 .cardContent {
   padding: 2rem;
   text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .cardTitle {
@@ -75,11 +133,37 @@
   color: var(--muted-text);
   font-size: 0.9rem;
   line-height: 1.6;
+  flex: 1;
+}
+
+.actionContainer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  background-color: rgba(255, 0, 0, 0.8); /* Reusing their active brand theme color approach */
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.primaryBtn:hover {
+  background-color: rgba(255, 0, 0, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
 }
 
 @media (max-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
+  .carouselItem {
+    flex: 0 0 calc(50% - 1.25rem); /* 2 items per view */
   }
 }
 
@@ -87,10 +171,22 @@
   .effectsContainer {
     padding: 4rem 0;
   }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .headerActions {
+    align-self: flex-end;
+  }
   .title {
     font-size: 2rem;
   }
-  .grid {
-    grid-template-columns: 1fr;
+  .carouselItem {
+    flex: 0 0 85%; /* 1 item per view + peek */
+  }
+  .primaryBtn {
+    width: 100%;
+    padding: 1rem;
   }
 }
