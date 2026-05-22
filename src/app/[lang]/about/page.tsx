@@ -10,9 +10,17 @@ import { useLanguage } from '@/context/LanguageContext';
 export default function AboutPage() {
   const { t, language } = useLanguage();
   const [mounted, setMounted] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     setMounted(true);
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -97,6 +105,10 @@ export default function AboutPage() {
           fill
           className={styles.heroBg}
           priority
+          style={{
+            transform: `translateY(${scrollY * 0.4}px) scale(1.15)`,
+            transformOrigin: 'center center',
+          }}
         />
         <div className={styles.heroOverlay}>
           <div className={styles.heroText}>
