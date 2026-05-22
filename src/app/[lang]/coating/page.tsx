@@ -91,10 +91,12 @@ export default function CoatingPage() {
           }}
         />
         <div className={styles.heroOverlay}>
-          <div>
+          <div className={styles.heroText}>
             <span className={styles.heroTag}>{L.heroTag}</span>
-            <h1 className={styles.heroTitle}>{t.effects.title}</h1>
-            <p className={styles.heroDesc}>{t.effects.description}</p>
+            <div className={styles.heroBottomText}>
+              <h1 className={styles.heroTitle}>{t.effects.title}</h1>
+              <p className={styles.heroDesc}>{t.effects.description}</p>
+            </div>
           </div>
         </div>
       </section>

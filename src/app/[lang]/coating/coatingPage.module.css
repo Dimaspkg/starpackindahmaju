@@ -39,14 +39,29 @@
   padding: 4rem 6rem;
 }
 
+.heroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+}
+
+.heroBottomText {
+  display: block;
+}
+
 @media (max-width: 768px) {
   .hero {
     height: 260px;
     margin-bottom: 2rem;
   }
   .heroOverlay {
-    padding: 0 1.5rem;
-    align-items: flex-start;
+    padding: 0 1.5rem 2rem;
+    align-items: stretch;
+  }
+  .heroText {
+    justify-content: space-between;
   }
 }
 

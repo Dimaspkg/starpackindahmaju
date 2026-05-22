@@ -30,11 +30,22 @@
   padding: 4rem 6rem;
 }
 
+.heroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .heroBanner { height: 280px; }
   .heroOverlay {
-    padding: 0 1.5rem;
-    align-items: flex-start;
+    padding: 0 1.5rem 2rem;
+    align-items: stretch;
+  }
+  .heroText {
+    justify-content: space-between;
   }
 }
 
