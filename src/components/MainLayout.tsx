@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Header from "./Header";
 import ThemeToggle from "./ThemeToggle";
@@ -9,6 +10,10 @@ import { useUI } from "@/context/UIContext";
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const { isNotFound } = useUI();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   
   const isAdminPage = pathname?.startsWith("/admin");
   const isLoginPage = pathname === "/login";
