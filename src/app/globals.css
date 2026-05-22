@@ -8,7 +8,15 @@
   --sidebar-border: #1a1a1a;
   --sidebar-width: 200px;
   --header-height: 64px;
-  
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --header-height: 70px;
+  }
+}
+
+:root {
   --card-bg: #1e1e1e;
   --card-border: #2a2a2a;
   --muted-text: #888888;
