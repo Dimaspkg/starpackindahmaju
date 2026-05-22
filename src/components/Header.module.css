@@ -79,7 +79,7 @@
 .navLink::after {
   content: '';
   position: absolute;
-  bottom: 2px;
+  bottom: 0;
   left: 0;
   right: 0;
   height: 2px;
@@ -87,7 +87,7 @@
   transform: scaleX(0);
   transform-origin: right center;
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 2px;
+  border-radius: 0;
 }
 
 .navLink:hover {
