@@ -75,11 +75,16 @@
   text-decoration: none;
 }
 
-/* Underline — slides from right to left */
-.navLink::after {
+.linkLabel {
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline — slides from right to left, matching only the text label */
+.linkLabel::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -4px; /* Perfectly aligned under the text baseline */
   left: 0;
   right: 0;
   height: 2px;
@@ -94,7 +99,7 @@
   color: var(--foreground);
 }
 
-.navLink:hover::after {
+.navLink:hover .linkLabel::after {
   transform: scaleX(1);
 }
 
@@ -102,7 +107,7 @@
   color: var(--primary);
 }
 
-.navLink.active::after {
+.navLink.active .linkLabel::after {
   transform: scaleX(1);
   transform-origin: left center;
 }

@@ -195,7 +195,7 @@ export default function Header() {
                       href={item.href}
                       className={`${styles.navLink} ${activeSection === item.id ? styles.active : ''} ${styles.hasSub}`}
                     >
-                      {item.label}
+                      <span className={styles.linkLabel}>{item.label}</span>
                       <svg className={styles.chevron} width="10" height="6" viewBox="0 0 10 6" fill="none">
                         <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
@@ -230,7 +230,7 @@ export default function Header() {
                   href={item.href}
                   className={`${styles.navLink} ${activeSection === item.id ? styles.active : ''}`}
                 >
-                  {item.label}
+                  <span className={styles.linkLabel}>{item.label}</span>
                 </LocalizedLink>
               );
             })}
