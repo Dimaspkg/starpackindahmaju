@@ -45,33 +45,20 @@ export default function CoatingPage() {
 
   if (!mounted || !t.effects) return null;
 
-  // Map effects items to categories for filtering
-  const getCategory = (title: string) => {
-    const tLower = title.toLowerCase();
-    if (tLower.includes('matte')) {
-      return 'matte';
-    }
-    if (tLower.includes('gloss') || tLower.includes('silver') || tLower.includes('gold') || tLower.includes('chrome')) {
-      return 'glossy';
-    }
-    return 'specialized'; // holographic, pearl, etc.
-  };
-
   const filteredItems = t.effects.items.map((item: any, idx: number) => ({
     ...item,
     originalIndex: idx, // keep track for lightbox navigation
-    category: getCategory(item.title)
   })).filter((item: any) => {
     if (activeFilter === 'all') return true;
-    return item.category === activeFilter;
+    return (item.category || 'uv-coating') === activeFilter;
   });
 
   // Filter translation labels
   const filterLabels = {
-    all: language === 'id' ? 'Semua Efek' : language === 'jp' ? 'すべての効果' : language === 'zh' ? '全部效果' : 'All Effects',
-    glossy: language === 'id' ? 'Glossy & Metallic' : language === 'jp' ? '光沢＆メタリック' : language === 'zh' ? '光泽与金属' : 'Glossy & Metallic',
-    matte: language === 'id' ? 'Matte Finish' : language === 'jp' ? 'マットフィニッシュ' : language === 'zh' ? '哑光饰面' : 'Matte Finish',
-    specialized: language === 'id' ? 'Spesial / Efek Khusus' : language === 'jp' ? '特殊効果' : language === 'zh' ? '特殊效果' : 'Specialized Effects'
+    all: language === 'id' ? 'Semua Kategori' : language === 'jp' ? 'すべてのカテゴリー' : language === 'zh' ? '所有类别' : 'All Categories',
+    'uv-coating': 'UV Coating',
+    'vacuum-metallizing': language === 'id' ? 'Vacuum Metallizing' : language === 'jp' ? '真空蒸着' : language === 'zh' ? '真空电镀' : 'Vacuum Metallizing',
+    'combo': language === 'id' ? 'Combo (Metallizing + UV)' : language === 'jp' ? 'コンボ (蒸着 + UV)' : language === 'zh' ? '复合工艺 (电镀 + UV)' : 'Combo (Metallizing + UV)'
   };
 
   const L = {
@@ -168,13 +155,19 @@ export default function CoatingPage() {
               onClick={() => setLightboxIndex(item.originalIndex)}
             >
               <div className={styles.imageWrapper}>
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className={styles.effectImage}
-                />
+                {item.image ? (
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className={styles.effectImage}
+                  />
+                ) : (
+                  <div className={styles.placeholderImage}>
+                    <span>{item.title}</span>
+                  </div>
+                )}
               </div>
               <div className={styles.cardContent}>
                 <h3 className={styles.cardTitle}>{item.title}</h3>
@@ -213,13 +206,19 @@ export default function CoatingPage() {
                   </svg>
                 </button>
 
-                <Image
-                  src={t.effects.items[lightboxIndex].image}
-                  alt={t.effects.items[lightboxIndex].title}
-                  fill
-                  sizes="(max-width: 768px) 95vw, 80vw"
-                  style={{ objectFit: 'contain' }}
-                />
+                {t.effects.items[lightboxIndex].image ? (
+                  <Image
+                    src={t.effects.items[lightboxIndex].image}
+                    alt={t.effects.items[lightboxIndex].title}
+                    fill
+                    sizes="(max-width: 768px) 95vw, 80vw"
+                    style={{ objectFit: 'contain' }}
+                  />
+                ) : (
+                  <div className={styles.placeholderLightboxImage}>
+                    <span>{t.effects.items[lightboxIndex].title}</span>
+                  </div>
+                )}
 
                 <button
                   className={styles.nextBtn}
