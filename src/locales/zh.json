@@ -116,10 +116,17 @@
       { "title": "金属哑光缎面 (Metallic Matte Satin)", "desc": "兼具优雅金属深度的半哑光缎面饰面", "image": "", "category": "uv-coating" },
       { "title": "极光珍珠 (Pearl Aurora)", "desc": "随着光影变幻的欧若拉极光幻彩珍珠涂层", "image": "", "category": "uv-coating" },
       { "title": "UV珍珠 (UV Pearl)", "desc": "经典、高雅的珍珠质感涂层饰面", "image": "", "category": "uv-coating" },
-      { "title": "七彩虹镀 (GG Rainbow Chrome)", "desc": "具有绚丽彩虹折射效果的真空电镀镜面装饰", "image": "/images/effects/gg_rainbow.png", "category": "vacuum-metallizing" },
-      { "title": "冰晶纹理 (GG Ice Crystal)", "desc": "在高反射金属表面呈现冰爽独特的结晶冰花效果", "image": "/images/effects/gg_ice_crystal.png", "category": "vacuum-metallizing" },
-      { "title": "金属细沙 (GG Sand Powder)", "desc": "精致、细腻的金属沙粉质感饰面", "image": "/images/Metallic_Silver/Metallic-Silver.png", "category": "vacuum-metallizing" },
-      { "title": "镀金 (Gold Chrome)", "desc": "为高端产品打造的豪华金属金饰面", "image": "/images/gold_chrome/Gold_Chrome.png", "category": "vacuum-metallizing" },
+      
+      { "title": "GG 彩虹电镀 (GG Rainbow)", "desc": "具有绚丽彩虹折射效果的真空电镀镜面装饰", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG 细沙效果 (GG Sand Powder)", "desc": "精致细密金属沙粉质感的磨砂饰面", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG 金沙效果 (GG Gold Sand Powder)", "desc": "豪华金属金沙质感真空电镀饰面", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG 冰晶纹理 (GG Ice Crystal)", "desc": "在高反射金属表面呈现结晶冰花纹理", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG 熔岩效果 (GG Glowing Lava)", "desc": "具有强烈红光熔岩裂纹质感的金属饰面", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG 皮革纹理 (GG Leather Effect)", "desc": "具有金属电镀光泽的仿皮革饰面效果", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG 镜面电镀 (GG Metallizing)", "desc": "高反射率的真空镜面金属化电镀饰面", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG 特色系列 (GG Series)", "desc": "GG特色系列的高级金属拉丝与光泽饰面", "image": "", "category": "vacuum-metallizing" },
+      { "title": "MM 专属系列 (MM Series)", "desc": "MM系列的专享哑光、半哑光金属化涂装饰面", "image": "", "category": "vacuum-metallizing" },
+      
       { "title": "冷露凝珠 (GG Dewdrop)", "desc": "在金属烤漆表面附着逼真的3D立体水滴与冷凝水雾质感", "image": "/images/effects/gg_dewdrop.png", "category": "combo" }
     ]
   },

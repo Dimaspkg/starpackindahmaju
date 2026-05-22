@@ -116,10 +116,17 @@
       { "title": "マットサテン (Metallic Matte Satin)", "desc": "上品な金属感と深みを与える半つや消しのサテン仕上げ", "image": "", "category": "uv-coating" },
       { "title": "オーロラパール (Pearl Aurora)", "desc": "オーロラのように揺らめく光を放つ、幻想的なパール仕上げ", "image": "", "category": "uv-coating" },
       { "title": "UVパール (UV Pearl)", "desc": "エレガントでクラシックな高級感あふれるパールコーティング", "image": "", "category": "uv-coating" },
-      { "title": "レインボークローム (GG Rainbow Chrome)", "desc": "真空蒸着クロームメタリックの上に鮮やかな虹色屈折を表現", "image": "/images/effects/gg_rainbow.png", "category": "vacuum-metallizing" },
-      { "title": "アイスクリスタル (GG Ice Crystal)", "desc": "高反射の金属表面に、凍りついたような美しい結晶紋を表現", "image": "/images/effects/gg_ice_crystal.png", "category": "vacuum-metallizing" },
-      { "title": "サンドパウダー効果 (GG Sand Powder)", "desc": "きめ細やかな質感の金属製砂パウダー仕上げ", "image": "/images/Metallic_Silver/Metallic-Silver.png", "category": "vacuum-metallizing" },
-      { "title": "ゴールドクローム (Gold Chrome)", "desc": "ハイエンド製品向けの豪華なゴールドメタリック仕上げ", "image": "/images/gold_chrome/Gold_Chrome.png", "category": "vacuum-metallizing" },
+      
+      { "title": "GG レインボー (GG Rainbow)", "desc": "真空蒸着クロームメタリックの上に鮮やかな虹色屈折を表現", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG サンドパウダー (GG Sand Powder Effect)", "desc": "きめ細やかな質感の金属製砂パウダー仕上げ", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG ゴールドサンドパウダー (GG Gold Sand Powder Effect)", "desc": "豪華なゴールドの輝きを持つ金属製砂パウダー仕上げ", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG アイスクリスタル (GG Ice Crystal)", "desc": "高反射の金属表面に、凍りついたような美しい結晶紋を表現", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG グローイング溶岩 (GG Glowing Lava)", "desc": "光り輝く溶岩のような赤く激しいクラック仕上げ", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG レザー効果 (GG Leather Effect)", "desc": "プレミアムな金属光沢を持つ真空蒸着の革模様仕上げ", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG メタライジング (GG Metallizing)", "desc": "極めて反射率の高い鏡面真空金属蒸着仕上げ", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG シリーズ (GG Series)", "desc": "GGシリーズの特色であるプレミアムメタリックコーティング", "image": "", "category": "vacuum-metallizing" },
+      { "title": "MM シリーズ (MM Series)", "desc": "MMシリーズ特有の高級サテン・つや消し金属蒸着仕上げ", "image": "", "category": "vacuum-metallizing" },
+      
       { "title": "結露露珠 (GG Dewdrop)", "desc": "塗装面に立体的な水滴と露結の凝縮感をリアルに加工", "image": "/images/effects/gg_dewdrop.png", "category": "combo" }
     ]
   },

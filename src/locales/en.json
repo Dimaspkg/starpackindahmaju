@@ -116,10 +116,17 @@
       { "title": "Metallic Matte Satin", "desc": "Semi-matte satin finish with elegant metallic depth", "image": "", "category": "uv-coating" },
       { "title": "Pearl Aurora", "desc": "Shimmering northern lights pearl finish with shifting glow", "image": "", "category": "uv-coating" },
       { "title": "UV Pearl", "desc": "Elegant and classic pearl coating finish", "image": "", "category": "uv-coating" },
-      { "title": "GG Rainbow Chrome", "desc": "Vacuum metallized chrome finish with vibrant rainbow refraction", "image": "/images/effects/gg_rainbow.png", "category": "vacuum-metallizing" },
-      { "title": "GG Ice Crystal", "desc": "Frosted crystalline ice patterns on highly reflective surface", "image": "/images/effects/gg_ice_crystal.png", "category": "vacuum-metallizing" },
-      { "title": "GG Sand Powder Effect", "desc": "Fine textured metallic sand powder finish", "image": "/images/Metallic_Silver/Metallic-Silver.png", "category": "vacuum-metallizing" },
-      { "title": "Gold Chrome", "desc": "Luxurious gold metallic finish for high-end products", "image": "/images/gold_chrome/Gold_Chrome.png", "category": "vacuum-metallizing" },
+      
+      { "title": "GG Rainbow", "desc": "Vacuum metallized chrome finish with vibrant rainbow refraction", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG Sand Powder Effect", "desc": "Metallic sand powder textured finish", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG Gold Sand Powder Effect", "desc": "Luxurious metallic gold sand powder finish", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG Ice Crystal", "desc": "Frosted crystalline ice patterns on highly reflective surface", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG Glowing Lava", "desc": "Intense glowing lava cracked pattern finish", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG Leather Effect", "desc": "Premium vacuum metallized leather texture", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG Metallizing", "desc": "High-reflective mirror vacuum metallized finish", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG Series", "desc": "Premium metallic finishes from the signature GG series", "image": "", "category": "vacuum-metallizing" },
+      { "title": "MM Series", "desc": "Exclusive satin and matte metallic finishes from the MM series", "image": "", "category": "vacuum-metallizing" },
+      
       { "title": "GG Dewdrop", "desc": "Realistic 3D water droplets and condensation texture layer", "image": "/images/effects/gg_dewdrop.png", "category": "combo" }
     ]
   },

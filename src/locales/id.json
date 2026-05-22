@@ -116,10 +116,17 @@
       { "title": "Metallic Matte Satin", "desc": "Finishing satin semi-matte dengan kedalaman logam yang elegan", "image": "", "category": "uv-coating" },
       { "title": "Pearl Aurora", "desc": "Finishing mutiara aurora yang berkilau dengan cahaya yang bergeser", "image": "", "category": "uv-coating" },
       { "title": "UV Pearl", "desc": "Finishing pelapisan mutiara klasik yang elegan", "image": "", "category": "uv-coating" },
-      { "title": "GG Rainbow Chrome", "desc": "Finishing krom metalik dengan refraksi warna pelangi yang memukau", "image": "/images/effects/gg_rainbow.png", "category": "vacuum-metallizing" },
-      { "title": "GG Ice Crystal", "desc": "Pola kristal es beku pada permukaan logam yang sangat reflektif", "image": "/images/effects/gg_ice_crystal.png", "category": "vacuum-metallizing" },
-      { "title": "GG Sand Powder Effect", "desc": "Finishing bubuk pasir logam bertekstur halus", "image": "/images/Metallic_Silver/Metallic-Silver.png", "category": "vacuum-metallizing" },
-      { "title": "Gold Chrome", "desc": "Finishing logam emas mewah untuk produk kelas atas", "image": "/images/gold_chrome/Gold_Chrome.png", "category": "vacuum-metallizing" },
+      
+      { "title": "GG Rainbow", "desc": "Finishing krom metalik dengan refraksi warna pelangi yang memukau", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG Sand Powder Effect", "desc": "Finishing bubuk pasir logam bertekstur halus", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG Gold Sand Powder Effect", "desc": "Finishing bubuk pasir emas logam yang mewah", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG Ice Crystal", "desc": "Pola kristal es beku pada permukaan logam yang sangat reflektif", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG Glowing Lava", "desc": "Finishing pola retakan lava pijar yang intens", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG Leather Effect", "desc": "Tekstur kulit premium dengan metalisasi vakum", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG Metallizing", "desc": "Finishing metalisasi vakum cermin reflektif tinggi", "image": "", "category": "vacuum-metallizing" },
+      { "title": "GG Series", "desc": "Finishing logam premium dari seri khas GG", "image": "", "category": "vacuum-metallizing" },
+      { "title": "MM Series", "desc": "Finishing logam satin dan matte eksklusif dari seri MM", "image": "", "category": "vacuum-metallizing" },
+      
       { "title": "GG Dewdrop", "desc": "Lapisan tekstur butiran air 3D dan kondensasi embun yang realistis", "image": "/images/effects/gg_dewdrop.png", "category": "combo" }
     ]
   },
