@@ -140,7 +140,7 @@ export default function ContactPage() {
           {/* Mockup Title Block: Flex layout with aligned subtitle */}
           <div className={styles.titleRow}>
             <div className={styles.titleLeft}>
-              <span className={styles.tagLine}>{labels.tagLine}</span>
+              <span className={styles.heroTag}>{labels.tagLine}</span>
               <h1 className={styles.title}>{labels.pageTitle}</h1>
             </div>
             <div className={styles.titleRight}>

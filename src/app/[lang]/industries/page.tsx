@@ -47,11 +47,20 @@ export default function IndustriesPage() {
         ? '立即咨询'
         : 'Consult Now';
 
+  const heroTag = language === 'id' 
+    ? 'Solusi Sektoral' 
+    : language === 'jp' 
+      ? '業界ソリューション' 
+      : language === 'zh' 
+        ? '行业解决方案' 
+        : 'Industry Solutions';
+
   return (
     <div className="pageContainer">
       <div className={styles.container}>
         {/* Header Section */}
         <header className={styles.header}>
+          <span className={styles.heroTag}>{heroTag}</span>
           <h1 className={styles.title}>{t.industry.title}</h1>
           <p className={styles.description}>{t.industry.description}</p>
         </header>

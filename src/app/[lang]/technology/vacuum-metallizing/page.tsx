@@ -97,11 +97,20 @@ export default function VacuumMetallizingPage() {
         ? '联系真空电镀团队'
         : 'Contact Metallizing Team';
 
+  const heroTag = language === 'id' 
+    ? 'Keunggulan Teknologi' 
+    : language === 'jp' 
+      ? '技術の卓越性' 
+      : language === 'zh' 
+        ? '技术卓越' 
+        : 'Technology Excellence';
+
   return (
     <div className="pageContainer">
       <div className={styles.container}>
         {/* Header Section */}
         <header className={styles.header}>
+          <span className={styles.heroTag}>{heroTag}</span>
           <h1 className={styles.title}>{category.title}</h1>
           <p className={styles.description}>
             {language === 'id' 

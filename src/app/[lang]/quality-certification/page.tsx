@@ -47,12 +47,21 @@ export default function QualityCertificationPage() {
         ? '联系质检团队'
         : 'Contact QA Team';
 
+  const heroTag = language === 'id' 
+    ? 'Sertifikasi & Mutu' 
+    : language === 'jp' 
+      ? '品質と認証' 
+      : language === 'zh' 
+        ? '质量与认证' 
+        : 'Quality & Certification';
+
   return (
     <div className="pageContainer">
       <div className={styles.container}>
         
         {/* Hero Section */}
         <section className={styles.hero}>
+          <span className={styles.heroTag}>{heroTag}</span>
           <h1 className={styles.heroTitle}>{t.quality.title}</h1>
           <p className={styles.heroDesc}>{t.quality.description}</p>
         </section>
