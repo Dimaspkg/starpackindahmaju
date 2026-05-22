@@ -62,16 +62,23 @@
 
 @media (max-width: 900px) {
   .hero {
-    padding: 5rem 0 4rem;
+    padding: 5rem 1.5rem 4rem;
   }
   .title {
     font-size: 2.8rem;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
   }
 }
 
 @media (max-width: 600px) {
+  .hero {
+    padding: 4rem 1.25rem 3rem;
+  }
   .title {
     font-size: 2.2rem;
+    line-height: 1.1;
+    letter-spacing: -1px;
   }
 }
 

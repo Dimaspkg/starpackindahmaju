@@ -31,7 +31,8 @@
   font-weight: 800;
   color: var(--foreground);
   margin-bottom: 1.5rem;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
 }
 
 .description {
@@ -40,6 +41,17 @@
   font-size: 1.15rem;
   line-height: 1.6;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 2.2rem;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+  .description {
+    font-size: 1rem;
+  }
 }
 
 /* Industries Grid */
