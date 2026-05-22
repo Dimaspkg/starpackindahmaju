@@ -115,20 +115,19 @@ export default function VacuumMetallizingPage() {
         </header>
 
         {/* Categories Detail Section */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: '4rem', marginBottom: '6rem' }}>
+        <div className={styles.detailGrid}>
           {/* Left Column: Feature Cards */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          <div className={styles.detailList}>
             {category.items.map((item: string, index: number) => (
               <div 
                 key={index} 
-                className={styles.techCard} 
-                style={{ padding: '2rem 2.5rem', display: 'flex', gap: '1.5rem', alignItems: 'center' }}
+                className={`${styles.techCard} ${styles.detailCard}`}
               >
-                <div style={{ flexShrink: 0, width: '48px', height: '48px', borderRadius: '10px', backgroundColor: 'var(--card-border)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div className={styles.iconWrapper}>
                   {getIcon(index)}
                 </div>
                 <div>
-                  <h3 style={{ fontSize: '1.15rem', fontWeight: '800', color: 'var(--foreground)', marginBottom: '0.25rem' }}>
+                  <h3 className={styles.cardTitle}>
                     {index === 0 
                       ? (language === 'id' ? 'Ruang Vakum Industri' : language === 'jp' ? '工業用真空チャンバー' : language === 'zh' ? '工业级真空腔体' : 'Industrial Vacuum Chambers')
                       : index === 1
@@ -139,30 +138,22 @@ export default function VacuumMetallizingPage() {
                             ? (language === 'id' ? 'Kontrol Proses Canggih' : language === 'jp' ? '高度なプロセス制御' : language === 'zh' ? '数字化过程控制' : 'Advanced Process Controls')
                             : (language === 'id' ? 'Daya Rekat & Ketahanan Unggul' : language === 'jp' ? '優れた密着性と耐久性' : language === 'zh' ? '卓越粘附力与耐久性' : 'Superior Adhesion & Durability')}
                   </h3>
-                  <p style={{ color: 'var(--muted-text)', fontSize: '0.95rem', lineHeight: '1.4' }}>{item}</p>
+                  <p className={styles.cardText}>{item}</p>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Right Column: Premium Double-Frame Visual Container */}
-          <div style={{ position: 'relative', minHeight: '400px' }}>
-            <div style={{ 
-              position: 'relative', 
-              width: '100%', 
-              height: '100%', 
-              minHeight: '450px',
-              borderRadius: '12px',
-              border: '1px solid var(--card-border)',
-              overflow: 'hidden'
-            }}>
+          <div className={styles.detailImageOuter}>
+            <div className={styles.detailImageWrapper}>
               <Image
                 src="/images/Vacuum_Metallizing/Vacuum-Metallizing.png"
                 alt="Vacuum Metallizing Systems Facilities"
                 fill
                 priority
                 sizes="(max-width: 900px) 100vw, 40vw"
-                style={{ objectFit: 'cover', transition: 'transform 2.4s cubic-bezier(0.4, 0, 0.2, 1)' }}
+                className={styles.detailImage}
               />
             </div>
           </div>
@@ -176,19 +167,6 @@ export default function VacuumMetallizingPage() {
           href="/#inquiry"
         />
       </div>
-
-      {/* CSS adjustments to ensure 100% desktop/mobile responsiveness */}
-      <style jsx>{`
-        @media (max-width: 900px) {
-          div[style*="gridTemplateColumns"] {
-            grid-template-columns: 1fr !important;
-            gap: 2.5rem !important;
-          }
-          div[style*="minHeight"] {
-            min-height: 300px !important;
-          }
-        }
-      `}</style>
     </div>
   );
 }

@@ -238,3 +238,109 @@
   font-size: 0.95rem;
   line-height: 1.5;
 }
+
+/* Detail Page Layouts (e.g. Vacuum Metallizing) */
+.detailGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+
+.detailList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detailCard {
+  padding: 2rem 2.5rem !important;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.detailCard::before {
+  display: none; /* No red side accent line for detail cards */
+}
+
+.iconWrapper {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardTitle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 0.25rem;
+}
+
+.cardText {
+  color: var(--muted-text);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.detailImageOuter {
+  position: relative;
+  min-height: 400px;
+}
+
+.detailImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 450px;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  overflow: hidden;
+}
+
+.detailImage {
+  object-fit: cover;
+  transition: transform 2.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.detailImageWrapper:hover .detailImage {
+  transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+  .detailGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+  }
+  .detailImageWrapper {
+    min-height: 300px;
+  }
+  .detailImageOuter {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .techCard {
+    padding: 2rem 1.5rem;
+  }
+  .techCardTitle {
+    font-size: 1.5rem;
+  }
+  .detailCard {
+    padding: 1.5rem !important;
+    gap: 1rem;
+  }
+}
