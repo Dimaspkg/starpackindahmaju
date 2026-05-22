@@ -28,6 +28,7 @@ export default function Header() {
 
     if (cleanPath === '/about') setActiveSection('about');
     else if (cleanPath === '/technology' || cleanPath.startsWith('/technology/')) setActiveSection('technology');
+    else if (cleanPath === '/coating' || cleanPath.startsWith('/coating/')) setActiveSection('coating');
     else if (cleanPath === '/industries' || cleanPath.startsWith('/industries/')) setActiveSection('industry');
     else if (cleanPath === '/quality-certification') setActiveSection('quality');
     else if (cleanPath === '/insights' || cleanPath.startsWith('/insights/')) setActiveSection('insights');
@@ -93,6 +94,11 @@ export default function Header() {
                 : 'Advanced vacuum chamber metal deposition for luxurious mirror-like silver, gold, and chrome finishes.'
         }
       ]
+    },
+    {
+      id: 'coating',
+      label: t.nav.premium,
+      href: '/coating'
     },
     { 
       id: 'industry',   

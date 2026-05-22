@@ -5,7 +5,6 @@ import Image from 'next/image';
 import LocalizedLink from "@/components/LocalizedLink";
 import Hero from '@/components/Hero';
 import CTA from '@/components/CTA';
-import EffectsSection from '@/components/EffectsSection';
 import PortfolioCarousel from '@/components/PortfolioCarousel';
 import styles from './homePage.module.css';
 import { useLanguage } from '@/context/LanguageContext';
@@ -212,8 +211,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        <EffectsSection />
 
         {/* ===== TECHNOLOGY SECTION ===== */}
         <section className={styles.section} id="technology">

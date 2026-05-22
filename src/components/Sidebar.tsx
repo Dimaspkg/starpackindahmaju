@@ -23,6 +23,8 @@ export default function Sidebar() {
       setActiveSection('about');
     } else if (pathname === '/technology') {
       setActiveSection('technology');
+    } else if (pathname === '/coating') {
+      setActiveSection('premium');
     } else if (pathname === '/industries') {
       setActiveSection('industry');
     } else if (pathname === '/quality-certification') {
@@ -75,7 +77,7 @@ export default function Sidebar() {
     { id: 'home', label: t.nav.home, href: '/' },
     { id: 'about', label: t.nav.about, href: pathname === '/' ? '/#about' : '/about' },
     { id: 'technology', label: t.nav.technology, href: pathname === '/' ? '/#technology' : '/technology' },
-    { id: 'premium', label: t.nav.premium, href: '/#premium' },
+    { id: 'premium', label: t.nav.premium, href: '/coating' },
     { id: 'industry', label: t.nav.industry, href: pathname === '/' ? '/#industry' : '/industries' },
     { id: 'quality', label: t.nav.quality, href: pathname === '/' ? '/#quality' : '/quality-certification' },
     { id: 'customers', label: t.nav.customers, href: '/#customers' },

@@ -1,0 +1,345 @@
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
+
+/* ---- Hero Section ---- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.heroBg {
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(14, 14, 16, 0.95) 0%,
+    rgba(14, 14, 16, 0.8) 50%,
+    rgba(224, 30, 56, 0.15) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 4rem 6rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 260px;
+    margin-bottom: 2rem;
+  }
+  .heroOverlay {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.heroTag {
+  display: inline-block;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 0.35rem 1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.heroDesc {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 700px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+  }
+  .heroDesc {
+    font-size: 0.9rem;
+  }
+}
+
+/* ---- Filter System ---- */
+.filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--muted-text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.filterBtn:hover {
+  border-color: var(--primary);
+  color: var(--foreground);
+}
+
+.filterBtnActive {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+}
+
+/* ---- Effects Grid ---- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* ---- Effect Card ---- */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+.effectImage {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .effectImage {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.card:hover .cardTitle {
+  color: var(--primary);
+}
+
+.cardDesc {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--muted-text);
+  margin: 0;
+}
+
+/* ---- Lightbox Modal ---- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(14, 14, 16, 0.95);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+.lightboxContent {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: scaleIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.lightboxImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background-color: #0b0b0d;
+}
+
+.lightboxCaption {
+  padding: 2rem;
+  background-color: var(--background);
+}
+
+.lightboxTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 0.75rem;
+}
+
+.lightboxDesc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--muted-text);
+  margin: 0;
+}
+
+/* Close & Nav buttons */
+.closeBtn, .prevBtn, .nextBtn {
+  position: absolute;
+  background: rgba(224, 30, 56, 0.1);
+  border: 1px solid rgba(224, 30, 56, 0.3);
+  color: var(--foreground);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 1010;
+}
+
+.closeBtn:hover, .prevBtn:hover, .nextBtn:hover {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+.closeBtn {
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.prevBtn {
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nextBtn {
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .lightbox {
+    padding: 1rem;
+  }
+  .lightboxImageWrapper {
+    height: 40vh;
+  }
+  .lightboxCaption {
+    padding: 1.25rem;
+  }
+  .lightboxTitle {
+    font-size: 1.25rem;
+  }
+  .lightboxDesc {
+    font-size: 0.85rem;
+  }
+  .closeBtn {
+    top: 1rem;
+    right: 1rem;
+    width: 38px;
+    height: 38px;
+  }
+  .prevBtn {
+    left: 0.5rem;
+    width: 38px;
+    height: 38px;
+  }
+  .nextBtn {
+    right: 0.5rem;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* ---- Animations ---- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

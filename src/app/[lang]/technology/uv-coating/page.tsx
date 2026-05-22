@@ -10,7 +10,6 @@ import { useLanguage } from '@/context/LanguageContext';
 export default function UvCoatingPage() {
   const { t, language } = useLanguage();
   const [mounted, setMounted] = useState(false);
-  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -154,95 +153,6 @@ export default function UvCoatingPage() {
           </div>
         </section>
 
-        {/* 3. Product Photo Gallery */}
-        <section className={styles.effectsSection}>
-          <h2 className={styles.sectionTitle}>{labels.effectsTitle}</h2>
-          <div className={styles.galleryGrid}>
-            {t.effects.items.map((effect: any, idx: number) => (
-              <div key={idx} className={styles.galleryItem} onClick={() => setLightboxIndex(idx)}>
-                <div className={styles.galleryImageContainer}>
-                  <Image
-                    src={effect.image}
-                    alt={effect.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className={styles.galleryImage}
-                  />
-                  <div className={styles.galleryOverlay}>
-                    <span className={styles.galleryCategory}>{effect.title}</span>
-                    <p className={styles.galleryDesc}>{effect.desc}</p>
-                    <div className={styles.zoomIcon}>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                        <line x1="11" y1="8" x2="11" y2="14"></line>
-                        <line x1="8" y1="11" x2="14" y2="11"></line>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Lightbox Modal */}
-          {lightboxIndex !== null && (
-            <div className={styles.lightbox} onClick={() => setLightboxIndex(null)}>
-              <button 
-                className={styles.closeBtn} 
-                onClick={(e) => { e.stopPropagation(); setLightboxIndex(null); }}
-                aria-label="Close lightbox"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              </button>
-              
-              <button 
-                className={styles.prevBtn} 
-                onClick={(e) => { 
-                  e.stopPropagation(); 
-                  setLightboxIndex((prev) => (prev !== null ? (prev - 1 + t.effects.items.length) % t.effects.items.length : null)); 
-                }}
-                aria-label="Previous image"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-              </button>
-
-              <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
-                <div className={styles.lightboxImageWrapper}>
-                  <Image 
-                    src={t.effects.items[lightboxIndex].image} 
-                    alt={t.effects.items[lightboxIndex].title}
-                    fill
-                    sizes="90vw"
-                    style={{ objectFit: 'contain' }}
-                  />
-                </div>
-                <div className={styles.lightboxCaption}>
-                  <h3 className={styles.lightboxTitle}>{t.effects.items[lightboxIndex].title}</h3>
-                  <p className={styles.lightboxDesc}>{t.effects.items[lightboxIndex].desc}</p>
-                </div>
-              </div>
-
-              <button 
-                className={styles.nextBtn} 
-                onClick={(e) => { 
-                  e.stopPropagation(); 
-                  setLightboxIndex((prev) => (prev !== null ? (prev + 1) % t.effects.items.length : null)); 
-                }}
-                aria-label="Next image"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
-            </div>
-          )}
-        </section>
 
         {/* 4. Quality Section */}
         <section className={styles.qualitySection}>

@@ -34,6 +34,7 @@ export default function SitemapPage() {
         title: language === 'id' ? 'Teknologi' : language === 'jp' ? 'テクノロジー' : language === 'zh' ? '技术' : 'Technology',
         links: [
           { label: language === 'id' ? 'Ringkasan Teknologi' : language === 'jp' ? '技術概要' : language === 'zh' ? '技术概述' : 'Technology Overview', href: '/technology' },
+          { label: language === 'id' ? 'Efek Coating' : language === 'jp' ? 'コーティング効果' : language === 'zh' ? '涂层效果' : 'Coating Effects', href: '/coating' },
           { label: language === 'id' ? 'UV Coating' : language === 'jp' ? 'UVコーティング' : language === 'zh' ? 'UV涂装' : 'UV Coating', href: '/technology/uv-coating' },
           { label: language === 'id' ? 'Vacuum Metallizing' : language === 'jp' ? '真空蒸着' : language === 'zh' ? '真空电镀' : 'Vacuum Metallizing', href: '/technology/vacuum-metallizing' },
           { label: language === 'id' ? 'Sertifikasi Kualitas' : language === 'jp' ? '品質認証' : language === 'zh' ? '质量认证' : 'Quality Certification', href: '/quality-certification' },
