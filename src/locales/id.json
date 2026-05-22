@@ -127,7 +127,11 @@
       { "title": "GG Series", "desc": "Finishing logam premium dari seri khas GG", "image": "", "category": "vacuum-metallizing" },
       { "title": "MM Series", "desc": "Finishing logam satin dan matte eksklusif dari seri MM", "image": "", "category": "vacuum-metallizing" },
       
-      { "title": "GG Dewdrop", "desc": "Lapisan tekstur butiran air 3D dan kondensasi embun yang realistis", "image": "/images/effects/gg_dewdrop.png", "category": "combo" }
+      { "title": "MG Spider Web Series", "desc": "Pola jaring laba-laba yang rumit dipadukan dengan kilau logam premium", "image": "", "category": "combo" },
+      { "title": "MG & GG Dewdrop", "desc": "Efek kombinasi khas yang menampilkan metalisasi premium dengan tekstur tetesan embun glossy", "image": "", "category": "combo" },
+      { "title": "GG Dewdrop", "desc": "Lapisan tekstur butiran air 3D dan kondensasi embun yang realistis", "image": "", "category": "combo" },
+      { "title": "GM Metallic Spider", "desc": "Pola hibrida unik seperti jaring laba-laba metalik untuk kemasan premium", "image": "", "category": "combo" },
+      { "title": "GG Colorant Dewdrop", "desc": "Efek butiran embun 3D berwarna cerah di atas latar belakang gloss tinggi", "image": "", "category": "combo" }
     ]
   },
   "industry": {

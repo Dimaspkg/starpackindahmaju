@@ -127,7 +127,11 @@
       { "title": "GG 特色系列 (GG Series)", "desc": "GG特色系列的高级金属拉丝与光泽饰面", "image": "", "category": "vacuum-metallizing" },
       { "title": "MM 专属系列 (MM Series)", "desc": "MM系列的专享哑光、半哑光金属化涂装饰面", "image": "", "category": "vacuum-metallizing" },
       
-      { "title": "冷露凝珠 (GG Dewdrop)", "desc": "在金属烤漆表面附着逼真的3D立体水滴与冷凝水雾质感", "image": "/images/effects/gg_dewdrop.png", "category": "combo" }
+      { "title": "MG 蛛网系列 (MG Spider Web Series)", "desc": "精致的蜘蛛网图案与高级金属光泽相结合", "image": "", "category": "combo" },
+      { "title": "MG & GG 凝露 (MG & GG Dewdrop)", "desc": "结合高级真空电镀与亮面立体水滴的特色工艺", "image": "", "category": "combo" },
+      { "title": "GG 凝露 (GG Dewdrop)", "desc": "在金属烤漆表面附着逼真的3D立体水滴与冷凝水雾质感", "image": "", "category": "combo" },
+      { "title": "GM 金属蛛网 (GM Metallic Spider)", "desc": "专为高端包装打造的独特混合金属网状纹理", "image": "", "category": "combo" },
+      { "title": "GG 彩色凝露 (GG Colorant Dewdrop)", "desc": "高亮背景上色彩鲜艳的3D立体彩色水滴效果", "image": "", "category": "combo" }
     ]
   },
   "industry": {
