@@ -84,7 +84,7 @@ export default function AutomotivePage() {
           
           <div className={styles.imageWrapper}>
             <Image
-              src="/images/tech/tech1.png"
+              src="/images/Automotive/Automotive.png"
               alt="Automotive Coating"
               fill
               priority
