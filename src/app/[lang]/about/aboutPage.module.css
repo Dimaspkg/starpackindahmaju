@@ -447,6 +447,26 @@
   border-color: var(--primary);
 }
 
+.valueIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: rgba(224, 30, 56, 0.1);
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover .valueIcon {
+  background-color: var(--primary);
+}
+
+.valueCard:hover .valueIcon svg {
+  stroke: #ffffff !important;
+}
+
 .valueNumber {
   font-size: 3rem;
   font-weight: 800;

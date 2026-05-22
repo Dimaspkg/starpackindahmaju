@@ -180,13 +180,62 @@ export default function AboutPage() {
           <h2 className={`${styles.sectionTitle} reveal`}>{t.about.values.title}</h2>
 
           <div className={`${styles.valuesGrid} reveal delay1`}>
-            {t.about.values.items.map((item: any, i: number) => (
-              <div key={i} className={styles.valueCard}>
-                <span className={styles.valueNumber}>{String(i + 1).padStart(2, '0')}</span>
-                <h3 className={styles.valueTitle}>{item.title}</h3>
-                <p className={styles.valueText}>{item.text}</p>
-              </div>
-            ))}
+            {t.about.values.items.map((item: any, i: number) => {
+              const getValueIcon = (index: number) => {
+                switch (index) {
+                  case 0: // Quality First
+                    return (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ transition: 'stroke 0.3s ease' }}>
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <path d="M12 8v8"/>
+                        <path d="M8 12h8"/>
+                      </svg>
+                    );
+                  case 1: // Innovation
+                    return (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ transition: 'stroke 0.3s ease' }}>
+                        <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .6 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
+                        <path d="M9 18h6"/>
+                        <path d="M10 22h4"/>
+                      </svg>
+                    );
+                  case 2: // Reliability
+                    return (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ transition: 'stroke 0.3s ease' }}>
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                      </svg>
+                    );
+                  case 3: // Partnership
+                    return (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ transition: 'stroke 0.3s ease' }}>
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                      </svg>
+                    );
+                  case 4: // Sustainability
+                    return (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ transition: 'stroke 0.3s ease' }}>
+                        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.58 1 9.3a7 7 0 0 1-9 8.7z"/>
+                        <path d="M9 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                      </svg>
+                    );
+                  default:
+                    return null;
+                }
+              };
+              
+              return (
+                <div key={i} className={styles.valueCard}>
+                  <span className={styles.valueNumber}>{String(i + 1).padStart(2, '0')}</span>
+                  <div className={styles.valueIcon}>{getValueIcon(i)}</div>
+                  <h3 className={styles.valueTitle}>{item.title}</h3>
+                  <p className={styles.valueText}>{item.text}</p>
+                </div>
+              );
+            })}
           </div>
         </section>
 
