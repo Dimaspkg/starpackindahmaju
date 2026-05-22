@@ -368,13 +368,13 @@
   text-decoration: none;
   transition: all 0.2s ease;
   padding: 0.55rem 0.75rem;
-  border-radius: 6px;
+  border-radius: 0;
   border: 1px solid transparent;
 }
 
 .megaMenuItem:hover {
-  background-color: var(--nav-hover-bg);
-  border-color: var(--sidebar-border);
+  background-color: var(--primary);
+  border-color: transparent;
 }
 
 .megaMenuTitle {
@@ -385,7 +385,7 @@
 }
 
 .megaMenuItem:hover .megaMenuTitle {
-  color: var(--primary);
+  color: #ffffff;
 }
 
 .megaMenuDesc {
@@ -393,6 +393,11 @@
   line-height: 1.4;
   color: var(--muted-text);
   margin: 0;
+  transition: color 0.2s ease;
+}
+
+.megaMenuItem:hover .megaMenuDesc {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .megaMenuBottom {
