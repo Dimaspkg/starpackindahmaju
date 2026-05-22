@@ -12,9 +12,17 @@ export default function CoatingPage() {
   const [mounted, setMounted] = useState(false);
   const [activeFilter, setActiveFilter] = useState('all');
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     setMounted(true);
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -77,6 +85,10 @@ export default function CoatingPage() {
           fill
           priority
           className={styles.heroBg}
+          style={{
+            transform: `translateY(${scrollY * 0.4}px) scale(1.15)`,
+            transformOrigin: 'center center',
+          }}
         />
         <div className={styles.heroOverlay}>
           <div>
