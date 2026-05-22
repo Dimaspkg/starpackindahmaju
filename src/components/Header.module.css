@@ -69,62 +69,33 @@
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--muted-text);
-  border-radius: 0;
+  border-radius: 6px;
   transition: color 0.2s ease;
   white-space: nowrap;
   text-decoration: none;
-  overflow: hidden;
 }
 
-/* Wipe background — slides from right to left */
-.navLink::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--primary);
-  transform: scaleX(0);
-  transform-origin: right center;
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 0;
-}
-
-/* Underline indicator */
+/* Underline — slides from right to left */
 .navLink::after {
   content: '';
   position: absolute;
   bottom: 2px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
+  left: 0;
+  right: 0;
   height: 2px;
   background-color: var(--primary);
-  transition: width 0.25s ease;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 2px;
-  z-index: 1;
-}
-
-/* Text above the wipe layer */
-.navLink > * {
-  position: relative;
-  z-index: 1;
-}
-
-.navLink span,
-.navLink svg {
-  position: relative;
-  z-index: 1;
 }
 
 .navLink:hover {
-  color: #ffffff;
-}
-
-.navLink:hover::before {
-  transform: scaleX(1);
+  color: var(--foreground);
 }
 
 .navLink:hover::after {
-  width: 0;
+  transform: scaleX(1);
 }
 
 .navLink.active {
@@ -132,7 +103,8 @@
 }
 
 .navLink.active::after {
-  width: 60%;
+  transform: scaleX(1);
+  transform-origin: left center;
 }
 
 /* CTA Button */
@@ -154,10 +126,6 @@
 .ctaBtn:hover {
   background-color: var(--primary-hover);
   transform: translateY(-1px);
-}
-
-.ctaBtn::before {
-  display: none !important;
 }
 
 .ctaBtn::after {
