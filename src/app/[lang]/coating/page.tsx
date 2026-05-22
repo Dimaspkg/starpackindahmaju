@@ -31,6 +31,18 @@ export default function CoatingPage() {
     }
   }, [mounted, t]);
 
+  // Lock scroll when lightbox is active
+  useEffect(() => {
+    if (lightboxIndex !== null) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [lightboxIndex]);
+
   if (!mounted || !t.effects) return null;
 
   // Map effects items to categories for filtering
@@ -146,58 +158,59 @@ export default function CoatingPage() {
         {/* Lightbox Modal */}
         {lightboxIndex !== null && (
           <div className={styles.lightbox} onClick={() => setLightboxIndex(null)}>
-            <button
-              className={styles.closeBtn}
-              onClick={(e) => { e.stopPropagation(); setLightboxIndex(null); }}
-              aria-label="Close lightbox"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            </button>
-
-            <button
-              className={styles.prevBtn}
-              onClick={(e) => {
-                e.stopPropagation();
-                setLightboxIndex((prev) => (prev !== null ? (prev - 1 + t.effects.items.length) % t.effects.items.length : null));
-              }}
-              aria-label="Previous image"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <polyline points="15 18 9 12 15 6"></polyline>
-              </svg>
-            </button>
-
             <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
+              <button
+                className={styles.closeBtn}
+                onClick={(e) => { e.stopPropagation(); setLightboxIndex(null); }}
+                aria-label="Close lightbox"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+
               <div className={styles.lightboxImageWrapper}>
+                <button
+                  className={styles.prevBtn}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setLightboxIndex((prev) => (prev !== null ? (prev - 1 + t.effects.items.length) % t.effects.items.length : null));
+                  }}
+                  aria-label="Previous image"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+
                 <Image
                   src={t.effects.items[lightboxIndex].image}
                   alt={t.effects.items[lightboxIndex].title}
                   fill
-                  sizes="90vw"
+                  sizes="(max-width: 768px) 95vw, 80vw"
                   style={{ objectFit: 'contain' }}
                 />
+
+                <button
+                  className={styles.nextBtn}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setLightboxIndex((prev) => (prev !== null ? (prev + 1) % t.effects.items.length : null));
+                  }}
+                  aria-label="Next image"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
               </div>
+
               <div className={styles.lightboxCaption}>
                 <h3 className={styles.lightboxTitle}>{t.effects.items[lightboxIndex].title}</h3>
                 <p className={styles.lightboxDesc}>{t.effects.items[lightboxIndex].desc}</p>
               </div>
             </div>
-
-            <button
-              className={styles.nextBtn}
-              onClick={(e) => {
-                e.stopPropagation();
-                setLightboxIndex((prev) => (prev !== null ? (prev + 1) % t.effects.items.length : null));
-              }}
-              aria-label="Next image"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </button>
           </div>
         )}
 
