@@ -109,7 +109,13 @@
       { "title": "メタリックシルバー (Metallic Silver)", "desc": "深みと輝きのあるプレミアムシルバーコーティング", "image": "/images/Metallic_Silver/Metallic-Silver.png" },
       { "title": "ゴールドクローム (Gold Chrome)", "desc": "ハイエンド製品向けの豪華なゴールドメタリック仕上げ", "image": "/images/gold_chrome/Gold_Chrome.png" },
       { "title": "ホログラフィック (Holographic)", "desc": "光反応性のあるレインボーイリディセント効果", "image": "/images/effects/Holographic.png" },
-      { "title": "パール効果 (Pearl Effect)", "desc": "エレガンスを演出する、繊細で洗練されたパールコーティング", "image": "/images/Pearl_Effect/Pearl_Effect_v2.png" }
+      { "title": "パール効果 (Pearl Effect)", "desc": "エレガンスを演出する、繊細で洗練されたパールコーティング", "image": "/images/Pearl_Effect/Pearl_Effect_v2.png" },
+      { "title": "パールカメレオン (Pearl Chameleon)", "desc": "光の角度によって色が変化する、イリディセントカラーシフト仕上げ", "image": "/images/effects/pearl_chameleon.png" },
+      { "title": "レザークラック (Leather Crackle)", "desc": "アンティークレザーの質感を忠実に再現したクラックパターン", "image": "/images/effects/leather_crackle.png" },
+      { "title": "大理石調 (Marble Effect)", "desc": "美しく磨かれたリアルな石紋を表現した、高級大理石風仕上げ", "image": "/images/effects/marble_effect.png" },
+      { "title": "レインボークローム (GG Rainbow Chrome)", "desc": "鮮やかな虹色屈折をみせる、真空蒸着クロームメタリック仕上げ", "image": "/images/effects/gg_rainbow.png" },
+      { "title": "アイスクリスタル (GG Ice Crystal)", "desc": "高反射の金属表面に、霜が降りたような結晶結晶花パターンを表現", "image": "/images/effects/gg_ice_crystal.png" },
+      { "title": "結露露珠 (GG Dewdrop)", "desc": "メタリック塗装面に立体的な水滴と露結の凝縮感をリアルに加工", "image": "/images/effects/gg_dewdrop.png" }
     ]
   },
   "industry": {

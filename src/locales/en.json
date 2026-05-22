@@ -109,7 +109,13 @@
       { "title": "Metallic Silver", "desc": "Premium silver coating with depth and shimmer", "image": "/images/Metallic_Silver/Metallic-Silver.png" },
       { "title": "Gold Chrome", "desc": "Luxurious gold metallic finish for high-end products", "image": "/images/gold_chrome/Gold_Chrome.png" },
       { "title": "Holographic", "desc": "Rainbow iridescent effect with light-reactive finish", "image": "/images/effects/Holographic.png" },
-      { "title": "Pearl Effect", "desc": "Subtle, sophisticated pearl coating for elegance", "image": "/images/Pearl_Effect/Pearl_Effect_v2.png" }
+      { "title": "Pearl Effect", "desc": "Subtle, sophisticated pearl coating for elegance", "image": "/images/Pearl_Effect/Pearl_Effect_v2.png" },
+      { "title": "Pearl Chameleon", "desc": "Iridescent color-shifting finish that reacts to light angles", "image": "/images/effects/pearl_chameleon.png" },
+      { "title": "Leather Crackle", "desc": "Textured crackle pattern mimicking antique leather finishes", "image": "/images/effects/leather_crackle.png" },
+      { "title": "Marble Effect", "desc": "Sophisticated marble stone finish with realistic polished veins", "image": "/images/effects/marble_effect.png" },
+      { "title": "GG Rainbow Chrome", "desc": "Vacuum metallized chrome finish with vibrant rainbow refraction", "image": "/images/effects/gg_rainbow.png" },
+      { "title": "GG Ice Crystal", "desc": "Frosted crystalline ice patterns on highly reflective surface", "image": "/images/effects/gg_ice_crystal.png" },
+      { "title": "GG Dewdrop", "desc": "Realistic 3D water droplets and condensation texture layer", "image": "/images/effects/gg_dewdrop.png" }
     ]
   },
   "industry": {

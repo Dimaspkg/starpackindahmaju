@@ -109,7 +109,13 @@
       { "title": "金属银 (Metallic Silver)", "desc": "具有深度和闪光的优质银色涂层", "image": "/images/Metallic_Silver/Metallic-Silver.png" },
       { "title": "镀金 (Gold Chrome)", "desc": "为高端产品打造的豪华金属金饰面", "image": "/images/gold_chrome/Gold_Chrome.png" },
       { "title": "全息效果 (Holographic)", "desc": "具有光反应饰面的彩虹色效果", "image": "/images/effects/Holographic.png" },
-      { "title": "珍珠效果 (Pearl Effect)", "desc": "细腻、精致的珍珠涂层，尽显优雅", "image": "/images/Pearl_Effect/Pearl_Effect_v2.png" }
+      { "title": "珍珠效果 (Pearl Effect)", "desc": "细腻、精致的珍珠涂层，尽显优雅", "image": "/images/Pearl_Effect/Pearl_Effect_v2.png" },
+      { "title": "五彩珍珠 (Pearl Chameleon)", "desc": "随光线角度变化的变色珍珠饰面，展现迷人效果", "image": "/images/effects/pearl_chameleon.png" },
+      { "title": "皮革纹理 (Leather Crackle)", "desc": "模仿复古皮革效果的质感裂纹图案，美观独特", "image": "/images/effects/leather_crackle.png" },
+      { "title": "大理石纹 (Marble Effect)", "desc": "具有高逼真抛光大理石纹理的优雅石材效果", "image": "/images/effects/marble_effect.png" },
+      { "title": "七彩虹镀 (GG Rainbow Chrome)", "desc": "具有绚丽彩虹折射效果的真空电镀镜面装饰", "image": "/images/effects/gg_rainbow.png" },
+      { "title": "冰晶纹理 (GG Ice Crystal)", "desc": "在高反射金属表面呈现冰爽独特的结晶冰花效果", "image": "/images/effects/gg_ice_crystal.png" },
+      { "title": "冷露凝珠 (GG Dewdrop)", "desc": "在金属烤漆表面附着逼真的3D立体水滴与冷凝水雾质感", "image": "/images/effects/gg_dewdrop.png" }
     ]
   },
   "industry": {

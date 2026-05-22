@@ -76,6 +76,15 @@ export default function CoatingPage() {
 
   const L = {
     heroTag: language === 'id' ? 'Katalog Finishing' : language === 'jp' ? '仕上げカタログ' : language === 'zh' ? '表面处理目录' : 'Finishing Catalog',
+    catalogTitle: language === 'id' ? 'Unduh Katalog Lengkap Kami' : language === 'jp' ? 'カタログ全体のダウンロード' : language === 'zh' ? '下载我们的完整目录' : 'Download Our Full Catalog',
+    catalogDesc: language === 'id' 
+      ? 'Jelajahi seluruh koleksi 50+ efek coating UV dan metalisasi vakum premium kami.'
+      : language === 'jp' 
+        ? '50種類以上のプレミアムUVコーティングおよび真空蒸着エフェクトの全ラインナップをご覧ください。'
+        : language === 'zh' 
+          ? '探索我们完整的50多种优质UV涂装与真空电镀工艺效果。'
+          : 'Explore our complete range of 50+ premium UV coating and vacuum metallizing effects.',
+    catalogBtn: language === 'id' ? 'Unduh PDF Katalog (3.6 MB)' : language === 'jp' ? 'カタログPDFをダウンロード (3.6 MB)' : language === 'zh' ? '下载目录 PDF (3.6 MB)' : 'Download Catalog PDF (3.6 MB)',
     ctaTitle: language === 'id' ? 'Butuh Finishing Kustom untuk Produk Anda?' : language === 'jp' ? '製品用のカスタム仕上げが必要ですか？' : language === 'zh' ? '需要为您产品进行定制处理？' : 'Need a Custom Finish for Your Product?',
     ctaDesc: language === 'id' 
       ? 'Konsultasikan dengan tim ahli kami untuk merumuskan efek coating khusus yang sesuai dengan kebutuhan branding Anda.'
@@ -114,6 +123,26 @@ export default function CoatingPage() {
       </section>
 
       <div className="pageContainer" style={{ paddingTop: '3rem' }}>
+        {/* Catalog Download Banner */}
+        <div className={styles.catalogBanner}>
+          <div className={styles.catalogText}>
+            <h2 className={styles.catalogTitle}>{L.catalogTitle}</h2>
+            <p className={styles.catalogDesc}>{L.catalogDesc}</p>
+          </div>
+          <a 
+            href="/downloads/Catalog_Uv_Coating.pdf" 
+            download="Starpack_Catalog_Uv_Coating.pdf"
+            className={styles.downloadBtn}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ marginRight: '8px' }}>
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            {L.catalogBtn}
+          </a>
+        </div>
+
         {/* Interactive Filter Tabs */}
         <div className={styles.filters}>
           {Object.entries(filterLabels).map(([key, label]) => (

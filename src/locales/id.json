@@ -109,7 +109,13 @@
       { "title": "Metallic Silver", "desc": "Pelapisan perak premium dengan kedalaman dan kilauan", "image": "/images/Metallic_Silver/Metallic-Silver.png" },
       { "title": "Gold Chrome", "desc": "Finishing logam emas mewah untuk produk kelas atas", "image": "/images/gold_chrome/Gold_Chrome.png" },
       { "title": "Holographic", "desc": "Efek pelangi warna-warni dengan finishing reaktif cahaya", "image": "/images/effects/Holographic.png" },
-      { "title": "Pearl Effect", "desc": "Pelapisan mutiara yang halus dan canggih untuk keanggunan", "image": "/images/Pearl_Effect/Pearl_Effect_v2.png" }
+      { "title": "Pearl Effect", "desc": "Pelapisan mutiara yang halus dan canggih untuk keanggunan", "image": "/images/Pearl_Effect/Pearl_Effect_v2.png" },
+      { "title": "Pearl Chameleon", "desc": "Finishing warna-warni yang berubah warna tergantung pada sudut cahaya", "image": "/images/effects/pearl_chameleon.png" },
+      { "title": "Leather Crackle", "desc": "Pola retakan bertekstur yang meniru finishing kulit antik", "image": "/images/effects/leather_crackle.png" },
+      { "title": "Marble Effect", "desc": "Finishing batu marmer canggih dengan urat poles yang realistis", "image": "/images/effects/marble_effect.png" },
+      { "title": "GG Rainbow Chrome", "desc": "Finishing krom metalik dengan refraksi warna pelangi yang memukau", "image": "/images/effects/gg_rainbow.png" },
+      { "title": "GG Ice Crystal", "desc": "Pola kristal es beku pada permukaan logam yang sangat reflektif", "image": "/images/effects/gg_ice_crystal.png" },
+      { "title": "GG Dewdrop", "desc": "Lapisan tekstur butiran air 3D dan kondensasi embun yang realistis", "image": "/images/effects/gg_dewdrop.png" }
     ]
   },
   "industry": {
