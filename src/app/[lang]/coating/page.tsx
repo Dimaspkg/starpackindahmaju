@@ -72,7 +72,7 @@ export default function CoatingPage() {
       {/* Hero Banner Section */}
       <section className={styles.hero}>
         <Image
-          src="/images/herro/coatingeffect.png"
+          src="/images/herro/coatingeffect2.png"
           alt="Coating Effects Background"
           fill
           priority
