@@ -68,7 +68,7 @@ export default function CoatingPage() {
   };
 
   return (
-    <div className="pageContainer">
+    <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
       {/* Hero Banner Section */}
       <section className={styles.hero}>
         <Image
@@ -87,7 +87,7 @@ export default function CoatingPage() {
         </div>
       </section>
 
-      <div className={styles.container}>
+      <div className="pageContainer" style={{ paddingTop: '3rem' }}>
         {/* Interactive Filter Tabs */}
         <div className={styles.filters}>
           {Object.entries(filterLabels).map(([key, label]) => (
