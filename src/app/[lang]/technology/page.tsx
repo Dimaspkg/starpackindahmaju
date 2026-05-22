@@ -56,11 +56,20 @@ export default function TechnologyPage() {
         ? '联系我们的技术团队'
         : 'Contact Our Technical Team';
 
+  const heroTag = language === 'id' 
+    ? 'Teknologi & Fasilitas' 
+    : language === 'jp' 
+      ? '技術と設備' 
+      : language === 'zh' 
+        ? '技术与设备' 
+        : 'Technology & Facilities';
+
   return (
     <div className="pageContainer">
       <div className={styles.container}>
         {/* Header Section */}
         <header className={styles.header}>
+          <span className={styles.heroTag}>{heroTag}</span>
           <h1 className={styles.title}>{t.tech.title}</h1>
           <p className={styles.description}>{t.tech.description}</p>
         </header>
