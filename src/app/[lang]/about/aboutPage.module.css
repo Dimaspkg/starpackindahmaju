@@ -32,7 +32,10 @@
 
 @media (max-width: 768px) {
   .heroBanner { height: 280px; }
-  .heroOverlay { padding: 2rem 1.5rem; }
+  .heroOverlay {
+    padding: 0 1.5rem;
+    align-items: flex-start;
+  }
 }
 
 
