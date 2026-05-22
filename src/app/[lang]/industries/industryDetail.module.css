@@ -32,15 +32,15 @@
 }
 
 .heroTag {
-  font-size: 0.85rem;
-  font-weight: 800;
-  color: var(--primary);
-  letter-spacing: 2px;
-  margin-bottom: 1.5rem;
   display: inline-block;
-  padding: 0.4rem 1rem;
-  border: 1px solid var(--primary);
-  border-radius: 4px;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 0.35rem 1rem;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
 }
 
 .title {
