@@ -25,7 +25,7 @@ export default function AboutPage() {
 
   /* ---------- Localised Strings ---------- */
   const L = {
-    heroTag: language === 'id' ? 'Profil Perusahaan' : language === 'jp' ? '会社概要' : language === 'zh' ? '公司简介' : 'Company Profile',
+    heroTag: language === 'id' ? 'Tentang Perusahaan' : language === 'jp' ? '会社概要' : language === 'zh' ? '关于公司' : 'About the Company',
     storyLabel: language === 'id' ? 'Sejarah Kami' : language === 'jp' ? '私たちの歩み' : language === 'zh' ? '我们的故事' : 'Our Story',
     missionLabel: language === 'id' ? 'Misi Kami' : language === 'jp' ? '私たちの使命' : language === 'zh' ? '我们的使命' : 'Our Mission',
     milestoneLabel: language === 'id' ? 'Tonggak Sejarah' : language === 'jp' ? 'マイルストーン' : language === 'zh' ? '里程碑' : 'Milestones',
