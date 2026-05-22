@@ -362,26 +362,42 @@
 }
 
 .megaMenuItem {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
   text-decoration: none;
-  transition: all 0.2s ease;
   padding: 0.55rem 0.75rem;
   border-radius: 0;
   border: 1px solid transparent;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
 }
 
-.megaMenuItem:hover {
+/* Sliding red background — wipes left to right */
+.megaMenuItem::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background-color: var(--primary);
-  border-color: transparent;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+}
+
+.megaMenuItem:hover::before {
+  transform: scaleX(1);
 }
 
 .megaMenuTitle {
+  position: relative;
+  z-index: 1;
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--foreground);
   margin: 0;
+  transition: color 0.2s ease;
 }
 
 .megaMenuItem:hover .megaMenuTitle {
@@ -389,6 +405,8 @@
 }
 
 .megaMenuDesc {
+  position: relative;
+  z-index: 1;
   font-size: 0.72rem;
   line-height: 1.4;
   color: var(--muted-text);
