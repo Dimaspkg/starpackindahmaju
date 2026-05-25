@@ -88,19 +88,13 @@ export default function FootwearPage() {
             </div>
           </div>
           
-          <div className={styles.imageWrapper} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '4rem', backgroundColor: '#111' }}>
+          <div className={styles.imageWrapper}>
             <Image
-              src="/images/industry/footwear.svg"
-              alt="Nike Logo Footwear Industry"
-              width={500}
-              height={178}
+              src="/images/footwear/footwear.png"
+              alt="Footwear Industry PT Starpack Indah Maju"
+              fill
               priority
-              style={{
-                maxWidth: '75%',
-                height: 'auto',
-                objectFit: 'contain',
-                filter: 'brightness(0) invert(1)',
-              }}
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
         </section>

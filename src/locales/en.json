@@ -144,7 +144,7 @@
       { "title": "Accessories", "desc": "High-precision decorative metal plating for various accessory components and product visual elements", "image": "/images/industry/accessories.png" },
       { "title": "Home & Lifestyle", "desc": "Decorative and functional home product coating", "image": "/images/Home_&_Lifestyle/Home_&_Lifestyle.png" },
       { "title": "Automotive", "desc": "Interior and exterior component coating solutions", "image": "/images/Automotive/Automotive.png" },
-      { "title": "Footwear", "desc": "Premium vacuum metallizing and protective coatings for designer footwear components and athletic branding elements", "image": "/images/industry/footwear.svg" },
+      { "title": "Footwear", "desc": "Premium vacuum metallizing and protective coatings for designer footwear components and athletic branding elements", "image": "/images/footwear/footwear.png" },
       { "title": "Many More", "desc": "Custom coating services for various other industrial specifications and requirements", "image": "/images/Many_More/many_more.png" }
     ]
   },

@@ -144,7 +144,7 @@
       { "title": "配饰", "desc": "为各种配饰部件和产品视觉元素提供高精度的装饰性金属电镀与涂层", "image": "/images/industry/accessories.png" },
       { "title": "家居与生活方式", "desc": "装饰性和功能性家居产品涂层", "image": "/images/Home_&_Lifestyle/Home_&_Lifestyle.png" },
       { "title": "汽车工业", "desc": "内饰和外饰组件涂层解决方案", "image": "/images/Automotive/Automotive.png" },
-      { "title": "鞋类", "desc": "为设计师鞋类部件和运动品牌元素提供优质真空镀膜与防护涂层", "image": "/images/industry/footwear.svg" },
+      { "title": "鞋类", "desc": "为设计师鞋类部件和运动品牌元素提供优质真空镀膜与防护涂层", "image": "/images/footwear/footwear.png" },
       { "title": "更多其他", "desc": "满足各种其他工业规格和需求的定制涂层服务", "image": "/images/Many_More/many_more.png" }
     ]
   },
