@@ -127,11 +127,11 @@
       { "title": "GG Series", "desc": "Finishing logam premium dari seri khas GG", "image": "/images/coating/Vacuum_Metallizing/GG Series.png", "category": "vacuum-metallizing" },
       { "title": "MM Series", "desc": "Finishing logam satin dan matte eksklusif dari seri MM", "image": "/images/coating/Vacuum_Metallizing/MM Series.png", "category": "vacuum-metallizing" },
       
-      { "title": "MG Spider Web Series", "desc": "Pola jaring laba-laba yang rumit dipadukan dengan kilau logam premium", "image": "/images/coating/combo/MG Spider Web Series.png", "category": "combo" },
-      { "title": "MG & GG Dewdrop", "desc": "Efek kombinasi khas yang menampilkan metalisasi premium dengan tekstur tetesan embun glossy", "image": "/images/coating/combo/MG & GG Dewdrop.png", "category": "combo" },
-      { "title": "GG Dewdrop", "desc": "Lapisan tekstur butiran air 3D dan kondensasi embun yang realistis", "image": "/images/coating/combo/GG Dewdrop.png", "category": "combo" },
-      { "title": "GM Metallic Spider", "desc": "Pola hibrida unik seperti jaring laba-laba metalik untuk kemasan premium", "image": "/images/coating/combo/GM Metallic Spider.png", "category": "combo" },
-      { "title": "GG Colorant Dewdrop", "desc": "Efek butiran embun 3D berwarna cerah di atas latar belakang gloss tinggi", "image": "/images/coating/combo/GG Colorant Dewdrop.png", "category": "combo" }
+      { "title": "MG Spider Web Series", "desc": "Pola jaring laba-laba yang rumit dipadukan dengan kilau logam premium", "image": "/images/coating/Combo/MG Spider Web Series.png", "category": "combo" },
+      { "title": "MG & GG Dewdrop", "desc": "Efek kombinasi khas yang menampilkan metalisasi premium dengan tekstur tetesan embun glossy", "image": "/images/coating/Combo/MG & GG Dewdrop.png", "category": "combo" },
+      { "title": "GG Dewdrop", "desc": "Lapisan tekstur butiran air 3D dan kondensasi embun yang realistis", "image": "/images/coating/Combo/GG Dewdrop.png", "category": "combo" },
+      { "title": "GM Metallic Spider", "desc": "Pola hibrida unik seperti jaring laba-laba metalik untuk kemasan premium", "image": "/images/coating/Combo/GM Metallic Spider.png", "category": "combo" },
+      { "title": "GG Colorant Dewdrop", "desc": "Efek butiran embun 3D berwarna cerah di atas latar belakang gloss tinggi", "image": "/images/coating/Combo/GG Colorant Dewdrop.png", "category": "combo" }
     ]
   },
   "industry": {

@@ -127,11 +127,11 @@
       { "title": "GG シリーズ (GG Series)", "desc": "GGシリーズの特色であるプレミアムメタリックコーティング", "image": "/images/coating/Vacuum_Metallizing/GG Series.png", "category": "vacuum-metallizing" },
       { "title": "MM シリーズ (MM Series)", "desc": "MMシリーズ特有の高級サテン・つや消し金属蒸着仕上げ", "image": "/images/coating/Vacuum_Metallizing/MM Series.png", "category": "vacuum-metallizing" },
       
-      { "title": "MG スパイダーウェブシリーズ (MG Spider Web Series)", "desc": "繊細なクモの巣模様とプレミアムな金属光沢の融合", "image": "/images/coating/combo/MG Spider Web Series.png", "category": "combo" },
-      { "title": "MG & GG デュードロップ (MG & GG Dewdrop)", "desc": "プレミアム金属蒸着と光沢感のある水滴質感を組み合わせた特徴的な効果", "image": "/images/coating/combo/MG & GG Dewdrop.png", "category": "combo" },
-      { "title": "GG デュードロップ (GG Dewdrop)", "desc": "塗装面に立体的な水滴と露結の凝縮感をリアルに加工", "image": "/images/coating/combo/GG Dewdrop.png", "category": "combo" },
-      { "title": "GM メタリックスパイダー (GM Metallic Spider)", "desc": "高級パッケージ向けに開発されたユニークなハイブリッド金属クモの巣模様", "image": "/images/coating/combo/GM Metallic Spider.png", "category": "combo" },
-      { "title": "GG カララントデュードロップ (GG Colorant Dewdrop)", "desc": "高光沢バックグラウンド上の嫌いな色付き3D水滴効果", "image": "/images/coating/combo/GG Colorant Dewdrop.png", "category": "combo" }
+      { "title": "MG スパイダーウェブシリーズ (MG Spider Web Series)", "desc": "繊細なクモの巣模様とプレミアムな金属光沢の融合", "image": "/images/coating/Combo/MG Spider Web Series.png", "category": "combo" },
+      { "title": "MG & GG デュードロップ (MG & GG Dewdrop)", "desc": "プレミアム金属蒸着と光沢感のある水滴質感を組み合わせた特徴的な効果", "image": "/images/coating/Combo/MG & GG Dewdrop.png", "category": "combo" },
+      { "title": "GG デュードロップ (GG Dewdrop)", "desc": "塗装面に立体的な水滴と露結の凝縮感をリアルに加工", "image": "/images/coating/Combo/GG Dewdrop.png", "category": "combo" },
+      { "title": "GM メタリックスパイダー (GM Metallic Spider)", "desc": "高級パッケージ向けに開発されたユニークなハイブリッド金属クモの巣模様", "image": "/images/coating/Combo/GM Metallic Spider.png", "category": "combo" },
+      { "title": "GG カララントデュードロップ (GG Colorant Dewdrop)", "desc": "高光沢バックグラウンド上の嫌いな色付き3D水滴効果", "image": "/images/coating/Combo/GG Colorant Dewdrop.png", "category": "combo" }
     ]
   },
   "industry": {

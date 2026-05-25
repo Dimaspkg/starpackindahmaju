@@ -127,11 +127,11 @@
       { "title": "GG Series", "desc": "Premium metallic finishes from the signature GG series", "image": "/images/coating/Vacuum_Metallizing/GG Series.png", "category": "vacuum-metallizing" },
       { "title": "MM Series", "desc": "Exclusive satin and matte metallic finishes from the MM series", "image": "/images/coating/Vacuum_Metallizing/MM Series.png", "category": "vacuum-metallizing" },
       
-      { "title": "MG Spider Web Series", "desc": "Intricate spider web patterns combined with premium metallic sheen", "image": "/images/coating/combo/MG Spider Web Series.png", "category": "combo" },
-      { "title": "MG & GG Dewdrop", "desc": "Signature combo effect featuring premium metallization with glossy dewdrop texture", "image": "/images/coating/combo/MG & GG Dewdrop.png", "category": "combo" },
-      { "title": "GG Dewdrop", "desc": "Realistic 3D water droplets and condensation texture layer", "image": "/images/coating/combo/GG Dewdrop.png", "category": "combo" },
-      { "title": "GM Metallic Spider", "desc": "Unique hybrid metallic web-like pattern for premium packaging", "image": "/images/coating/combo/GM Metallic Spider.png", "category": "combo" },
-      { "title": "GG Colorant Dewdrop", "desc": "Vibrant colored 3D dewdrop effect on high-gloss background", "image": "/images/coating/combo/GG Colorant Dewdrop.png", "category": "combo" }
+      { "title": "MG Spider Web Series", "desc": "Intricate spider web patterns combined with premium metallic sheen", "image": "/images/coating/Combo/MG Spider Web Series.png", "category": "combo" },
+      { "title": "MG & GG Dewdrop", "desc": "Signature combo effect featuring premium metallization with glossy dewdrop texture", "image": "/images/coating/Combo/MG & GG Dewdrop.png", "category": "combo" },
+      { "title": "GG Dewdrop", "desc": "Realistic 3D water droplets and condensation texture layer", "image": "/images/coating/Combo/GG Dewdrop.png", "category": "combo" },
+      { "title": "GM Metallic Spider", "desc": "Unique hybrid metallic web-like pattern for premium packaging", "image": "/images/coating/Combo/GM Metallic Spider.png", "category": "combo" },
+      { "title": "GG Colorant Dewdrop", "desc": "Vibrant colored 3D dewdrop effect on high-gloss background", "image": "/images/coating/Combo/GG Colorant Dewdrop.png", "category": "combo" }
     ]
   },
   "industry": {
