@@ -1,9 +1,15 @@
 import { Metadata } from 'next';
+import { generateDynamicMetadata } from '@/utils/metadata';
 
-export const metadata: Metadata = {
-  title: 'Jasa Vacuum Metallizing (Chrome Plastik)',
-  description: 'Deposisi logam dalam ruang hampa untuk menciptakan efek cermin emas, perak, dan krom pada komponen plastik dengan daya tahan tinggi.',
+type Props = {
+  children: React.ReactNode;
+  params: Promise<{ lang: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
+  return generateDynamicMetadata(lang, 'vacuum-metallizing');
+}
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;

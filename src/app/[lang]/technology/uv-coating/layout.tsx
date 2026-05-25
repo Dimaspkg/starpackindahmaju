@@ -1,9 +1,15 @@
 import { Metadata } from 'next';
+import { generateDynamicMetadata } from '@/utils/metadata';
 
-export const metadata: Metadata = {
-  title: 'Jasa UV Coating Plastik Premium',
-  description: 'Layanan UV coating khusus untuk kemasan premium, memberikan hasil akhir high gloss atau matte mewah yang tahan gores dan tahan bahan kimia.',
+type Props = {
+  children: React.ReactNode;
+  params: Promise<{ lang: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
+  return generateDynamicMetadata(lang, 'uv-coating');
+}
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;

@@ -1,10 +1,15 @@
 import { Metadata } from 'next';
+import { generateDynamicMetadata } from '@/utils/metadata';
 
-export const metadata: Metadata = {
-  title: 'Teknologi UV Coating & Vacuum Metallizing | PT STARPACK INDAH MAJU',
-  description: 'Jasa teknologi pelapisan plastik tercanggih di Indonesia: Automatic Spray Painting, UV Curing, dan Vacuum Metallizing untuk hasil premium.',
-  keywords: 'Teknologi UV Coating, Mesin Vacuum Metallizing, Automatic Spray Painting, Pabrik Coating Modern',
+type Props = {
+  children: React.ReactNode;
+  params: Promise<{ lang: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
+  return generateDynamicMetadata(lang, 'technology');
+}
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
