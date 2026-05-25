@@ -150,10 +150,10 @@ export default function CoatingPage() {
                     <span>{item.title}</span>
                   </div>
                 )}
-              </div>
-              <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>{item.title}</h3>
-                <p className={styles.cardDesc}>{item.desc}</p>
+                <div className={styles.cardContent}>
+                  <h3 className={styles.cardTitle}>{item.title}</h3>
+                  <p className={styles.cardDesc}>{item.desc}</p>
+                </div>
               </div>
             </div>
           ))}
