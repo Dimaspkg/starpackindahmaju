@@ -100,7 +100,7 @@ export default function AboutPage() {
       {/* ===== HERO BANNER ===== */}
       <div className={styles.heroBanner}>
         <Image
-          src="/images/about/ptstarpackindahmaju.png"
+          src="/images/About/ptstarpackindahmaju.png"
           alt="PT Starpack Indah Maju Factory"
           fill
           className={styles.heroBg}
