@@ -83,7 +83,7 @@
   width: 100%;
   aspect-ratio: 1.6 / 1;
   position: relative;
-  background-color: #111;
+  background-color: var(--background);
 }
 
 .galleryImage {

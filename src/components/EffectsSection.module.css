@@ -121,7 +121,7 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1.6 / 1;
-  background-color: #111;
+  background-color: var(--background);
   overflow: hidden;
 }
 
