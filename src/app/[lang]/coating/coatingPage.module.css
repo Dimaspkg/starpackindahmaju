@@ -185,7 +185,8 @@
 }
 
 .effectImage {
-  object-fit: cover;
+  object-fit: contain;
+  padding: 0.75rem;
   transition: transform 0.5s ease;
 }
 
@@ -250,6 +251,10 @@
   width: 100%;
   height: 50vh;
   background-color: var(--background);
+}
+
+.lightboxImageWrapper img {
+  padding: 1.5rem;
 }
 
 .lightboxCaption {
