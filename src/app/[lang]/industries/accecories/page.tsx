@@ -13,7 +13,7 @@ export default function AccecoriesPage() {
 
   useEffect(() => {
     setMounted(true);
-    document.title = 'Accessories Coating | PT STARPACK INDAH MAJU';
+    document.title = 'Accessories Coating | PT STARPACK INDAHMAJU';
   }, []);
 
   if (!mounted) return null;

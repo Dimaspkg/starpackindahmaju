@@ -13,7 +13,7 @@ export default function FootwearPage() {
 
   useEffect(() => {
     setMounted(true);
-    document.title = 'Footwear | PT STARPACK INDAH MAJU';
+    document.title = 'Footwear | PT STARPACK INDAHMAJU';
   }, []);
 
   if (!mounted) return null;
@@ -91,7 +91,7 @@ export default function FootwearPage() {
           <div className={styles.imageWrapper}>
             <Image
               src="/images/footwear/footwear.png"
-              alt="Footwear Industry PT Starpack Indah Maju"
+              alt="Footwear Industry PT Starpack Indahmaju"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"

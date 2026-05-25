@@ -17,7 +17,7 @@ export default function IndustriesPage() {
 
   useEffect(() => {
     if (mounted && t.industry) {
-      document.title = `${t.industry.title} | PT STARPACK INDAH MAJU`;
+      document.title = `${t.industry.title} | PT STARPACK INDAHMAJU`;
     }
   }, [mounted, t]);
 

@@ -25,7 +25,7 @@ export default function AboutPage() {
 
   useEffect(() => {
     if (mounted && t.about) {
-      document.title = `${t.about.title} | PT STARPACK INDAH MAJU`;
+      document.title = `${t.about.title} | PT STARPACK INDAHMAJU`;
     }
   }, [mounted, t]);
 
@@ -101,7 +101,7 @@ export default function AboutPage() {
       <div className={styles.heroBanner}>
         <Image
           src="/images/About/ptstarpackindahmaju.png"
-          alt="PT Starpack Indah Maju Factory"
+          alt="PT Starpack Indahmaju Factory"
           fill
           className={styles.heroBg}
           priority

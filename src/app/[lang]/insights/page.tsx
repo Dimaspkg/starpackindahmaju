@@ -17,7 +17,7 @@ export default function InsightsPage() {
 
   useEffect(() => {
     if (mounted && t.insights) {
-      document.title = `${t.insights.title} | PT STARPACK INDAH MAJU`;
+      document.title = `${t.insights.title} | PT STARPACK INDAHMAJU`;
     }
   }, [mounted, t]);
 

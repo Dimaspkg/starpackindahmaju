@@ -17,7 +17,7 @@ export default function VacuumMetallizingPage() {
 
   useEffect(() => {
     if (mounted && t.tech) {
-      document.title = `${t.tech.categories[1].title} | PT STARPACK INDAH MAJU`;
+      document.title = `${t.tech.categories[1].title} | PT STARPACK INDAHMAJU`;
     }
   }, [mounted, t]);
 

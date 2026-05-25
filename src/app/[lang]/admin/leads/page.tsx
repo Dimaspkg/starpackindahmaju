@@ -56,7 +56,7 @@ export default function LeadsPage() {
     // 1. Brand Logo Accent and Header
     doc.setFontSize(22);
     doc.setTextColor(230, 0, 0); // PT Starpack Red
-    doc.text('PT STARPACK INDAH MAJU', 14, 15);
+    doc.text('PT STARPACK INDAHMAJU', 14, 15);
 
     doc.setFontSize(12);
     doc.setTextColor(80, 80, 80);
@@ -132,7 +132,7 @@ export default function LeadsPage() {
         doc.setTextColor(150, 150, 150);
         // Print page number at bottom right of landscape A4
         doc.text(`Page ${pageCount}`, 283 - 10, 200);
-        doc.text('© 2026 PT Starpack Indah Maju. All rights reserved. | Private & Confidential', 14, 200);
+        doc.text('© 2026 PT Starpack Indahmaju. All rights reserved. | Private & Confidential', 14, 200);
       }
     });
 

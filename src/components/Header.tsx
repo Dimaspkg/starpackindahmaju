@@ -238,7 +238,7 @@ export default function Header() {
       >
         <div className={styles.inner}>
           {/* Logo */}
-          <LocalizedLink href="/" className={styles.logo} aria-label="PT STARPACK INDAH MAJU - Home">
+          <LocalizedLink href="/" className={styles.logo} aria-label="PT STARPACK INDAHMAJU - Home">
             <Image
               src="/logo_starpack.png"
               alt="Starpack"

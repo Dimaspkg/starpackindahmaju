@@ -17,7 +17,7 @@ export default function UvCoatingPage() {
 
   useEffect(() => {
     if (mounted && t.tech) {
-      document.title = `${t.tech.categories[0].title} | PT STARPACK INDAH MAJU`;
+      document.title = `${t.tech.categories[0].title} | PT STARPACK INDAHMAJU`;
     }
   }, [mounted, t]);
 

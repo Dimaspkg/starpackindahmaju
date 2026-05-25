@@ -13,7 +13,7 @@ export default function ElectronicsPage() {
 
   useEffect(() => {
     setMounted(true);
-    document.title = 'Electronics | PT STARPACK INDAH MAJU';
+    document.title = 'Electronics | PT STARPACK INDAHMAJU';
   }, []);
 
   if (!mounted) return null;

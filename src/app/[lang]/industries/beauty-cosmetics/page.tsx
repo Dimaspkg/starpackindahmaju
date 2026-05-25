@@ -13,7 +13,7 @@ export default function BeautyCosmeticsPage() {
 
   useEffect(() => {
     setMounted(true);
-    document.title = 'Beauty & Cosmetics | PT STARPACK INDAH MAJU';
+    document.title = 'Beauty & Cosmetics | PT STARPACK INDAHMAJU';
   }, []);
 
   if (!mounted) return null;

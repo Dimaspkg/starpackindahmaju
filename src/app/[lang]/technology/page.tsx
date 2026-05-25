@@ -17,7 +17,7 @@ export default function TechnologyPage() {
 
   useEffect(() => {
     if (mounted && t.tech) {
-      document.title = `${t.tech.title} | PT STARPACK INDAH MAJU`;
+      document.title = `${t.tech.title} | PT STARPACK INDAHMAJU`;
     }
   }, [mounted, t]);
 

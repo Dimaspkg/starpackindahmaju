@@ -22,9 +22,9 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params;
   return generateDynamicMetadata(lang, 'home', {
-    authors: [{ name: "PT STARPACK INDAH MAJU" }],
-    creator: "PT STARPACK INDAH MAJU",
-    publisher: "PT STARPACK INDAH MAJU",
+    authors: [{ name: "PT STARPACK INDAHMAJU" }],
+    creator: "PT STARPACK INDAHMAJU",
+    publisher: "PT STARPACK INDAHMAJU",
     verification: {
       google: "ISI_DENGAN_KODE_VERIFIKASI_GOOGLE_ANDA_DISINI",
     },
@@ -58,7 +58,7 @@ export default async function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "PT STARPACK INDAH MAJU",
+    "name": "PT STARPACK INDAHMAJU",
     "image": `${siteUrl}/images/starpackindahmaju.png`,
     "description": isEn 
       ? "ISO 9001:2015 certified UV Coating & Vacuum Metallizing Plastic Company in Indonesia."

@@ -115,7 +115,7 @@ export default function Sidebar() {
           <div className={styles.logoContainer}>
             <Image 
               src="/logo_starpack.png" 
-              alt="PT STARPACK INDAH MAJU" 
+              alt="PT STARPACK INDAHMAJU" 
               width={200} 
               height={40} 
               className={`${styles.logo} logoLight`}
@@ -123,7 +123,7 @@ export default function Sidebar() {
             />
             <Image 
               src="/logo_starpack_white.png" 
-              alt="PT STARPACK INDAH MAJU" 
+              alt="PT STARPACK INDAHMAJU" 
               width={200} 
               height={40} 
               className={`${styles.logo} logoDark`}
@@ -158,7 +158,7 @@ export default function Sidebar() {
             ))}
           </div>
           <div className={styles.copyright}>
-            © 2026 PT Starpack Indah Maju
+            © 2026 PT Starpack Indahmaju
           </div>
         </div>
       </aside>

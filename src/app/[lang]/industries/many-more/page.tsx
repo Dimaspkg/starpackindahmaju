@@ -13,7 +13,7 @@ export default function ManyMorePage() {
 
   useEffect(() => {
     setMounted(true);
-    document.title = 'Diverse Industries | PT STARPACK INDAH MAJU';
+    document.title = 'Diverse Industries | PT STARPACK INDAHMAJU';
   }, []);
 
   if (!mounted) return null;

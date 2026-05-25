@@ -26,7 +26,7 @@ export default function CoatingPage() {
 
   useEffect(() => {
     if (mounted && t.effects) {
-      document.title = `${t.effects.title} | PT STARPACK INDAH MAJU`;
+      document.title = `${t.effects.title} | PT STARPACK INDAHMAJU`;
     }
   }, [mounted, t]);
 
