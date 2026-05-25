@@ -24,6 +24,20 @@ export default function ContactPage() {
   useEffect(() => {
     setMounted(true);
     document.title = 'Contact Us | PT STARPACK INDAH MAJU';
+
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const interest = params.get('interest');
+      const message = params.get('message');
+
+      if (interest || message) {
+        setFormData(prev => ({
+          ...prev,
+          interest: interest || prev.interest,
+          message: message || prev.message
+        }));
+      }
+    }
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
