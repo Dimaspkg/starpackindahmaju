@@ -11,7 +11,7 @@ const metadataTranslations: Record<string, Record<string, PageMetadata>> = {
     home: {
       title: "UV Coating & Vacuum Metallizing Plastic Company Indonesia | PT STARPACK INDAHMAJU",
       description: "Get the best UV plastic coating & vacuum metallizing plastic coating services in Indonesia. PT Starpack Indahmaju offers premium, consistent, and ISO 9001:2015 certified plastic coating services.",
-      keywords: ["Plastic Coating Services", "Vacuum Metallizing Plastic Coating Indonesia", "UV Plastic Coating", "PT Starpack Indahmaju"]
+      keywords: ["uv coating indonesia", "vacuum metallizing indonesia", "plastic coating services indonesia", "jasa uv coating indonesia", "jasa vacuum metallizing indonesia", "PT Starpack Indahmaju", "plastic coating company"]
     },
     about: {
       title: "About Us - UV Coating & Vacuum Metallizing Company | PT STARPACK INDAHMAJU",
@@ -31,17 +31,17 @@ const metadataTranslations: Record<string, Record<string, PageMetadata>> = {
     technology: {
       title: "Advanced Plastic Coating Technology & Machinery | PT STARPACK INDAHMAJU",
       description: "Explore our state-of-the-art facilities equipped with advanced UV coating systems and industrial vacuum metallizing chambers in Indonesia.",
-      keywords: ["Coating Technology", "Vacuum Chamber Jakarta", "UV Curing Machine", "Plastic Coating Machinery"]
+      keywords: ["plastic coating technology indonesia", "uv coating machine indonesia", "vacuum metallizing technology", "industrial plastic coating", "PT Starpack Indahmaju"]
     },
     "uv-coating": {
       title: "Advanced UV Coating Technology for Plastics | PT STARPACK INDAHMAJU",
       description: "Innovative UV plastic coating services offering high-gloss, matte, soft touch, and specialized tactile finishes with instant UV curing.",
-      keywords: ["UV Plastic Coating", "Soft Touch Coating", "Coating Finish Effect", "Matte UV Coating"]
+      keywords: ["uv coating indonesia", "uv plastic coating indonesia", "jasa uv coating indonesia", "uv coating services jakarta", "soft touch coating", "matte uv coating"]
     },
     "vacuum-metallizing": {
       title: "Premium Vacuum Metallizing Plastic Plating | PT STARPACK INDAHMAJU",
       description: "Industrial vacuum metallizing services in Indonesia. Get high-reflective chrome, gold, and colorful metallic finishes on plastic products.",
-      keywords: ["Vacuum Metallizing", "Plastic Chrome Plating", "Reflective Metal Coating", "Vacuum Chamber Service"]
+      keywords: ["vacuum metallizing indonesia", "vacuum metallizing jakarta", "jasa vacuum metallizing indonesia", "plastic chrome plating indonesia", "reflective metal coating", "vacuum chamber plating"]
     },
     industries: {
       title: "Industries Served - Custom Plastic Coating Solutions | PT STARPACK INDAHMAJU",
@@ -108,7 +108,7 @@ const metadataTranslations: Record<string, Record<string, PageMetadata>> = {
     home: {
       title: "Perusahaan UV Coating & Vacuum Metallizing Plastik Indonesia | PT STARPACK INDAHMAJU",
       description: "Dapatkan jasa UV plastic coating & vacuum metallizing plastic coating terbaik di Indonesia. PT Starpack Indahmaju menawarkan coating plastic service premium, konsisten, dan bersertifikasi ISO 9001:2015.",
-      keywords: ["Jasa plastik Coating", "Vacuum Metallizing Plastic Coating Indonesia", "UV Plastic Coating", "PT Starpack Indahmaju"]
+      keywords: ["uv coating indonesia", "vacuum metallizing indonesia", "jasa uv coating indonesia", "jasa vacuum metallizing indonesia", "pabrik uv coating indonesia", "pabrik vacuum metallizing indonesia", "PT Starpack Indahmaju"]
     },
     about: {
       title: "Tentang Kami - Perusahaan UV Coating & Vacuum Metallizing | PT STARPACK INDAHMAJU",
@@ -128,17 +128,17 @@ const metadataTranslations: Record<string, Record<string, PageMetadata>> = {
     technology: {
       title: "Teknologi & Mesin Coating Plastik Canggih | PT STARPACK INDAHMAJU",
       description: "Jelajahi fasilitas modern kami yang dilengkapi dengan sistem UV coating canggih dan kamar vacuum metallizing industri terbaik di Indonesia.",
-      keywords: ["Teknologi Coating", "Kamar Vakum Jakarta", "Mesin UV Curing", "Mesin Coating Plastik"]
+      keywords: ["teknologi coating indonesia", "kamar vakum jakarta", "mesin uv curing indonesia", "mesin coating plastik", "PT Starpack Indahmaju"]
     },
     "uv-coating": {
       title: "Teknologi UV Coating Plastik Terdepan | PT STARPACK INDAHMAJU",
       description: "Jasa UV plastic coating inovatif menawarkan hasil akhir high-gloss, matte, soft touch, dan efek taktil khusus dengan pengeringan UV instan.",
-      keywords: ["UV Plastic Coating", "Coating Soft Touch", "Efek Finishing Coating", "Matte UV Coating"]
+      keywords: ["uv coating indonesia", "jasa uv coating indonesia", "jasa uv coating jakarta", "uv plastic coating indonesia", "pabrik uv coating jakarta", "coating plastik premium"]
     },
     "vacuum-metallizing": {
       title: "Jasa Vacuum Metallizing & Chrome Plastik Premium | PT STARPACK INDAHMAJU",
       description: "Layanan vacuum metallizing industri di Indonesia. Dapatkan finishing chrome reflektif tinggi, emas, dan logam berwarna pada produk plastik.",
-      keywords: ["Vacuum Metallizing", "Chrome Plastik Jakarta", "Lapisan Logam Reflektif", "Jasa Kamar Vakum"]
+      keywords: ["vacuum metallizing indonesia", "jasa vacuum metallizing indonesia", "jasa vacuum metallizing jakarta", "jasa chrome plastik indonesia", "chrome plastik jakarta", "pabrik vacuum metallizing"]
     },
     industries: {
       title: "Bidang Industri - Solusi Kustom Coating Plastik | PT STARPACK INDAHMAJU",

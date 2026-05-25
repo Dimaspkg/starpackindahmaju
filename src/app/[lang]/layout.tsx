@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     creator: "PT STARPACK INDAHMAJU",
     publisher: "PT STARPACK INDAHMAJU",
     verification: {
-      google: "ISI_DENGAN_KODE_VERIFIKASI_GOOGLE_ANDA_DISINI",
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "ISI_DENGAN_KODE_VERIFIKASI_GOOGLE_ANDA_DISINI",
     },
     robots: {
       index: true,
