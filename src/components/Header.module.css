@@ -372,14 +372,15 @@
 .megaMenuItem {
   position: relative;
   display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.75rem;
   text-decoration: none;
-  padding: 0.55rem 0.75rem;
-  border-radius: 0;
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
   border: 1px solid transparent;
   overflow: hidden;
-  transition: border-color 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 /* Sliding red background — wipes left to right */
@@ -396,6 +397,33 @@
 
 .megaMenuItem:hover::before {
   transform: scaleX(1);
+}
+
+.megaMenuIcon {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--primary);
+  transition: color 0.25s ease;
+  margin-top: 0.1rem;
+}
+
+.megaMenuItem:hover .megaMenuIcon {
+  color: #ffffff;
+}
+
+.megaMenuText {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 1;
 }
 
 .megaMenuTitle {
@@ -479,6 +507,9 @@
 }
 
 .mobileSubNavLink {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
   font-weight: 600;
@@ -492,3 +523,14 @@
   color: var(--foreground);
   background-color: var(--nav-hover-bg);
 }
+
+.mobileSubNavIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  color: var(--primary);
+}
+

@@ -74,6 +74,11 @@ export default function Header() {
         { 
           label: language === 'jp' ? 'UVコーティング' : language === 'zh' ? 'UV涂装' : 'UV Coating', 
           href: '/technology/uv-coating',
+          icon: (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z"/>
+            </svg>
+          ),
           description: language === 'id' 
             ? 'Pelapisan semprot presisi tinggi dengan pengerasan sinar UV instan untuk hasil akhir tahan gores.'
             : language === 'jp'
@@ -85,6 +90,13 @@ export default function Header() {
         { 
           label: language === 'jp' ? '真空蒸着' : language === 'zh' ? '真空电镀' : 'Vacuum Metallizing', 
           href: '/technology/vacuum-metallizing',
+          icon: (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+              <polyline points="2 17 12 22 22 17"/>
+              <polyline points="2 12 12 17 22 12"/>
+            </svg>
+          ),
           description: language === 'id' 
             ? 'Deposisi logam dalam ruang hampa udara untuk menciptakan efek cermin krom, emas, dan perak yang mewah.'
             : language === 'jp'
@@ -108,41 +120,97 @@ export default function Header() {
         { 
           label: language === 'id' ? 'Kecantikan & Kosmetik' : language === 'jp' ? '美容・化粧品' : language === 'zh' ? '美容与化妆品' : 'Beauty & Cosmetics',
           href: '/industries/beauty-cosmetics',
+          icon: (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+              <path d="m5 3 1 2.5L8.5 6 6 7 5 9.5 4 7 1.5 6 4 5.5z"/>
+              <path d="m19 17 1 2.5 2.5.5-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1z"/>
+            </svg>
+          ),
           description: language === 'id' ? 'Pelapisan mewah untuk kemasan kosmetik premium.' : language === 'jp' ? 'プレミアム化粧品パッケージ用の豪華なコーティング。' : language === 'zh' ? '用于高级化妆品包装的豪华涂层。' : 'Luxurious coatings for premium cosmetic packaging.'
         },
         { 
           label: language === 'id' ? 'Elektronik Konsumen' : language === 'jp' ? '家電製品' : language === 'zh' ? '消费电子' : 'Consumer Electronics',
           href: '/industries/electronics',
+          icon: (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="4" y="4" width="16" height="16" rx="2" />
+              <rect x="9" y="9" width="6" height="6" rx="1" />
+              <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3" />
+            </svg>
+          ),
           description: language === 'id' ? 'Perlindungan anti gores elegan untuk perangkat elektronik.' : language === 'jp' ? '電子デバイス向けのエレガントな傷防止保護。' : language === 'zh' ? '电子设备的优雅防刮保护。' : 'Elegant anti-scratch protection for electronic devices.'
         },
         { 
           label: language === 'id' ? 'Fashion' : language === 'jp' ? 'ファッション' : language === 'zh' ? '时尚' : 'Fashion',
           href: '/industries/fashion',
+          icon: (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M2 17h20a1 1 0 0 0 .707-1.707l-9-9A1 1 0 0 0 13 6h-2a1 1 0 0 0-.707.293l-9 9A1 1 0 0 0 2 17Z" />
+              <path d="M12 6a3 3 0 1 1 3-3" />
+            </svg>
+          ),
           description: language === 'id' ? 'Sentuhan estetika mengkilap dan bebas kusam.' : language === 'jp' ? '光沢のある色褪せない美的なタッチ。' : language === 'zh' ? '光泽且不褪色的美学触感。' : 'Glossy, tarnish-free aesthetic touches.'
         },
         { 
           label: language === 'id' ? 'Aksesoris' : language === 'jp' ? 'アクセサリー' : language === 'zh' ? '配饰' : 'Accessories',
           href: '/industries/accecories',
+          icon: (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M6 3h12l4 6-10 13L2 9Z"/>
+              <path d="M11 3 8 9l4 13 4-13-3-6"/>
+              <path d="M2 9h20"/>
+            </svg>
+          ),
           description: language === 'id' ? 'Pelapisan logam dekoratif presisi tinggi untuk komponen aksesoris.' : language === 'jp' ? '様々なアクセサリー部品向けの精密な装飾用金属めっき。' : language === 'zh' ? '用于各种配饰部件的高精度装饰性金属电镀。' : 'High-precision decorative metal plating for accessory components.'
         },
         { 
           label: language === 'id' ? 'Peralatan Rumah' : language === 'jp' ? 'ホーム＆ライフスタイル' : language === 'zh' ? '家居与生活方式' : 'Home & Lifestyle',
           href: '/industries/home-lifestyle',
+          icon: (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          ),
           description: language === 'id' ? 'Lapisan tahan suhu dan goresan untuk perlengkapan rumah.' : language === 'jp' ? '家庭用品向けの耐熱・耐傷コーティング。' : language === 'zh' ? '家用电器的耐温防刮涂层。' : 'Temperature and scratch-resistant coatings for household items.'
         },
         { 
           label: language === 'id' ? 'Otomotif' : language === 'jp' ? '自動車' : language === 'zh' ? '汽车' : 'Automotive',
           href: '/industries/automotive',
+          icon: (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/>
+              <circle cx="7" cy="17" r="2"/>
+              <path d="M9 17h6"/>
+              <circle cx="17" cy="17" r="2"/>
+            </svg>
+          ),
           description: language === 'id' ? 'Pelapisan komponen plastik dengan standar keamanan tinggi.' : language === 'jp' ? '高い安全基準を満たすプラスチック部品 coating。' : language === 'zh' ? '符合高安全标准的塑料部件涂层。' : 'Plastic component coatings meeting strict safety standards.'
         },
         { 
           label: language === 'id' ? 'Alas Kaki & Sepatu' : language === 'jp' ? 'フットウェア' : language === 'zh' ? '鞋类' : 'Footwear',
           href: '/industries/foot-wear',
+          icon: (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M3 18h18a1 1 0 0 0 1-1v-3a4 4 0 0 0-4-4h-4.5L11 4H6a2 2 0 0 0-2 2v10a2 2 0 0 0 1 1.73Z" />
+              <path d="M8 10h5" />
+              <path d="M8 13h4" />
+            </svg>
+          ),
           description: language === 'id' ? 'Lapisan premium tahan lentur untuk sepatu dan komponen olahraga.' : language === 'jp' ? 'シューズやスポーツ部品向けのプレミアム屈曲耐性コーティング。' : language === 'zh' ? '适用于鞋类与运动部件的优质屈曲涂层。' : 'Premium flex-resistant coatings for footwear and sports components.'
         },
         { 
           label: language === 'id' ? 'Dan Banyak Lagi' : language === 'jp' ? 'その他多数' : language === 'zh' ? '以及更多' : 'Many More',
           href: '/industries/many-more',
+          icon: (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect width="7" height="7" x="3" y="3" rx="1"/>
+              <rect width="7" height="7" x="14" y="3" rx="1"/>
+              <rect width="7" height="7" x="14" y="14" rx="1"/>
+              <rect width="7" height="7" x="3" y="14" rx="1"/>
+            </svg>
+          ),
           description: language === 'id' ? 'Solusi pelapisan kustom untuk berbagai sektor lainnya.' : language === 'jp' ? '他のさまざまな分野向けのカスタムコーティングソリューション。' : language === 'zh' ? '适用于各种其他领域的定制涂层解决方案。' : 'Custom coating solutions for a variety of other sectors.'
         }
       ]
@@ -211,8 +279,15 @@ export default function Header() {
                         <div className={styles.megaMenuGrid}>
                           {item.subItems.map((sub, i) => (
                             <LocalizedLink key={i} href={sub.href} className={styles.megaMenuItem}>
-                              <h3 className={styles.megaMenuTitle}>{sub.label}</h3>
-                              <p className={styles.megaMenuDesc}>{sub.description}</p>
+                              {sub.icon && (
+                                <div className={styles.megaMenuIcon}>
+                                  {sub.icon}
+                                </div>
+                              )}
+                              <div className={styles.megaMenuText}>
+                                <h3 className={styles.megaMenuTitle}>{sub.label}</h3>
+                                <p className={styles.megaMenuDesc}>{sub.description}</p>
+                              </div>
                             </LocalizedLink>
                           ))}
                         </div>
@@ -296,7 +371,12 @@ export default function Header() {
                       className={styles.mobileSubNavLink}
                       onClick={() => setMobileOpen(false)}
                     >
-                      {sub.label}
+                      {sub.icon && (
+                        <span className={styles.mobileSubNavIcon}>
+                          {sub.icon}
+                        </span>
+                      )}
+                      <span>{sub.label}</span>
                     </LocalizedLink>
                   ))}
                 </div>
