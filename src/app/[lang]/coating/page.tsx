@@ -94,26 +94,6 @@ export default function CoatingPage() {
       </section>
 
       <div className="pageContainer" style={{ paddingTop: '3rem' }}>
-        {/* Catalog Download Banner */}
-        <div className={styles.catalogBanner}>
-          <div className={styles.catalogText}>
-            <h2 className={styles.catalogTitle}>{L.catalogTitle}</h2>
-            <p className={styles.catalogDesc}>{L.catalogDesc}</p>
-          </div>
-          <a 
-            href="/downloads/Catalog_Uv_Coating.pdf" 
-            download="Starpack_Catalog_Uv_Coating.pdf"
-            className={styles.downloadBtn}
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ marginRight: '8px' }}>
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-              <polyline points="7 10 12 15 17 10"></polyline>
-              <line x1="12" y1="15" x2="12" y2="3"></line>
-            </svg>
-            {L.catalogBtn}
-          </a>
-        </div>
-
         {/* Interactive Filter Tabs */}
         <div className={styles.filters}>
           {Object.entries(filterLabels).map(([key, label]) => (

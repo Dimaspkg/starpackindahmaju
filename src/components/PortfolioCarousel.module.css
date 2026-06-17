@@ -1,5 +1,5 @@
 .section {
-  padding: 2.25rem 0;
+  padding: 3.5rem 0;
   background-color: var(--card-bg);
   border-top: 1px solid var(--card-border);
   border-bottom: 1px solid var(--card-border);
@@ -90,9 +90,21 @@
   transition: all 0.4s ease;
 }
 
+.marqueeLink {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+}
+
+.marqueeLink:hover .logoImage {
+  filter: grayscale(0.7) contrast(0.8) opacity(0.6);
+}
+
 .logoItem:hover .logoImage {
-  filter: grayscale(0) contrast(1) opacity(0.9);
-  transform: scale(1.08);
+  filter: grayscale(0) contrast(1) opacity(0.95) !important;
+  transform: scale(1.1);
 }
 
 @keyframes scroll {
@@ -103,4 +115,63 @@
   100% {
     transform: translateX(-33.3333%);
   }
+}
+
+/* Header & Title */
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding: 0 1.5rem;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--foreground);
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, var(--foreground) 30%, #a0a0a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+[data-theme="light"] .title {
+  background: linear-gradient(135deg, var(--foreground) 30%, #555555 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Footer & Action Button */
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  padding: 0 1.5rem;
+}
+
+.viewAllBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--card-border);
+  padding: 0.75rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--foreground);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: transparent;
+}
+
+.viewAllBtn:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.2);
 }

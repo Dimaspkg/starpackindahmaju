@@ -1,0 +1,177 @@
+/* ============================================
+   PORTFOLIO PAGE — CSS STYLES
+   ============================================ */
+
+.body {
+  padding: 5rem 6rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .body { padding: 3rem 2rem; }
+}
+
+@media (max-width: 640px) {
+  .body { padding: 2.5rem 1rem; }
+}
+
+/* ---- Header / Intro ---- */
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subtitle {
+  display: inline-block;
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--foreground);
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  background: linear-gradient(135deg, var(--foreground) 30%, #a0a0a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="light"] .title {
+  background: linear-gradient(135deg, var(--foreground) 30%, #555555 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.25rem;
+    letter-spacing: -1px;
+  }
+}
+
+.desc {
+  color: var(--muted-text);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* ---- Grid Layout ---- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 1rem;
+  }
+}
+
+/* ---- Logo Card ---- */
+.logoCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.logoCard::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.3) 0%, transparent 50%, rgba(255, 255, 255, 0.05) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+[data-theme="light"] .logoCard::after {
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.2) 0%, transparent 50%, rgba(0, 0, 0, 0.05) 100%);
+}
+
+.logoCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: 0 10px 40px rgba(255, 0, 0, 0.08);
+}
+
+.logoCard:hover::after {
+  opacity: 1;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoImg {
+  object-fit: contain;
+  filter: grayscale(1) contrast(0.7) opacity(0.45);
+  transition: all 0.4s ease;
+}
+
+.logoCard:hover .logoImg {
+  filter: grayscale(0) contrast(1) opacity(0.95);
+  transform: scale(1.06);
+}
+
+/* ---- Loading / Skeleton ---- */
+.skeleton {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--card-border) 25%, #2a2a2a 50%, var(--card-border) 75%);
+  background-size: 200% 100%;
+  animation: loadingShimmer 1.5s infinite;
+  border-radius: 8px;
+  opacity: 0.6;
+}
+
+[data-theme="light"] .skeleton {
+  background: linear-gradient(90deg, #eeeeee 25%, #e2e2e2 50%, #eeeeee 75%);
+  background-size: 200% 100%;
+}
+
+@keyframes loadingShimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

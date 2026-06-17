@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
+import LocalizedLink from '@/components/LocalizedLink';
 import styles from './PortfolioCarousel.module.css';
 
 // Fallback list of logos in case the API is loading or fails
@@ -32,12 +33,20 @@ export default function PortfolioCarousel() {
   }, []);
 
   const title = language === 'id'
-    ? 'Dipercaya oleh Merek Kosmetik & Kemasan Terkemuka'
+    ? 'Dipercaya oleh Berbagai Brand Terkemuka'
     : language === 'jp'
-      ? '主要な化粧品・包装ブランドからの信頼'
+      ? '主要ブランドからの信頼'
       : language === 'zh'
-        ? '深受知名化妆品及包装品牌信赖'
-        : 'Trusted by Leading Cosmetic & Packaging Brands';
+        ? '深受知名品牌信赖'
+        : 'Trusted by Leading Brands';
+
+  const btnText = language === 'id'
+    ? 'Lihat Semua Mitra →'
+    : language === 'jp'
+      ? 'すべてのパートナーを表示 →'
+      : language === 'zh'
+        ? '查看所有合作伙伴 →'
+        : 'View All Partners →';
 
   // Duplicate the list 3 times to ensure a seamless infinite scrolling marquee
   const duplicatedLogos = [...logos, ...logos, ...logos];
@@ -45,23 +54,38 @@ export default function PortfolioCarousel() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.marquee}>
-          <div className={styles.track}>
-            {duplicatedLogos.map((logo, idx) => (
-              <div key={`${logo}-${idx}`} className={styles.logoItem}>
-                <div className={styles.imageContainer}>
-                  <Image
-                    src={`/images/portofolio/${logo}`}
-                    alt={`Portfolio Brand Logo ${idx + 1}`}
-                    fill
-                    sizes="120px"
-                    className={styles.logoImage}
-                    loading="lazy"
-                  />
+        {/* Title Header */}
+        <div className={styles.header}>
+          <h2 className={styles.title}>{title}</h2>
+        </div>
+
+        {/* Marquee Track Link */}
+        <LocalizedLink href="/portfolio" className={styles.marqueeLink} aria-label={title}>
+          <div className={styles.marquee}>
+            <div className={styles.track}>
+              {duplicatedLogos.map((logo, idx) => (
+                <div key={`${logo}-${idx}`} className={styles.logoItem}>
+                  <div className={styles.imageContainer}>
+                    <Image
+                      src={`/images/portofolio/${logo}`}
+                      alt={`Portfolio Brand Logo ${idx + 1}`}
+                      fill
+                      sizes="120px"
+                      className={styles.logoImage}
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+        </LocalizedLink>
+
+        {/* View All Button */}
+        <div className={styles.footer}>
+          <LocalizedLink href="/portfolio" className={styles.viewAllBtn}>
+            {btnText}
+          </LocalizedLink>
         </div>
       </div>
     </section>

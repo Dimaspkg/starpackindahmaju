@@ -102,6 +102,11 @@ const metadataTranslations: Record<string, Record<string, PageMetadata>> = {
       title: "Sitemap - PT STARPACK INDAHMAJU",
       description: "Find and navigate through all pages, industries, technologies, and services of PT Starpack Indahmaju.",
       keywords: ["Starpack Sitemap", "Website Map", "Starpack Pages Navigation"]
+    },
+    portfolio: {
+      title: "Our Client Portfolio - Brand Partners | PT STARPACK INDAHMAJU",
+      description: "Explore the brands and manufacturers that trust PT Starpack Indahmaju for premium UV coating and vacuum metallizing plastic finishing in Indonesia.",
+      keywords: ["Starpack portfolio", "client brand logos", "cosmetic brand partners", "plastic finishing portfolio", "vacuum metallizing portfolio", "uv coating client list"]
     }
   },
   id: {
@@ -199,6 +204,11 @@ const metadataTranslations: Record<string, Record<string, PageMetadata>> = {
       title: "Peta Situs (Sitemap) - PT STARPACK INDAHMAJU",
       description: "Temukan dan jelajahi seluruh halaman, industri, teknologi, dan layanan dari PT Starpack Indahmaju.",
       keywords: ["Sitemap Starpack", "Peta Navigasi Situs", "Navigasi Halaman Starpack"]
+    },
+    portfolio: {
+      title: "Portofolio Klien Kami - Mitra Brand | PT STARPACK INDAHMAJU",
+      description: "Jelajahi merek dan produsen terkemuka yang mempercayakan PT Starpack Indahmaju untuk layanan finishing plastik UV coating dan vacuum metallizing premium di Indonesia.",
+      keywords: ["portofolio Starpack", "logo brand klien", "mitra merek kosmetik", "portofolio finishing plastik", "mitra vacuum metallizing", "daftar klien uv coating"]
     }
   },
   zh: {
@@ -296,6 +306,11 @@ const metadataTranslations: Record<string, Record<string, PageMetadata>> = {
       title: "网站地图 (Sitemap) - PT STARPACK INDAHMAJU",
       description: "快速查找并浏览 PT Starpack Indahmaju 的所有网页、所服务行业、核心技术及表面加工效果。",
       keywords: ["Starpack网站地图", "页面指南", "网站导航"]
+    },
+    portfolio: {
+      title: "客户案例与品牌合作伙伴 | PT STARPACK INDAHMAJU",
+      description: "了解信赖 PT Starpack Indahmaju 的品牌和制造商，我们在印尼提供优质的塑料UV喷涂与真空电镀加工服务。",
+      keywords: ["Starpack客户案例", "品牌标识", "化妆品品牌伙伴", "塑料表面涂装案例", "真空电镀案例", "UV喷涂客户列表"]
     }
   },
   jp: {
@@ -393,6 +408,11 @@ const metadataTranslations: Record<string, Record<string, PageMetadata>> = {
       title: "サイトマップ (Sitemap) - PT STARPACK INDAHMAJU",
       description: "PT Starpack Indahmaju のすべてのWebページ、提供業界、保有技術、および仕上がり効果を一覧から探せます。",
       keywords: ["Starpackサイトマップ", "ページ一覧案内", "サイトナビゲーション"]
+    },
+    portfolio: {
+      title: "実績・クライアント紹介 | PT STARPACK INDAHMAJU",
+      description: "インドネシアでプレミアムなUVコーティングと真空蒸着プラスチック加工を提供するPT Starpack Indahmajuを信頼するブランドとメーカーをご紹介します。",
+      keywords: ["Starpack実績", "クライアントブランドロゴ", "化粧品ブランドパートナー", "プラスチック加工ポートフォリオ", "真空蒸着実績", "UVコーティング顧客リスト"]
     }
   }
 };
