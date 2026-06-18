@@ -25,7 +25,7 @@ export default function QualitySection() {
         <div className={`${styles.leftCol} reveal fadeLeft`}>
           <div className={styles.imageWrapper}>
             <Image 
-              src="/images/ISO_Certification.png" 
+              src="/images/ISO_Certification_PT_Starpack_Indahmaju.png" 
               alt="ISO 9001:2015 Certification"
               width={500}
               height={600}

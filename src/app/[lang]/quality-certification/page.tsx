@@ -99,7 +99,7 @@ export default function QualityCertificationPage() {
           </div>
           <div className={styles.isoImageWrapper}>
             <Image 
-              src="/images/ISO_Certification.png" 
+              src="/images/ISO_Certification_PT_Starpack_Indahmaju.png" 
               alt="ISO 9001:2015 Certificate PT Starpack Indahmaju"
               width={500}
               height={700}
