@@ -8,7 +8,15 @@ const defaultLocale = 'id';
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // 1. Check Authentication for Admin routes
+  // 1. Redirect WWW to NON-WWW (canonical domain)
+  const host = request.headers.get('host');
+  if (host && host.startsWith('www.')) {
+    const nonWwwHost = host.replace(/^www\./, '');
+    const newUrl = new URL(pathname + request.nextUrl.search, `https://${nonWwwHost}`);
+    return NextResponse.redirect(newUrl, 301);
+  }
+
+  // 2. Check Authentication for Admin routes
   const isAdminRoute = locales.some(
     (locale) => pathname.startsWith(`/${locale}/admin`) || pathname === `/${locale}/admin`
   ) || pathname.startsWith('/admin') || pathname === '/admin';
