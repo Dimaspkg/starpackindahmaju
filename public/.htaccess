@@ -1,0 +1,22 @@
+# ==============================================================================
+# 1. REDIRECT WWW KE NON-WWW & PAKSA HTTPS (SEO & Keamanan)
+# ==============================================================================
+RewriteEngine On
+
+# Jika diakses menggunakan HTTP biasa ATAU menggunakan www.starpack.co.id
+# Alihkan semuanya ke https://starpack.co.id
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.starpack\.co\.id [NC]
+RewriteRule ^(.*)$ https://starpack.co.id/$1 [R=301,L]
+
+# ==============================================================================
+# 2. INTEGRASI NODE.JS (PASSENGER CPANEL/HPANEL)
+# ==============================================================================
+# Catatan: Jika server Hostinger Anda menggunakan Node.js App Setup (Passenger),
+# biasanya Hostinger akan otomatis menulis aturan di bawah ini. 
+# Jika sudah ada, biarkan aturan bawaan Hostinger berada di bagian bawah file ini.
+
+# PassengerAppRoot "/home/uXXXXX/domains/starpack.co.id/public_html"
+# PassengerBaseURI "/"
+# PassengerAppType node
+# PassengerStartupFile server.js
