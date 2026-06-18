@@ -207,7 +207,7 @@
   background-color: var(--sidebar-bg);
   border-bottom: 1px solid var(--sidebar-border);
   z-index: 999;
-  padding: calc(var(--header-height) + 1.5rem) 2rem 2rem;
+  padding: calc(var(--header-height) + 1.5rem) 0 2rem;
   flex-direction: column;
   gap: 0.25rem;
   overflow-y: auto;
@@ -225,14 +225,15 @@
 }
 
 .mobileNavLink {
-  padding: 0.9rem 1.2rem;
+  padding: 0.9rem 3rem;
   font-size: 1rem;
   font-weight: 600;
   color: var(--muted-text);
-  border-radius: 8px;
+  border-radius: 0;
   transition: all 0.2s ease;
   text-decoration: none;
-  border-left: 3px solid transparent;
+  border-left: 4px solid transparent;
+  display: block;
 }
 
 .mobileNavLink:hover {
@@ -249,14 +250,14 @@
 .mobileDivider {
   height: 1px;
   background-color: var(--card-border);
-  margin: 1rem 0;
+  margin: 1rem 3rem;
 }
 
 .mobileControls {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 0.5rem 1.2rem;
+  padding: 0.5rem 3rem;
 }
 
 /* Responsive */
@@ -284,7 +285,23 @@
   }
 
   .mobileMenu {
-    padding: calc(var(--header-height) + 1.5rem) 1.25rem 1.5rem;
+    padding: calc(var(--header-height) + 1.5rem) 0 1.5rem;
+  }
+
+  .mobileNavLink {
+    padding: 0.9rem 1.5rem;
+  }
+
+  .mobileSubMenu {
+    margin-left: 1.5rem;
+  }
+
+  .mobileDivider {
+    margin: 1rem 1.5rem;
+  }
+
+  .mobileControls {
+    padding: 0.5rem 1.5rem;
   }
 }
 
@@ -505,7 +522,7 @@
   flex-direction: column;
   padding-left: 1.2rem;
   border-left: 1px solid var(--card-border);
-  margin-left: 1.2rem;
+  margin-left: 3rem;
   margin-top: 0.25rem;
   margin-bottom: 0.5rem;
   gap: 0.2rem;
