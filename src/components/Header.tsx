@@ -43,7 +43,7 @@ export default function Header() {
     const handleScroll = () => {
       const currentY = window.scrollY;
       setScrolled(currentY > 20);
-      if (currentY > lastScrollY && currentY > 80) setHidden(true);
+      if (currentY > lastScrollY && currentY > 80 && !mobileOpen) setHidden(true);
       else setHidden(false);
       setLastScrollY(currentY);
 
@@ -51,7 +51,19 @@ export default function Header() {
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY, pathname]);
+  }, [lastScrollY, pathname, mobileOpen]);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileOpen]);
 
   // Close mobile menu on route change
   useEffect(() => {

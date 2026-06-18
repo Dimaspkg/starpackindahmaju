@@ -195,16 +195,18 @@
 .mobileMenu {
   display: none;
   position: fixed;
-  top: var(--header-height);
+  top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
+  height: 100vh;
+  height: 100dvh;
   background-color: var(--sidebar-bg);
   border-bottom: 1px solid var(--sidebar-border);
   z-index: 999;
-  padding: 1rem 2rem 2rem;
+  padding: calc(var(--header-height) + 1.5rem) 2rem 2rem;
   flex-direction: column;
   gap: 0.25rem;
-  max-height: calc(100vh - var(--header-height));
   overflow-y: auto;
   transform: translateY(-10px);
   opacity: 0;
