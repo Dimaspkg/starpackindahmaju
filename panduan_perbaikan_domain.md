@@ -50,35 +50,34 @@ Untuk memastikan semua trafik masuk secara seragam ke `https://starpack.co.id`, 
 3. Arahkan host/source `www` ke URL tujuan `https://starpack.co.id` dengan tipe **301 (Permanent)**.
 4. _Pastikan juga A Record untuk `www` di pengaturan DNS registrar Anda sudah mengarah ke IP Hostinger yang sama dengan domain utama._
 
-#### Opsi C: Membuat File `.htaccess` Khusus di Folder Subdomain `www` (Sangat Ampuh untuk Folder Terpisah)
+#### Opsi C: Menyesuaikan .htaccess Berdasarkan Struktur Folder Hostinger
 
-Jika Hostinger memperlakukan `www.starpack.co.id` sebagai folder subdomain terpisah (sehingga memunculkan halaman _Coming Soon_ milik folder `www` tersebut):
+Tempat menambahkannya tergantung pada struktur folder di Hostinger Anda:
 
-1. Buka **File Manager** Hostinger Anda.
-2. Cari folder dokumen root untuk subdomain `www` Anda. Biasanya terletak di:
-   - **`public_html/www/`**
-   - Atau di folder **`domains/www.starpack.co.id/public_html/`**
-3. Di dalam folder `www` tersebut, **hapus file `default.html`** bawaan Hostinger.
-4. Buat file baru bernama **`.htaccess`** di dalam folder `www` tersebut, lalu isi dengan kode berikut:
+##### Pilihan A: Jika Ada Folder Terpisah untuk Subdomain www (Sering terjadi di Hostinger)
+Jika ada folder khusus seperti `public_html/www/` atau `domains/www.starpack.co.id/public_html/`:
+
+1. Masuk ke dalam folder **`www`** tersebut menggunakan File Manager.
+2. Buat file baru bernama **`.htaccess`** (jika belum ada).
+3. Tuliskan kode tersebut di dalamnya:
    ```apache
    RewriteEngine On
    RewriteRule ^(.*)$ https://starpack.co.id/$1 [R=301,L]
    ```
-5. Simpan file tersebut. Semua trafik `www` sekarang akan langsung dialihkan secara instan ke domain utama tanpa memicu halaman _Coming Soon_.
+4. Simpan file tersebut.
 
-#### Opsi D: Mengedit File `.htaccess` Utama di Folder `public_html` (Jika TIDAK Ada Folder `www` Terpisah)
+##### Pilihan B: Jika TIDAK Ada Folder www (Hanya ada folder public_html utama)
+Jika domain utama dan www bersatu di folder `public_html`:
 
-Jika domain utama (`starpack.co.id`) dan `www.starpack.co.id` menggunakan satu folder root yang sama (`public_html`):
-1. Buka **File Manager** Hostinger Anda.
-2. Masuk ke folder **`public_html`** utama Anda.
-3. Edit file **`.htaccess`** yang sudah ada di sana.
-4. Tambahkan kode berikut di **baris paling atas** (sebelum kode integrasi Node.js/Passenger bawaan Hostinger):
+1. Buka folder **`public_html`** utama Anda.
+2. Edit file **`.htaccess`** yang sudah ada di sana.
+3. Tambahkan kode tersebut di baris paling atas (sebelum kode-kode lainnya), seperti ini:
    ```apache
    RewriteEngine On
    RewriteCond %{HTTP_HOST} ^www\.starpack\.co\.id [NC]
    RewriteRule ^(.*)$ https://starpack.co.id/$1 [R=301,L]
    ```
-5. Simpan file tersebut. Apache akan langsung membelokkan trafik `www` ke `non-www` sebelum memproses file lainnya.
+4. Simpan file tersebut.
 
 ---
 
