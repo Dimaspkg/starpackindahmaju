@@ -1,6 +1,21 @@
-# 🌐 PT STARPACK INDAHMAJU - Official Web Portal
+<div align="center">
+  <img src="public/logo_starpack.png" alt="PT STARPACK INDAHMAJU Logo" width="280" style="margin-bottom: 20px;" />
 
-Situs web resmi dan sistem manajemen portal **PT STARPACK INDAHMAJU** (Spesialis UV Coating & Vacuum Metallizing Plastik). Sistem ini mencakup landing page multi-bahasa yang interaktif, halaman portofolio dinamis, formulir kontak terintegrasi, serta **Dashboard Admin Premium** untuk pengelolaan prospek (leads), logo mitra, dokumen brosur, dan pengaturan SMTP email.
+  # PT STARPACK INDAHMAJU - Official Web Portal
+
+  Situs web resmi dan sistem manajemen portal **PT STARPACK INDAHMAJU** (Spesialis UV Coating & Vacuum Metallizing Plastik).
+
+  [![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+  [![React](https://img.shields.io/badge/React-19-20232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5-007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+  [![MySQL](https://img.shields.io/badge/MySQL-8-00758F.svg?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+  [![Node.js](https://img.shields.io/badge/Node.js-18+-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+  [![NextAuth](https://img.shields.io/badge/NextAuth-JWT-111111?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://next-auth.js.org/)
+  [![Nodemailer](https://img.shields.io/badge/Nodemailer-SMTP-0A85EA?style=for-the-badge&logo=mail.ru&logoColor=white)](https://nodemailer.com/)
+
+</div>
+
+Sistem ini mencakup landing page multi-bahasa yang interaktif, halaman portofolio dinamis, formulir kontak terintegrasi, serta **Dashboard Admin Premium** untuk pengelolaan prospek (leads), logo mitra, dokumen brosur, dan pengaturan SMTP email.
 
 ---
 
