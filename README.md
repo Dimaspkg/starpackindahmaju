@@ -15,7 +15,7 @@
 
 </div>
 
-Sistem ini mencakup landing page multi-bahasa yang interaktif, halaman portofolio dinamis, formulir kontak terintegrasi, serta **Dashboard Admin Premium** untuk pengelolaan prospek (leads), logo mitra, dokumen brosur, dan pengaturan SMTP email.
+Sistem ini mencakup landing page multi-bahasa yang interaktif, halaman portofolio dinamis, formulir kontak terintegrasi, serta **Dashboard Admin** untuk pengelolaan prospek (leads), logo mitra, dokumen brosur, dan pengaturan SMTP email.
 
 ---
 
