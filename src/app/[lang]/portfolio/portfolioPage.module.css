@@ -48,12 +48,14 @@
   margin-bottom: 1.25rem;
   background: linear-gradient(135deg, var(--foreground) 30%, #a0a0a0 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 [data-theme="light"] .title {
   background: linear-gradient(135deg, var(--foreground) 30%, #555555 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -110,6 +112,7 @@
   padding: 1px;
   background: linear-gradient(135deg, rgba(255, 0, 0, 0.3) 0%, transparent 50%, rgba(255, 255, 255, 0.05) 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
   pointer-events: none;

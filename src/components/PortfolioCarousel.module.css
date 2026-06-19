@@ -131,6 +131,7 @@
   letter-spacing: -0.5px;
   background: linear-gradient(135deg, var(--foreground) 30%, #a0a0a0 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
@@ -138,6 +139,7 @@
 [data-theme="light"] .title {
   background: linear-gradient(135deg, var(--foreground) 30%, #555555 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
