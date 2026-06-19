@@ -66,6 +66,20 @@ Jika Hostinger memperlakukan `www.starpack.co.id` sebagai folder subdomain terpi
    ```
 5. Simpan file tersebut. Semua trafik `www` sekarang akan langsung dialihkan secara instan ke domain utama tanpa memicu halaman _Coming Soon_.
 
+#### Opsi D: Mengedit File `.htaccess` Utama di Folder `public_html` (Jika TIDAK Ada Folder `www` Terpisah)
+
+Jika domain utama (`starpack.co.id`) dan `www.starpack.co.id` menggunakan satu folder root yang sama (`public_html`):
+1. Buka **File Manager** Hostinger Anda.
+2. Masuk ke folder **`public_html`** utama Anda.
+3. Edit file **`.htaccess`** yang sudah ada di sana.
+4. Tambahkan kode berikut di **baris paling atas** (sebelum kode integrasi Node.js/Passenger bawaan Hostinger):
+   ```apache
+   RewriteEngine On
+   RewriteCond %{HTTP_HOST} ^www\.starpack\.co\.id [NC]
+   RewriteRule ^(.*)$ https://starpack.co.id/$1 [R=301,L]
+   ```
+5. Simpan file tersebut. Apache akan langsung membelokkan trafik `www` ke `non-www` sebelum memproses file lainnya.
+
 ---
 
 ### Langkah 3: Instal Ulang SSL di hPanel Hostinger
