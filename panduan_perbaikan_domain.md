@@ -45,6 +45,20 @@ Untuk memastikan semua trafik masuk secara seragam ke `https://starpack.co.id`, 
 3. Arahkan host/source `www` ke URL tujuan `https://starpack.co.id` dengan tipe **301 (Permanent)**.
 4. *Pastikan juga A Record untuk `www` di pengaturan DNS registrar Anda sudah mengarah ke IP Hostinger yang sama dengan domain utama.*
 
+#### Opsi C: Membuat File `.htaccess` Khusus di Folder Subdomain `www` (Sangat Ampuh untuk Folder Terpisah)
+Jika Hostinger memperlakukan `www.starpack.co.id` sebagai folder subdomain terpisah (sehingga memunculkan halaman *Coming Soon* milik folder `www` tersebut):
+1. Buka **File Manager** Hostinger Anda.
+2. Cari folder dokumen root untuk subdomain `www` Anda. Biasanya terletak di:
+   * **`public_html/www/`**
+   * Atau di folder **`domains/www.starpack.co.id/public_html/`**
+3. Di dalam folder `www` tersebut, **hapus file `default.html`** bawaan Hostinger.
+4. Buat file baru bernama **`.htaccess`** di dalam folder `www` tersebut, lalu isi dengan kode berikut:
+   ```apache
+   RewriteEngine On
+   RewriteRule ^(.*)$ https://starpack.co.id/$1 [R=301,L]
+   ```
+5. Simpan file tersebut. Semua trafik `www` sekarang akan langsung dialihkan secara instan ke domain utama tanpa memicu halaman *Coming Soon*.
+
 ---
 
 ### Langkah 3: Instal Ulang SSL di hPanel Hostinger
