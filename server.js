@@ -5,7 +5,7 @@ const next = require('next');
 const dev = process.env.NODE_ENV !== 'production';
 // When deploying to cPanel, Phusion Passenger will dynamically assign process.env.PORT
 const port = process.env.PORT || 3000;
-const app = next({ dev, port });
+const app = next({ dev });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
