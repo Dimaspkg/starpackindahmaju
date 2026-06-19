@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="public/logo_starpack.png" alt="PT STARPACK INDAHMAJU Logo" width="280" style="margin-bottom: 20px;" />
+  <img src="public/logo_starpack_white.png" alt="PT STARPACK INDAHMAJU Logo" width="280" style="margin-bottom: 20px;" />
 
   # PT STARPACK INDAHMAJU - Official Web Portal
 
