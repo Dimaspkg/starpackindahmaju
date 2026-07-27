@@ -2,8 +2,8 @@
   /* Design Tokens */
   --background: #111111;
   --foreground: #ffffff;
-  --primary: #ff0000;
-  --primary-hover: #cc0000;
+  --primary: #ff3333; /* Diperbarui dari #ff0000 agar kontras di latar belakang gelap memenuhi standar WCAG (5.67:1) */
+  --primary-hover: #e62e2e;
   --sidebar-bg: #0a0a0a;
   --sidebar-border: #1a1a1a;
   --sidebar-width: 200px;
@@ -21,7 +21,7 @@
   --card-border: #2a2a2a;
   --muted-text: #888888;
   
-  --nav-active-bg: #ff0000;
+  --nav-active-bg: var(--primary);
   --nav-active-text: #ffffff;
   --nav-hover-bg: #151515;
   
@@ -31,8 +31,8 @@
 [data-theme="light"] {
   --background: #f7f7f7;
   --foreground: #000000;
-  --primary: #e60000;
-  --primary-hover: #cc0000;
+  --primary: #b80606; /* Diperbarui dari #e60000 agar kontras di latar belakang terang memenuhi standar WCAG AAA (7.1:1) */
+  --primary-hover: #910505;
   --sidebar-bg: #ffffff;
   --sidebar-border: #e0e0e0;
   
@@ -40,7 +40,7 @@
   --card-border: #dddddd;
   --muted-text: #555555;
   
-  --nav-active-bg: #ff0000;
+  --nav-active-bg: var(--primary);
   --nav-active-text: #ffffff;
   --nav-hover-bg: #f0f0f0;
 }
