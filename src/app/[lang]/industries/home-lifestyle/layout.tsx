@@ -1,10 +1,17 @@
 import { Metadata } from 'next';
+import { generateDynamicMetadata } from '@/utils/metadata';
 
-export const metadata: Metadata = {
-  title: 'Coating Peralatan Rumah Tangga',
-  description: 'Solusi pelapisan tahan suhu ekstrem dan aman untuk peralatan rumah tangga dan gaya hidup.',
+type Props = {
+  children: React.ReactNode;
+  params: Promise<{ lang: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
+  return generateDynamicMetadata(lang, 'home-lifestyle');
+}
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
+

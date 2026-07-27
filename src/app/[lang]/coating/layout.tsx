@@ -8,10 +8,9 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params;
-  return generateDynamicMetadata(lang, 'insights');
+  return generateDynamicMetadata(lang, 'coating');
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
-

@@ -23,6 +23,11 @@ const metadataTranslations: Record<string, Record<string, PageMetadata>> = {
       description: "Contact PT Starpack Indahmaju in Jakarta to discuss your plastic product UV coating and vacuum metallizing requirements, pricing, and specifications.",
       keywords: ["Contact Starpack", "Coating Factory Address Jakarta", "UV Plastic Coating Price", "Vacuum Metallizing Service"]
     },
+    coating: {
+      title: "Premium Coating Effects Catalog | PT STARPACK INDAHMAJU",
+      description: "Explore our premium coating effects catalog including Pearl Chameleon, Metallic Chrome, Leather Effect, and more customized visual finishes.",
+      keywords: ["coating effects catalog", "pearl chameleon coating", "metallic chrome coating", "premium coating finishes", "starpack coating catalogue"]
+    },
     quality: {
       title: "Quality & Certification - ISO 9001:2015 Certified | PT STARPACK INDAHMAJU",
       description: "Discover our rigorous quality control procedures and ISO 9001:2015 certification for premium UV coating and vacuum metallizing in Indonesia.",
@@ -124,6 +129,11 @@ const metadataTranslations: Record<string, Record<string, PageMetadata>> = {
       title: "Hubungi Kami - Konsultasi Jasa Coating Plastik | PT STARPACK INDAHMAJU",
       description: "Hubungi tim ahli PT Starpack Indahmaju di Jakarta untuk mendiskusikan kebutuhan harga dan spesifikasi UV coating & vacuum metallizing produk Anda.",
       keywords: ["Kontak Starpack", "Alamat Pabrik Coating Jakarta", "Harga UV Coating Plastik", "Jasa Vacuum Metallizing"]
+    },
+    coating: {
+      title: "Katalog Efek Coating Premium | PT STARPACK INDAHMAJU",
+      description: "Jelajahi katalog efek coating premium kami termasuk Pearl Chameleon, Metallic Chrome, Leather Effect, dan hasil akhir visual kustom lainnya.",
+      keywords: ["katalog efek coating", "pearl chameleon indonesia", "metallic chrome indonesia", "finishing coating premium", "katalog coating starpack"]
     },
     quality: {
       title: "Kualitas & Sertifikasi - Terakreditasi ISO 9001:2015 | PT STARPACK INDAHMAJU",
@@ -227,6 +237,11 @@ const metadataTranslations: Record<string, Record<string, PageMetadata>> = {
       description: "联系位于雅加达的PT Starpack Indahmaju专家团队，共同商讨您的塑料制品UV喷涂与真空电镀的产品规格、价格及定制要求。",
       keywords: ["联系Starpack", "雅加达涂装厂地址", "UV塑料喷涂价格", "真空电镀服务"]
     },
+    coating: {
+      title: "高级涂层效果目录 | PT STARPACK INDAHMAJU",
+      description: "探索我们高级涂层效果目录，包括珍珠变色龙、金属铬、皮革效果等各种定制视觉效果。",
+      keywords: ["涂装效果目录", "珍珠变色龙涂层", "镜面金属电镀", "高级涂装效果"]
+    },
     quality: {
       title: "品质与认证 - ISO 9001:2015国际标准 | PT STARPACK INDAHMAJU",
       description: "了解我们严格的品质控制流程以及针对高端UV喷涂与真空电镀所取得的ISO 9001:2015国际质量管理体系认证。",
@@ -326,8 +341,13 @@ const metadataTranslations: Record<string, Record<string, PageMetadata>> = {
     },
     contact: {
       title: "お問い合わせ - プラスチック塗装・蒸着の仕様相談 | PT STARPACK INDAHMAJU",
-      description: "プラスチック製品のUV塗装や真空蒸着の価格、仕様、ご要望について、ジャカルタのPT Starpack Indahmajuの専門チームへお気軽にご相談ください。",
+      description: "プラスチック製品のUV塗装や真空蒸着の価格, 仕様, ご要望について, ジャカルタのPT Starpack Indahmajuの専門チームへお気軽にご相談ください。",
       keywords: ["Starpack連絡先", "ジャカルタ工場住所", "UV塗装価格", "真空蒸着サービス"]
+    },
+    coating: {
+      title: "プレミアムコーティング効果カタログ | PT STARPACK INDAHMAJU",
+      description: "パールカメレオン、メタリッククローム、レザーエフェクトなど、当社のプレミアムコーティング仕上がりカタログをご覧ください。",
+      keywords: ["コーティングエフェクトカタログ", "パールカメレオン塗装", "メタリッククロムメッキ", "意匠性コーティング仕上げ"]
     },
     quality: {
       title: "品質と認証 - ISO 9001:2015国際規格取得 | PT STARPACK INDAHMAJU",
@@ -424,10 +444,36 @@ export function getMetadataTranslation(lang: string, pageKey: string): PageMetad
   return pageData;
 }
 
+const pageKeyToPath: Record<string, string> = {
+  home: '',
+  about: '/about',
+  contact: '/contact',
+  coating: '/coating',
+  quality: '/quality-certification',
+  technology: '/technology',
+  'uv-coating': '/technology/uv-coating',
+  'vacuum-metallizing': '/technology/vacuum-metallizing',
+  industries: '/industries',
+  'beauty-cosmetics': '/industries/beauty-cosmetics',
+  electronics: '/industries/electronics',
+  fashion: '/industries/fashion',
+  accessories: '/industries/accecories',
+  'fashion-accessories': '/industries/fashion-accessories',
+  'home-lifestyle': '/industries/home-lifestyle',
+  automotive: '/industries/automotive',
+  footwear: '/industries/foot-wear',
+  'many-more': '/industries/many-more',
+  insights: '/insights',
+  sitemap: '/sitemap',
+  portfolio: '/portfolio'
+};
+
 export function generateDynamicMetadata(lang: string, pageKey: string, baseMetadata: Partial<Metadata> = {}): Metadata {
   const data = getMetadataTranslation(lang, pageKey);
   const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://starpack.co.id';
   const siteUrl = rawSiteUrl.endsWith('/') ? rawSiteUrl.slice(0, -1) : rawSiteUrl;
+  
+  const pagePath = pageKeyToPath[pageKey] !== undefined ? pageKeyToPath[pageKey] : `/${pageKey}`;
   
   return {
     metadataBase: new URL(siteUrl),
@@ -438,17 +484,19 @@ export function generateDynamicMetadata(lang: string, pageKey: string, baseMetad
     description: data.description,
     keywords: data.keywords,
     alternates: {
+      canonical: `${siteUrl}/${lang}${pagePath}`,
       languages: {
-        'id': `/id/${pageKey === 'home' ? '' : pageKey}`,
-        'en': `/en/${pageKey === 'home' ? '' : pageKey}`,
-        'zh': `/zh/${pageKey === 'home' ? '' : pageKey}`,
-        'ja': `/jp/${pageKey === 'home' ? '' : pageKey}`
+        'id': `${siteUrl}/id${pagePath}`,
+        'en': `${siteUrl}/en${pagePath}`,
+        'zh': `${siteUrl}/zh${pagePath}`,
+        'ja': `${siteUrl}/jp${pagePath}`,
+        'x-default': `${siteUrl}/id${pagePath}`
       },
     },
     openGraph: {
       type: "website",
       locale: lang === 'en' ? "en_US" : lang === 'zh' ? "zh_CN" : lang === 'ja' ? "ja_JP" : "id_ID",
-      url: `${siteUrl}/${lang}/${pageKey === 'home' ? '' : pageKey}`,
+      url: `${siteUrl}/${lang}${pagePath}`,
       title: data.title,
       description: data.description,
       siteName: "PT STARPACK INDAHMAJU",
@@ -470,3 +518,4 @@ export function generateDynamicMetadata(lang: string, pageKey: string, baseMetad
     ...baseMetadata
   };
 }
+
