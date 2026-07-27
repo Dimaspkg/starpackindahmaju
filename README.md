@@ -50,9 +50,17 @@ Starpack/
 ├── src/                        # Direktori utama kode aplikasi
 │   ├── app/                    # Next.js App Router (Halaman & API Routes)
 │   │   ├── [lang]/             # Rute halaman dinamis berbasis Bahasa (ID, EN, ZH, JP)
+│   │   │   ├── about/          # Halaman Tentang Kami
 │   │   │   ├── admin/          # Dasbor Admin (dashboard, leads, customers, settings, dll.)
-│   │   │   ├── portfolio/      # Halaman portofolio utama
+│   │   │   ├── coating/        # Halaman Katalog Efek Coating Premium
+│   │   │   ├── contact/        # Halaman Hubungi Kami
+│   │   │   ├── industries/     # Halaman Layanan Industri (kecantikan, otomotif, dsb.)
+│   │   │   ├── insights/       # Halaman Wawasan & Berita (dengan rute dinamis [slug])
 │   │   │   ├── login/          # Halaman masuk untuk admin
+│   │   │   ├── portfolio/      # Halaman portofolio utama
+│   │   │   ├── quality-certification/ # Halaman Kualitas & Sertifikasi (ISO 9001:2015)
+│   │   │   ├── sitemap/        # Halaman Peta Situs (Sitemap)
+│   │   │   ├── technology/     # Halaman detail teknologi (UV Coating & Vacuum Metallizing)
 │   │   │   └── layout.tsx      # Tata letak dasar (HTML, Head, LanguageProvider)
 │   │   │
 │   │   └── api/                # Rute API Backend
