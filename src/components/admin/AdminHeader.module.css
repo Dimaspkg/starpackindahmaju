@@ -1,0 +1,170 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2.5rem;
+  background: rgba(var(--card-bg-rgb, 255, 255, 255), 0.75);
+  border-bottom: 1px solid var(--card-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  height: var(--header-height, 64px);
+}
+
+:global([data-theme="dark"]) .header {
+  background: rgba(20, 20, 20, 0.75);
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.breadcrumbItem {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.breadcrumbItem:hover {
+  color: var(--primary);
+}
+
+.breadcrumbSeparator {
+  opacity: 0.5;
+  font-size: 0.75rem;
+}
+
+.breadcrumbActive {
+  color: var(--text-primary);
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.dateDisplay {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.actionButton {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.actionButton:hover {
+  background: rgba(128, 128, 128, 0.1);
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary, #0075ff);
+  border-radius: 50%;
+  border: 1.5px solid var(--card-bg);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 117, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(0, 117, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 117, 255, 0);
+  }
+}
+
+.themeWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--card-border);
+}
+
+.profileSummary {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-left: 0.25rem;
+}
+
+.profileAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.profileText {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileName {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.profileRole {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 1.5rem;
+  }
+  .profileText, .divider, .dateDisplay {
+    display: none;
+  }
+}

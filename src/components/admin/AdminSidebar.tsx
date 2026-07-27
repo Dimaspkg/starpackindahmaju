@@ -1,9 +1,10 @@
 "use client";
 
-import LocalizedLink from "@/components/LocalizedLink";
+import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { signOut, useSession } from 'next-auth/react';
+import { useNotifications } from '@/context/NotificationContext';
 import styles from './AdminSidebar.module.css';
 
 const navItems = [
@@ -55,62 +56,101 @@ const navItems = [
     )
   },
   { 
+    label: 'Insights', 
+    href: '/admin/insights', 
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+      </svg>
+    )
+  },
+  { 
     label: 'Settings', 
     href: '/admin/settings', 
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="3"></circle>
-        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2 2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
       </svg>
     )
   }
 ];
 
+import { useState } from 'react';
+
 export default function AdminSidebar() {
   const pathname = usePathname();
   const { data: session } = useSession();
+  const { unreadCount } = useNotifications();
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   const userInitial = session?.user?.name ? session.user.name.charAt(0).toUpperCase() : 'A';
 
   return (
-    <aside className={styles.sidebar}>
+    <aside className={styles.sidebar} data-collapsed={isCollapsed}>
       <div className={styles.logoContainer}>
-        <Image 
-          src="/logo_starpack.png" 
-          alt="Logo" 
-          width={150} 
-          height={30} 
-          style={{ objectFit: 'contain' }}
-          className="logoLight"
-        />
-        <Image 
-          src="/logo_starpack_white.png" 
-          alt="Logo" 
-          width={150} 
-          height={30} 
-          style={{ objectFit: 'contain' }}
-          className="logoDark"
-        />
+        {!isCollapsed ? (
+          <>
+            <Image 
+              src="/logo_starpack.png" 
+              alt="Logo" 
+              width={150} 
+              height={30} 
+              style={{ objectFit: 'contain' }}
+              className="logoLight"
+            />
+            <Image 
+              src="/logo_starpack_white.png" 
+              alt="Logo" 
+              width={150} 
+              height={30} 
+              style={{ objectFit: 'contain' }}
+              className="logoDark"
+            />
+          </>
+        ) : (
+          <div style={{ fontWeight: 800, fontSize: '1.25rem', color: 'var(--primary)' }}>SP</div>
+        )}
       </div>
 
       <nav className={styles.nav}>
         {navItems.map((item) => {
           const isActive = pathname === item.href;
           return (
-            <LocalizedLink 
+            <Link 
               key={item.href} 
               href={item.href}
               className={`${styles.navLink} ${isActive ? styles.active : ''}`}
+              style={{ display: 'flex', alignItems: 'center', justifyContent: isCollapsed ? 'center' : 'space-between' }}
             >
-              <span className={styles.icon}>{item.icon}</span>
-              {item.label}
-            </LocalizedLink>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
+                <span className={styles.icon}>{item.icon}</span>
+                {!isCollapsed && <span>{item.label}</span>}
+              </div>
+              {!isCollapsed && item.label === 'Leads' && unreadCount > 0 && (
+                <span style={{
+                  backgroundColor: '#e74c3c',
+                  color: 'white',
+                  fontSize: '0.7rem',
+                  fontWeight: 'bold',
+                  padding: '2px 8px',
+                  borderRadius: '20px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}>
+                  {unreadCount}
+                </span>
+              )}
+            </Link>
           );
         })}
         {(session?.user as any)?.role === 'admin' && (
-          <LocalizedLink 
+          <Link 
             href="/admin/users"
             className={`${styles.navLink} ${pathname === '/admin/users' ? styles.active : ''}`}
+            style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}
           >
             <span className={styles.icon}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -120,29 +160,47 @@ export default function AdminSidebar() {
                 <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
               </svg>
             </span>
-            Users
-          </LocalizedLink>
+            {!isCollapsed && <span>Users</span>}
+          </Link>
         )}
       </nav>
 
       <div className={styles.bottomSection}>
-        <div className={styles.userInfo}>
+        {/* Toggle Collapse Button */}
+        <button 
+          onClick={() => setIsCollapsed(!isCollapsed)}
+          className={styles.collapseBtn}
+          title={isCollapsed ? "Expand Sidebar" : "Collapse Sidebar"}
+        >
+          {isCollapsed ? (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
+          ) : (
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg>
+          )}
+          {!isCollapsed && <span>Collapse</span>}
+        </button>
+
+        <div className={styles.userInfo} style={{ justifyContent: isCollapsed ? 'center' : 'flex-start' }}>
           <div className={styles.avatar}>{userInitial}</div>
-          <div className={styles.userDetails}>
-            <span className={styles.userName}>{session?.user?.name || 'Admin'}</span>
-            <span className={styles.userRole}>Super Admin</span>
-          </div>
+          {!isCollapsed && (
+            <div className={styles.userDetails}>
+              <span className={styles.userName}>{session?.user?.name || 'Admin'}</span>
+              <span className={styles.userRole}>Super Admin</span>
+            </div>
+          )}
         </div>
         <button 
           onClick={() => signOut({ callbackUrl: '/login' })} 
           className={styles.logoutBtn}
+          title="Logout"
+          style={{ justifyContent: isCollapsed ? 'center' : 'flex-start' }}
         >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
             <polyline points="16 17 21 12 16 7"></polyline>
             <line x1="21" y1="12" x2="9" y2="12"></line>
           </svg>
-          Logout
+          {!isCollapsed && <span>Logout</span>}
         </button>
       </div>
     </aside>

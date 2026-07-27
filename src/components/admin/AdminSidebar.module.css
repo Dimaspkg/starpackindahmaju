@@ -2,7 +2,8 @@
   width: 260px;
   height: 100vh;
   background: var(--sidebar-bg);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-right: 1px solid var(--sidebar-border);
   display: flex;
   flex-direction: column;
@@ -10,62 +11,91 @@
   left: 0;
   top: 0;
   z-index: 100;
-  transition: all 0.3s ease;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar[data-collapsed="true"] {
+  width: 80px;
+}
+
+:global([data-theme="dark"]) .sidebar {
+  background: rgba(10, 10, 10, 0.85);
 }
 
 .logoContainer {
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid var(--sidebar-border);
+  height: var(--header-height, 64px);
+  overflow: hidden;
+}
+
+.sidebar[data-collapsed="true"] .logoContainer {
+  padding: 1.5rem 0;
 }
 
 .nav {
-  padding: 1.5rem 1rem;
+  padding: 1.75rem 1rem;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.35rem;
+  overflow-x: hidden;
 }
 
 .navLink {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 0.8rem 1rem;
-  border-radius: 12px;
+  gap: 0.85rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
   color: var(--muted-text);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 550;
+  font-size: 0.9rem;
   transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.sidebar[data-collapsed="true"] .navLink {
+  justify-content: center;
+  padding: 0.75rem;
 }
 
 .navLink:hover {
-  background: var(--nav-hover-bg);
+  background: rgba(255, 51, 51, 0.05);
   color: var(--primary);
 }
 
 .active {
   background: var(--primary) !important;
   color: white !important;
+  box-shadow: 0 4px 14px rgba(255, 51, 51, 0.3);
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bottomSection {
   padding: 1.5rem;
   border-top: 1px solid var(--sidebar-border);
+  background: rgba(128, 128, 128, 0.01);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .userInfo {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 0.75rem;
 }
 
 .avatar {
@@ -78,43 +108,79 @@
   align-items: center;
   justify-content: center;
   font-weight: bold;
+  box-shadow: 0 2px 8px rgba(255, 51, 51, 0.2);
 }
 
 .userDetails {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .userName {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
+  color: var(--foreground);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .userRole {
   font-size: 0.75rem;
-  opacity: 0.6;
+  color: var(--muted-text);
 }
 
 .logoutBtn {
-  width: 100%;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 0.8rem 1rem;
-  border-radius: 0px;
-  background: none;
-  border: 1px solid rgba(231, 76, 60, 0.2);
-  color: #e74c3c;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
   cursor: pointer;
-  font-weight: 500;
   transition: all 0.2s ease;
 }
 
 .logoutBtn:hover {
-  background: rgba(231, 76, 60, 0.1);
+  background: rgba(231, 76, 60, 0.05);
+  border-color: rgba(231, 76, 60, 0.3);
+  color: #e74c3c;
 }
 
-@media (max-width: 768px) {
+.collapseBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px dashed var(--card-border);
+  background: transparent;
+  color: var(--muted-text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.collapseBtn:hover {
+  background: rgba(128, 128, 128, 0.05);
+  color: var(--foreground);
+}
+
+.sidebar[data-collapsed="true"] .collapseBtn,
+.sidebar[data-collapsed="true"] .logoutBtn {
+  justify-content: center;
+  padding: 0.75rem;
+}
+
+@media (max-width: 1024px) {
   .sidebar {
     transform: translateX(-100%);
   }

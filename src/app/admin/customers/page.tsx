@@ -362,7 +362,11 @@ export default function CustomersAdminPage() {
                   </div>
                 ) : (
                   <div>
-                    <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🖼️</div>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--muted-text)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginBottom: '0.5rem', opacity: 0.7 }}>
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                      <circle cx="8.5" cy="8.5" r="1.5" />
+                      <polyline points="21 15 16 10 5 21" />
+                    </svg>
                     <p style={{ fontSize: '0.8rem', margin: 0, color: 'var(--muted-text)' }}>
                       Click or drag image file here
                     </p>

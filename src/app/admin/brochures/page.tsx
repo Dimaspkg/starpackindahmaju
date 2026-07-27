@@ -249,13 +249,14 @@ export default function BrochuresPage() {
         display: 'flex', 
         justifyContent: 'space-between', 
         alignItems: 'center', 
-        marginBottom: '2rem', 
+        marginBottom: '2.5rem', 
         flexWrap: 'wrap', 
         gap: '1.2rem',
         background: 'var(--card-bg)',
-        padding: '1.2rem 1.5rem',
-        borderRadius: '16px',
-        border: '1px solid var(--card-border)'
+        padding: '1.5rem',
+        borderRadius: '20px',
+        border: '1px solid var(--card-border)',
+        boxShadow: '0 4px 15px -5px rgba(0,0,0,0.1)'
       }}>
         {/* Horizontal Navigation Tabs */}
         <div style={{ display: 'flex', gap: '0.6rem', overflowX: 'auto', maxWidth: '100%', paddingBottom: '4px' }}>
@@ -359,44 +360,48 @@ export default function BrochuresPage() {
         </div>
 
         {/* Create Folder Form */}
-        <form onSubmit={handleCreateFolder} style={{ display: 'flex', gap: '0.5rem', marginLeft: 'auto' }}>
-          <input 
-            type="text" 
-            placeholder="New folder..." 
-            value={newFolderName}
-            onChange={(e) => setNewFolderName(e.target.value)}
-            style={{
-              padding: '0.5rem 0.75rem',
-              borderRadius: '8px',
-              border: '1px solid var(--card-border)',
-              background: 'rgba(255,255,255,0.03)',
-              color: 'var(--foreground)',
-              fontSize: '0.8rem',
-              width: '140px'
-            }}
-            required
-          />
+        <form onSubmit={handleCreateFolder} style={{ display: 'flex', gap: '0.75rem', marginLeft: 'auto', alignItems: 'center' }}>
+          <div style={{ position: 'relative' }}>
+            <span style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', opacity: 0.5 }}>📁</span>
+            <input 
+              type="text" 
+              placeholder="New folder name..." 
+              value={newFolderName}
+              onChange={(e) => setNewFolderName(e.target.value)}
+              style={{
+                padding: '0.65rem 1rem 0.65rem 2.25rem',
+                borderRadius: '12px',
+                border: '1px solid var(--card-border)',
+                background: 'rgba(128,128,128,0.03)',
+                color: 'var(--foreground)',
+                fontSize: '0.85rem',
+                width: '180px',
+                transition: 'all 0.2s',
+                outline: 'none'
+              }}
+              onFocus={(e) => {
+                e.target.style.borderColor = 'var(--primary)';
+                e.target.style.boxShadow = '0 0 0 3px rgba(255, 51, 51, 0.15)';
+              }}
+              onBlur={(e) => {
+                e.target.style.borderColor = 'var(--card-border)';
+                e.target.style.boxShadow = 'none';
+              }}
+              required
+            />
+          </div>
           <button 
             type="submit" 
             disabled={creatingFolder}
-            style={{
-              padding: '0.5rem 0.85rem',
-              borderRadius: '8px',
-              border: 'none',
-              background: '#2ecc71',
-              color: '#fff',
-              cursor: 'pointer',
-              fontWeight: 600,
-              fontSize: '0.8rem',
-              transition: 'background 0.2s'
-            }}
+            className={styles.saveBtn}
+            style={{ padding: '0.65rem 1.25rem', borderRadius: '12px' }}
           >
-            {creatingFolder ? '...' : '+'}
+            {creatingFolder ? '...' : 'Create Folder'}
           </button>
         </form>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 3fr', gap: '2rem', alignItems: 'start' }}>
+      <div className={styles.brochuresLayout}>
         {/* Upload Card */}
         <div style={{ 
           background: 'var(--card-bg)', 
