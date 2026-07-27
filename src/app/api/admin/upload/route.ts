@@ -19,8 +19,16 @@ export async function POST(request: Request) {
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
+    const customName = formData.get('customName') as string;
+    
     // Create unique filename with .webp extension
-    const baseName = file.name.replace(/\.[^/.]+$/, '').replace(/\s+/g, '_');
+    let baseName = '';
+    if (customName) {
+      baseName = customName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+    } else {
+      baseName = file.name.replace(/\.[^/.]+$/, '').replace(/\s+/g, '_');
+    }
+    
     const filename = `${Date.now()}-${baseName}.webp`;
     const uploadDir = path.join(process.cwd(), 'public', 'uploads', 'insights');
     const fileUrl = `/uploads/insights/${filename}`;

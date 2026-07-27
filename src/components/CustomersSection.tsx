@@ -84,17 +84,13 @@ export default function CustomersSection() {
                 maxHeight: '45px',
                 maxWidth: '85%',
                 objectFit: 'contain',
-                filter: 'brightness(0.9) contrast(1.1) grayscale(1)',
-                opacity: 0.7,
                 transition: 'all 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.filter = 'none';
-                e.currentTarget.style.opacity = '1';
+                e.currentTarget.style.transform = 'scale(1.06)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.filter = 'brightness(0.9) contrast(1.1) grayscale(1)';
-                e.currentTarget.style.opacity = '0.7';
+                e.currentTarget.style.transform = 'scale(1)';
               }}
             />
           </div>

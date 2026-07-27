@@ -75,6 +75,7 @@ export default function Hero() {
                 src={src} 
                 alt={`Premium Cosmetic Packaging Finishing ${index + 1}`} 
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 priority={index === 0}
                 className={`${styles.bgImage} ${index === currentImageIndex ? styles.activeImage : styles.inactiveImage}`}
               />

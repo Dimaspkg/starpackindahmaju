@@ -1,13 +1,27 @@
 import { MetadataRoute } from 'next';
 import id from '../locales/id.json';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+import pool from '@/lib/db';
+import { RowDataPacket } from 'mysql2/promise';
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://starpack.co.id';
   const siteUrl = rawSiteUrl.endsWith('/') ? rawSiteUrl.slice(0, -1) : rawSiteUrl;
   const locales = ['id', 'en', 'zh', 'jp'];
   
-  // Extract dynamic article slugs from locales
-  const articleSlugs = id.insights?.items?.map((item: any) => `/insights/${item.slug}`) || [];
+  // Extract static article slugs from locales
+  let articleSlugs = id.insights?.items?.map((item: any) => `/insights/${item.slug}`) || [];
+
+  // Fetch dynamic article slugs from Database
+  try {
+    const [rows] = await pool.execute<RowDataPacket[]>("SELECT slug FROM posts WHERE status = 'published'");
+    const dbSlugs = rows.map(row => `/insights/${row.slug}`);
+    
+    // Combine and remove duplicates
+    articleSlugs = Array.from(new Set([...articleSlugs, ...dbSlugs]));
+  } catch (error) {
+    console.error("Failed to fetch posts for sitemap:", error);
+  }
 
   const routes = [
     '',

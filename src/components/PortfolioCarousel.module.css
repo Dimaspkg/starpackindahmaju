@@ -86,7 +86,6 @@
 
 .logoImage {
   object-fit: contain;
-  filter: grayscale(1) contrast(0.7) opacity(0.5);
   transition: all 0.4s ease;
 }
 
@@ -99,11 +98,9 @@
 }
 
 .marqueeLink:hover .logoImage {
-  filter: grayscale(0.7) contrast(0.8) opacity(0.6);
 }
 
 .logoItem:hover .logoImage {
-  filter: grayscale(0) contrast(1) opacity(0.95) !important;
   transform: scale(1.1);
 }
 

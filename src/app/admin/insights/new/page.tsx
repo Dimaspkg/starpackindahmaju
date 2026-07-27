@@ -59,6 +59,12 @@ export default function NewInsightPage() {
   };
 
   const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!title && !slug) {
+      setError('Pastikan Anda sudah mengisi kolom Judul/Slug terlebih dahulu di form sebelum menekan tombol Unggah Gambar.');
+      e.target.value = ''; // Reset input file
+      return;
+    }
+
     const file = e.target.files?.[0];
     if (!file) return;
 
@@ -67,6 +73,9 @@ export default function NewInsightPage() {
 
     const formData = new FormData();
     formData.append('file', file);
+    if (slug || title) {
+      formData.append('customName', slug || title);
+    }
 
     try {
       const response = await fetch('/api/admin/upload', {

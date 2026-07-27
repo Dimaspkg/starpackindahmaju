@@ -182,7 +182,7 @@ export default async function ArticleDetailPage({ params }: PageProps) {
 
         <section className={styles.contentBody}>
           {post.content.map((paragraph: string, idx: number) => (
-            <p key={idx} dangerouslySetInnerHTML={{ __html: paragraph }} />
+            <div key={idx} style={{ marginBottom: '1.25rem', lineHeight: 1.8 }} dangerouslySetInnerHTML={{ __html: paragraph }} />
           ))}
         </section>
 
