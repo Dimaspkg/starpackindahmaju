@@ -31,9 +31,9 @@ export const authOptions: AuthOptions = {
             };
           }
           return null;
-        } catch (error) {
+        } catch (error: any) {
           console.error("Auth Error:", error);
-          return null;
+          throw new Error(`db_error:${error.message || 'Unknown database error'}`);
         }
       }
     })

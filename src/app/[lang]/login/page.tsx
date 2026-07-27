@@ -39,13 +39,18 @@ export default function LoginPage() {
     try {
       const result = await signIn('credentials', { username, password, redirect: false });
       if (result?.error) {
-        setError('Username atau password salah. Silakan coba lagi.');
+        if (result.error.includes('db_error:')) {
+          const rawMessage = result.error.split('db_error:')[1] || 'Koneksi ditolak';
+          setError(`Gagal terhubung ke Database: "${rawMessage}". Silakan periksa kembali konfigurasi host, user, password, dan nama database di file .env Anda.`);
+        } else {
+          setError('Username atau password salah. Silakan coba lagi.');
+        }
       } else {
         router.push('/admin');
         router.refresh();
       }
-    } catch {
-      setError('Terjadi kesalahan. Silakan coba lagi.');
+    } catch (err: any) {
+      setError(`Terjadi kesalahan sistem: ${err.message || 'Silakan coba lagi.'}`);
     } finally {
       setLoading(false);
     }
