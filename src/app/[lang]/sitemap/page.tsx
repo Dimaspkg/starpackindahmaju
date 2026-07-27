@@ -14,7 +14,7 @@ export default function SitemapPage() {
     document.title = 'Sitemap | PT STARPACK INDAHMAJU';
   }, []);
 
-  if (!mounted) return null;
+  // No-op for mounted check to enable SSR
 
   const content = {
     title: language === 'id' ? 'Peta Situs' : language === 'jp' ? 'サイトマップ' : language === 'zh' ? '网站地图' : 'Sitemap',

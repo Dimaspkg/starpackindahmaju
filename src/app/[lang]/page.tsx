@@ -74,7 +74,7 @@ export default function Home() {
     setMounted(true);
   }, []);
 
-  if (!mounted || !t.about) return null;
+  if (!t.about) return null;
 
   // Get latest 3 articles from locale data
   const latestPosts = t.insights?.items?.slice(0, 3) ?? [];

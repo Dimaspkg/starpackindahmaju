@@ -30,7 +30,7 @@ export default function CoatingPage() {
     }
   }, [mounted, t]);
 
-  if (!mounted || !t.effects) return null;
+  if (!t.effects) return null;
 
   const filteredItems = t.effects.items.filter((item: any) => {
     if (activeFilter === 'all') return true;

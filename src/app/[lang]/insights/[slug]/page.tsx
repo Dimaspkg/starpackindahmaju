@@ -31,7 +31,7 @@ export default function ArticleDetailPage({ params }: PageProps) {
     }
   }, [mounted, article]);
 
-  if (!mounted) return null;
+  // No-op for mounted check to enable SSR
 
   if (!article) {
     return (

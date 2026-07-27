@@ -21,7 +21,7 @@ export default function IndustriesPage() {
     }
   }, [mounted, t]);
 
-  if (!mounted || !t.industry) return null;
+  if (!t.industry) return null;
 
   const ctaTitle = language === 'id'
     ? 'Miliki Spesifikasi Khusus untuk Industri Anda?'

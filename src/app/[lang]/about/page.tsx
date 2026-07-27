@@ -29,7 +29,7 @@ export default function AboutPage() {
     }
   }, [mounted, t]);
 
-  if (!mounted || !t.about) return null;
+  if (!t.about) return null;
 
   /* ---------- Localised Strings ---------- */
   const L = {

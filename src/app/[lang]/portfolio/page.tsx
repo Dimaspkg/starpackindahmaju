@@ -77,7 +77,7 @@ export default function PortfolioPage() {
     }
   }, [mounted, language]);
 
-  if (!mounted) return null;
+  // No-op for mounted check to enable SSR
 
   return (
     <div className={styles.body}>

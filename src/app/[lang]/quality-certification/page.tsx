@@ -21,7 +21,7 @@ export default function QualityCertificationPage() {
     }
   }, [mounted, t]);
 
-  if (!mounted || !t.quality) return null;
+  if (!t.quality) return null;
 
   const ctaTitle = language === 'id'
     ? 'Ingin Mendapatkan Dokumen Spesifikasi Mutu Lengkap Kami?'

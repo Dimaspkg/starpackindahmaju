@@ -21,7 +21,7 @@ export default function InsightsPage() {
     }
   }, [mounted, t]);
 
-  if (!mounted || !t.insights) return null;
+  if (!t.insights) return null;
 
   // Extract unique categories dynamically based on selected language
   const categories = ['all', ...Array.from(new Set(t.insights.items.map((item: any) => item.category)))];

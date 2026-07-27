@@ -21,7 +21,7 @@ export default function TechnologyPage() {
     }
   }, [mounted, t]);
 
-  if (!mounted || !t.tech) return null;
+  if (!t.tech) return null;
 
   // Localized gallery heading & CTA strings
   const galleryHeading = language === 'id' 

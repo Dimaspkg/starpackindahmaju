@@ -81,7 +81,7 @@ export default function ContactPage() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  if (!mounted || !t.inquiry) return null;
+  if (!t.inquiry) return null;
 
   const labels = {
     pageTitle: language === 'id' ? 'Hubungi Kami' : language === 'jp' ? 'お問い合わせ' : language === 'zh' ? '联系我们' : 'Contact Us',
