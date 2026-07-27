@@ -89,6 +89,15 @@ export default function Footer() {
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
                 className={styles.mapIframe}
+                title={
+                  language === 'id' 
+                    ? "Peta Lokasi Kantor PT Starpack Indahmaju" 
+                    : language === 'jp'
+                      ? "PT Starpack Indahmajuのオフィス所在地マップ"
+                      : language === 'zh'
+                        ? "PT Starpack Indahmaju 办公室位置地图"
+                        : "PT Starpack Indahmaju Office Location Map"
+                }
               ></iframe>
             </div>
           </div>
