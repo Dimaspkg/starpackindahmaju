@@ -11,12 +11,15 @@ interface CounterProps {
 }
 
 export default function Counter({ target, duration = 2000, prefix = "", suffix = "", start = 0 }: CounterProps) {
+  const [mounted, setMounted] = useState(false);
   const [count, setCount] = useState(start);
   const countRef = useRef(start);
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
+    setMounted(true);
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -62,7 +65,8 @@ export default function Counter({ target, duration = 2000, prefix = "", suffix =
 
   return (
     <span ref={elementRef}>
-      {prefix}{count}{suffix}
+      {prefix}{mounted ? count : target}{suffix}
     </span>
   );
 }
+
